@@ -1,0 +1,39 @@
+@font-face {
+  font-family: dm-sans;
+  src: url(./fonts/DMSans-Regular.ttf);
+}
+
+.bizbut {
+  width: 168px;
+  height: 42px;
+  background: linear-gradient(180deg, #0A2F53 10.8%, #35597C 100%);
+  border: 2px solid #000000;
+  border-radius: 5px;
+
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #FFFCF5;
+  cursor: pointer;
+  transition: 0.5s
+}
+
+.bizbut:hover {
+  box-shadow:  3px 3px 5px rgb(0 0 0 / 0.2);
+  transition: 0.5s
+}
+
+.reqCB {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #0A2F53;
+  text-decoration: none;
+  padding-left: 24px;
+}

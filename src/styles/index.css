@@ -1,0 +1,24 @@
+
+
+.main {
+  background-color: #FFFCF5;
+}
+
+.shapeParent {
+  width: 100%;
+}
+
+.shape01 {
+  position: absolute;
+  z-index: 1;
+  top: 726px;
+  right: 0;
+  width: 100%;
+}
+
+.shape02 {
+  top: 745px;
+  right: 17%;
+  position: absolute;
+  z-index: 0;
+}

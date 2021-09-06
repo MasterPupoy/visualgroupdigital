@@ -1,0 +1,158 @@
+@font-face {
+  font-family: dm-sans;
+  src: url(./fonts/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: momcake;
+  src: url(./fonts/MOMCAKE-Thin.otf);
+}
+
+@font-face {
+  font-family: momcake-bold;
+  src: url(./fonts/MOMCAKE-Bold.otf);
+}
+
+
+nav {
+  width: 100vw;
+  padding: 35px 88px 34px 93px;
+
+}
+
+.logo {
+  width: 218px;
+  height: 33;
+}
+
+.send {
+  padding: 0px 5px 0px 0px;
+  display: inline-block;
+}
+
+/* .biz {
+  display: inline-block;
+  margin-bottom: 10px;
+
+} */
+
+.nav-list > li {
+  font-family: momcake;
+  display: inline-block;
+  padding: 0px 23px;
+  font-size: 19px;
+  color: #767672;
+}
+
+/* .businessEnquiryButton {
+  width: 163px;
+  height: 39px;
+  border: 2px solid #0A2F53;
+  border-radius: 5px;
+  color: #0A2F53;
+
+  background-color: #FFFCF5;
+
+  font-family: dm-sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+
+  transition: 0.5s;  
+}
+
+.businessEnquiryButton:hover {
+  cursor: pointer;
+  box-shadow:  3px 3px 5px rgb(0 0 0 / 0.2);
+  transition: 0.5s;
+} */
+
+.button {
+
+	min-width: 150px;
+	max-width: 250px;
+  width: 163px;
+  height: 39px;
+
+	display: block;
+	border: none;
+	background: none;
+
+  font-family: dm-sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+
+	color: inherit;
+	position: relative;
+	z-index: 1;
+	-moz-osx-font-smoothing: grayscale;
+
+  border: 2px solid #0A2F53;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button > span {
+	vertical-align: middle;
+}
+
+.button.button--aylen {
+	background: #fff;
+	color: #37474f;
+	overflow: hidden;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+  transition: 0.3s;
+}
+
+.button--aylen.button--inverted {
+	background: none;
+	color: #fff;
+}
+
+.button--aylen::before,
+.button--aylen::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 100%;
+  border-radius: 10px;
+  border: 2px solid;
+	left: 0;
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--aylen::before {
+	background: #0A2F53;
+}
+
+.button--aylen::after {
+	background: #EE6F19;
+}
+
+.button--aylen:hover {
+	color: #fff;
+  border: 2px solid;
+}
+
+.button--aylen:hover::before,
+.button--aylen:hover::after {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+
+.button--aylen:hover::after {
+	-webkit-transition-delay: 0.175s;
+	transition-delay: 0.175s;
+}

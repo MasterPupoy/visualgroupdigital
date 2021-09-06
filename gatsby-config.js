@@ -4,6 +4,7 @@ module.exports = {
     title: "visualgroupdigital",
   },
   plugins: [
+    "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
