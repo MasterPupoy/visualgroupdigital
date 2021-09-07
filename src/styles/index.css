@@ -22,3 +22,48 @@
   position: absolute;
   z-index: 0;
 }
+
+.shape03 {
+  position: absolute;
+  top: 58%;
+  left: 45.76%;
+  z-index: 1;
+}
+
+.shape04 {
+  position: absolute;
+  top: 73%;
+  left: 69.93%;
+  opacity: 0.59;
+  z-index: 1;
+}
+
+.shape05 {
+  position: absolute;
+  top: 32%;
+  left: 51.88%;
+  opacity: 0.59;
+  z-index: 1;
+}
+
+.shape06 {
+  position: absolute;
+  top: 25%;
+  left: 83.03%;
+  opacity: 0.59;
+  z-index: 1;
+}
+
+.shape07 {
+  position: absolute;
+  top: 20%;
+  left: 53%;
+  z-index: 1;
+}
+
+.shape08 {
+  position: absolute;
+  top: 52%;
+  left: 83.03%;
+  z-index: 0;
+}

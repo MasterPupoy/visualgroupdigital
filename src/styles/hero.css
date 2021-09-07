@@ -4,25 +4,31 @@
 }
 
 .hero-section {
-  background: linear-gradient(152.27deg, rgba(255, 252, 244, 0.831) 7.03%, rgba(255, 247, 229, 0.902) 32.02%, #FFF1D0 94.7%);
-  height: 100vh;
+  /* background: linear-gradient(152.27deg, rgba(255, 252, 244, 0.831) 7.03%, rgba(255, 247, 229, 0.902) 32.02%, #FFF1D0 94.7%); */
+  
   width: 100%;
+
+  background-image: url('../images/BG.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px 0px;
 }
 
 .banner-section {
-  font-family: dm-sans, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 62px;
   width: 50%;
   margin-top: 194px;
   flex-wrap: wrap;
+  
 }
 
 .marketing {
   color:  #0A2F53;
   width: 100%;
+  font-size: 48px;
+  font-family: dm-sans, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 62px;
 }
 
 .submarketing {
@@ -32,7 +38,39 @@
   line-height: 30px;
 
   padding-top: 20px;
+  padding-bottom: 17px;
   padding-left: 11px; 
   color: rgba(10, 47, 83, 0.62);
+}
+
+.subhero {
+  margin-top: 23%;
+  margin-bottom: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.p1 {
+  text-align: center;
+  width: 574px;
+}
+
+.p1 > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.p1 > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+
+  color: rgba(52, 52, 52, 0.61);;
 }
 

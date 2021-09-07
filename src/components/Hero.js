@@ -37,6 +37,23 @@ export default function Hero() {
             <Bizbut />
           </Box>
         </Flex>
+        <Flex
+          className="subhero"
+        >
+          <Box
+            className="p1"
+          >
+            <h3>
+              Our Clients
+            </h3>
+            <p>
+              We’ve worked with more than 100 companies 
+              since 2015 Check out some of the fantastic 
+              clients we have brought to the UK and International 
+              Markets.
+            </p>
+          </Box>
+        </Flex>
       </Flex>
     </Box>
   )

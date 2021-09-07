@@ -39,7 +39,7 @@ nav {
 .nav-list > li {
   font-family: momcake;
   display: inline-block;
-  padding: 0px 23px;
+  padding: 0 1rem;
   font-size: 19px;
   color: #767672;
 }
