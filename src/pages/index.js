@@ -16,6 +16,7 @@ import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
 import '../styles/index.css';
+import Slideshow from "../components/Slideshow";
 
 export default function index() {
   return (
@@ -41,16 +42,21 @@ export default function index() {
           <div
             className="shapeParent"
           >
-            <img src={shape} className="shape01" />
-            <img src={shape2} className="shape02" />
-            <img src={shape3} className="shape03" />
-            <img src={shape4} className="shape04" />
-            <img src={shape5} className="shape05" />
-            <img src={shape6} className="shape06" />
-            <img src={shape7} className="shape07" />
-            <img src={shape8} className="shape08" />
+            <img src={shape} alt="svg" className="shape01" />
+            <img src={shape2} alt="svg" className="shape02" />
+            <img src={shape3} alt="svg" className="shape03" />
+            <img src={shape4} alt="svg" className="shape04" />
+            <img src={shape5} alt="svg" className="shape05" />
+            <img src={shape6} alt="svg" className="shape06" />
+            <img src={shape7} alt="svg" className="shape07" />
+            <img src={shape8} alt="svg" className="shape08" />
         </div>
         </Flex>
+      </Flex>
+      <Flex
+        w="100%"
+      >
+        <Slideshow />
       </Flex>
     </Box>
   )

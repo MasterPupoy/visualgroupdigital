@@ -7,6 +7,7 @@
   /* background: linear-gradient(152.27deg, rgba(255, 252, 244, 0.831) 7.03%, rgba(255, 247, 229, 0.902) 32.02%, #FFF1D0 94.7%); */
   
   width: 100%;
+  padding-bottom: 20px;
 
   background-image: url('../images/BG.svg');
   background-repeat: no-repeat;
