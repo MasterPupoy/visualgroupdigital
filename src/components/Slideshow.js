@@ -20,6 +20,14 @@ import cleaningspecialistproviders from '../images/logo/cleaningspecialistprovid
 import provest from '../images/logo/provest.svg';
 import secretcalm from '../images/logo/secretcalm.svg';
 
+import houseofstrength from '../images/logo/houseofstrength.svg';
+import fitify from '../images/logo/fitifiy.svg';
+import reignsupreme from '../images/logo/reignsupreme.svg';
+import rebecca from '../images/logo/rebecca.svg';
+import regency from '../images/logo/regencyestate.svg';
+import keating from '../images/logo/keatingestates.svg';
+import outperform from '../images/logo/outperform.svg';
+
 import '../styles/slideshow.css';
 
 
@@ -50,14 +58,28 @@ export default function Slideshow() {
       w="100%"
       px="2%"
     >
-      <img src={delishus} />
-      <img src={manetain} />
-      <img src={doggo} />
-      <img src={redsacks} />
-      <img src={beautifulsouls} />
-      <img src={cleaningspecialistproviders} />
-      <img src={provest} />
-      <img src={secretcalm} />
+      <img src={delishus} alt="delishus.svg" />
+      <img src={manetain} alt="manetain.svg" />
+      <img src={doggo} alt="doggo.svg" />
+      <img src={redsacks} alt="redsacks.svg" />
+      <img src={beautifulsouls} alt="beautifulsouls.svg" />
+      <img src={cleaningspecialistproviders} alt="cleaningspecialistproviders.svg" />
+      <img src={provest} alt="provest.svg" />
+      <img src={secretcalm} alt="secretcalm.svg" />
+    </Flex>
+    <Flex
+      justifyContent="space-between"
+      alignItems="center"
+      w="100%"
+      px="4%"
+    >
+      <img src={houseofstrength} alt="houseofstreng.svg" />
+      <img src={fitify} alt="fitify.svg" />
+      <img src={reignsupreme} alt="reignsupreme.svg" />
+      <img src={rebecca} alt="rebecca.svg" />
+      <img src={regency} alt="regency.svg" />
+      <img src={keating} alt="keating.svg" />
+      <img src={outperform} alt="outperform.svg" />
     </Flex>
    </Flex>
   )
