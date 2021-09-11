@@ -42,6 +42,14 @@ nav {
   padding: 0 1rem;
   font-size: 19px;
   color: #767672;
+  transition: all 0.3s;
+}
+
+.nav-list > li > a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #EE6F19;
+  color: #EE6F19;
+  transition: all 0.3s;
 }
 
 /* .businessEnquiryButton {
@@ -160,4 +168,5 @@ nav {
 .active {
   font-family: momcake-bold;
   color: #0A2F53;
+  border-bottom: 2px solid #0A2F53;
 }

@@ -15,8 +15,15 @@ import shape5 from '../images/small_circle.svg';
 import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
+
+import line1 from '../images/line1.svg';
+import SiderCircles from "../components/Illustrations/SiderCircles";
+
 import '../styles/index.css';
 import Slideshow from "../components/Slideshow";
+import Cards from "../components/Cards";
+import Process from "../components/Process";
+
 
 export default function index({ location }) {
 
@@ -59,8 +66,83 @@ export default function index({ location }) {
       >
         <Slideshow />
       </Box>
+      <Flex
+        pt="5%"
+      >
+        <Box>
+          <SiderCircles />
+        </Box>
+        <Box
+          pl="10%"
+        >
+          <Box
+            className="vgd"
+          >
+            VISUAL GROUP DIGITAL
+          </Box>
+          <Flex
+            flexDirection="row"
+            flexWrap="noWrap"
+            w="100%"
+            className="whatwedo"
+          >
+            <Box>
+              <h3>
+                What We Do
+              </h3>
+            </Box>
+            <Box
+              alignSelf="center"
+              pl="20px"
+            >
+              <img src={line1} alt="line.svg" />
+            </Box>
+          </Flex>
+          <Box
+            pt="26px"
+          >
+            <p
+              className="subwhatwedo"
+            >
+              At Visual Group Digital, we help businesses 
+              flourish by following a comprehensive 3-step 
+              process of <br/>
+              consulting, development, and marketing.
+            </p>
+          </Box>
+          <Box>
+            <Cards />
+          </Box>
+        </Box>
+      </Flex>
       <Box>
-
+        <Box
+          className="vgd"
+          pt="190px"
+          pl="17%"
+        >
+          BUT HOW DO WE DO IT?
+        </Box>
+        <Flex
+          flexDirection="row"
+          flexWrap="noWrap"
+          w="100%"
+          pl="17%"
+          className="whatwedo"
+        >
+          <Box>
+            <h3>
+              OUR 3 STEP PROCESS
+            </h3>
+          </Box>
+          <Box
+            alignSelf="center"
+            pl="20px"
+          >
+            <img src={line1} alt="line.svg" />
+          </Box>
+        </Flex>
+        <Process />
       </Box>
     </Box>
   )

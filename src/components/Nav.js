@@ -11,7 +11,7 @@ export default function Nav({ loc }) {
   
   const [key, setKey] = useState();
 
-  console.log(loc)
+  console.log(loc.pathname, key)
   
   useEffect(() => {
     
@@ -59,27 +59,27 @@ export default function Nav({ loc }) {
     },
     {
       tab : 'ABOUT',
-      key : 'about'
+      key : '/about'
     },
     {
       tab : 'MARKETING',
-      key : 'marketing'
+      key : '/marketing'
     },
     {
       tab : 'BRANDING',
-      key : 'branding'
+      key : '/branding'
     },
     {
       tab : 'CASE STUDIES',
-      key : 'case_studies'
+      key : '/case_studies'
     },
     {
       tab : 'OUR PORTFOLIO',
-      key : 'portfolio'
+      key : '/portfolio'
     },
     {
       tab : 'CONTACT',
-      key : 'contact'
+      key : '/contact'
     }
   ]
   
@@ -100,13 +100,15 @@ export default function Nav({ loc }) {
             return (
               <li
                 key={tab.key}
-                className={
+              >
+                <a 
+                  href={`${tab.key}`}
+                  className={
                   (key === tab.key) 
                   ? "active"
                   : null
                 }
-              >
-                <a href={`/${tab.key}`}>
+                >
                   {tab.tab}
                 </a>
               </li>
