@@ -28,6 +28,14 @@ import regency from '../images/logo/regencyestate.svg';
 import keating from '../images/logo/keatingestates.svg';
 import outperform from '../images/logo/outperform.svg';
 
+import portfolioFm from '../images/logo/portfoliofm.svg';
+import hydroInstal from '../images/logo/hydroinstal.svg';
+import futurefitness from '../images/logo/futurefitness.svg';
+import schTech from '../images/logo/schtech.svg';
+import adaptingHomes from '../images/logo/adaptinghomes.svg';
+import onlineFitnessFreedom from '../images/logo/onlinefitnessfreedom.svg';
+import intuneConsulting from '../images/logo/intuneconsulting.svg';
+
 import '../styles/slideshow.css';
 
 
@@ -80,6 +88,44 @@ export default function Slideshow() {
       <img src={regency} alt="regency.svg" />
       <img src={keating} alt="keating.svg" />
       <img src={outperform} alt="outperform.svg" />
+    </Flex>
+    <Flex
+      justifyContent="space-between"
+      alignItems="center"
+      w="100%"
+      px="4%"
+    >
+      <img src={portfolioFm} alt="portfoliofm.svg" />
+      <img src={hydroInstal} alt="hydroinstal.svg" />
+      <img src={futurefitness} alt="futurefitness.svg" />
+      <img src={schTech} alt="schtech.svg" />
+      <img src={adaptingHomes} alt="adaptinghomes.svg" />
+      <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" />
+      <img src={intuneConsulting} alt="intuneconsulting.svg" />
+    </Flex>
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      w="100%"
+      pt="20px"
+    >
+      <Box
+        alignSelf="center"
+      >
+        <button
+          className="seeMore button--aylen"
+        >
+          <span>
+            SEE MORE OF OUR CLIENTS
+          </span>
+        </button>
+        <a
+          className="reqCB"
+          href="#"
+        >
+          REQUEST A CALL BACK &gt;
+        </a>
+      </Box>
     </Flex>
    </Flex>
   )

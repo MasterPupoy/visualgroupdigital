@@ -156,3 +156,8 @@ nav {
 	-webkit-transition-delay: 0.175s;
 	transition-delay: 0.175s;
 }
+
+.active {
+  font-family: momcake-bold;
+  color: #0A2F53;
+}

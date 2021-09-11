@@ -18,16 +18,29 @@ import shape8 from '../images/back.svg';
 import '../styles/index.css';
 import Slideshow from "../components/Slideshow";
 
-export default function index() {
+export default function index({ location }) {
+
   return (
     <Box
       className="main"
     >
       <SEO />
+      <div
+        className="shapeParent"
+      >
+        <img src={shape} alt="svg" className="shape01" />
+        <img src={shape2} alt="svg" className="shape02" />
+        <img src={shape3} alt="svg" className="shape03" />
+        <img src={shape4} alt="svg" className="shape04" />
+        <img src={shape5} alt="svg" className="shape05" />
+        <img src={shape6} alt="svg" className="shape06" />
+        <img src={shape7} alt="svg" className="shape07" />
+        <img src={shape8} alt="svg" className="shape08" />
+      </div>
       <Flex
         w="100%"
       >
-        <Nav />
+        <Nav loc={location} />
       </Flex>
       <Flex
         w="100%"
@@ -39,25 +52,16 @@ export default function index() {
           w="100%"
         >
           <Hero />
-          <div
-            className="shapeParent"
-          >
-            <img src={shape} alt="svg" className="shape01" />
-            <img src={shape2} alt="svg" className="shape02" />
-            <img src={shape3} alt="svg" className="shape03" />
-            <img src={shape4} alt="svg" className="shape04" />
-            <img src={shape5} alt="svg" className="shape05" />
-            <img src={shape6} alt="svg" className="shape06" />
-            <img src={shape7} alt="svg" className="shape07" />
-            <img src={shape8} alt="svg" className="shape08" />
-        </div>
         </Flex>
       </Flex>
-      <Flex
+      <Box
         w="100%"
       >
         <Slideshow />
-      </Flex>
+      </Box>
+      <Box>
+
+      </Box>
     </Box>
   )
 }

@@ -9,3 +9,48 @@
   display: block;
   width: fit-content;
 }
+
+.seeMore {
+  padding: 14px 18px;
+
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+
+  border: 2px solid #0A2F53;
+
+	color: inherit;
+	position: relative;
+	z-index: 1;
+	-moz-osx-font-smoothing: grayscale;
+
+  border: 2px solid #0A2F53;
+  border-radius: 10px;
+
+  cursor: pointer;
+  
+}
+
+.seeMore:focus {
+	outline: none;
+}
+
+.seeMore > span {
+	vertical-align: middle;
+}
+
+.seeMore.button--aylen {
+  background: #fff;
+	color: #37474f;
+	overflow: hidden;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+  transition: 0.3s;
+}
+
+.seeMore:hover {
+  color: #fff;
+  
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   Flex,
   Box
@@ -7,7 +7,82 @@ import logo from '../images/vgd.svg';
 import send from '../images/send.svg';
 import '../styles/navbar.css';
 
-export default function Nav() {
+export default function Nav({ loc }) {
+  
+  const [key, setKey] = useState();
+
+  console.log(loc)
+  
+  useEffect(() => {
+    
+    let mounted = true;
+
+    if(mounted){
+
+      switch(loc.pathname){
+        case ('/') : 
+          setKey('/');
+          break;
+        case ('/about') :
+          setKey('about');
+          break;
+        case ('/marketing') : 
+          setKey('marketing');
+          break;
+        case ('/branding') : 
+          setKey('branding');
+          break;
+        case ('/case_studies') :
+          setKey('case_studies');
+          break;
+        case ('/portfolio') : 
+          setKey('portfolio');
+          break;
+        case ('/contact') : 
+          setKey('contact');
+          break;
+        default :
+          return;
+      }
+    }
+
+    return () => {
+      mounted = false;
+    }
+
+  })
+  
+  const tabs = [
+    {
+      tab : 'HOME',
+      key : '/'
+    },
+    {
+      tab : 'ABOUT',
+      key : 'about'
+    },
+    {
+      tab : 'MARKETING',
+      key : 'marketing'
+    },
+    {
+      tab : 'BRANDING',
+      key : 'branding'
+    },
+    {
+      tab : 'CASE STUDIES',
+      key : 'case_studies'
+    },
+    {
+      tab : 'OUR PORTFOLIO',
+      key : 'portfolio'
+    },
+    {
+      tab : 'CONTACT',
+      key : 'contact'
+    }
+  ]
+  
   return (
     <nav>
       <Flex
@@ -17,16 +92,26 @@ export default function Nav() {
         <Box>
           <img src={logo} alt="visual_group_logo" className="logo" />
         </Box>
-        <ul
+        <ul 
           className="nav-list"
         >
-          <li>HOME</li>
-          <li>ABOUT</li>
-          <li>MARKETING</li>
-          <li>BRANDING</li>
-          <li>CASE STUDIES</li>
-          <li>OUR PORTFOLIO</li>
-          <li>CONTACT</li>
+          {tabs.map((tab) => {
+
+            return (
+              <li
+                key={tab.key}
+                className={
+                  (key === tab.key) 
+                  ? "active"
+                  : null
+                }
+              >
+                <a href={`/${tab.key}`}>
+                  {tab.tab}
+                </a>
+              </li>
+            )
+          })}
         </ul>
         <button
           // className="businessEnquiryButton"
