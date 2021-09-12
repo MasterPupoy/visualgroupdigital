@@ -3,4 +3,28 @@
   height: 315px;
   border: 1px solid #0A2F53;
   border-radius: 10px;
+  filter: drop-shadow(0px 9px 28px rgba(10, 47, 83, 0.161));
+}
+
+.leftArrow {
+  border-radius: 5px;
+  border: 2px solid #0A2F53;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.leftArrow:hover {
+  cursor: pointer; 
+  filter: drop-shadow(0px 9px 28px rgba(10, 47, 83, 0.161));
+}
+
+.rightArrow {
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid #0A2F53;
+}
+
+.rightArrow:hover {
+  cursor: pointer; 
+  filter: drop-shadow(0px 9px 28px rgba(10, 47, 83, 0.161));
 }

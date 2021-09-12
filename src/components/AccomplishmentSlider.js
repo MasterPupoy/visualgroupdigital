@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useReducer } from 'react'
 
 import {
   Flex, 
   Box
 } from '@chakra-ui/react';
+
+import left from '../images/left.svg';
+import right from '../images/right.svg';
 
 import { gsap } from 'gsap';
 
@@ -135,20 +138,57 @@ function ThirdSlider({ dir }){
   )
 }
 
+const initState = { 
+  slider : 0
+}
+
+function reducer(state, action) {
+  switch(action.dir){
+    case "right" : 
+
+      if(state.slider === 2){
+        return {
+          slider : 0
+        }
+      }
+
+      return {
+        slider : state.slider + 1,
+      }
+    case "left" : 
+
+      if(state.slider === 0){
+        return {
+          slider : 2
+        }
+      }
+      
+      return {
+        slider : state.slider - 1
+      }
+    default: 
+      return {
+        slider : 0
+      }
+  }
+
+}
+
 export default function AccomplishmentSlider() {
-  const [dir, setDir] = useState();
-  const [slider, setSlider] = useState(0)
+  const [state, dispatch] = useReducer(reducer, initState)
+  
+  console.log(state)
 
   const ServiceSlider = () => {
 
-    switch(slider){
+    switch(state.slider){
       case (0) : 
         return <FirstSlider />
       break;
       case (1) : 
         return <SecondSlider />
       break;
-      case (3) : 
+      case (2) : 
         return <ThirdSlider />
       break;
     }
@@ -189,16 +229,27 @@ export default function AccomplishmentSlider() {
             strategy. 
           </p>
         </Box>
-        <Box>
-          <button>
-            &lt;
+        <Box
+          textAlign="right"
+          pr="205px"
+        >
+          <button
+            className="leftArrow"
+            onClick={() => dispatch({ dir: "left"})}
+          >
+            <img src={left} alt="left.svg" />
           </button>
-          <button>
-            &gt;
+          <button
+            className="rightArrow"
+            onClick={() => dispatch({ dir: "right"})}
+          >
+            <img src={right} alt="right.svg" />
           </button>
         </Box>
         <Box
           pt="55px"
+          pr="50px"
+          h="350px"
         >
           <ServiceSlider />
         </Box>
