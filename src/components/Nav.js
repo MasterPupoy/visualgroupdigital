@@ -23,22 +23,22 @@ export default function Nav({ loc }) {
         case ('/') : 
           setKey('/');
           break;
-        case ('/about') :
+        case ('/about' || '/about/') :
           setKey('/about');
           break;
-        case ('/marketing') : 
+        case ('/marketing' || '/marketing/') : 
           setKey('/marketing');
           break;
-        case ('/branding') : 
+        case ('/branding' || '/branding/') : 
           setKey('/branding');
           break;
-        case ('/case_studies') :
+        case ('/case_studies' || '/case_studies/') :
           setKey('/case_studies');
           break;
-        case ('/portfolio') : 
+        case ('/portfolio' || '/portfolio/') : 
           setKey('/portfolio');
           break;
-        case ('/contact') : 
+        case ('/contact' || '/contact/') : 
           setKey('/contact');
           break;
         default :

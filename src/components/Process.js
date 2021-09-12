@@ -8,6 +8,8 @@ import consulting from '../images/consulting.svg';
 import development from '../images/development.svg';
 import marketing from '../images/marketing.svg';
 
+import Bizbut from '../components/Bizbut';
+
 import '../styles/process.css';
 
 export default function Process() {
@@ -105,7 +107,13 @@ export default function Process() {
         >
           <img src={marketing} alt="consulting.svg" className="svg" />
         </Box>
-      </Flex> 
+      </Flex>
+      <Box
+        textAlign="center"
+        pt="100px"
+      >
+        <Bizbut />
+      </Box>
     </Flex>
   )
 }
