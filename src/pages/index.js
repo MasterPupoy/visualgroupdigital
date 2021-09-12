@@ -13,6 +13,7 @@ import Slideshow from "../components/Slideshow";
 import Cards from "../components/Cards";
 import Process from "../components/Process";
 import OfferCard from "../components/OfferCard";
+import AccomplishmentSlider from "../components/AccomplishmentSlider";
 
 import shape from '../images/Shape_01.svg';
 import shape2 from '../images/Shape_02.svg';
@@ -49,7 +50,7 @@ export default function index({ location }) {
       <Flex
         w="100%"
       >
-        <Nav loc={location} />
+        <Nav loc={location} page='/' />
       </Flex>
       <Flex
         w="100%"
@@ -146,45 +147,46 @@ export default function index({ location }) {
         </Flex>
         <Process />
       </Box>
-        <Box 
-          pl="10%"
-          pt="105px"
+      <Box 
+        pl="10%"
+        pt="105px"
+      >
+        <Box
+          className="vgd"
         >
-          <Box
-            className="vgd"
-          >
-            OUR SERVICES
-          </Box>
-          <Flex
-            flexDirection="row"
-            flexWrap="noWrap"
-            w="100%"
-            className="whatwedo"
-          >
-            <Box>
-              <h3>
-                What We Offer
-              </h3>
-            </Box>
-            <Box
-              alignSelf="center"
-              pl="20px"
-            >
-              <img src={line1} alt="line.svg" />
-            </Box>
-          </Flex>
-          <Box
-            pt="26px"
-          >
-            <p
-              className="subwhatwedo"
-            >
-              Businesses Of All Sizes Have A Social Presence, But How Do You Have Enough Time To Do It Effectively?
-            </p>
-          </Box>
+          OUR SERVICES
         </Box>
-        <OfferCard />
-      
+        <Flex
+          flexDirection="row"
+          flexWrap="noWrap"
+          w="100%"
+          className="whatwedo"
+        >
+          <Box>
+            <h3>
+              What We Offer
+            </h3>
+          </Box>
+          <Box
+            alignSelf="center"
+            pl="20px"
+          >
+            <img src={line1} alt="line.svg" />
+          </Box>
+        </Flex>
+        <Box
+          pt="26px"
+        >
+          <p
+            className="subwhatwedo"
+          >
+            Businesses Of All Sizes Have A Social Presence, 
+            But How Do You Have Enough Time To Do It Effectively?
+          </p>
+        </Box>
+      </Box>
+      <OfferCard />    
+      <AccomplishmentSlider />      
     </Box>
   )
 }

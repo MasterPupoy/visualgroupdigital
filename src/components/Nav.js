@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { 
   Flex,
   Box
 } from '@chakra-ui/react';
+
 import logo from '../images/vgd.svg';
 import send from '../images/send.svg';
+
+import { gsap } from 'gsap';
+
 import '../styles/navbar.css';
 
-export default function Nav({ loc }) {
+export default function Nav({ loc, page }) {
   
   const [key, setKey] = useState();
+  const links = useRef();
 
   console.log(loc.pathname, key)
   
@@ -18,32 +23,38 @@ export default function Nav({ loc }) {
     let mounted = true;
 
     if(mounted){
+      // const pathname = loc.pathname
 
-      switch(loc.pathname){
-        case ('/') : 
-          setKey('/');
-          break;
-        case ('/about' || '/about/') :
-          setKey('/about');
-          break;
-        case ('/marketing' || '/marketing/') : 
-          setKey('/marketing');
-          break;
-        case ('/branding' || '/branding/') : 
-          setKey('/branding');
-          break;
-        case ('/case_studies' || '/case_studies/') :
-          setKey('/case_studies');
-          break;
-        case ('/portfolio' || '/portfolio/') : 
-          setKey('/portfolio');
-          break;
-        case ('/contact' || '/contact/') : 
-          setKey('/contact');
-          break;
-        default :
-          return;
-      }
+      // switch(true){
+      //   case (pathname === '/') : 
+      //     setKey('/');
+      //     break;
+      //   case (pathname === '/about' || pathname === '/about/') :
+      //     setKey('/about');
+      //     break;
+      //   case (pathname === '/marketing' || pathname === '/marketing/') : 
+      //     setKey('/marketing');
+      //     break;
+      //   case (pathname === '/branding' || pathname === '/branding/') : 
+      //     setKey('/branding');
+      //     break;
+      //   case (pathname === '/case_studies' || pathname === '/case_studies/') :
+      //     setKey('/case_studies');
+      //     break;
+      //   case (pathname === '/portfolio' || pathname === '/portfolio/') : 
+      //     setKey('/portfolio');
+      //     break;
+      //   case (pathname === '/contact' || pathname === '/contact/') : 
+      //     setKey('/contact');
+      //     break;
+      //   default :
+      //     return;
+      // }
+
+      gsap.fromTo(links.current, { opacity : 0 }, { opacity : 1, duration : 3})
+      
+      setKey(page)
+
     }
 
     return () => {
@@ -94,6 +105,7 @@ export default function Nav({ loc }) {
         </Box>
         <ul 
           className="nav-list"
+          ref={links}
         >
           {tabs.map((tab) => {
 

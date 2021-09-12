@@ -11,7 +11,7 @@ export default function about({ location }) {
     <Box>
       <SEO />
       <Box>
-        <Nav loc={location} />
+        <Nav loc={location} page='/about' />
       </Box>
     </Box>
   )
