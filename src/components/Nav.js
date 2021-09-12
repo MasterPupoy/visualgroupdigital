@@ -24,22 +24,22 @@ export default function Nav({ loc }) {
           setKey('/');
           break;
         case ('/about') :
-          setKey('about');
+          setKey('/about');
           break;
         case ('/marketing') : 
-          setKey('marketing');
+          setKey('/marketing');
           break;
         case ('/branding') : 
-          setKey('branding');
+          setKey('/branding');
           break;
         case ('/case_studies') :
-          setKey('case_studies');
+          setKey('/case_studies');
           break;
         case ('/portfolio') : 
-          setKey('portfolio');
+          setKey('/portfolio');
           break;
         case ('/contact') : 
-          setKey('contact');
+          setKey('/contact');
           break;
         default :
           return;

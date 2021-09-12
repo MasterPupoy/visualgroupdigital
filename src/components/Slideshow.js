@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import {
   Flex,
   Box
@@ -36,22 +36,57 @@ import adaptingHomes from '../images/logo/adaptinghomes.svg';
 import onlineFitnessFreedom from '../images/logo/onlinefitnessfreedom.svg';
 import intuneConsulting from '../images/logo/intuneconsulting.svg';
 
+import { gsap } from 'gsap';
 import '../styles/slideshow.css';
 
 
 export default function Slideshow() {
+  const set1 = useRef();
+  const set2 = useRef();
+  const set3 = useRef();
+  const set4 = useRef();
+
+  useEffect(() => {
+    let mounted = true;
+    
+    const tl1 = gsap.timeline({ repeat: -1 });
+    const tl2 = gsap.timeline({ repeat: -1 });
+    const tl3 = gsap.timeline({ repeat: -1 });
+    const tl4 =  gsap.timeline({ repeat: -1 });
+
+    if(mounted) {
+
+      tl1.fromTo(set1.current, { x: -1400 }, { x : 1400, duration : 15, ease : 'none' }); 
+      tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 20, ease : 'none' });
+      tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 25, ease : 'none' });
+      tl4.fromTo(set4.current, { x: 1500 }, { x : -1500, duration : 35, ease : 'none' });
+    }
+
+    return () => {
+      mounted = false;
+      tl1.kill();
+      tl2.kill();
+      tl3.kill();
+      tl4.kill();
+    }
+  })
+
+
   return (
-   <Flex
-    flexDirection="row"
-    flexWrap="wrap"
-    w="100%"
-    className="slideshow"
-   >
+  <Flex
+  flexDirection="row"
+  flexWrap="wrap"
+  w="100%"
+  className="slideshow"
+  overflowX="hidden"
+  >
     <Flex
     justifyContent="space-between"
     alignItems="center"
     w="100%"
     px="10%"
+    ref={set1}
+    overflowX="hidden"
     >
       <img src={chessmoves} alt="chessmoveslogo" />
       <img src={oxtedFestival} alt="oxtedfestival" />
@@ -65,6 +100,7 @@ export default function Slideshow() {
       alignItems="center"
       w="100%"
       px="2%"
+      ref={set2}
     >
       <img src={delishus} alt="delishus.svg" />
       <img src={manetain} alt="manetain.svg" />
@@ -80,6 +116,7 @@ export default function Slideshow() {
       alignItems="center"
       w="100%"
       px="4%"
+      ref={set3}
     >
       <img src={houseofstrength} alt="houseofstreng.svg" />
       <img src={fitify} alt="fitify.svg" />
@@ -94,6 +131,7 @@ export default function Slideshow() {
       alignItems="center"
       w="100%"
       px="4%"
+      ref={set4}
     >
       <img src={portfolioFm} alt="portfoliofm.svg" />
       <img src={hydroInstal} alt="hydroinstal.svg" />
@@ -127,6 +165,6 @@ export default function Slideshow() {
         </a>
       </Box>
     </Flex>
-   </Flex>
+  </Flex>
   )
 }

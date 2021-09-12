@@ -3,10 +3,16 @@ import {
   Flex,
   Box,
 } from "@chakra-ui/react";
-import SEO from "../components/seo";
+
+import SEO from "../components/Seo";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Sider from "../components/Sider";
+import SiderCircles from "../components/Illustrations/SiderCircles";
+import Slideshow from "../components/Slideshow";
+import Cards from "../components/Cards";
+import Process from "../components/Process";
+
 import shape from '../images/Shape_01.svg';
 import shape2 from '../images/Shape_02.svg';
 import shape3 from '../images/Vector-circle.svg';
@@ -15,14 +21,9 @@ import shape5 from '../images/small_circle.svg';
 import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
-
 import line1 from '../images/line1.svg';
-import SiderCircles from "../components/Illustrations/SiderCircles";
 
 import '../styles/index.css';
-import Slideshow from "../components/Slideshow";
-import Cards from "../components/Cards";
-import Process from "../components/Process";
 
 
 export default function index({ location }) {

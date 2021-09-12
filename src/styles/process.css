@@ -1,0 +1,44 @@
+
+.steps {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  /* identical to box height */
+
+  letter-spacing: 0.395em;
+
+  color: #0A2F53;
+}
+
+.stepName {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 61px;
+
+  color: #294C5B;
+}
+
+.stepP {
+  padding-top: 10px;
+
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 179.7%;
+  /* or 31px */
+
+
+  color: #1D1D1D;
+
+  opacity: 0.7;
+}
+
+.svg {
+  height: 400px;
+  width: 450px;
+}
