@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer, useRef } from 'react'
 
 import {
   Flex, 
@@ -13,21 +13,34 @@ import { gsap } from 'gsap';
 import '../styles/slider.css';
 
 function FirstSlider({ dir }){
+  const slides = useRef();
+
   useEffect(() => {
     let mounted = true;
 
     if(mounted) {
-      
+     if(dir === "right"){
+      gsap.fromTo(slides.current, { x : -1500 }, { x : 0, duration : 1 });
+  
+     }
+
+     if(dir === "left"){
+      gsap.fromTo(slides.current, { x : 1500 }, { x : 0, duration : 1 });
+
+     }
     }
 
     return () => {
       mounted = false;
     }
-  })
+  }, [])
+
 
   return (
     <Flex
-      justifyContent="space-between"
+      justifyContent="center"
+      w="100%"
+      ref={slides}
     >
       <Box
         className="sliderBox"
@@ -55,10 +68,21 @@ function FirstSlider({ dir }){
 }
 
 function SecondSlider({ dir }){
+  const slides = useRef();
+
   useEffect(() => {
     let mounted = true;
 
     if(mounted) {
+      if(dir === "right"){
+      gsap.fromTo(slides.current, { x : -1500 }, { x : 0, duration : 1 });
+  
+     }
+
+     if(dir === "left"){
+      gsap.fromTo(slides.current, { x : 1500 }, { x : 0, duration : 1 });
+
+     }
       
     }
 
@@ -69,7 +93,9 @@ function SecondSlider({ dir }){
 
   return (
     <Flex
-      justifyContent="space-between"
+      justifyContent="center"
+      w="100%"
+      ref={slides}
     >
       <Box
         className="sliderBox"
@@ -97,10 +123,21 @@ function SecondSlider({ dir }){
 }
 
 function ThirdSlider({ dir }){
+  const slides = useRef();
+
   useEffect(() => {
     let mounted = true;
 
     if(mounted) {
+      if(dir === "right"){
+      gsap.fromTo(slides.current, { x : -1500 }, { x : 0, duration : 1 });
+  
+     }
+
+     if(dir === "left"){
+      gsap.fromTo(slides.current, { x : 1500 }, { x : 0, duration : 1 });
+
+     }
       
     }
 
@@ -111,7 +148,9 @@ function ThirdSlider({ dir }){
 
   return (
     <Flex
-      justifyContent="space-between"
+      justifyContent="center"
+      w="100%"
+      ref={slides}
     >
       <Box
         className="sliderBox"
@@ -139,7 +178,8 @@ function ThirdSlider({ dir }){
 }
 
 const initState = { 
-  slider : 0
+  slider : 0,
+  dir : 'right'
 }
 
 function reducer(state, action) {
@@ -148,27 +188,32 @@ function reducer(state, action) {
 
       if(state.slider === 2){
         return {
-          slider : 0
+          slider : 0,
+          dir: 'right'
         }
       }
 
       return {
         slider : state.slider + 1,
+        dir: 'right'
       }
     case "left" : 
 
       if(state.slider === 0){
         return {
-          slider : 2
+          slider : 2,
+          dir : 'left'
         }
       }
       
       return {
-        slider : state.slider - 1
+        slider : state.slider - 1,
+        dir : 'left'
       }
     default: 
       return {
-        slider : 0
+        slider : 0,
+        dir : 'left'
       }
   }
 
@@ -183,13 +228,13 @@ export default function AccomplishmentSlider() {
 
     switch(state.slider){
       case (0) : 
-        return <FirstSlider />
+        return <FirstSlider dir={state.dir} />
       break;
       case (1) : 
-        return <SecondSlider />
+        return <SecondSlider dir={state.dir} />
       break;
       case (2) : 
-        return <ThirdSlider />
+        return <ThirdSlider dir={state.dir} />
       break;
     }
   }
@@ -246,14 +291,16 @@ export default function AccomplishmentSlider() {
             <img src={right} alt="right.svg" />
           </button>
         </Box>
+      </Box>
         <Box
           pt="55px"
-          pr="50px"
-          h="350px"
+          h="500px"
+          w="100%"
+          overflowX="hidden"
+          overflowY="hidden"
         >
           <ServiceSlider />
         </Box>
-      </Box>
     </Box>
   )
 }

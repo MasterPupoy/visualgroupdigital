@@ -1,9 +1,21 @@
 .sliderBox {
   width: 315px;
   height: 315px;
-  border: 1px solid #0A2F53;
-  border-radius: 10px;
-  filter: drop-shadow(0px 9px 28px rgba(10, 47, 83, 0.161));
+  border: 2px solid #0A2F53;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #0A2F53;
+  margin: 0px 42px;
+}
+
+.sliderBox > h3 {
+  font-family: dm-sans;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 23px;
+
+color: #1D1D1D;
+text-align: center;
 }
 
 .leftArrow {
@@ -11,20 +23,28 @@
   border: 2px solid #0A2F53;
   padding: 10px;
   margin-right: 10px;
+  transition: 0.3s ease-out;
 }
 
 .leftArrow:hover {
   cursor: pointer; 
   filter: drop-shadow(0px 9px 28px rgba(10, 47, 83, 0.161));
+  box-shadow: 3px 3px 5px #0A2F53; 
+  background: #EE6F19;
+  transition: 0.3s ease-out;
 }
 
 .rightArrow {
   border-radius: 5px;
   padding: 10px;
   border: 2px solid #0A2F53;
+  transition: 0.3s ease-out;
 }
 
 .rightArrow:hover {
   cursor: pointer; 
   filter: drop-shadow(0px 9px 28px rgba(10, 47, 83, 0.161));
+  box-shadow: 3px 3px 5px #0A2F53; 
+  transition: 0.3s ease-out;
+  background: #EE6F19;
 }

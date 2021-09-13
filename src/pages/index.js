@@ -26,6 +26,7 @@ import shape8 from '../images/back.svg';
 import line1 from '../images/line1.svg';
 
 import '../styles/index.css';
+import ClientTestimonials from "../components/ClientTestimonials";
 
 
 export default function index({ location }) {
@@ -186,7 +187,8 @@ export default function index({ location }) {
         </Box>
       </Box>
       <OfferCard />    
-      <AccomplishmentSlider />      
+      <AccomplishmentSlider />
+      <ClientTestimonials />
     </Box>
   )
 }
