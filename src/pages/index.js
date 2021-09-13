@@ -14,6 +14,7 @@ import Cards from "../components/Cards";
 import Process from "../components/Process";
 import OfferCard from "../components/OfferCard";
 import AccomplishmentSlider from "../components/AccomplishmentSlider";
+import LearnMoreButton from '../components/LearnMoreButton';
 
 import shape from '../images/Shape_01.svg';
 import shape2 from '../images/Shape_02.svg';
@@ -24,6 +25,13 @@ import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
 import line1 from '../images/line1.svg';
+
+import spag from '../images/spag.svg';
+import triangol from '../images/triangol.svg';
+import orangespag from '../images/orangespag.svg';
+import fatTriangle from '../images/fatTriangle.svg';
+
+import aboutus from '../images/aboutus.png';
 
 import '../styles/index.css';
 import ClientTestimonials from "../components/ClientTestimonials";
@@ -189,6 +197,58 @@ export default function index({ location }) {
       <OfferCard />    
       <AccomplishmentSlider />
       <ClientTestimonials />
+      <Flex
+        mt="100px"
+        w="100%"
+        justifyContent="center"
+        alignItems="center"
+        px="148px"
+      >
+        <Box
+          w="50%"
+        >
+          <h3
+            className="aboutusindex"
+          >
+            About Us
+          </h3>
+          <p>
+            It all started when the founders, Ricky and Kerryann, 
+            self-branded and marketed their own businesses to 
+            success. That lesson laid the foundation for the 
+            creation of Visual Group, a marketing agency dedicated 
+            to driving results for businesses around the world.
+          </p>
+          <p>
+            From humble beginnings, Visual Group has grown into an 
+            agency capable of web development, brand development, 
+            full marketing strategies, and more. Throughout the 
+            company’s growth, our team has maintained the same attention 
+            to detail with each client we work with.
+          </p>
+          <LearnMoreButton />
+        </Box>
+        <Box>
+          <img src={aboutus} alt="aboutus.png" />
+        </Box>
+        <Box>
+          <img src={spag} alt="spag.svg" className="spag" />
+          <img src={triangol} alt="triangol" className="triangol" />
+          <img src={orangespag} alt="orangespag" className="orangespag" />
+          <img src={shape5} alt="svg" className="circol" />
+          <img src={fatTriangle} alt="svg" className="fatTriangle" />
+        </Box>
+      </Flex>
+      <Flex
+        mt="200px"
+        h="371px"
+        w="100%"
+        bg="#fff"
+      >
+        <Box>
+
+        </Box>
+      </Flex>
     </Box>
   )
 }

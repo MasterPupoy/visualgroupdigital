@@ -86,7 +86,7 @@ export default function Nav({ loc, page }) {
     },
     {
       tab : 'OUR PORTFOLIO',
-      key : '/portfolio'
+      key : '/our_portfolio'
     },
     {
       tab : 'CONTACT',
