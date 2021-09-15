@@ -25,6 +25,7 @@ import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
 import line1 from '../images/line1.svg';
+import circle_el from '../images/circle_el.svg';
 
 import spag from '../images/spag.svg';
 import triangol from '../images/triangol.svg';
@@ -127,7 +128,9 @@ export default function index({ location }) {
           </Box>
         </Box>
       </Flex>
-      <Box>
+      <Flex
+        flexDirection="column"
+      >
         <Box
           className="vgd"
           pt="190px"
@@ -155,7 +158,7 @@ export default function index({ location }) {
           </Box>
         </Flex>
         <Process />
-      </Box>
+      </Flex>
       <Box 
         pl="10%"
         pt="105px"
@@ -228,7 +231,9 @@ export default function index({ location }) {
           </p>
           <LearnMoreButton />
         </Box>
-        <Box>
+        <Box
+          ml="100px"
+        >
           <img src={aboutus} alt="aboutus.png" />
         </Box>
         <Box>
@@ -237,17 +242,50 @@ export default function index({ location }) {
           <img src={orangespag} alt="orangespag" className="orangespag" />
           <img src={shape5} alt="svg" className="circol" />
           <img src={fatTriangle} alt="svg" className="fatTriangle" />
+          <img src={circle_el} alt="svg" className="circle_el" />
         </Box>
       </Flex>
       <Flex
-        mt="200px"
+        mt="100px"
         h="371px"
         w="100%"
         bg="#fff"
+        p="256px"
       >
-        <Box>
-
-        </Box>
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Box
+            w="500px"
+          >
+            <h1
+              className="requesth1"
+            >
+              REQUEST A FREE CALLBACK <br />
+              TODAY
+            </h1>
+            <p>
+              Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
+              we can help decide where you need to start and which of our services would benefit you the most.
+            </p>
+          </Box>
+          <Box
+            pl="145px"
+          >
+            <h2
+              className="requesth2"
+            >
+              Why Wait? <br/>
+              Start Now
+            </h2>
+            <button
+              className="bizbut indexBizbut"
+            >
+              BUSINESS ENQUIRY
+            </button>
+          </Box>
+        </Flex>
       </Flex>
     </Box>
   )
