@@ -15,6 +15,7 @@ import Process from "../components/Process";
 import OfferCard from "../components/OfferCard";
 import AccomplishmentSlider from "../components/AccomplishmentSlider";
 import LearnMoreButton from '../components/LearnMoreButton';
+import Footer from '../components/Footer';
 
 import shape from '../images/Shape_01.svg';
 import shape2 from '../images/Shape_02.svg';
@@ -206,6 +207,7 @@ export default function index({ location }) {
         justifyContent="center"
         alignItems="center"
         px="148px"
+    
       >
         <Box
           w="50%"
@@ -286,6 +288,9 @@ export default function index({ location }) {
             </button>
           </Box>
         </Flex>
+      </Flex>
+      <Flex>
+        <Footer />
       </Flex>
     </Box>
   )

@@ -1,0 +1,114 @@
+
+.footertxt {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0px 10px;
+  color: rgba(10, 47, 83, 0.71);
+}
+
+.subscribe {
+  display: inline-block;
+  padding: 13px 40px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #45698B 0%, #0A2F53 100%);
+  margin: 0px 11px;
+}
+
+.subscribe > span {
+
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #FFFFFF;
+}
+
+.footerabout > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding-top: 20px;
+  color: rgba(10, 47, 83, 0.58);
+}
+
+.footerabout > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 25px;
+  /* identical to box height */
+
+
+  color: #0A2F53;
+}
+
+
+.footerlistservices {
+  padding: 0px 90px 0px 70px;
+}
+
+.footerlist {
+  padding: 0px 90px;
+}
+
+.footerlist > h3, .footerlistservices > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 25px;
+  /* identical to box height */
+
+
+  color: #0A2F53;
+}
+
+.footerlist > ul > li, .footerlistservices > ul > li {
+  list-style-type: none;
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  padding: 10px 0px;
+
+  color: rgba(10, 47, 83, 0.58);
+}
+
+.social > img {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.footerrule {
+  margin: 64px 190px 0px 190px;
+}
+
+.footerrule > hr {
+  border: 0.3px solid #6F6F73;
+}
+
+.footerfoot > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+
+  color: rgba(10, 47, 83, 0.63);
+}
+
+
