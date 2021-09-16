@@ -86,6 +86,10 @@
   color: rgba(10, 47, 83, 0.58);
 }
 
+.footerlist > ul > li > a, .footerlistservices > ul > li > a {
+  text-decoration: none;
+}
+
 .social > img {
   display: inline-block;
   padding: 0px 10px;

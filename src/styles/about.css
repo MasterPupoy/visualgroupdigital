@@ -1,0 +1,134 @@
+
+.founder > h3 {
+  font-family: momcake;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 16px;
+  /* identical to box height */
+
+  letter-spacing: 0.21em;
+
+  color: #0A2F53;
+}
+
+.founder > h2 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+
+  
+  color : rgb(255,255,255, 1);
+  
+  text-shadow:
+  -1px -1px 0 #0A2F53,  
+  1px -1px 0 #0A2F53,
+  -1px 1px 0 #0A2F53,
+  1px 1px 0 #0A2F53;
+ 
+}
+
+.founder > h5 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #0A2F53;
+}
+
+.founder > p {
+  padding: 20px 0px;
+
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 27px;
+
+  color: #1D1D1D;
+
+  opacity: 0.7;
+}
+
+.ceo {
+  width: 540px;
+  height: 540px;
+}
+
+.valuesvgd {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 64px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+
+
+}
+
+.valuesvgdword {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 64px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: -0.03em;
+
+  color : rgb(255,255,255, 1); 
+
+  text-shadow:
+  -1px -1px 0 #0A2F53,  
+  1px -1px 0 #0A2F53,
+  -1px 1px 0 #0A2F53,
+  1px 1px 0 #0A2F53;
+}
+
+.ourprocess {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 62px;
+
+  color: #0A2F53;
+
+
+  padding-top: 133px;
+}
+
+.ourprocess > span {
+  font-family: dm-sans;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 62px;
+
+  color : rgb(255,255,255, 1); 
+
+  text-shadow:
+  -1px -1px 0 #0A2F53,  
+  1px -1px 0 #0A2F53,
+  -1px 1px 0 #0A2F53,
+  1px 1px 0 #0A2F53;
+}
+
+.processline {
+  position: relative;
+  top: 300px;
+  left: 500px;
+  z-index: 0;
+}

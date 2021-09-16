@@ -1,0 +1,50 @@
+
+.reusablehero {
+  height: 750px;
+}
+
+.reusableheader {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+
+  color: #0A2F53;
+
+
+}
+
+.reusableheader > span {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+
+  color : rgb(255,255,255, 1);
+
+  text-shadow:
+  -1px -1px 0 #0A2F53,  
+  1px -1px 0 #0A2F53,
+  -1px 1px 0 #0A2F53,
+  1px 1px 0 #0A2F53;
+}
+
+.reusableheader + p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: rgba(52, 52, 52, 0.66);
+
+}
+
+.reusableimageholder {
+  position: relative;
+  top: 45px;
+  left: 12%;
+  z-index: 1;
+}

@@ -8,6 +8,9 @@ import consulting from '../images/consulting.svg';
 import development from '../images/development.svg';
 import marketing from '../images/marketing.svg';
 
+import slantline from '../images/slantline.svg';
+import slantline2 from '../images/slantline2.svg';
+
 import Bizbut from '../components/Bizbut';
 
 import '../styles/process.css';
@@ -17,7 +20,7 @@ export default function Process() {
     <Flex
       flexDirection="column"
       pl="10%"
-      pt="115px"
+      pt="100px"
     >
       <Flex>
         <Box
@@ -113,6 +116,10 @@ export default function Process() {
         pt="100px"
       >
         <Bizbut />
+      </Box>
+      <Box>
+        <img src={slantline} alt="slantline.svg" className="leftdrop" />
+        <img src={slantline2} alt="slantline2.svg" className="rightdrop" />
       </Box>
     </Flex>
   )

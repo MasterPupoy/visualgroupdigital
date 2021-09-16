@@ -42,3 +42,18 @@
   height: 400px;
   width: 450px;
 }
+
+.leftdrop {
+  position: relative;
+  bottom: 1050px;
+  left: 500px;
+  z-index: 0;
+}
+
+.rightdrop {
+  position: relative;
+  position: relative;
+  bottom: 900px;
+  left: 500px;
+  z-index: 0;
+}

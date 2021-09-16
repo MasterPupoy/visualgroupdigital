@@ -1,0 +1,85 @@
+
+.valuecard1 {
+  background: #0A2F53;
+  border-radius: 16px;  
+  padding: 80px 38px 80px 66px;
+
+  display: inline-block;
+
+  margin: 17px 22px;
+
+  height: 288px;
+  width: 660px;
+}
+
+.valuecard1 > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: -0.03em;
+
+  color: #FFFFFF;
+}
+
+.valuecard1 > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: -0.03em;
+
+  color: rgba(255, 255, 255, 0.99);
+}
+
+
+.valuecard2 {
+  background: #FFFFFF;
+  border: 2px solid #EE6F19;
+  border-radius: 16px;
+
+  padding: 80px 38px 80px 66px;
+
+  display: inline-block;
+
+  margin: 17px 22px;
+
+  height: 288px;
+  width: 660px;
+}
+
+.valuecard2 > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  padding-top: 17px;
+
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+}
+
+.valuecard2 > p  {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: -0.03em;
+
+  padding-top: 17px;
+
+  color: #0A2F53;
+}

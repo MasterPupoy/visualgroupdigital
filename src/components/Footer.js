@@ -16,6 +16,41 @@ import logoline from '../images/logoline.svg';
 import '../styles/footer.css';
 
 export default function Footer() {
+  const quicklinks = [
+    {
+      tab : 'HOME',
+      key : '/'
+    },
+    {
+      tab : 'ABOUT',
+      key : '/about'
+    },
+    {
+      tab : 'OUR PORTFOLIO',
+      key : '/our_portfolio'
+    },
+    {
+      tab : 'CONTACT',
+      key : '/contact'
+    }  
+  ]
+
+  const serviceslinks = [
+     {
+      tab : 'MARKETING',
+      key : '/marketing'
+    },
+    {
+      tab : 'BRANDING',
+      key : '/branding'
+    },
+    {
+      tab : 'CASE STUDIES',
+      key : '/case_studies'
+    },
+  ]
+
+
   return (
     <Box
       w="100%"
@@ -129,10 +164,11 @@ export default function Footer() {
             Quick Links
           </h3>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            {quicklinks.map(link => {
+              return (
+                <li><a href={`${link.key}`}>{link.tab}</a></li>
+              )
+            })}
           </ul>
         </Box>
       </Flex>
