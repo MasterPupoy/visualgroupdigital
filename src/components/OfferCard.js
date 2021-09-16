@@ -48,7 +48,7 @@ export default function OfferCard() {
           <LearnMoreButton />
         </Flex>
       </Box>
-       <Box
+      <Box
         className="offerCards"
       >
         <img src={eCommerce} alt="digitalmarketing.svg" />

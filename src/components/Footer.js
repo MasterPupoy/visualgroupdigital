@@ -18,36 +18,40 @@ import '../styles/footer.css';
 export default function Footer() {
   const quicklinks = [
     {
-      tab : 'HOME',
+      tab : 'Home',
       key : '/'
     },
     {
-      tab : 'ABOUT',
+      tab : 'About',
       key : '/about'
     },
     {
-      tab : 'OUR PORTFOLIO',
+      tab : 'Portfolio',
       key : '/our_portfolio'
     },
     {
-      tab : 'CONTACT',
+      tab : 'Contact',
       key : '/contact'
     }  
   ]
 
   const serviceslinks = [
      {
-      tab : 'MARKETING',
+      tab : 'Marketing',
       key : '/marketing'
     },
     {
-      tab : 'BRANDING',
+      tab : 'Branding',
       key : '/branding'
     },
     {
-      tab : 'CASE STUDIES',
+      tab : 'Case Studies',
       key : '/case_studies'
     },
+    {
+      tab : 'Portfolio',
+      key : '/our_portfolio'
+    }  
   ]
 
 

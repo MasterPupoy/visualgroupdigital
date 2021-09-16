@@ -21,7 +21,7 @@ import circle_el from '../images/circle_el.svg';
 import '../styles/reusablehero.css';
 
 
-export default function ReusableHero({ image, header, subheader, paragraph }) {
+export default function ReusableHero({ image, header, subheader, paragraph, imageClass = "reusableimageholder" }) {
   return (
     <Flex
       className="hero-section reusablehero"
@@ -55,7 +55,7 @@ export default function ReusableHero({ image, header, subheader, paragraph }) {
         <img src={shape6} alt="svg" className="shape06" />
         <img src={shape7} alt="svg" className="shape07" />
         <img src={shape8} alt="svg" className="shape08" />
-        <img src={image} alt="image" className="reusableimageholder" />
+        <img src={image} alt="image" className={imageClass} />
       </Box>
     </Flex>
   )

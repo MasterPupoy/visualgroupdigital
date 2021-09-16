@@ -1,0 +1,80 @@
+
+.digitalmarkbanner {
+  position: relative;
+  top: 43px;
+  left: 25%;
+  z-index: 1;
+}
+
+.digimark > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+
+  color: #fff;
+
+  text-shadow:
+  -1px -1px 0 #0A2F53,  
+  1px -1px 0 #0A2F53,
+  -1px 1px 0 #0A2F53,
+  1px 1px 0 #0A2F53;
+}
+
+.digimark > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 27px;
+
+  padding: 20px 0px;
+
+  color: #1D1D1D;
+
+  opacity: 0.7;
+}
+
+
+.digimarkfeatures {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 35px;
+
+  color: #0A2F53;
+  text-align: center;
+}
+
+.digimarkfeatures > span {
+  font-family: dm-sans;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 35px;
+
+  color: #fff;
+
+  text-shadow:
+  -1px -1px 0 #0A2F53,  
+  1px -1px 0 #0A2F53,
+  -1px 1px 0 #0A2F53,
+  1px 1px 0 #0A2F53;
+}
+
+.whyus {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 179.7%;
+  /* or 31px */
+
+  padding-left: 70px;
+
+  color: #1D1D1D;
+
+  opacity: 0.7;
+}

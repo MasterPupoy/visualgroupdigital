@@ -44,6 +44,7 @@ export default function Process() {
             Everything, including your business’ origin story, vision, and mission will be explored to 
             gain a personalised view of your needs. Understanding your business will enable us to develop 
             an interesting brand story that catches attention and converts!
+          <img src={slantline} alt="slantline.svg" className="leftdrop" />
           </p>
         </Box>
         <Box
@@ -104,6 +105,7 @@ export default function Process() {
             your overall marketing strategy and ad campaigns. We will help you market your business 
             effectively to build the ultimate lead generation machine that GETS YOU CLIENTS!
           </p>
+          <img src={slantline2} alt="slantline2.svg" className="rightdrop" />
         </Box>
         <Box
           pl="80px"
@@ -116,10 +118,6 @@ export default function Process() {
         pt="100px"
       >
         <Bizbut />
-      </Box>
-      <Box>
-        <img src={slantline} alt="slantline.svg" className="leftdrop" />
-        <img src={slantline2} alt="slantline2.svg" className="rightdrop" />
       </Box>
     </Flex>
   )

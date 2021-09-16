@@ -11,6 +11,8 @@ import Values from '../components/Values';
 import Process from '../components/Process';
 import LearnMoreButton from '../components/LearnMoreButton';
 import Slideshow from '../components/Slideshow';
+import ReusableFooter from '../components/ReusableFooter';
+
 
 import whatisvgd from '../images/whatisvgd.svg';
 import ceo from '../images/ceo.png';
@@ -24,6 +26,7 @@ export default function about({ location }) {
   const headerTxt = "ABOUT"
   const subheader = "VISUAL GROUP DIGITAL"
   const paragraph = "For +10 Years We’ve Been Working with Big Companies, Helping Them Re-Discover Their Essence and Leverage Their Business"
+  const text = "We collaborate with ambitious Companies and people."
 
   return (
     <Box className="main">
@@ -113,7 +116,25 @@ export default function about({ location }) {
           </h3>
         </Box>
         <Process />
+        <Box>
+          <Box
+            pl="100px"
+            pt="200px"
+          >
+            <h3
+              className="addlogo"
+            >
+              WE WOULD <span>LOVE</span> TO <br/>
+              ADD YOUR LOGO HERE.
+            </h3>
+            <p>
+              We’ve worked with more than 100 companies since 2015 Check out some of the <br />
+              fantastic clients we have brought to the UK and International Markets.
+            </p>
+          </Box>
+        </Box>
         <Slideshow />
+        <ReusableFooter text={text} />
         <Footer />
       </Box>
     </Box>

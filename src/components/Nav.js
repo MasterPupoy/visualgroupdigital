@@ -107,25 +107,188 @@ export default function Nav({ loc, page }) {
           className="nav-list"
           ref={links}
         >
-          {tabs.map((tab) => {
-
-            return (
-              <li
-                key={tab.key}
-              >
-                <a 
-                  href={`${tab.key}`}
-                  className={
-                  (key === tab.key) 
-                  ? "active"
+          <li>
+            <a 
+              href={`/`}
+              className={
+              (key === '/') 
+              ? "active"
+              : null
+            }
+            >
+              HOME
+            </a>
+          </li>
+          <li>
+            <a 
+              href={`/about`}
+              className={
+              (key === '/about') 
+              ? "active"
+              : null
+            }
+            >
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a 
+              href={`/digital_marketing`}
+              className={
+              (key === '/digital_marketing') 
+              ? "active"
+              : null
+            }
+            >
+              MARKETING
+            </a>
+            <Box
+              className="dropdown-content1"
+            >
+              <a
+                href={'/digital_marketing'}
+                className={
+                  (key === '/digital_marketing') 
+                  ? "activeSecondary"
                   : null
                 }
-                >
-                  {tab.tab}
-                </a>
-              </li>
-            )
-          })}
+              >
+                Digital Marketing
+              </a>
+              <a
+                href={'/ecommerce_marketing'}
+                className={
+                  (key === '/ecommerce_marketing') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                E-Commerce Marketing
+              </a>
+              <a
+                href={'/facebook_advertising'}
+                className={
+                  (key === '/facebook_advertising') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Facebook Advertising
+              </a>
+              <a
+                href={'/google_advertising'}
+                className={
+                  (key === '/google_advertising') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Google Advertising
+              </a>
+              <a
+                href={'/social_media_growth'}
+                className={
+                  (key === '/social_media_growth') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Social Media Growth
+              </a>
+              <a
+                href={'/seo_opt'}
+                className={
+                  (key === '/seo_opt') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Search Engine Optimisation
+              </a>
+            </Box>
+          </li>
+          <li>
+            <a 
+              href={`/branding`}
+              className={
+                (key === '/branding') 
+                ? "activeSecondary"
+                : null
+              }
+            >
+              BRANDING
+            </a>
+            <Box
+              className="dropdown-content2"
+            >
+              <a
+                href={`/digital_branding`}
+                className={
+                  (key === '/digital_branding') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Digital Branding
+              </a>
+              <a
+                href={`/graphic_design`}
+                className={
+                  (key === '/graphic_design') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Graphic Design
+              </a>
+              <a
+                href={`/web_development`}
+                className={
+                  (key === '/web_development') 
+                  ? "activeSecondary"
+                  : null
+                }
+              >
+                Web Development
+              </a>
+            </Box>       
+          </li>
+          <li>
+            <a 
+              href={`/case_studies`}
+              className={
+              (key === '/case_studies') 
+              ? "active"
+              : null
+            }
+            >
+              CASE STUDIES
+            </a>
+          </li>
+          <li>
+            <a 
+              href={`/our_portfolio`}
+              className={
+              (key === '/our_portfolio') 
+              ? "active"
+              : null
+            }
+            >
+              OUR PORTFOLIO
+            </a>
+          </li>
+          <li>
+            <a 
+              href={`/contact`}
+              className={
+              (key === '/CONTACT') 
+              ? "active"
+              : null
+            }
+            >
+              CONTACT
+            </a>
+          </li>
         </ul>
         <button
           // className="businessEnquiryButton"
@@ -134,7 +297,7 @@ export default function Nav({ loc, page }) {
           <img src={send} alt="send" className="send" />
           <span className="biz">BUSINESS ENQUIRY</span>
         </button>
-      </Flex>      
+      </Flex>
     </nav>
   )
 }
