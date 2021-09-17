@@ -20,12 +20,12 @@ function FirstSlider({ dir }){
 
     if(mounted) {
      if(dir === "right"){
-      gsap.fromTo(slides.current, { x : -1500 }, { x : 0, duration : 1 });
+      gsap.fromTo(slides.current, { opacity : 0 }, { opacity : 1, duration : 1.5 });
   
      }
 
      if(dir === "left"){
-      gsap.fromTo(slides.current, { x : 1500 }, { x : 0, duration : 1 });
+      gsap.fromTo(slides.current, { opacity : 0 }, { opacity : 1, duration : 1.5 });
 
      }
     }
@@ -70,26 +70,26 @@ function FirstSlider({ dir }){
 function SecondSlider({ dir }){
   const slides = useRef();
 
+  
   useEffect(() => {
     let mounted = true;
 
     if(mounted) {
-      if(dir === "right"){
-      gsap.fromTo(slides.current, { x : -1500 }, { x : 0, duration : 1 });
+     if(dir === "right"){
+      gsap.fromTo(slides.current, { opacity : 0 }, { opacity : 1, duration : 1.5 });
   
      }
 
      if(dir === "left"){
-      gsap.fromTo(slides.current, { x : 1500 }, { x : 0, duration : 1 });
+      gsap.fromTo(slides.current, { opacity : 0 }, { opacity : 1, duration : 1.5 });
 
      }
-      
     }
 
     return () => {
       mounted = false;
     }
-  })
+  }, [])
 
   return (
     <Flex
@@ -125,26 +125,26 @@ function SecondSlider({ dir }){
 function ThirdSlider({ dir }){
   const slides = useRef();
 
+  
   useEffect(() => {
     let mounted = true;
 
     if(mounted) {
-      if(dir === "right"){
-      gsap.fromTo(slides.current, { x : -1500 }, { x : 0, duration : 1 });
+     if(dir === "right"){
+      gsap.fromTo(slides.current, { opacity : 0 }, { opacity : 1, duration : 1.5 });
   
      }
 
      if(dir === "left"){
-      gsap.fromTo(slides.current, { x : 1500 }, { x : 0, duration : 1 });
+      gsap.fromTo(slides.current, { opacity : 0 }, { opacity : 1, duration : 1.5 });
 
      }
-      
     }
 
     return () => {
       mounted = false;
     }
-  })
+  }, [])
 
   return (
     <Flex

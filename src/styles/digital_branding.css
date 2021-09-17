@@ -1,0 +1,79 @@
+
+.digitalbrandbanner {
+  position: relative;
+  top: 40px;
+  left: 15%;
+  z-index: 1;
+}
+
+.digibrand > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+
+  color: #0A2F53;
+
+
+}
+
+.digibrand > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 27px;
+
+  padding: 20px 0px;
+
+  color: #1D1D1D;
+
+  opacity: 0.7;
+}
+
+.slidercards > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 125.84%;
+  /* or 60px */
+
+
+  color: #0A2F53;
+}
+
+.slidercards > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 151.4%;
+  /* or 26px */
+
+  letter-spacing: 0.06em;
+
+  color: #585858;
+}
+
+/* width */
+.brandingslider::-webkit-scrollbar {
+  height: 4px;
+}
+
+/* Track */
+.brandingslider::-webkit-scrollbar-track {
+  background: #c8c8c8;
+}
+
+/* Handle */
+.brandingslider::-webkit-scrollbar-thumb {
+  background: linear-gradient(94.29deg, #0A2F53 -3.9%, #EE6F19 104.1%);
+}
+
+/* Handle on hover */
+.brandingslider::-webkit-scrollbar-thumb:hover {
+  background: #0A2F53;
+  transition: 0.5s;
+}

@@ -209,10 +209,10 @@ export default function Nav({ loc, page }) {
           </li>
           <li>
             <a 
-              href={`/branding`}
+              href={`/digital_branding`}
               className={
-                (key === '/branding') 
-                ? "activeSecondary"
+                (key === '/digital_branding') 
+                ? "active"
                 : null
               }
             >

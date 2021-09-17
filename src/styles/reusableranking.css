@@ -1,0 +1,52 @@
+
+.reusablerankingnum {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 244px;
+  line-height: 325px;
+  /* identical to box height */
+
+
+  color: #F1F1F1;
+}
+
+.reusablerankingbody > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+}
+
+.reusablerankingbody > h3 > img {
+  display:  inline-block;
+  margin-left: 20px;
+}
+
+.reusablerankingbody > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+}
+
+.rrfirstclass {
+  border-right: 0.5px solid #d9d9d9;
+}
+
+.rrsecondclass {
+  padding-top: 100px;
+}
+

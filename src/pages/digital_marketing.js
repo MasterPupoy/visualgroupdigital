@@ -8,12 +8,12 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import Slideshow from '../components/Slideshow';
 import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import Bizbut from '../components/Bizbut';
+import StaticLogo from '../components/StaticLogo';
 
 
 import rocketpc from '../images/rocketpc.png';
@@ -27,13 +27,66 @@ import facebookAds from '../images/offers/facebookads.svg';
 
 import features from '../images/features/features.svg';
 
+import hex from '../images/features/hex.svg';
+import barchart from '../images/features/barchart.svg';
+import monitor from '../images/features/monitor.svg';
+import medal from '../images/features/medal.svg';
+import brush from '../images/features/brush.svg';
+
 import '../styles/digital_marketing.css';
+import ReusableRanking from '../components/ReusableRanking';
 
 export default function marketing({ location }) {
   const headerText = "DIGITAL MARKETING"
   const subheader = "SERVICES"
   const paragraph = "We will get you on page one for all your top keyword searches for your business."
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
+
+  const rankingArray = [
+    {
+      num: 1,
+      header: "Traffic",
+      para: "As you gain more visibility with digital marketing, your total number of conversions and sales will increase.",
+      classes: "rrfirstclass",
+      img: hex,
+    },
+    {
+      num: 2,
+      header: "Google Search Ranking",
+      para: "Digital marketing will help you appear higher on Google Search Results, which is valuable for your business.",
+      classes: "rrsecondclass",
+      img: barchart,
+    },
+    {
+      num: 3,
+      header: "More Leads",
+      para: "Targeting audiences with digital marketing will result in more leads visiting your sites.",
+      classes: "rrfirstclass",
+      img: monitor,
+    },
+    {
+      num: 4,
+      header: "High Income",
+      para: "We’ll help you increase targeted leads to give you a positive ROI on your advertising investment.",
+      classes: "rrsecondclass",
+      img: barchart,
+    },
+    {
+      num: 5,
+      header: "More Brand Awareness",
+      para: "Your brand is a large part of what customers use to judge your business against others in the same industry, and digital marketing helps build that brand.",
+      classes: "rrfirstclass",
+      img: medal 
+    },
+    {
+      num: 6,
+      header: "Business Growth",
+      para: "New, qualified leads and brand awareness through digital marketing all contribute to new growth opportunities.",
+      classes: "rrsecondclass",
+      img: brush,
+    }
+  ]
+
 
   return (
     <Box className="main">
@@ -213,6 +266,13 @@ export default function marketing({ location }) {
             </p>
           </Box>
         </Flex>
+        <Box
+          pl="103px"
+        >
+          <ReusableRanking 
+            textArray={rankingArray}
+          />
+        </Box>
         <AccomplishmentSlider />
         <ClientTestimonials />
         <Box>
@@ -232,7 +292,7 @@ export default function marketing({ location }) {
             </p>
           </Box>
         </Box>
-        <Slideshow />
+        <StaticLogo />
         <ReusableFooter 
           text={text}
         />
