@@ -115,24 +115,7 @@ export default function about({ location }) {
             OUR <span>PROCESS</span>
           </h3>
         </Box>
-        <Process />
-        <Box>
-          <Box
-            pl="100px"
-            pt="200px"
-          >
-            <h3
-              className="addlogo"
-            >
-              WE WOULD <span>LOVE</span> TO <br/>
-              ADD YOUR LOGO HERE.
-            </h3>
-            <p>
-              We’ve worked with more than 100 companies since 2015 Check out some of the <br />
-              fantastic clients we have brought to the UK and International Markets.
-            </p>
-          </Box>
-        </Box>
+        <Process /> 
         <Slideshow />
         <ReusableFooter text={text} />
         <Footer />

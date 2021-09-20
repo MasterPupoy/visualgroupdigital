@@ -1,0 +1,112 @@
+
+.contact {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 47px;
+  /* identical to box height */
+
+
+  color: #0A2F53;
+}
+
+.contactside {
+  border-right: 0.5px solid #000000;;
+}
+
+.contactgetstarted {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.contactgetstarted > h3 {
+  
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 64px;
+  /* identical to box height, or 114% */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+}
+
+.contactgetstarted > p {
+  
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  padding-top: 24px;
+
+  color: #0A2F53;
+}
+
+.contactgetstarted2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.contactgetstarted2 > h3 {
+  
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+}
+
+.inputField {
+  border: 1px solid rgba(238, 111, 25, 0.54);
+  border-radius: 8px;
+}
+
+label {
+  font-family: dm-sans;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: #0A2F53;
+}
+
+.contactsubmit {
+  background: #0A2F53;
+border-radius: 8px;
+padding: 15px 40px;
+color: #fff
+}
+
+.contactgetstarted3 > h3 {
+  
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  color: #0A2F53;
+}

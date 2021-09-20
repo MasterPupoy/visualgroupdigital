@@ -281,7 +281,7 @@ export default function Nav({ loc, page }) {
             <a 
               href={`/contact`}
               className={
-              (key === '/CONTACT') 
+              (key === '/contact') 
               ? "active"
               : null
             }

@@ -21,8 +21,11 @@ import circle_el from '../images/circle_el.svg';
 import '../styles/reusablehero.css';
 
 
-export default function ReusableHero({ image, header, subheader, paragraph, imageClass = "reusableimageholder" }) {
-  return (
+export default function ReusableHero({ image, header, subheader, paragraph, 
+  imageClass = "reusableimageholder", separated = true }) {
+  
+  
+    return (
     <Flex
       className="hero-section reusablehero"
     >
@@ -34,7 +37,7 @@ export default function ReusableHero({ image, header, subheader, paragraph, imag
         <h2
           className="reusableheader"
         >
-          {header} <br />
+          {header} {(separated) ? <br /> : null }
           <span>{subheader}</span>
         </h2>
         <p>

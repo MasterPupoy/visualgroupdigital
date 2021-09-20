@@ -159,15 +159,13 @@
   1px 1px 0 #0A2F53;
 }
 
-.addlogo + p {
+.addlogop {
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 179.7%;
   /* or 31px */
-
-  padding-top: 17px;
 
   color: #1D1D1D;
 

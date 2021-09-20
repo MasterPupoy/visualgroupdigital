@@ -43,98 +43,135 @@ import '../styles/slideshow.css';
 export default function Slideshow() {
   
  return (
-  <Flex
-  flexDirection="row"
-  flexWrap="wrap"
-  w="100%"
-  className="slideshow"
-  overflowX="hidden"
-  >
+  <>
+    <Box>
+      <Box
+        pl="100px"
+        pt="100px"
+      >
+        <h3
+          className="addlogo"
+        >
+          WE WOULD <span>LOVE</span> TO <br/>
+          ADD YOUR LOGO HERE.
+        </h3>
+      </Box>
+      <Flex
+        justifyContent="space-between"
+        px="100px"
+        pt="17px"
+      >
+        <Box>
+          <p
+            className="addlogop"
+          >
+            We’ve worked with more than 100 companies since 2015 Check out some of the <br />
+            fantastic clients we have brought to the UK and International Markets.
+          </p>
+        </Box>
+        <Box>
+          <h3
+            className="addlogo"
+          >
+            Our Clients
+          </h3>
+        </Box>
+      </Flex>
+    </Box>
+    
     <Flex
-    justifyContent="space-between"
-    alignItems="center"
+    flexDirection="row"
+    flexWrap="wrap"
     w="100%"
-    px="10%"
-  
+    className="slideshow"
     overflowX="hidden"
     >
-      <img src={chessmoves} alt="chessmoveslogo" />
-      <img src={oxtedFestival} alt="oxtedfestival" />
-      <img src={tailoredRemoval} alt="tailoredremovallogo" />
-      <img src={surreyCedar} alt="surreycedarlogo" />
-      <img src={oneroof} alt="onerooflogo" />
-      <img src={simonKemp} alt="simonKemp" />
-    </Flex>
-    <Flex
+      <Flex
       justifyContent="space-between"
       alignItems="center"
       w="100%"
-      px="2%"
+      px="10%"
     
-    >
-      <img src={delishus} alt="delishus.svg" />
-      <img src={manetain} alt="manetain.svg" />
-      <img src={doggo} alt="doggo.svg" />
-      <img src={redsacks} alt="redsacks.svg" />
-      <img src={beautifulsouls} alt="beautifulsouls.svg" />
-      <img src={cleaningspecialistproviders} alt="cleaningspecialistproviders.svg" />
-      <img src={provest} alt="provest.svg" />
-      <img src={secretcalm} alt="secretcalm.svg" />
-    </Flex>
-    <Flex
-      justifyContent="space-between"
-      alignItems="center"
-      w="100%"
-      px="4%"
-
-    >
-      <img src={houseofstrength} alt="houseofstreng.svg" />
-      <img src={fitify} alt="fitify.svg" />
-      <img src={reignsupreme} alt="reignsupreme.svg" />
-      <img src={rebecca} alt="rebecca.svg" />
-      <img src={regency} alt="regency.svg" />
-      <img src={keating} alt="keating.svg" />
-      <img src={outperform} alt="outperform.svg" />
-    </Flex>
-    <Flex
-      justifyContent="space-between"
-      alignItems="center"
-      w="100%"
-      px="4%"
- 
-    >
-      <img src={portfolioFm} alt="portfoliofm.svg" />
-      <img src={hydroInstal} alt="hydroinstal.svg" />
-      <img src={futurefitness} alt="futurefitness.svg" />
-      <img src={schTech} alt="schtech.svg" />
-      <img src={adaptingHomes} alt="adaptinghomes.svg" />
-      <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" />
-      <img src={intuneConsulting} alt="intuneconsulting.svg" />
-    </Flex>
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-      w="100%"
-      pt="20px"
-    >
-      <Box
-        alignSelf="center"
+      overflowX="hidden"
       >
-        <button
-          className="seeMore button--aylen"
+        <img src={chessmoves} alt="chessmoveslogo" />
+        <img src={oxtedFestival} alt="oxtedfestival" />
+        <img src={tailoredRemoval} alt="tailoredremovallogo" />
+        <img src={surreyCedar} alt="surreycedarlogo" />
+        <img src={oneroof} alt="onerooflogo" />
+        <img src={simonKemp} alt="simonKemp" />
+      </Flex>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+        px="2%"
+      
+      >
+        <img src={delishus} alt="delishus.svg" />
+        <img src={manetain} alt="manetain.svg" />
+        <img src={doggo} alt="doggo.svg" />
+        <img src={redsacks} alt="redsacks.svg" />
+        <img src={beautifulsouls} alt="beautifulsouls.svg" />
+        <img src={cleaningspecialistproviders} alt="cleaningspecialistproviders.svg" />
+        <img src={provest} alt="provest.svg" />
+        <img src={secretcalm} alt="secretcalm.svg" />
+      </Flex>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+        px="4%"
+
+      >
+        <img src={houseofstrength} alt="houseofstreng.svg" />
+        <img src={fitify} alt="fitify.svg" />
+        <img src={reignsupreme} alt="reignsupreme.svg" />
+        <img src={rebecca} alt="rebecca.svg" />
+        <img src={regency} alt="regency.svg" />
+        <img src={keating} alt="keating.svg" />
+        <img src={outperform} alt="outperform.svg" />
+      </Flex>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        w="100%"
+        px="4%"
+  
+      >
+        <img src={portfolioFm} alt="portfoliofm.svg" />
+        <img src={hydroInstal} alt="hydroinstal.svg" />
+        <img src={futurefitness} alt="futurefitness.svg" />
+        <img src={schTech} alt="schtech.svg" />
+        <img src={adaptingHomes} alt="adaptinghomes.svg" />
+        <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" />
+        <img src={intuneConsulting} alt="intuneconsulting.svg" />
+      </Flex>
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        w="100%"
+        pt="20px"
+      >
+        <Box
+          alignSelf="center"
         >
-          <span>
-            SEE MORE OF OUR CLIENTS
-          </span>
-        </button>
-        <a
-          className="reqCB"
-          href="#"
-        >
-          REQUEST A CALL BACK &gt;
-        </a>
-      </Box>
+          <button
+            className="seeMore button--aylen"
+          >
+            <span>
+              SEE MORE OF OUR CLIENTS
+            </span>
+          </button>
+          <a
+            className="reqCB"
+            href="#"
+          >
+            REQUEST A CALL BACK &gt;
+          </a>
+        </Box>
+      </Flex>
     </Flex>
-  </Flex>
+  </>
   )
 }

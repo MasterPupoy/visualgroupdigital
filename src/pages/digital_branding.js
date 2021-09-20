@@ -254,24 +254,7 @@ export default function digital_branding({ location }) {
           />
         </Box>
         <AccomplishmentSlider />
-        <ClientTestimonials />
-        <Box>
-          <Box
-            pl="100px"
-            pt="200px"
-          >
-            <h3
-              className="addlogo"
-            >
-              WE WOULD <span>LOVE</span> TO <br/>
-              ADD YOUR LOGO HERE.
-            </h3>
-            <p>
-              We’ve worked with more than 100 companies since 2015 Check out some of the <br />
-              fantastic clients we have brought to the UK and International Markets.
-            </p>
-          </Box>
-        </Box>
+        <ClientTestimonials /> 
         <StaticLogo />
         <ReusableFooter 
           text={text}
