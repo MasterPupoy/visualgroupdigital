@@ -25,12 +25,11 @@ export default function SEO() {
 
       {/* twitter tags */}
 
-      <link rel="preload" href="/styles/fonts/Poppins-Medium.ttf" as="font" type="font/woff2" crossorigin /> 
-      <link rel="preload" href="/styles/fonts/DMSans-Regular.ttf" as="font" type="font/woff2" crossorigin /> 
-      <link rel="preload" href="/styles/fonts/MOMCAKE-Bold.otf" as="font" type="font/woff2" crossorigin /> 
-      <link rel="preload" href="/styles/fonts/MOMCAKE-Thin.otf" as="font" type="font/woff2" crossorigin /> 
-	    <link rel="stylesheet" href="/styles/index.css" as="style" />
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="font" type="font/woff2" crossorigin /> 
 
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     </Helmet>
   )
 }
