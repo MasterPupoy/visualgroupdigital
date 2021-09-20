@@ -208,5 +208,11 @@
   margin-top: 20px;
 }
 
+.indexbanner {
+  position: absolute;
+top: 150px;
+  left: 775px;
+  z-index: 1;
+}
 
 

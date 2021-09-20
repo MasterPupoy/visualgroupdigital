@@ -4,6 +4,8 @@ import {
   Box
 } from '@chakra-ui/react';
 import Bizbut from '../components/Bizbut';
+
+import indexpic from '../images/index.png';
 import '../styles/hero.css';
 
 export default function Hero() {
@@ -54,6 +56,9 @@ export default function Hero() {
             </p>
           </Box>
         </Flex>
+        <Box>
+          <img src={indexpic} alt="visualgroupdigital" className="indexbanner" />
+        </Box>
       </Flex>
     </Box>
   )

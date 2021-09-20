@@ -1,1 +1,40 @@
 
+.portLinks {
+
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  color: #848484;
+
+  margin: 10px 0px;
+}
+
+.portLinks > a {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.portbox {
+  height: 1450px;
+  width: 1400px;
+  margin: 36px auto;
+
+  border: 2px solid #0A2F53;
+  border-radius: 38px;
+
+}
+
+.portshowcase > img {
+  padding: 10px 9px;
+  border-radius: 9px;
+}
+

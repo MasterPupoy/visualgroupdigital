@@ -22,17 +22,29 @@ export default function Sider() {
         <Box
           py="25%"
         >
-          <img src={facebook} alt="facebook.svg" />
+          <a 
+            href="https://www.facebook.com/visualgrouponlineltd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={facebook} alt="facebook.svg" style={{ cursor : "pointer"}}  />
+          </a>
         </Box>
         <Box
           py="25%"
         >
-          <img src={twitter} alt="facebook.svg" />
+          <img src={twitter} alt="facebook.svg" style={{ cursor : "pointer"}} />
         </Box>
         <Box
           py="25%"
         >
-          <img src={insta} alt="facebook.svg" />
+          <a 
+            href="https://www.instagram.com/visualgroupdigitalltd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={insta} alt="facebook.svg" style={{ cursor : "pointer"}}  />
+          </a>
         </Box>
         <Box
           py="45%"

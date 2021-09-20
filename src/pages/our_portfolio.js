@@ -10,6 +10,15 @@ import ReusableFooter from '../components/ReusableFooter';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 
+import anothaweb from '../images/portfolio/anothaweb.png';
+import bar from '../images/portfolio/bar.png';
+import delish from '../images/portfolio/delish.png';
+import delish2 from '../images/portfolio/delish2.png';
+import hair from '../images/portfolio/hair.png';
+import map from '../images/portfolio/map.png';
+import oxted from '../images/portfolio/oxted.png';
+import van from '../images/portfolio/van.png';
+import web from '../images/portfolio/web.png';
 import casestudies from '../images/features/casestudies.png';
 
 import '../styles/our_portfolio.css';
@@ -34,18 +43,59 @@ export default function our_portfolio({ location }) {
           separated={false}
           imageClass="casebanner"
         />
-        <Flex>
-          <Box>
-            <a>WEBSITE DESIGN</a>
-            <a>WEBSITE DEVELOPMENT</a>
-            <a>E-COMMERCE MARKETING</a>
-            <a>GRAPHIC DESIGNS</a>
-            <a>SOCIAL MEDIA MARKETING</a>
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          pt="77px"
+        >
+          <Box
+            className="portLinks"
+          >
+            <a href="/our_portfolio">WEBSITE DESIGN</a>
+            <a href="/our_portfolio">WEBSITE DEVELOPMENT</a>
+            <a href="/our_portfolio">E-COMMERCE MARKETING</a>
+            <a href="/our_portfolio">GRAPHIC DESIGNS</a>
+            <a href="/our_portfolio">SOCIAL MEDIA MARKETING</a>
           </Box>
-          <Box>
-            <a>FACEBOOK AD COPY</a>
+          <Box
+            className="portLinks"
+          >
+            <a href="/our_portfolio">FACEBOOK AD COPY</a>
+            <a href="/our_portfolio">BRANDING</a>
+            <a href="/our_portfolio">GOOGLE ADVERTISING</a>
           </Box>
         </Flex>
+        <Box
+          className="portbox"
+        >
+          <Flex
+            className="portshowcase"
+            flexWrap="wrap"
+            flexDirection="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <img src={anothaweb} alt="anothaweb.png" />
+            <img src={bar} alt="anothaweb.png" />
+            <img src={delish} alt="anothaweb.png" />
+            <img src={delish2} alt="anothaweb.png" />
+            <img src={hair} alt="anothaweb.png" /> 
+            <img src={map} alt="anothaweb.png" />
+            <img src={oxted} alt="oxted.png" />
+            <img src={van} alt="van.png" />
+            <img src={web} alt="web.png" />
+          </Flex>
+          <Flex
+            justifyContent="center"
+            pt="50px"
+          >
+            <Box>
+              <button className="button button--aylen ">
+                <span>LOAD MORE</span>
+              </button>
+            </Box>
+          </Flex>
+        </Box>
         <StaticLogo />
         <ReusableFooter 
           text={text}
