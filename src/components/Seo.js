@@ -25,6 +25,12 @@ export default function SEO() {
 
       {/* twitter tags */}
 
+      <link rel="preload" href="/styles/fonts/Poppins-Medium.ttf" as="font" type="font/woff2" crossorigin /> 
+      <link rel="preload" href="/styles/fonts/DMSans-Regular.ttf" as="font" type="font/woff2" crossorigin /> 
+      <link rel="preload" href="/styles/fonts/MOMCAKE-Bold.otf" as="font" type="font/woff2" crossorigin /> 
+      <link rel="preload" href="/styles/fonts/MOMCAKE-Thin.otf" as="font" type="font/woff2" crossorigin /> 
+	    <link rel="stylesheet" href="/styles/index.css" as="style" />
+
     </Helmet>
   )
 }
