@@ -7,7 +7,6 @@ import {
 import logo from '../images/vgd.svg';
 import send from '../images/send.svg';
 
-import { gsap } from 'gsap';
 
 import '../styles/navbar.css';
 
@@ -51,7 +50,6 @@ export default function Nav({ loc, page }) {
       //     return;
       // }
 
-      gsap.fromTo(links.current, { opacity : 0 }, { opacity : 1, duration : 3})
       
       setKey(page)
 
@@ -196,7 +194,7 @@ export default function Nav({ loc, page }) {
                 Social Media Growth
               </a>
               <a
-                href={'/seo_opt'}
+                href={'/search_engine_optimization'}
                 className={
                   (key === '/seo_opt') 
                   ? "activeSecondary"
