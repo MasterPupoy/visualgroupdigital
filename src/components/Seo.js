@@ -20,7 +20,7 @@ export default function SEO() {
 
       {/* opengraph tags */}
       <meta property="og:url" content={url} />
-      <meta property="og:title" content="Visual Studio Group" />
+      <meta property="og:title" content="Visual Group Digital" />
       <meta property="fb:app_id" content={fbId} />
 
       {/* twitter tags */}
