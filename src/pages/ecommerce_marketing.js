@@ -24,6 +24,7 @@ import line1 from '../images/line1.svg';
 import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
+import digitalBranding from '../images/offers/digitalbranding.svg';
 
 import features from '../images/features/features.svg';
 
@@ -209,7 +210,7 @@ export default function ecommerce_marketing({ location }) {
           <Box
             className="offerCards"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={digitalBranding} alt="digitalmarketing.svg" />
             <h3>
              Marketing Campaigns
             </h3>
@@ -250,14 +251,6 @@ export default function ecommerce_marketing({ location }) {
         > 
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
-        <Flex
-          w="100%"
-          justifyContent="center"
-          pt="60px"
-          pb="110px"
-        >
-          <Bizbut />
-        </Flex>
         <Flex
           pl="103px"
           flexDirection="row"

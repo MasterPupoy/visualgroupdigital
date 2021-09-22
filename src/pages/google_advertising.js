@@ -251,14 +251,6 @@ export default function google_advertising({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          w="100%"
-          justifyContent="center"
-          pt="60px"
-          pb="110px"
-        >
-          <Bizbut />
-        </Flex>
-        <Flex
           pl="103px"
           flexDirection="row"
         >
