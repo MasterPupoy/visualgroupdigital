@@ -11,6 +11,7 @@ import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
+import LearnMoreButton from '../components/LearnMoreButton';
 
 import brandng from '../images/brandng.png';
 import fbadcopy from '../images/fbadcopy.png';
@@ -29,6 +30,7 @@ function ClientView({ num }) {
       type: "FOOD COMPANY",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "oxtedfest.co.uk",
@@ -36,6 +38,7 @@ function ClientView({ num }) {
       type: "CONCERT BOOKING",
       img1: "N/A",
       img2: "N/A",
+      page: "/oxtedfest"
     },
     {
       link: "maneuk.com",
@@ -43,6 +46,7 @@ function ClientView({ num }) {
       type: "HAIR PRODUCTS",
       img1: "N/A",
       img2: "N/A",
+      page: "/maneuk"
     },
      {
       link: "hellovans.com",
@@ -50,6 +54,7 @@ function ClientView({ num }) {
       type: "vAN COMPANY",
       img1: "N/A",
       img2: "N/A",
+      page: "/hellovans"
     },
     {
       link: "houseofstrength.co.uk",
@@ -57,6 +62,7 @@ function ClientView({ num }) {
       type: "GYM EQUIPMENTS",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "subfranticmusic.com",
@@ -64,6 +70,7 @@ function ClientView({ num }) {
       type: "Online music streaming",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "bossybitchmaid.me.uk",
@@ -71,6 +78,7 @@ function ClientView({ num }) {
       type: "Bossy Bitch Maids",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "capitalcluehunts.com",
@@ -78,6 +86,7 @@ function ClientView({ num }) {
       type: "Game Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "sussexremovals.co.uk",
@@ -85,6 +94,7 @@ function ClientView({ num }) {
       type: "Removal Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "schtech.co.uk",
@@ -92,6 +102,7 @@ function ClientView({ num }) {
       type: "Technology Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "citydoggo.com",
@@ -99,6 +110,7 @@ function ClientView({ num }) {
       type: "Pet Products Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "procleanpartnership.co.uk",
@@ -106,6 +118,7 @@ function ClientView({ num }) {
       type: "Luxury cleaning service.",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "beemoved.com",
@@ -113,6 +126,7 @@ function ClientView({ num }) {
       type: "Transport Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "slynote.com",
@@ -120,6 +134,7 @@ function ClientView({ num }) {
       type: "Encrypted notes Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "arenheatingplumbing.co.uk",
@@ -127,6 +142,7 @@ function ClientView({ num }) {
       type: "Plumbing and heating company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "expertapps.online",
@@ -134,6 +150,7 @@ function ClientView({ num }) {
       type: "Encrypted notes Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "lbpcourse.com",
@@ -141,6 +158,7 @@ function ClientView({ num }) {
       type: "Life Balance Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "virtlx.com",
@@ -148,6 +166,7 @@ function ClientView({ num }) {
       type: "Real-time Monitoring Platform",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "blackandwhitelondon.co.uk",
@@ -155,6 +174,7 @@ function ClientView({ num }) {
       type: "Promotional Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "bodiesmadeonline.com",
@@ -162,6 +182,7 @@ function ClientView({ num }) {
       type: "Fitness Services",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "tailoredremoval.co.uk",
@@ -169,6 +190,7 @@ function ClientView({ num }) {
       type: "Tailored Removal Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
     {
       link: "readerschool.org/v1/",
@@ -176,6 +198,7 @@ function ClientView({ num }) {
       type: "Online Children Learning platform",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
      {
       link: "intune.consulting/",
@@ -183,6 +206,7 @@ function ClientView({ num }) {
       type: "Consulting Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
      {
       link: "terrilynn.com",
@@ -190,6 +214,7 @@ function ClientView({ num }) {
       type: "Lifestyle Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
       {
       link: "onlinefitnessfreedom.com",
@@ -197,6 +222,7 @@ function ClientView({ num }) {
       type: "Fitness Services",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
       {
       link: "reignsupremeuk.com",
@@ -204,6 +230,7 @@ function ClientView({ num }) {
       type: "Business & Accounting Company",
       img1: "N/A",
       img2: "N/A",
+      page: "/sodelishus"
     },
   ]
 
@@ -256,6 +283,7 @@ function ClientView({ num }) {
               <Box>
                 <Flex
                   w="220px"
+                  h="320px"
                   ml="30px"
                   flexDirection="column"
                   mt="50px"
@@ -287,6 +315,15 @@ function ClientView({ num }) {
               </Box>
               <Box>
 
+              </Box>
+            </Flex>
+            <Flex
+              w="100%"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Box>
+                <LearnMoreButton link={client.page} />
               </Box>
             </Flex>
           </Box>

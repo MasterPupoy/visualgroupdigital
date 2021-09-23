@@ -141,3 +141,26 @@ text-transform: uppercase;
 color: #7F7F7F;;
 
 }
+
+.title {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 62px;
+
+  color: #0A2F53;
+
+}
+
+.caseparagraph > p {
+  font-family: dm-sans;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 27px;
+
+color: #1D1D1D;
+
+opacity: 0.7;
+}

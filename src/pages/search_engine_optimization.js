@@ -96,7 +96,7 @@ export default function search_engine_optimization({ location }) {
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/social_media_growth' />
+        <Nav loc={location} page='/social_media_growth' main="/marketing" />
         <ReusableHero 
           header={headerText}
           subheader={subheader}

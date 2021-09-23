@@ -93,7 +93,7 @@ export default function google_advertising({ location }) {
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/google_advertising' />
+        <Nav loc={location} page='/google_advertising' main="/marketing" />
         <ReusableHero 
           header={headerText}
           subheader={subheader}

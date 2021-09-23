@@ -26,9 +26,9 @@ import brush from '../images/features/brush.svg';
 import '../styles/digital_branding.css';
 
 export default function digital_branding({ location }) {
-  const headerText = "BRAND"
-  const subheader = "DEVELOPMENT"
-  const paragraph = "At Visual Group Digital, we’ll make your brand come to life on digital platforms through a creative and targeted approach."
+  const headerText = "GRAPHIC"
+  const subheader = "DESIGN"
+  const paragraph = "We cover a wide range of graphic design services to help you build the foundations of your brand such as logo designs, business stationery, social media banners, flyers and more."
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
 
   const rankingArray = [
@@ -80,7 +80,7 @@ export default function digital_branding({ location }) {
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/digital_branding' main="/branding" />
+        <Nav loc={location} page='/graphic_design' main="/branding" />
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -98,14 +98,14 @@ export default function digital_branding({ location }) {
             w="50%"
           >
             <h3>
-              What is your BRAND?
+              Graphic Design
             </h3>
             <p>
-            Whether it’s an individual, product, or company, 
-            branding is the most essential part in crafting an
-            identity. Branding is all about creating memorable, 
-            positive impressions to capture and engage your target 
-            audience for favorable results and sales growth.
+              Graphic design is an essential part of what we do. 
+              Without it, no companies would have any form of brand identity. 
+              We cover a wide range of graphic design services to help you build 
+              the foundations of your brand such as logo designs, business stationery, 
+              social media banners, flyers, and more...
             </p>
             <button
               // className="businessEnquiryButton"
@@ -118,33 +118,6 @@ export default function digital_branding({ location }) {
             ml="70px"
           >
             <img src={brandingpic2} alt="rocketpc.svg" />
-          </Box>
-        </Flex>
-        <Flex
-          pt="50px"
-          pl="103px"
-          alignItems="center"
-        >
-          <Box>
-            <img src={brandingpic3} alt="rocketpc.svg" />
-          </Box>
-          <Box
-            className="digibrand"
-            w="50%"
-            ml="70px"
-          >
-            <h3>
-              Visual Group Digital as your Digital Branding Agency
-            </h3>
-            <p>
-              At Visual Group Digital, we’ll make your brand come to life on digital platforms through a creative and targeted approach.
-            </p>
-            <button
-              // className="businessEnquiryButton"
-              className="button button--aylen"
-            >
-              <span className="biz">BUSINESS ENQUIRY</span>
-            </button>
           </Box>
         </Flex>
         <Box
@@ -165,10 +138,10 @@ export default function digital_branding({ location }) {
               mx="80px"
             >
               <h3>
-                Your Corporate Identity and Business Goals
+                Website Design
               </h3>
               <p>
-                As a company, what do you want to achieve? We, at Visual Group Digital, will take an in-depth study on your business goals, your present business status, and the gap that we have to bridge by designing the perfect brand image and identity.
+                We provide you with an eye-catching website, which helps your customer enjoy a better experience and a more comfortable UI.
               </p>
             </Box>
             <Box
@@ -177,16 +150,10 @@ export default function digital_branding({ location }) {
               mx="80px"
             >
               <h3>
-              Your Market
+                Logo Design
               </h3>
               <p>
-                What motivates the consumers in your market? What are their preferences and what do they think of your brand? Who are your captured market and why do they patronize your brand? 
-                <br/>
-                <br/>
-                To build the perfect persona for your brand, we, at Visual Group Digital, will explore different ways to understand the market, find out the expectations of consumers, and discover brand elements that appeal to them both visually and psychologically.
-                <br/>
-                <br/>
-                Then, we’ll create strategies to grow your audience engagement, market share, positive customer experience, and brand loyalty, leading to an increase in sales and ROI.
+                We will design a logo that stands out and captures the essence of your business.
               </p>
             </Box>
             <Box
@@ -195,10 +162,10 @@ export default function digital_branding({ location }) {
               mx="80px"
             >
               <h3>
-              Your Competitors and Industry
+                Business Cards
               </h3>
               <p>
-                Who are your competitors? What are they up to? What is the trend in the industry? At Visual Group Digital, we’ll study your “game field” to give us a better idea on how we will “play.” In designing your brand, we will consider what works and what doesn’t in the industry. With this approach, we can achieve better success rates!    
+                We can design business cards to give you a strong first impression during in-person interactions.
               </p>
             </Box>
             <Box
@@ -207,17 +174,34 @@ export default function digital_branding({ location }) {
               mx="80px"
             >
               <h3>
-              Your Brand Design
+                Social Media Banners
               </h3>
               <p>
-                With all of the above as references, we will design the visual elements of your brand.
-                Brand Logo
-                Brand Tagline
-                Brand Description
-                Corporate Vision, Mission and Values
-                Website Content
-
-                All elements including graphics, fonts, colors and keywords, must be significant and consistent with what your brand stands for.
+                We can target audiences who are interested in your products and services through carefully designed social media banners that drive traffic to your site!
+              </p>
+            </Box>
+            <Box
+              className="slidercards"
+              w="670px"
+              mx="80px"
+            >
+              <h3>
+                Flyer / Poster / Leaflet Design
+              </h3>
+              <p>
+                We can create posters, flyers, and leaflets that stand out and create a visual impact. 
+              </p>
+            </Box>
+             <Box
+              className="slidercards"
+              w="670px"
+              mx="80px"
+            >
+              <h3>
+                App Design Graphics
+              </h3>
+              <p>
+                We can redesign apps to have a more professional and pleasing appearance.
               </p>
             </Box>
           </Flex>

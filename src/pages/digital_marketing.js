@@ -92,7 +92,7 @@ export default function marketing({ location }) {
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/digital_marketing' />
+        <Nav loc={location} page='/digital_marketing' main="/marketing" />
         <ReusableHero 
           header={headerText}
           subheader={subheader}

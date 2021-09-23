@@ -79,7 +79,7 @@ export default function ecommerce_marketing({ location }) {
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/ecommerce_marketing' />
+        <Nav loc={location} page='/ecommerce_marketing' main="/marketing" />
         <ReusableHero 
           header={headerText}
           subheader={subheader}

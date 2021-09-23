@@ -80,7 +80,7 @@ export default function facebook_advertising({ location }) {
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/facebook_advertising' />
+        <Nav loc={location} page='/facebook_advertising' main="/marketing" />
         <ReusableHero 
           header={headerText}
           subheader={subheader}

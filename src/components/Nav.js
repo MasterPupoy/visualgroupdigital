@@ -10,7 +10,7 @@ import send from '../images/send.svg';
 
 import '../styles/navbar.css';
 
-export default function Nav({ loc, page }) {
+export default function Nav({ loc, page, main }) {
   
   const [key, setKey] = useState();
   const links = useRef();
@@ -133,7 +133,7 @@ export default function Nav({ loc, page }) {
             <a 
               href={`/digital_marketing`}
               className={
-              (key === '/digital_marketing') 
+              (main === '/marketing') 
               ? "active"
               : null
             }
@@ -209,7 +209,7 @@ export default function Nav({ loc, page }) {
             <a 
               href={`/digital_branding`}
               className={
-                (key === '/digital_branding') 
+                (main === '/branding') 
                 ? "active"
                 : null
               }
