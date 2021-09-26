@@ -10,6 +10,7 @@ import {
 import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import MobileNav from '../components/MobileNav';
 
 import facebook from '../images/facebook.svg';
 import twitter from '../images/twitter.svg';
@@ -20,7 +21,7 @@ import map from '../images/map.svg';
 
 import '../styles/contact.css';
 
-export default function contact({ location }) {
+export default function Contact({ location }) {
 
   const isBrowser = typeof window !== "undefined"
   
@@ -46,7 +47,11 @@ export default function contact({ location }) {
     <Box className="main" >
       <SEO />
       <Box>
-        <Nav loc={location} page='/contact' />
+         {
+          (width > 1280) 
+          ? <Nav loc={location} page='/contact' />
+          : <MobileNav />
+        }
         <Flex
           justifyContent="center"
           pt="93px"

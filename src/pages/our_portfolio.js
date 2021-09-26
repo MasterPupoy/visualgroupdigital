@@ -9,6 +9,7 @@ import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
+import MobileNav from '../components/MobileNav';
 
 import anothaweb from '../images/portfolio/anothaweb.png';
 import bar from '../images/portfolio/bar.png';
@@ -23,7 +24,7 @@ import casestudies from '../images/features/casestudies.png';
 
 import '../styles/our_portfolio.css';
 
-export default function our_portfolio({ location }) {
+export default function Our_portfolio({ location }) {
   const headerText = "OUR"
   const subheader = "PORTFOLIO"
   const paragraph = "Below, you’ll find some of our favorite brands that we’ve worked with"
