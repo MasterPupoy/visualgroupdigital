@@ -28,19 +28,25 @@ export default function About({ location }) {
   const paragraph = "For +10 Years We’ve Been Working with Big Companies, Helping Them Re-Discover Their Essence and Leverage Their Business"
   const text = "We collaborate with ambitious Companies and people."
 
-  const [width, setWidth]   = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const isBrowser = typeof window !== "undefined"
+  
+  const [width, setWidth]   = useState();
+  const [height, setHeight] = useState();
   
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", updateDimensions);
+ useEffect(() => {
+
+    if(isBrowser){
+      updateDimensions();
+      window.addEventListener("resize", updateDimensions);
+    }
     
     return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+  }, []); 
 
   return (
     <Box className="main">

@@ -92,19 +92,25 @@ export default function Search_engine_optimization({ location }) {
     }
   ]
 
-   const [width, setWidth]   = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const isBrowser = typeof window !== "undefined"
+  
+  const [width, setWidth]   = useState();
+  const [height, setHeight] = useState();
   
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", updateDimensions);
+ useEffect(() => {
+
+    if(isBrowser){
+      updateDimensions();
+      window.addEventListener("resize", updateDimensions);
+    }
     
     return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
+  }, []); 
 
   return (
     <Box className="main">

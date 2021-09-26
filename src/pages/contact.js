@@ -21,6 +21,27 @@ import map from '../images/map.svg';
 import '../styles/contact.css';
 
 export default function contact({ location }) {
+
+  const isBrowser = typeof window !== "undefined"
+  
+  const [width, setWidth]   = useState();
+  const [height, setHeight] = useState();
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+ useEffect(() => {
+
+    if(isBrowser){
+      updateDimensions();
+      window.addEventListener("resize", updateDimensions);
+    }
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
     <Box className="main" >
       <SEO />

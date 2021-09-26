@@ -21,20 +21,26 @@ import figma from '../../images/figma.png';
 
 import '../../styles/casestudies.css';
 
+const isBrowser = typeof window !== "undefined"
+
 export default function Sodelishus({ location }) {
 
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
 
-  const [width, setWidth]   = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const [width, setWidth]   = useState();
+  const [height, setHeight] = useState();
   
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", updateDimensions);
+ useEffect(() => {
+
+    if(isBrowser){
+      updateDimensions();
+      window.addEventListener("resize", updateDimensions);
+    }
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
