@@ -1,10 +1,22 @@
 .sliderBox {
   width: 315px;
-  height: 315px;
+  height: 340px;
   border: 2px solid #0A2F53;
   border-radius: 20px;
   box-shadow: 3px 3px 10px #0A2F53;
-  margin: 0px 42px;
+  margin: 10px 32px;
+
+}
+
+.sliderBox > div {
+  margin: auto;
+  width:270px ;
+}
+
+.sliderBox > div > img {
+  display: block;
+  margin: auto;
+  padding-top: 30px;
 }
 
 .sliderBox > h3 {
@@ -24,6 +36,7 @@ text-align: center;
   padding: 10px;
   margin-right: 10px;
   transition: 0.3s ease-out;
+  display: inline-block;
 }
 
 .leftArrow:hover {
@@ -39,6 +52,7 @@ text-align: center;
   padding: 10px;
   border: 2px solid #0A2F53;
   transition: 0.3s ease-out;
+  display: inline-block;
 }
 
 .rightArrow:hover {

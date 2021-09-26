@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Flex, 
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import Bizbut from '../components/Bizbut';
@@ -15,8 +16,6 @@ import shape5 from '../images/small_circle.svg';
 import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
-import line1 from '../images/line1.svg';
-import circle_el from '../images/circle_el.svg';
 
 import '../styles/reusablehero.css';
 
@@ -26,40 +25,92 @@ export default function ReusableHero({ image, header, subheader, paragraph,
   
   
     return (
+    <>
     <Flex
       className="hero-section reusablehero"
+      overflowX="hidden"
+      overflowY="hidden"
+      flexWrap="wrap"
+      height={[
+        "600px",
+        "500px",
+        "500px",
+        "700px",
+        "900px"
+      ]}
+      w="100%"
     >
       <Sider />
       <Box
-        pt="208px"
         pl="50px"
+        pt={[
+          "10px",
+          "20px",
+          "150px",
+          "200px"
+        ]}
+        width={[
+          "70%", // 0-30em
+          "100%", // 30em-48em
+          "50%", // 48em-62em
+          "30%", // 62em+
+          "40%"
+        ]}
       >
-        <h2
+        <Text
           className="reusableheader"
+          fontSize="5xl"
         >
           {header} {(separated) ? <br /> : null }
           <span>{subheader}</span>
-        </h2>
-        <p>
+        </Text>
+        <Text
+          as="p"
+          fontSize="2xl"
+        >
           {paragraph}
-        </p>
+        </Text>
         <Bizbut />
-      </Box>
-      <Box> 
       </Box>
       <Box
         className="shapeParent"
+        width={[
+          "0px ", // 0-30em
+          "0%", // 30em-48em
+          "30%", // 48em-62em
+          "50%",
+          "50%" // 62em+
+        ]}
+        height={[
+          "0px",
+          "0px",
+          "170px",
+          "270px",
+          "300px"
+        ]}
       >
-        <img src={shape} alt="svg" className="shape01" />
-        <img src={shape2} alt="svg" className="shape02" />
-        <img src={shape3} alt="svg" className="shape03" />
-        <img src={shape4} alt="svg" className="shape04" />
+        <img src={shape3} alt="svg" className="reshape3" />
+        <img src={shape4} alt="svg" className="reshape4" />
         <img src={shape5} alt="svg" className="shape05" />
-        <img src={shape6} alt="svg" className="shape06" />
-        <img src={shape7} alt="svg" className="shape07" />
-        <img src={shape8} alt="svg" className="shape08" />
+        <img src={shape6} alt="svg" className="reshape6" />
+        <img src={shape7} alt="svg" className="reshape7" />
+        <img src={shape8} alt="svg" className="reshape8" />
         <img src={image} alt="image" className={imageClass} />
       </Box>
+      <Box
+       width={[
+          "0%", // 0-30em
+          "0%", // 30em-48em
+          "0%", // 48em-62em
+          "100%",
+          "100%",
+          "100%" // 62em+
+      ]}
+      >
+          <img src={shape} alt="svg" className="reshape1" />
+          <img src={shape2} alt="svg" className="reshape2" />
+      </Box>
     </Flex>
+    </>
   )
 }

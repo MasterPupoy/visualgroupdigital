@@ -5,43 +5,64 @@ import {
   Badge
 } from '@chakra-ui/react';
 
-import SEO from '../components/Seo';
-import Nav from '../components/Nav';
-import ReusableFooter from '../components/ReusableFooter';
-import StaticLogo from '../components/StaticLogo';
-import Footer from '../components/Footer';
+import SEO from '../../components/Seo';
+import Nav from '../../components/Nav';
+import ReusableFooter from '../../components/ReusableFooter';
+import StaticLogo from '../../components/StaticLogo';
+import Footer from '../../components/Footer';
+import MobileNav from '../../components/MobileNav';
 
-import brandng from '../images/brandng.png';
-import fbadcopy from '../images/fbadcopy.png';
-import figma from '../images/figma.png';
-import casestudies from '../images/features/casestudies.png';
+import sub from '../../images/scraped/subfrantic-music.json'
 
-import '../styles/casestudies.css';
+import brandng from '../../images/brandng.png';
+import fbadcopy from '../../images/fbadcopy.png';
+import figma from '../../images/figma.png';
 
-export default function maneuk({ location }) {
+
+import '../../styles/casestudies.css';
+
+export default function Sodelishus({ location }) {
 
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
+
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page="/case_studies" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/case_studies' />
+          : <MobileNav />
+        }
         <Flex
           justifyContent="center"
           alignItems="center"
+          m="10px"
         >
           <Box>
             <h1
               className="title"
             >
-              Hello Vans
+              Subfrantic Music
             </h1>
           </Box>
         </Flex>
         <Box
-          w="1358px"
-          h="1000px"
+          w="95%"
           className="caseStudyBox"
           m="auto"
           mt="50px"
@@ -52,13 +73,13 @@ export default function maneuk({ location }) {
             className="viewshead"
           >
             <h3>
-              hellovans.com
+                subfranticmusic.com
             </h3>
             <p>
-              Online Van removals comparison company
+             The number one online live streaming service for musicians 
             </p>
           </Box>
-          <Box
+          {/* <Box
             px="160px"
             py="36px"
             className="caseparagraph"
@@ -69,21 +90,23 @@ export default function maneuk({ location }) {
             <p style={{ marginTop: "30px"}}>
               When we moved here, I was shocked to find there was no range of low carb, low sugar, high protein products on the supermarket shelves (although low fat and gluten free products were). Crohn’s disease is complex, and there are many limitations on what you can and can’t eat. SoDelishUs is the answer to this gap and brings healthier foods to all families, myself and my family included.”
             </p>
-          </Box>
+          </Box> */}
           <Flex>
-            <Box>
+            <Box
+              w="20%"
+            >
               <Flex
-                w="220px"
                 h="540px"
-                ml="30px"
                 flexDirection="column"
                 mt="50px"
+                justifyContent="center"
+                px="10px"
               >
                 <Box
                   alignSelf="center"
                   py="20px"
                 >
-                  <Badge>Van Company</Badge>
+                  <Badge>Online music streaming</Badge>
                 </Box>
                 <Box
                   className="viewsSider"
@@ -104,10 +127,27 @@ export default function maneuk({ location }) {
                 </Box>
               </Flex>
             </Box>
+            <Flex
+              flexWrap="wrap"
+              w="80%"
+              justifyContent="center"
+            >
+              {sub.map((img, i) => {
+                return (
+                  <Box
+                    w="25%"
+                    m="5px"
+                  >
+                    <img key={i} src={img} alt={img} style={{ borderRadius: "2px"}} />
+                  </Box>
+                )
+              })}
             </Flex>
+          </Flex>
             <Flex
               justifyContent="center"
               alignItems="center"
+              my="20px"
             >
               <Box
                 mx="10px"
@@ -127,7 +167,7 @@ export default function maneuk({ location }) {
                 <button   
                   className="button button--aylen "
                   onClick={() => {
-                    window.location.replace("/case_studies")
+                    window.location.assign("/case_studies")
                   }}
                 >
                   <span>VIEW MORE CASE STUDIES</span>
@@ -144,6 +184,4 @@ export default function maneuk({ location }) {
     </Box>
   )
 }
-
-
 

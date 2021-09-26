@@ -46,39 +46,38 @@ export default function Slideshow() {
   const set3 = useRef();
   const set4 = useRef();
 
-  useEffect(() => {
-    let mounted = true;
+  // useEffect(() => {
+  //   let mounted = true;
     
-    const tl1 = gsap.timeline({ repeat: -1 });
-    const tl2 = gsap.timeline({ repeat: -1 });
-    const tl3 = gsap.timeline({ repeat: -1 });
-    const tl4 =  gsap.timeline({ repeat: -1 });
+  //   const tl1 = gsap.timeline({ repeat: -1 });
+  //   const tl2 = gsap.timeline({ repeat: -1 });
+  //   const tl3 = gsap.timeline({ repeat: -1 });
+  //   const tl4 =  gsap.timeline({ repeat: -1 });
 
-    if(mounted) {
+  //   if(mounted) {
 
-      tl1.fromTo(set1.current, { x: -1400 }, { x : 1400, duration : 15, ease : 'none' }); 
-      tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 20, ease : 'none' });
-      tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 25, ease : 'none' });
-      tl4.fromTo(set4.current, { x: 1500 }, { x : -1500, duration : 35, ease : 'none' });
-    }
+  //     tl1.fromTo(set1.current, { x: -1400 }, { x : 1400, duration : 15, ease : 'none' }); 
+  //     tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 20, ease : 'none' });
+  //     tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 25, ease : 'none' });
+  //     tl4.fromTo(set4.current, { x: 1500 }, { x : -1500, duration : 35, ease : 'none' });
+  //   }
 
-    return () => {
-      mounted = false;
-      tl1.kill();
-      tl2.kill();
-      tl3.kill();
-      tl4.kill();
-    }
-  })
+  //   return () => {
+  //     mounted = false;
+  //     tl1.kill();
+  //     tl2.kill();
+  //     tl3.kill();
+  //     tl4.kill();
+  //   }
+  // })
 
 
   return (
   <Flex
-  flexDirection="row"
-  flexWrap="wrap"
-  w="100%"
-  className="slideshow"
-  overflowX="hidden"
+    flexDirection="row"
+    flexWrap="wrap"
+    className="slideshow"
+    overflowX="hidden"
   >
     <Flex
     justifyContent="space-between"

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -12,7 +13,7 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Bizbut from '../components/Bizbut';
+import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
 
 
@@ -24,9 +25,6 @@ import line1 from '../images/line1.svg';
 import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
-import seo from '../images/offers/seo.svg';
-
-import features from '../images/features/features.svg';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
@@ -37,7 +35,7 @@ import brush from '../images/features/brush.svg';
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function google_advertising({ location }) {
+export default function Google_advertising({ location }) {
   const headerText = "GOOGLE ADS"
   const subheader = "PAY-PER-CLICK (PPC) MANAGEMENT"
   const paragraph = "Google is the commonly used search engine across the worldwide web."
@@ -88,12 +86,29 @@ export default function google_advertising({ location }) {
     }
   ]
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/google_advertising' main="/marketing" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/google_advertising' main="/marketing" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -102,32 +117,60 @@ export default function google_advertising({ location }) {
           imageClass="digitalmarkbanner"
         />
         <Flex
-          pt="50px"
-          pl="103px"
+          mt="50px"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
           alignItems="center"
         >
           <Box
             
+            width={[
+              "0%", // 0-30em
+              "0%", // 30em-48em
+              "0%", // 48em-62em
+              "50%", // 62em+
+              "50%"
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={google} alt="rocketpc.svg" style={{ borderRadius: "10px", width: "600px", height: "500px"}} />
           </Box>
           <Box
             className="digimark"
-            w="50%"
-            ml="70px"
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "100%", // 48em-62em
+              "40%",
+              "40%" // 62em+
+            ]}
+            ml="20px"
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Google Ads Pay-Per-Click (PPC) <br />
               Management
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               Google is head-and-shoulders above any other website as the most used search engine on the internet. 
               It has transcended itself from a brand to a verb, 
               which means to search and obtain information. If you don’t believe us, Google it!
               <br />
               <br />
               Google handles over 5 billion searches per day. By utilising Google Ads, your business will be displayed to people who are actively seeking out the products and services you provide. PPC means you only pay each time your ad is clicked by your prospective customers, meaning you only pay for results! Successful businesses recognise the benefits of Google Ads PPC in sending high-value traffic to their website.
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
         </Flex>
@@ -155,7 +198,6 @@ export default function google_advertising({ location }) {
           pt="50px"
           justifyContent="center"
           flexWrap="wrap"
-          w="1200px"
           margin="auto"
         >
           <Box
@@ -206,7 +248,7 @@ export default function google_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-              className="offerCards"
+            className="offerCards"
           >
             <img src={facebookAds} alt="digitalmarketing.svg" />
             <h3>
@@ -251,8 +293,15 @@ export default function google_advertising({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
+          flexWrap="wrap"
         >
           <Box>
             <h3
@@ -271,13 +320,10 @@ export default function google_advertising({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
-        >
-          <ReusableRanking 
-            textArray={rankingArray}
-          />
-        </Box>
+      
+        <ReusableRanking 
+          textArray={rankingArray}
+        />
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

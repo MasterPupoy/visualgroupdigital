@@ -16,7 +16,6 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 47px;
   line-height: 61px;
 
   color: #294C5B;
@@ -43,17 +42,24 @@
   width: 450px;
 }
 
+@media screen and (max-width: 600px) {
+  .svg {
+    height: 0px;
+    width: 0px;
+  }
+}
+
 .leftdrop {
   position: relative;
-  bottom: 5px;
-  left: 500px;
+  bottom: 50%;
+  right: 20%;
   z-index: 0;
 }
 
 .rightdrop {
   position: relative;
   position: relative;
-  bottom: 400px;
-  left: 500px;
+  bottom: 50%;
+  left: 100%;
   z-index: 0;
 }

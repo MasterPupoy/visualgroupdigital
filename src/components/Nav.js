@@ -291,6 +291,9 @@ export default function Nav({ loc, page, main }) {
         <button
           // className="businessEnquiryButton"
           className="button button--aylen"
+          onClick={() => {
+            window.location.assign('/contact')
+          }}
         >
           <img src={send} alt="send" className="send" />
           <span className="biz">BUSINESS ENQUIRY</span>

@@ -41,12 +41,12 @@ export default function our_portfolio({ location }) {
           paragraph={paragraph}
           image={casestudies}
           separated={false}
-          imageClass="casebanner"
+          imageClass="digitalmarkbanner"
         />
         <Flex
           flexDirection="column"
           justifyContent="center"
-          pt="77px"
+          py="50px"
         >
           <Box
             className="portLinks"
@@ -67,6 +67,8 @@ export default function our_portfolio({ location }) {
         </Flex>
         <Box
           className="portbox"
+          w="95%"
+          m="auto"
         >
           <Flex
             className="portshowcase"
@@ -87,7 +89,7 @@ export default function our_portfolio({ location }) {
           </Flex>
           <Flex
             justifyContent="center"
-            pt="50px"
+            py="50px"
           >
             <Box>
               <button className="button button--aylen ">

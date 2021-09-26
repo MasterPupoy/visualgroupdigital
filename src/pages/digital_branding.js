@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -13,10 +14,12 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
+import MobileNav from '../components/MobileNav';
 
-import branding from '../images/branding.png';
+import branding from '../images/brandbg.png';
 import brandingpic2 from '../images/brandingpic2.png';
 import brandingpic3 from '../images/brandingpic3.png';
+
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
@@ -25,7 +28,7 @@ import brush from '../images/features/brush.svg';
 
 import '../styles/digital_branding.css';
 
-export default function digital_branding({ location }) {
+export default function Digital_branding({ location }) {
   const headerText = "BRAND"
   const subheader = "DEVELOPMENT"
   const paragraph = "At Visual Group Digital, we’ll make your brand come to life on digital platforms through a creative and targeted approach."
@@ -76,37 +79,72 @@ export default function digital_branding({ location }) {
     }
   ]
 
+   const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/digital_branding' main="/branding" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/digital_branding' main="/branding" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
           paragraph={paragraph}
           image={branding}
-          imageClass="digitalbrandbanner"
+          imageClass="digitalmarkbanner"
         />
         <Flex
           pt="50px"
-          pl="103px"
-          alignItems="center"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
+          alignItems="center" 
         >
           <Box
             className="digibrand"
-            w="50%"
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               What is your BRAND?
-            </h3>
-            <p>
-            Whether it’s an individual, product, or company, 
-            branding is the most essential part in crafting an
-            identity. Branding is all about creating memorable, 
-            positive impressions to capture and engage your target 
-            audience for favorable results and sales growth.
-            </p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
+              Whether it’s an individual, product, or company, 
+              branding is the most essential part in crafting an
+              identity. Branding is all about creating memorable, 
+              positive impressions to capture and engage your target 
+              audience for favorable results and sales growth.
+            </Text>
             <button
               // className="businessEnquiryButton"
               className="button button--aylen"
@@ -115,30 +153,76 @@ export default function digital_branding({ location }) {
             </button>
           </Box>
           <Box
-            ml="70px"
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={brandingpic2} alt="rocketpc.svg" />
           </Box>
         </Flex>
         <Flex
           pt="50px"
-          pl="103px"
-          alignItems="center"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
+          alignItems="center" 
         >
-          <Box>
+          <Box
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
+          >
             <img src={brandingpic3} alt="rocketpc.svg" />
           </Box>
           <Box
             className="digibrand"
-            w="50%"
-            ml="70px"
+             width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Visual Group Digital as your Digital Branding Agency
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               At Visual Group Digital, we’ll make your brand come to life on digital platforms through a creative and targeted approach.
-            </p>
+            </Text>
             <button
               // className="businessEnquiryButton"
               className="button button--aylen"
@@ -149,9 +233,9 @@ export default function digital_branding({ location }) {
         </Flex>
         <Box
           mt="210px"
-          ml="100px"
           overflowX="scroll"
           className="brandingslider"
+          mx="50px"
         >
           <Flex
             w="3236px"
@@ -223,9 +307,17 @@ export default function digital_branding({ location }) {
           </Flex>
         </Box>
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
-          mt="100px"
+          flexWrap="wrap"
+          justifyContent="center"
+          pt="50px"
         >
           <Box>
             <h3
@@ -234,7 +326,9 @@ export default function digital_branding({ location }) {
               Imagine Your ideal <span>BRAND</span>              
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="20px"
+          >
             <p
               className="whyus"
             >
@@ -242,13 +336,11 @@ export default function digital_branding({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
-        >
+      
           <ReusableRanking 
             textArray={rankingArray}
           />
-        </Box>
+     
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

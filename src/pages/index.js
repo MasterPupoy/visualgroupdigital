@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Flex,
   Box,
+  Text
 } from "@chakra-ui/react";
 
 import SEO from "../components/Seo";
 import Nav from "../components/Nav";
+import MobileNav from "../components/MobileNav";
 import Hero from "../components/Hero";
 import Sider from "../components/Sider";
 import SiderCircles from "../components/Illustrations/SiderCircles";
@@ -17,14 +19,7 @@ import AccomplishmentSlider from "../components/AccomplishmentSlider";
 import LearnMoreButton from '../components/LearnMoreButton';
 import Footer from '../components/Footer';
 
-import shape from '../images/Shape_01.svg';
-import shape2 from '../images/Shape_02.svg';
-import shape3 from '../images/Vector-circle.svg';
-import shape4 from '../images/Vector-verysmall.svg';
 import shape5 from '../images/small_circle.svg';
-import shape6 from '../images/Polygon.svg';
-import shape7 from '../images/Ellipse1.svg';
-import shape8 from '../images/back.svg';
 import line1 from '../images/line1.svg';
 import circle_el from '../images/circle_el.svg';
 
@@ -39,51 +34,51 @@ import '../styles/index.css';
 import ClientTestimonials from "../components/ClientTestimonials";
 
 
-export default function index({ location }) {
+export default function Index({ location }) {
+
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <Box
       className="main"
     >
       <SEO />
-      <div
-        className="shapeParent"
-      >
-        <img src={shape} alt="svg" className="shape01" />
-        <img src={shape2} alt="svg" className="shape02" />
-        <img src={shape3} alt="svg" className="shape03" />
-        <img src={shape4} alt="svg" className="shape04" />
-        <img src={shape5} alt="svg" className="shape05" />
-        <img src={shape6} alt="svg" className="shape06" />
-        <img src={shape7} alt="svg" className="shape07" />
-        <img src={shape8} alt="svg" className="shape08" />
-      </div>
-      <Flex
-        w="100%"
-      >
-        <Nav loc={location} page='/' />
-      </Flex>
+      {
+        (width > 1028) 
+        ? <Nav loc={location} page='/' />
+        : <MobileNav />
+      }
       <Flex
         w="100%"
       >
         <Sider />
-        <Flex
-          flexDirection="row"
-          flexWrap="wrap"
-          w="100%"
-        >
-          <Hero />
-        </Flex>
+        <Hero />
       </Flex>
-      <Box
-        w="100%"
-      >
-        <Slideshow />
-      </Box>
+      <Slideshow />
+   
       <Flex
         pt="5%"
       >
-        <Box>
+        <Box
+          width={[
+            "0%", // 0-30em
+            "0%", // 30em-48em
+            "45%", // 48em-62em
+            "5%", // 62em+
+          ]}
+        >
           <SiderCircles />
         </Box>
         <Box
@@ -92,18 +87,24 @@ export default function index({ location }) {
           <Box
             className="vgd"
           >
-            VISUAL GROUP DIGITAL
+            <Text
+              fontSize="md"
+            >
+              VISUAL GROUP DIGITAL
+            </Text>
           </Box>
           <Flex
             flexDirection="row"
-            flexWrap="noWrap"
+            flexWrap="wrap"
             w="100%"
             className="whatwedo"
           >
             <Box>
-              <h3>
+              <Text
+                fontSize="4xl"
+              >
                 What We Do
-              </h3>
+              </Text>
             </Box>
             <Box
               alignSelf="center"
@@ -114,15 +115,22 @@ export default function index({ location }) {
           </Flex>
           <Box
             pt="26px"
+            w={[
+              "100%",
+              "50%",
+              "50%",
+              "100%"
+            ]}
           >
-            <p
+            <Text
+              fontSize="sm"
               className="subwhatwedo"
             >
               At Visual Group Digital, we help businesses 
               flourish by following a comprehensive 3-step 
               process of <br/>
               consulting, development, and marketing.
-            </p>
+            </Text>
           </Box>
           <Box>
             <Cards />
@@ -203,42 +211,68 @@ export default function index({ location }) {
       <ClientTestimonials />
       <Flex
         mt="100px"
-        w="100%"
-        justifyContent="center"
-        alignItems="center"
-        px="148px"
+        mx={[
+          "10px",
+          "10px",
+          "20px",
+          "100px"
+        ]}
     
+        alignItems="center"
+        flexDirection="row"
+        flexWrap="wrap"
       >
-        <Box
-          w="50%"
+        <Flex
+          w={[
+            "100%",
+            "100%",
+            "50%",
+            "50%"
+          ]}
+          flexDirection="column"
+          alignSelf="flex-start"
         >
-          <h3
+          <Text
             className="aboutusindex"
+            fontSize="2xl"
           >
             About Us
-          </h3>
-          <p>
+          </Text>
+          <Text
+            fontSize="md"
+          >
             It all started when the founders, Ricky and Kerryann, 
             self-branded and marketed their own businesses to 
             success. That lesson laid the foundation for the 
             creation of Visual Group, a marketing agency dedicated 
             to driving results for businesses around the world.
-          </p>
-          <p>
+          </Text>
+          <Text
+            fontSize="md"
+          >
             From humble beginnings, Visual Group has grown into an 
             agency capable of web development, brand development, 
             full marketing strategies, and more. Throughout the 
             company’s growth, our team has maintained the same attention 
             to detail with each client we work with.
-          </p>
+          </Text>
           <LearnMoreButton />
-        </Box>
+        </Flex>
         <Box
-          ml="100px"
+          w={[
+            "100%",
+            "100%",
+            "50%",
+            "50%"
+          ]}
+          h={[
+            "300px",
+            "400px",
+            "500px",
+            "500px"
+          ]}
         >
           <img src={aboutus} alt="aboutus.png" />
-        </Box>
-        <Box>
           <img src={spag} alt="spag.svg" className="spag" />
           <img src={triangol} alt="triangol" className="triangol" />
           <img src={orangespag} alt="orangespag" className="orangespag" />
@@ -252,14 +286,35 @@ export default function index({ location }) {
         h="371px"
         w="100%"
         bg="#fff"
-        p="256px"
+        p={[
+          "20px",
+          "40px",
+          "256px",
+          "256px"
+        ]}
+        h="500px"
       >
         <Flex
           justifyContent="center"
           alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+          w="100%"
+          px={[
+               "20px",
+               "20px",
+               "100px",
+               "100px"
+             ]}
         >
           <Box
-            w="500px"
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
+            
           >
             <h1
               className="requesth1"
@@ -273,7 +328,18 @@ export default function index({ location }) {
             </p>
           </Box>
           <Box
-            pl="145px"
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
+             px={[
+               "20px",
+               "20px",
+               "100px",
+               "100px"
+             ]}
           >
             <h2
               className="requesth2"
@@ -289,9 +355,7 @@ export default function index({ location }) {
           </Box>
         </Flex>
       </Flex>
-      <Flex>
-        <Footer />
-      </Flex>
+      <Footer />
     </Box>
   )
 }

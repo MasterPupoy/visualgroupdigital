@@ -1,13 +1,9 @@
 
-.reusablehero {
-  height: 750px;
-}
 
 .reusableheader {
   font-family: dm-sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
   line-height: 62px;
 
   color: #0A2F53;
@@ -19,7 +15,6 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
   line-height: 62px;
 
   color : rgb(255,255,255, 1);
@@ -45,7 +40,59 @@
 
 .reusableimageholder {
   position: relative;
-  top: 45px;
-  left: 12%;
+  bottom: 270%;
+  left: 10%;
+  z-index: 0;
+}
+
+.reshape8 {
+  position: relative;
+  bottom: 100%;
+  left: 70%;
+}
+
+.reshape7 {
+  position: relative;
+  bottom: 50%;
+  left: 15%;
+}
+
+.reshape6 {
+   position: relative;
+  bottom: 30%;
+  left: 70%;
+}
+
+.reshape05 {
+  position: relative;
+  top: 0;
+  left: 10%;
+}
+
+.reshape4{
+  position: relative;
+  top: 200%;
+  left: 50%;
+}
+
+.reshape3 {
+  position: relative;
+  top: 200%;
+  left:  0%;
+}
+
+.reshape2 {
+  position: relative;
+  bottom: -23%;
+  left:  21%;
   z-index: 1;
+  
+}
+
+.reshape1 {
+  position: relative;
+  top: 66%;
+  left:  0%;
+  z-index: 1;
+  width: 100%;
 }

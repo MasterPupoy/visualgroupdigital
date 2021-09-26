@@ -19,7 +19,13 @@ export default function Cards() {
       flexWrap="wrap"
     >
       <Box
-        w="400px"
+        w={[
+          "100%",
+          "100%",
+          "50%",
+          "25%",
+          "25%"
+        ]}
         pt="10px"
       >
         <Box>
@@ -28,7 +34,12 @@ export default function Cards() {
         </Box>
         <Box
           pt="50px"
-          h="230px"
+          h={[
+            "230px",
+            "230px",
+            "270px",
+            "350px"
+          ]}
         >
           <h3
             className="cardh"
@@ -52,7 +63,13 @@ export default function Cards() {
         </Box>
       </Box>
       <Box
-        w="400px"
+        w={[
+          "100%",
+          "100%",
+          "50%",
+          "25%",
+          "25%"
+        ]}
         pt="10px"
       >
         <Box>
@@ -61,7 +78,12 @@ export default function Cards() {
         </Box>
         <Box
           pt="50px"
-          h="230px"
+          h={[
+            "230px",
+            "230px",
+            "270px",
+            "350px"
+          ]}
         >
           <h3
             className="cardh"
@@ -82,7 +104,13 @@ export default function Cards() {
         </Box>
       </Box>
       <Box
-        w="400px"
+        w={[
+          "100%",
+          "100%",
+          "50%",
+          "25%",
+          "25%"
+        ]}
         pt="10px"
       >
         <Box>
@@ -91,7 +119,12 @@ export default function Cards() {
         </Box>
         <Box
           pt="50px"
-          h="230px"
+          h={[
+            "230px",
+            "230px",
+            "270px",
+            "350px"
+          ]}
         >
           <h3
             className="cardh"

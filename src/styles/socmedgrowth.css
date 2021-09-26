@@ -22,6 +22,12 @@
   margin: 0px 38px 53px 38px;
 }
 
+@media screen and (max-width: 600px ){
+  .widerCards {
+    height: 900px;
+  } 
+}
+
 .widerCards > h3 {
   font-family: dm-sans;
   font-style: normal;
@@ -48,6 +54,17 @@
   margin-left: 30px;
   margin-right: 17px;
 }
+
+@media screen and (max-width: 600px ){
+  .widerCards {
+    height: 900px;
+  }
+
+  .widerCards > p {
+    height: 600px;
+  }
+}
+
 
 .widerCards > img {
   display: block;

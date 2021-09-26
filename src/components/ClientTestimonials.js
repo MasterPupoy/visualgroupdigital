@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Box,
-  Flex
+  Flex,
+  Text
 } from '@chakra-ui/react';
 
 import line1 from '../images/line1.svg';
@@ -57,8 +58,8 @@ export default function ClientTestimonials() {
       >
         <Box
           w="500px"
-          mx="100px"
           my="20px"
+          mx="20px"
         >
           <Flex
             justifyContent="center"
@@ -69,16 +70,22 @@ export default function ClientTestimonials() {
           <Box
             className="statement"
           >
-            <h3>
+            <Text
+              fontSize="3xl"
+              as="h3"
+            >
               “I’ve been using Visual <br />  
               Group for over 2 months.”
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="md"
+            >
               "My experience has been amazing and they have really helped me grow my business 
               and progress it to the next level. We speak daily and continuously track progress 
               and discuss how we can keep growing the business further. Really great company to 
               work with and I would recommend them to anyone!"
-            </p>
+            </Text>
           </Box>
           <Flex
             justifyContent="center"
@@ -99,8 +106,8 @@ export default function ClientTestimonials() {
         </Box>
         <Box
           w="500px"
-          mx="100px"
-          my="20px" 
+          my="20px"
+          mx="20px"
         >
           <Flex
             justifyContent="center"
@@ -111,18 +118,24 @@ export default function ClientTestimonials() {
           <Box
             className="statement"
           >
-            <h3>
+            <Text
+              fontSize="3xl"
+              as="h3"
+            >
               “Fantastic service. Highly <br /> 
               recommend!”
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="md"
+            >
               "We came across Ricky by chance and so glad we did.
               Originally we approached Ricky with my project that 
               needed to be completely transformed. I have been working 
               with the visualgroup.online for a few months since and 
               Ricky has always been a man of his word, constantly 
               deliveres quality and continues too. I highly recommend."
-            </p>
+            </Text>
           </Box>
           <Flex
             justifyContent="center"
@@ -143,7 +156,7 @@ export default function ClientTestimonials() {
         </Box>
         <Box
           w="500px"
-          mx="100px"
+          mx="20px"
           my="20px"
         >
           <Flex
@@ -155,11 +168,16 @@ export default function ClientTestimonials() {
           <Box
             className="statement"
           >
-            <h3>
+            <Text
+              fontSize="3xl"
+              as="h3"
+            >
               “I can’t express enough how <br />
               impressed I am with their results!”
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+            >
               "Visual Group have been running my ads for the last 4 months 
               and I can’t express enough how impressed I am with their 
               results! They’ve increased my sales and allowed me to take 
@@ -168,7 +186,7 @@ export default function ClientTestimonials() {
               paid marketing plan but they also gave me advice on how to 
               grow my business organically. Thank you so much! 2021 is 
               going to be a big year!"
-            </p>
+            </Text>
           </Box>
           <Flex
             justifyContent="center"
@@ -189,7 +207,7 @@ export default function ClientTestimonials() {
         </Box>
         <Box
           w="500px"
-          mx="100px"
+          mx="20px"
           my="20px"
         >
           <Flex
@@ -201,12 +219,17 @@ export default function ClientTestimonials() {
           <Box
             className="statement"
           >
-            <h3>
+            <Text
+              fontSize="3xl"
+              as="h3"
+            >
               “Visual Group have been <br />
               excellent in getting my business <br/>
               out of a rut.”
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+            >
               "I had a very bad experience with a marketing firm who 
               charged me an excessive amount of money but didn't complete the works. 
               Visual Group have since helped with my business to make it consistent 
@@ -215,7 +238,7 @@ export default function ClientTestimonials() {
               has generated leads, all within a 3 month time period! Very quick and 
               efficient at what they do. Very happy with the results! 
               Would highly recommend them!"
-            </p>
+            </Text>
           </Box>
           <Flex
             justifyContent="center"

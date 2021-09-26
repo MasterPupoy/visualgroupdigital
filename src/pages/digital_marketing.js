@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -14,6 +15,7 @@ import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import Bizbut from '../components/Bizbut';
 import StaticLogo from '../components/StaticLogo';
+import MobileNav from '../components/MobileNav';
 
 
 import rocketpc from '../images/rocketpc.png';
@@ -36,7 +38,7 @@ import brush from '../images/features/brush.svg';
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function marketing({ location }) {
+export default function Marketing({ location }) {
   const headerText = "DIGITAL MARKETING"
   const subheader = "SERVICES"
   const paragraph = "We will get you on page one for all your top keyword searches for your business."
@@ -87,12 +89,30 @@ export default function marketing({ location }) {
     }
   ]
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/digital_marketing' main="/marketing" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/digital_marketing' main="/marketing" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -102,26 +122,57 @@ export default function marketing({ location }) {
         />
         <Flex
           pt="50px"
-          pl="103px"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
           alignItems="center"
         >
           <Box
             className="digimark"
-            w="50%"
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Digital Marketing
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               As you gain more visibility, your number of visitors will 
               increase and help you gain the best marketing results 
               with our SEO services. We will get you on page one for 
               all your top keyword searches for your business.
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
           <Box
-            ml="70px"
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={rocketpc} alt="rocketpc.svg" />
           </Box>
@@ -149,6 +200,7 @@ export default function marketing({ location }) {
         <Flex
           pt="50px"
           justifyContent="center"
+          flexWrap="wrap"
         >
           <Box
             className="offerCards"
@@ -246,8 +298,16 @@ export default function marketing({ location }) {
           <Bizbut />
         </Flex>
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="center"
         >
           <Box>
             <h3
@@ -256,7 +316,9 @@ export default function marketing({ location }) {
               WHY <span>US?</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="20px"
+          >
             <p
               className="whyus"
             >
@@ -266,13 +328,9 @@ export default function marketing({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
-        >
-          <ReusableRanking 
-            textArray={rankingArray}
-          />
-        </Box>
+        <ReusableRanking 
+          textArray={rankingArray}
+        />
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

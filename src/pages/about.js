@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 import SEO from '../components/Seo';
 import Nav from '../components/Nav';
@@ -10,29 +11,46 @@ import Footer from '../components/Footer';
 import Values from '../components/Values';
 import Process from '../components/Process';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Slideshow from '../components/Slideshow';
 import ReusableFooter from '../components/ReusableFooter';
-
+import MobileNav from '../components/MobileNav';
+import StaticLogo from '../components/StaticLogo';
 
 import whatisvgd from '../images/whatisvgd.svg';
 import ceo from '../images/ceo.png';
 import aboutus from '../images/pekture.png';
-import slantline2 from '../images/slantline2.svg';
 
 import '../styles/about.css';
 
-export default function about({ location }) {
+export default function About({ location }) {
 
   const headerTxt = "ABOUT"
   const subheader = "VISUAL GROUP DIGITAL"
   const paragraph = "For +10 Years We’ve Been Working with Big Companies, Helping Them Re-Discover Their Essence and Leverage Their Business"
   const text = "We collaborate with ambitious Companies and people."
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/about' />
+        {
+          (width > 1028) 
+          ? <Nav loc={location} page='/about' />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerTxt}
           subheader={subheader}
@@ -42,28 +60,56 @@ export default function about({ location }) {
         <Flex
           pt="90px"
           pl="103px"
+          pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
+          alignItems="center"
         >
           <Box
             className="founder"
-            w="50%"
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "30%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               FOUNDER
-            </h3>
-            <h2>
+            </Text>
+            <Text
+              as="h2"
+              fontSize="5xl"
+            >
               RICKY INGRAM
-            </h2>
-            <h5>
+            </Text>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Chief Executive Officer of Visual Group Digital.
-            </h5>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               It all started when the founders, Ricky and Kerryann, 
               self-branded and marketed their own businesses to success. 
               That lesson laid the foundation for the creation of Visual 
               Group Digital, a marketing agency dedicated to driving results 
               for businesses around the world.
-            </p>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               Visual Group Digital leading marketing, branding and web development 
               agency. Who strategically plan the design of websites that empower 
               your business.Throughout the company’s growth, our team has maintained 
@@ -71,11 +117,25 @@ export default function about({ location }) {
               of our growing team understands that our differentiating factor among 
               other marketing agencies is the one-of-a-kind thought that we put into 
               each new account.
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
           <Box
-            ml="70px"
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={ceo} alt="ceo.png" className="ceo" />
           </Box>
@@ -90,7 +150,7 @@ export default function about({ location }) {
             <h3
               className="valuesvgd"
             >
-              Visual Studio Group
+              Visual Group Digital
             </h3>
             <h3
               className="valuesvgdword"
@@ -110,13 +170,12 @@ export default function about({ location }) {
         <Box
           pl="10%"
         >
-          <img src={slantline2} alt="slantline2" className="processline" />
           <h3 className="ourprocess">
             OUR <span>PROCESS</span>
           </h3>
         </Box>
         <Process /> 
-        <Slideshow />
+        <StaticLogo />
         <ReusableFooter text={text} />
         <Footer />
       </Box>

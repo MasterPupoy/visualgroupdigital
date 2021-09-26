@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -12,8 +13,8 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Bizbut from '../components/Bizbut';
 import StaticLogo from '../components/StaticLogo';
+import MobileNav from '../components/MobileNav';
 
 
 import fblogo from '../images/fblogo.jpg';
@@ -27,7 +28,6 @@ import facebookAds from '../images/offers/facebookads.svg';
 import seo from '../images/offers/seo.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 
-import features from '../images/features/features.svg';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
@@ -38,7 +38,7 @@ import brush from '../images/features/brush.svg';
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function facebook_advertising({ location }) {
+export default function Facebook_advertising({ location }) {
   const headerText = "FACEBOOK"
   const subheader = "ADVERTISING"
   const paragraph = "Facebook, with its active users of over 2 billion and continuously growing, is the most popular social media network worldwide."
@@ -75,12 +75,29 @@ export default function facebook_advertising({ location }) {
     },
   ]
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/facebook_advertising' main="/marketing" />
+         {
+          (width > 1280) 
+          ? <Nav loc={location} page='/facebook_advertising' main="/marketing" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -90,17 +107,34 @@ export default function facebook_advertising({ location }) {
         />
         <Flex
           pt="50px"
-          pl="103px"
+          pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
           alignItems="center"
         >
           <Box
             className="digimark"
-            w="700px"
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Facebook Ad Placements
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               Facebook, with a user base of over 2 billion accounts, is the most popular social media network worldwide.
               Research shows that in the UK alone, Facebook’s active users have reached almost 45 million, topping the 
               list of most popular social media networks in the country.
@@ -109,11 +143,24 @@ export default function facebook_advertising({ location }) {
               Many small to medium businesses have recognised the advantages of Social Media Marketing (SMM), specifically Facebook,
                in reaching their target consumer market in a cost-effective way. Building an organic following and running paid ads 
                are two popular methods for increasing revenue that we can help you with! 
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
           <Box
-            ml="70px"
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "60%", // 48em-62em
+              "50%", // 62em+
+            ]}
+            pt="10px"
+            textAlign="center"
           >
             <img src={fblogo} alt="rocketpc.svg" style={{ borderRadius: "10px", width: "550px", height: "400px"}} />
           </Box>
@@ -142,7 +189,6 @@ export default function facebook_advertising({ location }) {
           pt="50px"
           justifyContent="center"
           flexWrap="wrap"
-          w="1200px"
           margin="auto"
         >
           <Box
@@ -334,8 +380,16 @@ export default function facebook_advertising({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */} 
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="center"
         >
           <Box>
             <h3
@@ -344,7 +398,9 @@ export default function facebook_advertising({ location }) {
               Why <span>Visual Group Digital</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="20px"
+          >
             <p
               className="whyus"
             >
@@ -355,13 +411,9 @@ export default function facebook_advertising({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
-        >
-          <ReusableRanking 
-            textArray={rankingArray}
-          />
-        </Box>
+        <ReusableRanking 
+          textArray={rankingArray}
+        />
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

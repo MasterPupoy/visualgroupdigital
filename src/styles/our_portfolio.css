@@ -24,10 +24,7 @@
 }
 
 .portbox {
-  height: 1450px;
-  width: 1400px;
-  margin: 36px auto;
-
+  width: 100%;
   border: 2px solid #0A2F53;
   border-radius: 38px;
 

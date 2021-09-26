@@ -36,4 +36,10 @@
   color: #0A2F53;
   text-decoration: none;
   padding-left: 24px;
+  transition: 0.25s ease-out;
+}
+
+.reqCB:hover {
+  color: #EE6F19;
+  transition: 0.25s ease-in;
 }

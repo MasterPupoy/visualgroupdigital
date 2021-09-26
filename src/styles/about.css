@@ -59,8 +59,7 @@
 }
 
 .ceo {
-  width: 540px;
-  height: 540px;
+  width: 100%;
 }
 
 .valuesvgd {
@@ -137,7 +136,6 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 27px;
   line-height: 35px;
 
   color: #0A2F53;
@@ -163,7 +161,6 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
   line-height: 179.7%;
   /* or 31px */
 

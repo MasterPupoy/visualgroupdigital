@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -13,6 +14,7 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
+import MobileNav from '../components/MobileNav';
 
 import branding from '../images/branding.png';
 import webdevelopment from '../images/webdevelopment.png';
@@ -25,12 +27,10 @@ import facebookAds from '../images/offers/facebookads.svg';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
 
 import '../styles/digital_branding.css';
 
-export default function web_development({ location }) {
+export default function Web_development({ location }) {
   const headerText = "WEB"
   const subheader = "DEVELOPMENT"
   const paragraph = "We, at Visual Group Digital, will be your technology partner in building a bespoke website to establish your brand presence in the worldwide web."
@@ -67,38 +67,74 @@ export default function web_development({ location }) {
     },
   ]
 
+   const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/web_development' main="/branding" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/web_development' main="/branding" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
           paragraph={paragraph}
           image={branding}
           separated={false}
-          imageClass="digitalbrandbanner"
+          imageClass="digitalmarkbanner"
         />
         <Flex
           pt="50px"
-          pl="103px"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
           alignItems="center"
         >
           <Box
             className="digibrand"
-            w="50%"
+              width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Website Development: <br />
               Your Gateway to an Impressive Online Customer Experience
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               Your web design greatly affects your audience’s perception of your brand. 
               Their impression of your website can either glue potential customers to your 
               page or drive them away in an instant! Invest in a strong web presence to keep 
               customers interested in your site rather than competitors' sites.
-            </p>
+            </Text>
             <button
               // className="businessEnquiryButton"
               className="button button--aylen"
@@ -107,16 +143,30 @@ export default function web_development({ location }) {
             </button>
           </Box>
           <Box
-            ml="70px"
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={webdevelopment} alt="rocketpc.svg" />
           </Box>
         </Flex>
         <Box
-          mt="210px"
-          ml="100px"
+         mt="210px"
           overflowX="scroll"
           className="brandingslider"
+          mx="50px"
         >
           <Flex
             w="3236px"
@@ -226,9 +276,18 @@ export default function web_development({ location }) {
           </Flex>
         </Box>
         <Flex
-          pl="103px"
-          flexDirection="row"
           mt="100px"
+            pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
+          flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="center"
+          pt="50px"
         >
           <Box>
             <h3
@@ -237,7 +296,9 @@ export default function web_development({ location }) {
               Imagine Your ideal <span>BRAND</span>              
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="20px"
+          >
             <p
               className="whyus"
             >
@@ -248,7 +309,7 @@ export default function web_development({ location }) {
 
         <Flex
           flexDirection="row"
-          flexWrap="noWrap"
+          flexWrap="wrap"
           w="100%"
           className="whatwedo"
           pl="20%"
@@ -513,14 +574,10 @@ export default function web_development({ location }) {
           </Box>
         </Flex>
 
-
-        <Box
-          pl="103px"
-        >
           <ReusableRanking 
             textArray={rankingArray}
           />
-        </Box>
+        
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

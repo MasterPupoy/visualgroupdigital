@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     "@chakra-ui/gatsby-plugin",
+    `gatsby-plugin-preload-fonts`,
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",

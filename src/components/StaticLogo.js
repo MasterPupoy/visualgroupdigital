@@ -2,7 +2,8 @@
 import React from 'react'
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import chessmoves from '../images/logo/chessmoves.svg';
@@ -44,38 +45,40 @@ export default function Slideshow() {
   
  return (
   <>
-    <Box>
+    <Box
+      mx="20px"
+    >
       <Box
-        pl="100px"
         pt="100px"
       >
-        <h3
+        <Text
           className="addlogo"
+          fontSize="3xl"
         >
           WE WOULD <span>LOVE</span> TO <br/>
           ADD YOUR LOGO HERE.
-        </h3>
+        </Text>
       </Box>
       <Flex
         justifyContent="space-between"
-        px="100px"
         pt="17px"
       >
         <Box>
-          <p
+          <Text
             className="addlogop"
+            fontSize="lg"
           >
             We’ve worked with more than 100 companies since 2015 Check out some of the <br />
             fantastic clients we have brought to the UK and International Markets.
-          </p>
+          </Text>
         </Box>
-        <Box>
+        {/* <Box>
           <h3
             className="addlogo"
           >
             Our Clients
           </h3>
-        </Box>
+        </Box> */}
       </Flex>
     </Box>
     

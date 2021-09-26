@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -12,7 +13,7 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Bizbut from '../components/Bizbut';
+import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
 
 
@@ -27,7 +28,7 @@ import seo from '../images/offers/seo.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 import socmed from '../images/offers/socmed.svg';
 import graphics from '../images/offers/graphics.svg';
-
+import growth from '../images/growth.png';
 import check from '../images/check.svg';
 
 import hex from '../images/features/hex.svg';
@@ -40,10 +41,10 @@ import brush from '../images/features/brush.svg';
 import '../styles/socmedgrowth.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function search_engine_optimization({ location }) {
-  const headerText = "ORGANIC SOCIAL"
-  const subheader = "MEDIA GROWTH"
-  const paragraph = "Social Media is the most used platform by a vast audience of diverse market profile."
+export default function Search_engine_optimization({ location }) {
+  const headerText = "SEARCH ENGINE OPTIMIZATION"
+  const subheader = "SEO"
+  const paragraph = "SEO is all about increasing your website’s visibility in the search engines by improving your rankings"
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
 
   const rankingArray = [
@@ -91,12 +92,29 @@ export default function search_engine_optimization({ location }) {
     }
   ]
 
+   const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/social_media_growth' main="/marketing" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/search_engine_optimization' main="/marketing" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -105,26 +123,58 @@ export default function search_engine_optimization({ location }) {
           imageClass="digitalmarkbanner"
         />
         <Flex
-          pt="50px"
-          pl="103px"
+           pt="50px"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
+          alignItems="center"
           alignItems="center"
         >
           <Box
-            className="digimark"
-            w="50%"
+             className="digimark"
+             width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Search Engine Optimisation (SEO): <br/>
               An Organic Way to Reach Your Target Audience
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               SEO is all about increasing your website’s visibility in search engines by improving your rankings. 
               When done right, SEO can boost your web traffic organically, leading to increases in customers and sales.
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
           <Box
-            ml="70px"
+            ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={seopic} alt="rocketpc.svg" style={{ borderRadius: "10px", }} />
           </Box>
@@ -154,7 +204,6 @@ export default function search_engine_optimization({ location }) {
           pt="50px"
           justifyContent="center"
           flexWrap="wrap"
-          w="1200px"
           margin="auto"
         >
           <Box
@@ -373,8 +422,16 @@ export default function search_engine_optimization({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
+          flexWrap="wrap"
+            justifyContent="center"
         >
           <Box>
             <h3
@@ -383,7 +440,9 @@ export default function search_engine_optimization({ location }) {
               Why <span>Visual Group Digital</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="20px"
+          >
             <p
               className="whyus"
             >
@@ -394,13 +453,60 @@ export default function search_engine_optimization({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
+    
+        <ReusableRanking 
+          textArray={rankingArray}
+        />
+
+        <Flex
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
+          mt="50px"
         >
-          <ReusableRanking 
-            textArray={rankingArray}
-          />
-        </Box>
+          <Box>
+            <Text
+              fontSize="5xl"
+            >
+              SEO Features
+            </Text>
+            <Text
+              fontSize="2xl"
+            >
+              Achieve all your goals and aspirations with the <br /> 
+              right kind of help, exactly when you need it
+            </Text>
+            <ul
+              className="socmedgrowthlist"
+            >
+               <li>
+                  <img src={check} alt="check.svg" /> High Traffic
+                </li>
+                 <li>
+                  <img src={check} alt="check.svg" /> Google Search Ranking
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> More leads
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> High income
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> More brand awareness
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> Business growth
+                </li> 
+                <li>
+                  <img src={check} alt="check.svg" /> Data reports every two weeks
+                </li> 
+            </ul>
+          </Box>
+          <Box>
+            <img src={growth} alt="seo_growth" />
+          </Box>
+        </Flex>
+        
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

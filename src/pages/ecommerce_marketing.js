@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -12,8 +13,8 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Bizbut from '../components/Bizbut';
 import StaticLogo from '../components/StaticLogo';
+import MobileNav from '../components/MobileNav';
 
 
 import ecom from '../images/ecom.png';
@@ -26,21 +27,18 @@ import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 
-import features from '../images/features/features.svg';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
 import monitor from '../images/features/monitor.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
 
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function ecommerce_marketing({ location }) {
-  const headerText = "GOOGLE ADS"
-  const subheader = "PAY-PER-CLICK (PPC) MANAGEMENT"
-  const paragraph = "Google is the commonly used search engine across the worldwide web."
+export default function Ecommerce_marketing({ location }) {
+  const headerText = "E-COMMERCE /"
+  const subheader = "DIGITAL STORES"
+  const paragraph = "This is in response to the change in consumer shopping behavior and preferences."
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
 
   const rankingArray = [
@@ -74,12 +72,30 @@ export default function ecommerce_marketing({ location }) {
     },
   ]
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/ecommerce_marketing' main="/marketing" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/ecommerce_marketing' main="/marketing" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -89,28 +105,59 @@ export default function ecommerce_marketing({ location }) {
         />
         <Flex
           pt="50px"
-          pl="103px"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
           alignItems="center"
         >
           <Box
             className="digimark"
-            w="50%"
+             width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               E-Commerce or Digital Stores: <br />
               The Next Generation of Shopping
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               Successful companies have diversified from brick-and-mortar operations by opening E-commerce stores. 
               These commercial channels act as online shops open 24/7. Consumers, particularly those with a busy 
               lifestyle, find online shopping time-saving and convenient since they can make a purchase at the click 
               of a button. Amidst a sea of brands and ECommerce stores on the internet, what will you do to make your 
               brand stand out, drive more consumers to your site, and convert them into sales?
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
           <Box
-            ml="70px"
+             ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={ecom} alt="rocketpc.svg" />
           </Box>
@@ -139,7 +186,6 @@ export default function ecommerce_marketing({ location }) {
           pt="50px"
           justifyContent="center"
           flexWrap="wrap"
-          w="1200px"
           margin="auto"
         >
           <Box
@@ -252,8 +298,16 @@ export default function ecommerce_marketing({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
+          flexWrap="wrap"
+            justifyContent="center"
         >
           <Box>
             <h3
@@ -262,7 +316,9 @@ export default function ecommerce_marketing({ location }) {
               Why <span>Visual Group Digital</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="10px"
+          >
             <p
               className="whyus"
             >
@@ -271,13 +327,11 @@ export default function ecommerce_marketing({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
-        >
-          <ReusableRanking 
-            textArray={rankingArray}
-          />
-        </Box>
+
+        <ReusableRanking 
+          textArray={rankingArray}
+        />
+     
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Flex,
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -12,7 +13,7 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Bizbut from '../components/Bizbut';
+import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
 
 
@@ -39,7 +40,7 @@ import brush from '../images/features/brush.svg';
 import '../styles/socmedgrowth.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function social_media_growth({ location }) {
+export default function Social_media_growth({ location }) {
   const headerText = "ORGANIC SOCIAL"
   const subheader = "MEDIA GROWTH"
   const paragraph = "Social Media is the most used platform by a vast audience of diverse market profile."
@@ -90,12 +91,30 @@ export default function social_media_growth({ location }) {
     }
   ]
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
 
   return (
     <Box className="main">
       <SEO />
       <Box>
-        <Nav loc={location} page='/social_media_growth' main="/marketing" />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/social_media_growth' main="/marketing" />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -105,28 +124,60 @@ export default function social_media_growth({ location }) {
         />
         <Flex
           pt="50px"
-          pl="103px"
+           pl={[
+            "10px",
+            "20px",
+            "60px",
+            "103px"
+          ]}
+          flexWrap="wrap"
+          alignItems="center"
           alignItems="center"
         >
-          <Box
+        <Box
+          ml={[
+              "0px",
+              "0px",
+              "70px",
+              "70px"
+            ]}
+            width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
+            pt="10px"
+            px="20px"
+            textAlign="center"
           >
             <img src={socmedgrowth} alt="rocketpc.svg" style={{ borderRadius: "10px", }} />
           </Box>
           <Box
             className="digimark"
-            w="50%"
-            ml="70px"
+             width={[
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "50%", // 48em-62em
+              "40%", // 62em+
+            ]}
           >
-            <h3>
+            <Text
+              as="h3"
+              fontSize="5xl"
+            >
               Organic Social Media
-            </h3>
-            <p>
+            </Text>
+            <Text
+              as="p"
+              fontSize="xl"
+            >
               <strong>Social Media platforms are among the most used sites on the internet.</strong> Social media activities like posting photos, 
               viewing influencer posts, and browsing through news feeds are a daily routine for a growing number of people.
               <br />
               <br />
               Organic Social Media allows an individual or entity to post any content they want, free of charge. Businesses use Organic Social Media to advertise free promotions, create more brand awareness and visibility, strengthen their market positioning, widen their audience and consumer base, and increase engagement with their customers!
-            </p>
+            </Text>
             <LearnMoreButton />
           </Box>
         </Flex>
@@ -155,7 +206,6 @@ export default function social_media_growth({ location }) {
           pt="50px"
           justifyContent="center"
           flexWrap="wrap"
-          w="1200px"
           margin="auto"
         >
           <Box
@@ -347,8 +397,16 @@ export default function social_media_growth({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl="103px"
+          pl={[
+            "30px",
+            "30px",
+            "30px",
+            "50px",
+            "108px"
+          ]}
           flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="center"
         >
           <Box>
             <h3
@@ -357,7 +415,9 @@ export default function social_media_growth({ location }) {
               Why <span>Visual Group Digital</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            pt="20px"
+          >
             <p
               className="whyus"
             >
@@ -366,13 +426,10 @@ export default function social_media_growth({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          pl="103px"
-        >
+
           <ReusableRanking 
             textArray={rankingArray}
           />
-        </Box>
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

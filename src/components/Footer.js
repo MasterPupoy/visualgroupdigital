@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Box, 
   Flex,
-  Input
+  Input,
+  Text
 } from '@chakra-ui/react';
 
 import message from '../images/message.svg';
@@ -64,6 +65,7 @@ export default function Footer() {
         justifyContent="center"
         alignItems="center"
         w="100%"
+        flexWrap="wrap"
       >
         <Flex
           flexDirection="row"
@@ -99,6 +101,7 @@ export default function Footer() {
         <Flex
           flexDirection="row"
           px="30px"
+          flexWrap="wrap"
         >
           <Box>
             <img src={map} alt="message.svg" />
@@ -130,7 +133,14 @@ export default function Footer() {
       <Flex
         w="100%"
         pl="190px"
+        pl={[
+          "10px",
+          "20px",
+          "150px",
+          "190px"
+        ]}
         pt="132px"
+        flexWrap="wrap"
       >
         <Box className="footerabout">
           <h3>
@@ -196,7 +206,12 @@ export default function Footer() {
         <hr />
       </Box>
       <Flex
-        mx="190px"
+        mx={[
+          "0px",
+          "0px",
+          "100px",
+          "190px"
+        ]}
         justifyContent="space-between"
         my="20px"
       >

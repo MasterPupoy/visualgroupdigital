@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Box,
-  Flex
+  Flex,
+  Text
 } from '@chakra-ui/react';
 
 import emoji from '../images/emoji.png';
@@ -14,34 +15,61 @@ export default function ReusableFooter({ text }) {
   return (
     <Flex 
       mt="100px"
-      h="371px"
+      h={[
+        "800px",
+        "800px",
+        "800px",
+        "700px",
+      ]}
       w="100%"
       bg="#fff"
-      py="256px"
+      px={[
+        "20px",
+        "20px",
+        "150px",
+        "250px"
+      ]}
+      overflowX="hidden"
+      alignItems="center"
     >
       <Flex
         alignItems="center"
-        pl="109px"
+        flexWrap="wrap"
+        alignSelf="center"
       >
         <Box>
           <img src={emoji} alt="emoji" />
         </Box>
         <Box
-          w="500px"
-          pl="74px"
+           w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
         >
-          <h1
+          <Text
+            as="h1"
+            fontSize="3xl"
             className="requesth1"
           >
             {text}
-          </h1>
-          <p>
+          </Text>
+          <Text
+            as="p"
+            fontSize="md"
+          >
             Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
             we can help decide where you need to start and which of our services would benefit you the most.
-          </p>
+          </Text>
         </Box>
         <Box
-          pl="145px"
+          w={[
+              "100%",
+              "100%",
+              "100%",
+              "20%"
+            ]}
         >
           <h2
             className="requesth2"
@@ -55,7 +83,14 @@ export default function ReusableFooter({ text }) {
             BUSINESS ENQUIRY
           </button>
         </Box>
-        <Box>
+        <Box
+          w={[
+            "0px",
+            "0px",
+            "100%",
+            "100%"
+          ]}
+        >
           <img src={circle_el} alt="svg" className="circular" />
         </Box>
       </Flex>

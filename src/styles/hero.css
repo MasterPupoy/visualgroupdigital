@@ -7,8 +7,6 @@
 .hero-section {
   /* background: linear-gradient(152.27deg, rgba(255, 252, 244, 0.831) 7.03%, rgba(255, 247, 229, 0.902) 32.02%, #FFF1D0 94.7%); */
   
-  width: 100%;
-  padding-bottom: 20px;
 
   background-image: url('../images/BG.svg');
   background-repeat: no-repeat;
@@ -16,8 +14,14 @@
   background-position: 0px 0px;
 }
 
+.indexbanner {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .banner-section {
-  width: 50%;
   margin-top: 194px;
   flex-wrap: wrap;
   
@@ -25,56 +29,106 @@
 
 .marketing {
   color:  #0A2F53;
-  width: 100%;
-  font-size: 48px;
   font-family: dm-sans, sans-serif;
   font-style: normal;
   font-weight: bold;
-  line-height: 62px;
+  height: auto;
 }
 
 .submarketing {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
   line-height: 30px;
 
-  padding-top: 20px;
   padding-bottom: 17px;
   padding-left: 11px; 
   color: rgba(10, 47, 83, 0.62);
 }
 
-.subhero {
-  margin-top: 23%;
-  margin-bottom: 14px;
-  justify-content: center;
-  align-items: center;
-}
-
 .p1 {
   text-align: center;
-  width: 574px;
+  z-index: 1;
 }
 
-.p1 > h3 {
+.herohead {
   font-family: dm-sans;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 47px;
-  position: relative;
-  z-index: 1;
 }
 
-.p1 > p {
+.heropara {
   font-family: dm-sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
   line-height: 23px;
   text-align: center;
 
   color: rgba(52, 52, 52, 0.61);;
 }
+
+/* 
+  shapes
+*/
+.shape01 {
+  position: relative;
+  z-index: 1;
+  top: 30%;
+  width: 100%;
+}
+
+.shape02 {
+  bottom: 5%;
+  position: relative;
+  z-index: 0;
+}
+
+.shape03 {
+  position: relative;
+  bottom: 200%;
+  left: 0%;
+  z-index: 1;
+}
+
+.shape04 {
+  position: relative;
+  bottom: 200%;
+  left: 50%;
+  z-index: 1;
+}
+
+.shape05 {
+  position: relative;
+  top: 50%;
+  left: 10%;
+  opacity: 0.59;
+  z-index: 1;
+}
+
+.shape06 {
+  position: relative;
+  top: 3%;
+  left: 50%;
+  opacity: 0.59;
+  z-index: 1;
+}
+
+.shape07 {
+  position: relative;
+  bottom: 200%;
+  left: 7%;
+  z-index: 0;
+}
+
+.shape08 {
+  position: relative;
+  bottom: 280%;
+  left: 70%;
+  z-index: 0;
+}
+
+/* 
+  end of shapes
+*/
 

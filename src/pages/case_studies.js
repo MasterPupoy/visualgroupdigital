@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {
   Flex,
   Box,
-  Badge
+  Badge,
+  Text
 } from '@chakra-ui/react';
 
 import SEO from '../components/Seo';
@@ -12,11 +13,39 @@ import ReusableFooter from '../components/ReusableFooter';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
+import MobileNav from '../components/MobileNav';
 
 import brandng from '../images/brandng.png';
 import fbadcopy from '../images/fbadcopy.png';
 import figma from '../images/figma.png';
 import casestudies from '../images/features/casestudies.png';
+
+import sd from '../images/scraped/sodelishus.json';
+import ox from '../images/scraped/oxted_festival.json';
+import man from '../images/scraped/mane_uk.json';
+import hello from '../images/scraped/hello_vans.json';
+import house from '../images/scraped/house_of_strengh.json';
+import sub from '../images/scraped/subfrantic-music.json';
+import boss from '../images/scraped/bossy_bitch_maid.json';
+import capital from '../images/scraped/capital_clue_hunts.json';
+import suss from '../images/scraped/sussex_removals.json';
+import sch from '../images/scraped/sch_tech.json';
+import city from '../images/scraped/city_doggo.json';
+import pro from '../images/scraped/proclean.json';
+import bee from '../images/scraped/beemoved.json';
+import sly from '../images/scraped/slynote.json';
+import aren from '../images/scraped/aren_heating_plumbing.json';
+import exp from '../images/scraped/expert_apps.json';
+import lbp from '../images/scraped/life_balance.json';
+import virt from '../images/scraped/virtlx.json';
+import bw from '../images/scraped/black_and_white_london.json';
+import bod from '../images/scraped/bodiesmade_online.json';
+import tailor from '../images/scraped/sussex_tailored.json';
+import reader from '../images/scraped/readers_school.json';
+import intune from '../images/scraped/intune_consulting.json';
+import terrilyn from '../images/scraped/terri_lynn.json';
+import online from '../images/scraped/online_fitness_freedom.json';
+import reign from '../images/scraped/reign_supreme.json';
 
 import '../styles/casestudies.css';
 
@@ -28,209 +57,235 @@ function ClientView({ num }) {
       link: "sodelishus.co.uk",
       subheader: "Sodelishus is a health-focused food company",
       type: "FOOD COMPANY",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: sd[1],
+      img2: sd[2],
+      page: "/case_studies/sodelishus",
+      colorScheme: "gray"
     },
     {
       link: "oxtedfest.co.uk",
       subheader: "Music Festival based in Oxted",
       type: "CONCERT BOOKING",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/oxtedfest"
+      img1: ox[1],
+      img2: ox[2],
+      page: "/case_studies/oxtedfest",
+      colorScheme: "green.300"
     },
     {
       link: "maneuk.com",
       subheader: "Hair Thickening Solutions Company",
       type: "HAIR PRODUCTS",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/maneuk"
+      img1: man[0],
+      img2: man[1],
+      page: "/case_studies/maneuk",
+      colorScheme: "yellow.300"
     },
      {
       link: "hellovans.com",
       subheader: "Online Van removals comparison company",
       type: "vAN COMPANY",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/hellovans"
+      img1: hello[1],
+      img2: hello[2],
+      page: "/case_studies/hellovans",
+      colorScheme: "blue.300"
     },
     {
       link: "houseofstrength.co.uk",
       subheader: "A leading uk manufacturer and distributor of weighted plates and olympic bars",
       type: "GYM EQUIPMENTS",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: house[1],
+      img2: house[2],
+      page: "/case_studies/house_of_strength",
+      colorScheme: "teal.300"
     },
     {
       link: "subfranticmusic.com",
       subheader: "The number one online live streaming service for musicians",
       type: "Online music streaming",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: sub[1],
+      img2: sub[2],
+      page: "/case_studies/subfrantic_music",
+      colorScheme: "orange.300",
     },
     {
       link: "bossybitchmaid.me.uk",
       subheader: "England's most unique maid and butler service",
       type: "Bossy Bitch Maids",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: boss[1],
+      img2: boss[2],
+      colorScheme: "red.300",
+      page: "/case_studies/bossy_bitch_maid"
     },
     {
       link: "capitalcluehunts.com",
       subheader: "Real world adventure games in London. All you need is a phone, a team and a sharp mind for the cryptic",
       type: "Game Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: capital[1],
+      img2: capital[2],
+      colorScheme: "blue.300",
+      page: "/case_studies/capital_clue_hunts"
     },
     {
       link: "sussexremovals.co.uk",
       subheader: "Sussex Tailored Removals is a friendly and Professional Removals and Storage In Sussex.",
       type: "Removal Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: suss[1],
+      img2: suss[2],
+      colorScheme: "green.300",
+      page: "/case_studies/sussex_removals"
     },
     {
       link: "schtech.co.uk",
       subheader: "We Listen, Create & Deliver YOUR Technology Solutions.",
       type: "Technology Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: sch[1],
+      img2: sch[2],
+      colorScheme: "blue.300",
+      page: "/case_studies/sch_tech"
     },
     {
       link: "citydoggo.com",
       subheader: "City Doggo introduces a return to nature for your metropolitan pet. Our first HERO product, the Oui Oui Patch is an eco-friendly, odour-free, real grass pet toilet for your flat or balcony.",
       type: "Pet Products Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: city[1],
+      img2: city[2],
+      colorScheme: "green.300",
+      page: "/case_studies/city_doggo"
     },
     {
       link: "procleanpartnership.co.uk",
       subheader: "We Listen, Create & Deliver YOUR Technology Solutions.",
       type: "Luxury cleaning service.",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: pro[1],
+      img2: pro[2],
+      colorScheme: "gray.300",
+      page: "/case_studies/proclean"
     },
     {
       link: "beemoved.com",
       subheader: "TRUSTED Brighton REMOVALS & STORAGE COMPANY GET A FREE QUOTE FROM BEE MOVED",
       type: "Transport Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: bee[1],
+      img2: bee[2],
+      colorScheme: "cyan.300",
+      page: "/case_studies/bee_moved"
     },
     {
       link: "slynote.com",
       subheader: "Slynote makes sending encrypted data simple, no technical knowledge required or understanding of how encryption works, all you need is the basic requirement to send private data to another person or persons securely and quickly.",
       type: "Encrypted notes Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: sly[1],
+      img2: sly[2],
+      colorScheme: "teal.300",
+      page: "/case_studies/slynote"
     },
     {
       link: "arenheatingplumbing.co.uk",
       subheader: "Plumbing and heating company based in London",
       type: "Plumbing and heating company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: aren[1],
+      img2: aren[2],
+      colorScheme: "red.300",
+      page: "/case_studies/aren_heating"
     },
     {
       link: "expertapps.online",
       subheader: "App Development Platform for Business",
       type: "Encrypted notes Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: exp[1],
+      img2: exp[2],
+      colorScheme: "cyan.300",
+      page: "/case_studies/expert_apps"
     },
     {
       link: "lbpcourse.com",
       subheader: "LifeBalance Portal",
       type: "Life Balance Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: lbp[1],
+      img2: lbp[2],
+      colorScheme: "gray.300",
+      page: "/case_studies/life_balance"
     },
     {
       link: "virtlx.com",
       subheader: "The real-time monitoring platform forCustomer feedback",
       type: "Real-time Monitoring Platform",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: virt[1],
+      img2: virt[2],
+      colorScheme: "blue.300",
+      page: "/case_studies/virtlx"
     },
     {
       link: "blackandwhitelondon.co.uk",
       subheader: "Black and White London, a leading UK Supplier of promotional items. We specialise in promotional business gifts, printed promotional items and branded corporate merchandise",
       type: "Promotional Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: bw[1],
+      img2: bw[2],
+      colorScheme: "red.300",
+      page: "/case_studies/black_and_white"
     },
     {
       link: "bodiesmadeonline.com",
       subheader: "You’ll Taken The First Steps To Transforming Your Body & Life.",
       type: "Fitness Services",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: bod[1],
+      img2: bod[2],
+      colorScheme: "teal.300",
+      page: "/case_studies/bodiesmade_online"
     },
     {
       link: "tailoredremoval.co.uk",
       subheader: "Removals and storage company based in Sussex",
       type: "Tailored Removal Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: tailor[1],
+      img2: tailor[2],
+      colorScheme: "yellow.300",
+      page: "/case_studies/sussex_tailored"
     },
     {
       link: "readerschool.org/v1/",
       subheader: "A full interactive and fun e-learning platform for children.",
       type: "Online Children Learning platform",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: reader[1],
+      img2: reader[2],
+      colorScheme: "cyan.300",
+      page: "/case_studies/readers_school"
     },
      {
       link: "intune.consulting/",
       subheader: "Whilst each organisation is unique, here are some specific offerings.",
       type: "Consulting Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: intune[1],
+      img2: intune[2],
+      colorScheme: "gray",
+      page: "/case_studies/intune_consulting"
     },
      {
       link: "terrilynn.com",
       subheader: "Terri Lynn's FREE fundraising program makes it easy for you to raise money for your cause! Get started today with a personal Online Webstore.",
       type: "Lifestyle Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: terrilyn[1],
+      img2: terrilyn[2],
+      colorScheme: "red.300",
+      page: "/case_studies/terri_lyn"
     },
       {
       link: "onlinefitnessfreedom.com",
       subheader: "Improve Their Marketing & Branding To Help Them Maximise Their Clientele Potential.",
       type: "Fitness Services",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: online[1],
+      img2: online[2],
+      colorScheme: "yellow.300",
+      page: "/case_studies/online_fitness_freedom"
     },
       {
       link: "reignsupremeuk.com",
       subheader: "Accountant In Kent, Who Speaks To You More Than Just Once A Year",
       type: "Business & Accounting Company",
-      img1: "N/A",
-      img2: "N/A",
-      page: "/sodelishus"
+      img1: reign[1],
+      img2: reign[2],
+      colorScheme: "teal.300",
+      page: "/case_studies/reign_supreme"
     },
   ]
 
@@ -257,33 +312,39 @@ function ClientView({ num }) {
   
 
   return(
-    <Box>
+    <Box
+      w="90%"
+    >
       {views.map((client, i) => {
         return (
           <Box
             key={i}
-            w="1358px"
-            h="563px"
+            w="100%"
             className="caseStudyBox"
             my="35px"
+            px="25px"
           >
             <Box
               textAlign="center"
-              pt="30px"
+              mt="30px"
               className="viewshead"
             >
               <h3>
-                {client.link}
+                <a href={`https://${client.link}/`} target="_blank">
+                  {client.link}
+                </a>
               </h3>
+
               <p>
                 {client.subheader}
               </p>
             </Box>
-            <Flex>
+            <Flex
+              mt="30px"
+            >
               <Box>
                 <Flex
                   w="220px"
-                  h="320px"
                   ml="30px"
                   flexDirection="column"
                   mt="50px"
@@ -292,7 +353,9 @@ function ClientView({ num }) {
                     alignSelf="center"
                     py="20px"
                   >
-                    <Badge>{client.type}</Badge>
+                    <Badge
+                      colorScheme={client.colorScheme}
+                    >{client.type}</Badge>
                   </Box>
                   <Box
                     className="viewsSider"
@@ -313,14 +376,35 @@ function ClientView({ num }) {
                   </Box>
                 </Flex>
               </Box>
-              <Box>
-
-              </Box>
+              <Flex
+                bg={client.colorScheme}
+                w="100%"
+                justifyContent="space-between"
+                alignItems="center"
+                p="20px"
+                borderRadius="12px"
+              >
+                <Box
+                  w="50%"
+                  borderRadius="70px"
+                  px="10px"
+                >
+                  <img src={client.img1} alt="client_showcase" style={{ borderRadius: "12px"}} />
+                </Box>
+                <Box
+                  w="50%"
+                  borderRadius="70px"
+                  px="10px"
+                >
+                  <img src={client.img2} alt="client_showcase" style={{ borderRadius: "12px"}}  />
+                </Box>
+              </Flex>
             </Flex>
             <Flex
               w="100%"
               justifyContent="center"
               alignItems="center"
+              my="50px"
             >
               <Box>
                 <LearnMoreButton link={client.page} />
@@ -346,7 +430,19 @@ export default function Case_studies({ location }) {
   const paragraph = "Below, you’ll find some of our favorite brands that we’ve worked with"
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
 
+  const [width, setWidth]   = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
 
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
   
 
   return (
@@ -355,17 +451,20 @@ export default function Case_studies({ location }) {
     >
       <SEO />
       <Box>
-        <Nav loc={location} page='/case_studies' />
+        {
+          (width > 1280) 
+          ? <Nav loc={location} page='/case_studies' />
+          : <MobileNav />
+        }
         <ReusableHero 
           header={headerText}
           subheader={subheader}
           paragraph={paragraph}
           image={casestudies}
           separated={false}
-          imageClass="casebanner"
+          imageClass="digitalmarkbanner"
         />
         <Flex
-          pl="103px"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
@@ -390,12 +489,19 @@ export default function Case_studies({ location }) {
             </p>
           </Box>
         </Flex>
-        <Box
-          textAlign="right"
+        <Flex
           mt="50px"
-          mx="150px"
+          mx="20px"
           h="100px"
+          justifyContent="flex-end"
         >
+          <Text
+            fontSize="sm"
+            mr="10px"
+            className="view"
+          >
+            View
+          </Text>
           <button
             className={
               (activeQty === 5) 
@@ -456,7 +562,7 @@ export default function Case_studies({ location }) {
           >
             All
           </button>
-        </Box>
+        </Flex>
         <Flex
           justifyContent="center"
         >

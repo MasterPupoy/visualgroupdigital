@@ -8,6 +8,15 @@ import {
 import left from '../images/left.svg';
 import right from '../images/right.svg';
 
+import accompfb from '../images/accomfb.png';
+import accompgoog from '../images/accompgoog.png';
+import accompseo from '../images/accompseo.png';
+import accompsocmed from '../images/accompsocmed.png';
+
+import socmedmark from '../images/socmedmark.jpg';
+
+import ecom from '../images/ecom.png'
+
 import { gsap } from 'gsap';
 
 import '../styles/slider.css';
@@ -41,17 +50,24 @@ function FirstSlider({ dir }){
       justifyContent="center"
       w="100%"
       ref={slides}
+      flexWrap="wrap"
     >
       <Box
         className="sliderBox"
       >
+         <Box>
+          <img src={socmedmark} alt="fbaccomplishment" />
+        </Box>
         <h3>
           Digital marketing
         </h3>
       </Box>
       <Box
         className="sliderBox"
-      >
+      > 
+        <Box>
+          <img src={ecom} alt="fbaccomplishment" />
+        </Box>
         <h3>
           e-commerce
         </h3>
@@ -59,6 +75,9 @@ function FirstSlider({ dir }){
       <Box
         className="sliderBox"
       >
+        <Box>
+          <img src={accompfb} alt="fbaccomplishment" />
+        </Box>
         <h3>
           Facebook advertising
         </h3>
@@ -96,10 +115,14 @@ function SecondSlider({ dir }){
       justifyContent="center"
       w="100%"
       ref={slides}
+      flexWrap="wrap"
     >
       <Box
         className="sliderBox"
       >
+        <Box>
+          <img src={accompgoog} alt="accompgoogle" />
+        </Box>
         <h3>
           Google advertising
         </h3>
@@ -107,6 +130,9 @@ function SecondSlider({ dir }){
       <Box
         className="sliderBox"
       >
+        <Box>
+          <img src={accompsocmed} alt="socmend" />
+        </Box>
         <h3>
           Social Media Growth
         </h3>
@@ -114,6 +140,9 @@ function SecondSlider({ dir }){
       <Box
         className="sliderBox"
       >
+        <Box>
+          <img src={accompseo} alt="seoaccomplishment" />
+        </Box>
         <h3>
           Search Engine Optimization
         </h3>
@@ -150,6 +179,7 @@ function ThirdSlider({ dir }){
     <Flex
       justifyContent="center"
       w="100%"
+      flexWrap="wrap"
       ref={slides}
     >
       <Box
@@ -274,9 +304,10 @@ export default function AccomplishmentSlider() {
             strategy. 
           </p>
         </Box>
-        <Box
+        <Flex
           textAlign="right"
-          pr="205px"
+          justifyContent="flex-end"
+          px="50px"
         >
           <button
             className="leftArrow"
@@ -290,14 +321,13 @@ export default function AccomplishmentSlider() {
           >
             <img src={right} alt="right.svg" />
           </button>
-        </Box>
+        </Flex>
       </Box>
         <Box
           pt="55px"
-          h="500px"
           w="100%"
           overflowX="hidden"
-          overflowY="hidden"
+
         >
           <ServiceSlider />
         </Box>

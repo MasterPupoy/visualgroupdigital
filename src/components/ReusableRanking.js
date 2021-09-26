@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Flex, 
-  Box
+  Box,
+  Text
 } from '@chakra-ui/react';
 
 import '../styles/reusableranking.css';
@@ -14,37 +15,58 @@ export default function ReusableRanking({ textArray }) {
       flexDirection="row"
       flexWrap="wrap"
       alignItems="center"
+      justifyContent="center"
+      w="100%"
     >
         {textArray.map((steps, i) => {
           return (
             <Flex
               flexDirection="row"
               flexWrap="wrap"
-              w="650px"
-              h="314px"
+              w={[
+                "100%",
+                "100%",
+                "50%",
+                "40%",
+                "40%"
+              ]}
+              h={[
+                "600px",
+                "600px",
+                "600px",
+                "600px",
+                "600px",
+                "316px"
+              ]}
               alignItems="center"
               className={steps.classes}
               mr="50px"
               mt="60px"
             >
               <Box>
-                <h1
+                <Text
                   className="reusablerankingnum"
                 >
                   {steps.num}
-                </h1>
+                </Text>
               </Box>
               <Box
                 className="reusablerankingbody"
-                w="500px"
+                w="70%"
               >
-                <h3>  
+                <Text
+                  fontSize="3xl"
+                  as="h3"
+                >  
                   {steps.header}
                   <img src={steps.img} alt="img" />
-                </h3>
-                <p>
+                </Text>
+                <Text
+                  as="p"
+                  fontSize="lg"
+                >
                   {steps.para}
-                </p>
+                </Text>
               </Box>
             </Flex>
           )
