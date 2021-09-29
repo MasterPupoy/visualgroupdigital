@@ -38,7 +38,7 @@ export default function Cards() {
             "230px",
             "230px",
             "270px",
-            "350px"
+            "270px"
           ]}
         >
           <h3
@@ -82,7 +82,7 @@ export default function Cards() {
             "230px",
             "230px",
             "270px",
-            "350px"
+            "270px"
           ]}
         >
           <h3
@@ -123,7 +123,7 @@ export default function Cards() {
             "230px",
             "230px",
             "270px",
-            "350px"
+            "270px"
           ]}
         >
           <h3

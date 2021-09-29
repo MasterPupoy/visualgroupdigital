@@ -194,10 +194,9 @@ export default function Footer() {
         <Box
           className="social"
         >
-          <img src={facebook} alt="facebooklogo.svg" />
-          <img src={twitter} alt="twitter.svg" />
-          <img src={insta} alt="instagram.svg" />
-          <img src={logoline} alt="logoline.svg" />
+          <img src={facebook} alt="facebooklogo.svg" style={{ height: "35px", width: "35px" }} />
+          <img src={twitter} alt="twitter.svg" style={{ height: "45px", width: "45px" }} />
+          <img src={insta} alt="instagram.svg" style={{ height: "45px", width: "45px" }} />
         </Box>
       </Flex>
       <Box

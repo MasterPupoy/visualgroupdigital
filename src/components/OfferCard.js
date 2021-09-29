@@ -45,7 +45,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/digital_marketing" />
         </Flex>
       </Box>
       <Box
@@ -62,7 +62,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/ecommerce_marketing" />
         </Flex>
       </Box>
        <Box
@@ -79,7 +79,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/facebook_advertising" />
         </Flex>
       </Box>
        <Box
@@ -96,7 +96,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="google_advertising" />
         </Flex>
       </Box>
        <Box
@@ -113,7 +113,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="social_media_growth" />
         </Flex>
       </Box>
        <Box
@@ -130,7 +130,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/search_engine_optimization" />
         </Flex>
       </Box>
        <Box
@@ -147,7 +147,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/graphic_design" />
         </Flex>
       </Box>
        <Box
@@ -164,7 +164,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/web_development" />
         </Flex>
       </Box>
        <Box
@@ -181,7 +181,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton />
+          <LearnMoreButton link="/digital_branding" />
         </Flex>
       </Box>
     </Flex>

@@ -34,7 +34,8 @@ export default function Hero() {
             "500px",
             "500px",
             "700px",
-            "900px"
+            "1000px",
+            "1000px"
           ]}
       >
         <Flex
@@ -52,6 +53,7 @@ export default function Hero() {
             "50%", // 48em-62em
             "50%", // 62em+
           ]}
+          pl="30px"
         >
           <Text
             className="marketing"
@@ -67,9 +69,7 @@ export default function Hero() {
             We Help Businesses Improve Their Marketing &amp; <br/>
             Brand To Maximise Client Potential.
           </Text>
-          <Box
-            pl="11px"
-          >
+          <Box>
             <Bizbut />
           </Box>
         </Flex>
@@ -104,6 +104,7 @@ export default function Hero() {
             "0px",
             "300px"
           ]}
+          w="100%"
         >
           <img src={shape} alt="svg" className="shape01" />
           <img src={shape2} alt="svg" className="shape02" />
@@ -120,6 +121,7 @@ export default function Hero() {
             "100px"
           ]}
         w="100%"
+
       >
         <Box
           className="p1"
@@ -135,7 +137,7 @@ export default function Hero() {
             className="heropara"
           >
             We’ve worked with more than 100 companies 
-            since 2015 Check out some of the fantastic 
+            since 2015 Check out some of the fantastic <br />
             clients we have brought to the UK and International 
             Markets.
           </Text>

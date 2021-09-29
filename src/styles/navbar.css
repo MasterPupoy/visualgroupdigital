@@ -18,7 +18,7 @@
 
 nav {
   width: 100%;
-  padding: 35px 88px 34px 93px;
+  padding: 35px 88px 34px 30px;
 
 }
 
@@ -39,10 +39,11 @@ nav {
 } */
 
 .nav-list > li {
-  font-family: momcake, sans-serif;
+  font-family: dm-sans;
   display: inline-block;
   padding: 0 1rem;
-  font-size: 19px;
+  font-size: 13px;
+  font-weight: 600;
   color: #767672;
   transition: all 0.3s;
 }
@@ -168,7 +169,9 @@ nav {
 }
 
 .active {
-  font-family: momcake-bold;
+  font-family: dm-sans;
+  font-size: 13px;
+  font-weight: 600;
   color: #0A2F53;
   border-bottom: 2px solid #0A2F53;
 }

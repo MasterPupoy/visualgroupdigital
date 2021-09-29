@@ -10,9 +10,14 @@
   font-display: swap;
 }
 
+body {
+  background-color: #FFFCF5;
+}
+
 .main {
   background-color: #FFFCF5;
   max-width: 2000px;
+  margin: auto;
 }
 
 .vgd {
@@ -101,7 +106,7 @@
 .circle_el {
   position: relative;
   bottom: 10%;
-  left: 40%;
+  left: 103%;
 }
 
 .requesth1 {
@@ -117,7 +122,6 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  line-height: 35px;
 
   color: #0A2F53;
 
@@ -136,6 +140,8 @@
 .indexBizbut {
   margin-top: 20px;
 }
+
+
 
 
 

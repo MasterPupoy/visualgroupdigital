@@ -3,7 +3,7 @@
   margin-bottom: 10px;
 }
 
-.slideshow > div > img {
+.slideshow > div > div > img, .slideshow > div > img {
   -webkit-filter: invert(100%); /* Safari/Chrome */
   filter: invert(100%);
   display: block;
@@ -59,3 +59,9 @@
   0%   { transform: translate(0, 0); }
   100% { transform: translate(-100%, 0); }
 }
+
+.slidelogo {
+  width: 100px;
+  margin:0px 10px 0px 10px ;
+}
+ 

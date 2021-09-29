@@ -68,7 +68,6 @@ export default function Index({ location }) {
       <Flex
         w="100%"
       >
-        <Sider />
         <Hero />
       </Flex>
       <Slideshow />
@@ -271,8 +270,8 @@ export default function Index({ location }) {
             "50%"
           ]}
           h={[
-            "300px",
-            "400px",
+            "500px",
+            "500px",
             "500px",
             "500px"
           ]}
@@ -283,82 +282,56 @@ export default function Index({ location }) {
           <img src={orangespag} alt="orangespag" className="orangespag" />
           <img src={shape5} alt="svg" className="circol" />
           <img src={fatTriangle} alt="svg" className="fatTriangle" />
-          <img src={circle_el} alt="svg" className="circle_el" />
         </Box>
       </Flex>
       <Flex
-        mt="100px"
-        h="371px"
-        w="100%"
         bg="#fff"
-        p={[
-          "20px",
-          "40px",
-          "256px",
-          "256px"
-        ]}
+        w="100%"
+        justifyContent="center"
+        alignItems="center"
         h="500px"
+        flexWrap="wrap"
+        mt="200px"
       >
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="row"
-          flexWrap="wrap"
-          w="100%"
-          px={[
-               "20px",
-               "20px",
-               "100px",
-               "100px"
-             ]}
+        <Box
+          w={[
+            "100%",
+            "100%",
+            "50%",
+            "500px"
+          ]}
         >
-          <Box
-            w={[
-              "100%",
-              "100%",
-              "100%",
-              "50%"
-            ]}
-            
-          >
-            <h1
+          <Text
               className="requesth1"
+              fontSize="4xl"
             >
               REQUEST A FREE CALLBACK <br />
               TODAY
-            </h1>
-            <p>
+            </Text>
+            <Text>
               Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
               we can help decide where you need to start and which of our services would benefit you the most.
-            </p>
-          </Box>
-          <Box
-            w={[
-              "100%",
-              "100%",
-              "100%",
-              "50%"
-            ]}
-             px={[
-               "20px",
-               "20px",
-               "100px",
-               "100px"
-             ]}
-          >
-            <h2
+            </Text>
+        </Box>
+        <Box
+          p="20px"
+        >
+           <Text
               className="requesth2"
+              fontSize="2xl"
             >
               Why Wait? <br/>
               Start Now
-            </h2>
+            </Text>
             <button
               className="bizbut indexBizbut"
             >
               BUSINESS ENQUIRY
             </button>
-          </Box>
-        </Flex>
+        </Box>
+        <Box>
+          <img src={circle_el} alt="svg" className="circle_el" />
+        </Box>
       </Flex>
       <Footer />
     </Box>
