@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -11,9 +11,36 @@ import fivestars from '../images/fivestars.svg';
 import smallLine from '../images/small_line.svg';
 import trustpilot from '../images/trustpilot.png';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/clientTestimonials.css';
 
 export default function ClientTestimonials() {
+
+  useEffect(() => {
+
+    let testimonialtl = gsap.timeline({ scrollTrigger: {
+      trigger: ".testimonialtop",
+      start: "top center",
+    }})
+
+    testimonialtl.fromTo(".testimonial1", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1})
+    .fromTo(".testimonial2", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1}, ">")
+    .fromTo(".testimonial3", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1}, ">")
+    .fromTo(".testimonial4", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1}, ">")
+
+
+  })
+  
   return (
     <Box 
       pt="90px"
@@ -23,7 +50,7 @@ export default function ClientTestimonials() {
         flexWrap="noWrap"
         justifyContent="center"
         w="100%"
-        className="whatwedo"
+        className="whatwedo testimonialtop"
       >
         <Box
           alignSelf="center"
@@ -60,6 +87,7 @@ export default function ClientTestimonials() {
           w="500px"
           my="20px"
           mx="20px"
+          className="testimonial1"
         >
           <Flex
             justifyContent="center"
@@ -108,6 +136,7 @@ export default function ClientTestimonials() {
           w="500px"
           my="20px"
           mx="20px"
+          className="testimonial2"
         >
           <Flex
             justifyContent="center"
@@ -158,6 +187,7 @@ export default function ClientTestimonials() {
           w="500px"
           mx="20px"
           my="20px"
+          className="testimonial3"
         >
           <Flex
             justifyContent="center"
@@ -209,6 +239,7 @@ export default function ClientTestimonials() {
           w="500px"
           mx="20px"
           my="20px"
+          className="testimonial4"
         >
           <Flex
             justifyContent="center"
@@ -264,7 +295,9 @@ export default function ClientTestimonials() {
       >
         <Box>
           <a 
-            href="#"
+            href="https://uk.trustpilot.com/review/visualgroup.online"
+            target="_blank"
+            rel="noreferrer"
             className="linktotrustpilot"
           >
             VIEW ALL REVIEWS ON &gt;

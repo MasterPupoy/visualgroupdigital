@@ -6,7 +6,6 @@ import {
 } from '@chakra-ui/react';
 
 import Bizbut from '../components/Bizbut';
-import Sider from '../components/Sider';
 
 import shape from '../images/Shape_01.svg';
 import shape2 from '../images/Shape_02.svg';
@@ -40,7 +39,6 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       ]}
       w="100%"
     >
-      <Sider />
       <Box
         pl="50px"
         pt={[
@@ -95,7 +93,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         <img src={shape6} alt="svg" className="reshape6" />
         <img src={shape7} alt="svg" className="reshape7" />
         <img src={shape8} alt="svg" className="reshape8" />
-        <img src={image} alt="image" className={imageClass} />
+        <img src={image} alt="someimha" className={imageClass} />
       </Box>
       <Box
        width={[

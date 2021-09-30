@@ -114,21 +114,6 @@ export default function Footer() {
             </h5>
           </Box>
         </Flex>
-        <Flex
-          flexDirection="row"
-          px="10px"
-        >
-          <Input 
-            placeholder="Drop Your Email" 
-            display="inline-block" 
-            size="lg"
-          />
-          <button
-            className="subscribe"
-          >
-            <span>SUBSCRIBE</span>
-          </button>
-        </Flex>
       </Flex>
       <Flex
         w="100%"

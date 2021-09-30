@@ -7,11 +7,12 @@ import {
 import '../styles/bizbut.css';
 
 
-export default function Bizbut() {
+export default function Bizbut({ id }) {
   return (
     <Flex
       flexWrap="wrap"
       alignItems="center"
+      id={id}
     >
       <Box>
         <button

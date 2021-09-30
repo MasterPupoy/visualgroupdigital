@@ -27,6 +27,7 @@ export default function Cards() {
           "25%"
         ]}
         pt="10px"
+        className="icard1"
       >
         <Box>
           <img src={strat} alt="strategy.svg" className="cardIcon" />
@@ -71,6 +72,7 @@ export default function Cards() {
           "25%"
         ]}
         pt="10px"
+        className="icard2"
       >
         <Box>
           <img src={designdev} alt="strategy.svg" className="cardIcon" />
@@ -112,6 +114,7 @@ export default function Cards() {
           "25%"
         ]}
         pt="10px"
+        className="icard3"
       >
         <Box>
           <img src={management} alt="strategy.svg" className="cardIcon" />

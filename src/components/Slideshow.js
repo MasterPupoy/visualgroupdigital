@@ -37,8 +37,10 @@ import onlineFitnessFreedom from '../images/logo/onlinefitnessfreedom.svg';
 import intuneConsulting from '../images/logo/intuneconsulting.svg';
 
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/slideshow.css';
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Slideshow() {
   const set1 = useRef();
@@ -46,30 +48,50 @@ export default function Slideshow() {
   const set3 = useRef();
   const set4 = useRef();
 
-  // useEffect(() => {
-  //   let mounted = true;
+  useEffect(() => {
+    let mounted = true;
     
-  //   const tl1 = gsap.timeline({ repeat: -1 });
-  //   const tl2 = gsap.timeline({ repeat: -1 });
-  //   const tl3 = gsap.timeline({ repeat: -1 });
-  //   const tl4 =  gsap.timeline({ repeat: -1 });
+    const tl1 = gsap.timeline({ repeat: -1 });
+    const tl2 = gsap.timeline({ repeat: -1 });
+    const tl3 = gsap.timeline({ repeat: -1 });
+    const tl4 =  gsap.timeline({ repeat: -1 });
 
-  //   if(mounted) {
+    if(mounted) {
 
-  //     tl1.fromTo(set1.current, { x: -1400 }, { x : 1400, duration : 15, ease : 'none' }); 
-  //     tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 20, ease : 'none' });
-  //     tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 25, ease : 'none' });
-  //     tl4.fromTo(set4.current, { x: 1500 }, { x : -1500, duration : 35, ease : 'none' });
-  //   }
+      // tl1.fromTo(set1.current, { x: -1400 }, { x : 1400, duration : 15, ease : 'none' }); 
+      // tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 20, ease : 'none' });
+      // tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 25, ease : 'none' });
+      // tl4.fromTo(set4.current, { x: 1500 }, { x : -1500, duration : 35, ease : 'none' });
+    
+      let slideshowtl = gsap.timeline({ scrollTrigger : {
+        trigger: ".heroheadhead",
+        toggleActions: "restart none none none",
+        start: "top center"
+      }})
 
-  //   return () => {
-  //     mounted = false;
-  //     tl1.kill();
-  //     tl2.kill();
-  //     tl3.kill();
-  //     tl4.kill();
-  //   }
-  // })
+      slideshowtl.fromTo(".heroheadhead", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, opacity: 1, y: 0})
+      .fromTo(".heropara", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5,  opacity: 1, y: 0}, ">")
+      .fromTo(".slideshow", {
+        opacity: 0,
+        y: -50
+      }, { duration: 0.5,  opacity: 1, y: 0})
+      
+    }
+
+    return () => {
+      mounted = false;
+      tl1.kill();
+      tl2.kill();
+      tl3.kill();
+      tl4.kill();
+    }
+  })
 
 
   return (
@@ -80,12 +102,12 @@ export default function Slideshow() {
     overflowX="hidden"
   >
     <Flex
-    justifyContent="space-between"
-    alignItems="center"
-    w="100%"
-    px="10%"
-    ref={set1}
-    overflowX="hidden"
+      justifyContent="space-between"
+      alignItems="center"
+      w="100%"
+      px="10%"
+      ref={set1}
+      overflowX="hidden"
     >
       <img src={chessmoves} alt="chessmoveslogo" />
       <img src={oxtedFestival} alt="oxtedfestival" />

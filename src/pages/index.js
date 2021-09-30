@@ -9,7 +9,6 @@ import SEO from "../components/Seo";
 import Nav from "../components/Nav";
 import MobileNav from "../components/MobileNav";
 import Hero from "../components/Hero";
-import Sider from "../components/Sider";
 import SiderCircles from "../components/Illustrations/SiderCircles";
 import Slideshow from "../components/Slideshow";
 import Cards from "../components/Cards";
@@ -30,12 +29,17 @@ import fatTriangle from '../images/fatTriangle.svg';
 
 import aboutus from '../images/aboutus.png';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/index.css';
 import ClientTestimonials from "../components/ClientTestimonials";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Index({ location }) {
 
- const isBrowser = typeof window !== "undefined"
+  const isBrowser = typeof window !== "undefined"
   
   const [width, setWidth]   = useState();
   const [height, setHeight] = useState();
@@ -45,15 +49,128 @@ export default function Index({ location }) {
     setHeight(window.innerHeight);
   }
 
- useEffect(() => {
+  useEffect(() => {
 
     if(isBrowser){
       updateDimensions();
       window.addEventListener("resize", updateDimensions);
+
+
+      let indextl = gsap.timeline({ scrollTrigger : {
+        trigger: ".whatwedo",
+        toggleActions: "restart none none none",
+      }})
+
+      indextl.fromTo(".whatwedo", {
+        opacity: 0,
+        x: -100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".indexsub", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1}, ">")
+      .fromTo(".icard1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".icard2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".icard3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
     }
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
+
+  useEffect(() => {
+    
+    let indextl2 = gsap.timeline({ scrollTrigger : {
+      trigger: ".vgd",
+      toggleActions: "restart none none none",
+      start: "top center",
+    }})
+
+    indextl2.fromTo(".vgd",{ 
+      opacity: 0,
+      x: -100
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo(".whatwedo2",{ 
+      opacity: 0,
+      x: -100
+    }, { duration: 0.5, x: 0, opacity: 1})
+
+  })
+
+ 
+  useEffect(() => {
+
+    let whatweoffertl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatweoffer",
+      toggleActions: "restart none none none",
+      start: "20% center"
+    }})
+
+    whatweoffertl.fromTo(".whatweoffer", {
+      opacity: 0,
+      x: -100
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo(".subwhatweoffer", {
+      opacity: 0,
+      x: -100
+    }, { duration: 0.5, x: 0, opacity: 1})
+
+  })
+
+  useEffect(() => {
+    
+     let abouttl = gsap.timeline({scrollTrigger: {
+        trigger: ".indexaboutussection",
+        scrub: 1,
+        start: "top top",
+      }})
+
+      abouttl.to(".aboutusindex", {
+        y: -20,
+        duration: 1,
+        ease: "ease"
+      })
+      .to(".spag", {
+        y: -10,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".triangol", {
+        y: -15,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".orangespag", {
+        y: -10,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".circol", {
+        y: -17,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".fatTriangle", {
+        y: -8,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to(".aboutuspic", {
+      y: -9,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+    
+  })
+
 
   return (
     <Box
@@ -125,6 +242,7 @@ export default function Index({ location }) {
               "50%",
               "100%"
             ]}
+            className="indexsub"
           >
             <Text
               fontSize="sm"
@@ -143,6 +261,7 @@ export default function Index({ location }) {
       </Flex>
       <Flex
         flexDirection="column"
+        className="vgd2"
       >
         <Box
           className="vgd"
@@ -175,6 +294,7 @@ export default function Index({ location }) {
       <Box 
         pl="10%"
         pt="105px"
+        className="supervgd"
       >
         <Box
           className="vgd"
@@ -185,7 +305,7 @@ export default function Index({ location }) {
           flexDirection="row"
           flexWrap="noWrap"
           w="100%"
-          className="whatwedo"
+          className="whatwedo whatweoffer"
         >
           <Box>
             <h3>
@@ -201,6 +321,7 @@ export default function Index({ location }) {
         </Flex>
         <Box
           pt="26px"
+          className="subwhatweoffer"
         >
           <p
             className="subwhatwedo"
@@ -225,6 +346,7 @@ export default function Index({ location }) {
         alignItems="center"
         flexDirection="row"
         flexWrap="wrap"
+        className="indexaboutussection"
       >
         <Flex
           w={[
@@ -238,7 +360,7 @@ export default function Index({ location }) {
         >
           <Text
             className="aboutusindex"
-            fontSize="2xl"
+            fontSize="5xl"
           >
             About Us
           </Text>
@@ -260,7 +382,7 @@ export default function Index({ location }) {
             company’s growth, our team has maintained the same attention 
             to detail with each client we work with.
           </Text>
-          <LearnMoreButton />
+          <LearnMoreButton link="/about" />
         </Flex>
         <Box
           w={[
@@ -276,7 +398,7 @@ export default function Index({ location }) {
             "500px"
           ]}
         >
-          <img src={aboutus} alt="aboutus.png" />
+          <img src={aboutus} alt="aboutus.png" className="aboutuspic" />
           <img src={spag} alt="spag.svg" className="spag" />
           <img src={triangol} alt="triangol" className="triangol" />
           <img src={orangespag} alt="orangespag" className="orangespag" />
@@ -291,7 +413,7 @@ export default function Index({ location }) {
         alignItems="center"
         h="500px"
         flexWrap="wrap"
-        mt="200px"
+        mt="100px"
       >
         <Box
           w={[

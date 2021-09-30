@@ -8,16 +8,20 @@ import {
 import left from '../images/left.svg';
 import right from '../images/right.svg';
 
-import accompfb from '../images/accomfb.png';
-import accompgoog from '../images/accompgoog.png';
-import accompseo from '../images/accompseo.png';
-import accompsocmed from '../images/accompsocmed.png';
+import accompfb from '../images/social.svg';
+import accompgoog from '../images/googadvert.svg';
+import accompseo from '../images/seooo.svg';
+import accompsocmed from '../images/socmedgrowth.svg';
+import graphix from '../images/graphix.svg';
+import webdev from '../images/webdev.svg';
+import branding from '../images/branding.svg';
 
-import socmedmark from '../images/socmedmark.jpg';
+import socmedmark from '../images/marketingsvg.svg';
 
-import ecom from '../images/ecom.png'
+import ecom from '../images/undrawsecom.svg';
 
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/slider.css';
 
@@ -55,32 +59,32 @@ function FirstSlider({ dir }){
       <Box
         className="sliderBox"
       >
-         <Box>
-          <img src={socmedmark} alt="fbaccomplishment" />
-        </Box>
         <h3>
           Digital marketing
         </h3>
+         <Box>
+          <img src={socmedmark} alt="fbaccomplishment" />
+        </Box>
       </Box>
       <Box
         className="sliderBox"
       > 
-        <Box>
-          <img src={ecom} alt="fbaccomplishment" />
-        </Box>
         <h3>
           e-commerce
         </h3>
+        <Box>
+          <img src={ecom} alt="fbaccomplishment" />
+        </Box>
       </Box>
       <Box
         className="sliderBox"
       >
-        <Box>
-          <img src={accompfb} alt="fbaccomplishment" />
-        </Box>
         <h3>
           Facebook advertising
         </h3>
+        <Box>
+          <img src={accompfb} alt="fbaccomplishment" />
+        </Box>
       </Box>
     </Flex>
   )
@@ -119,33 +123,33 @@ function SecondSlider({ dir }){
     >
       <Box
         className="sliderBox"
-      >
-        <Box>
-          <img src={accompgoog} alt="accompgoogle" />
-        </Box>
+        >
         <h3>
           Google advertising
         </h3>
+        <Box>
+          <img src={accompgoog} alt="accompgoogle" />
+        </Box>
       </Box>
       <Box
         className="sliderBox"
       >
-        <Box>
-          <img src={accompsocmed} alt="socmend" />
-        </Box>
         <h3>
           Social Media Growth
         </h3>
+        <Box>
+          <img src={accompsocmed} alt="socmend" />
+        </Box>
       </Box>
       <Box
         className="sliderBox"
       >
-        <Box>
-          <img src={accompseo} alt="seoaccomplishment" />
-        </Box>
         <h3>
           Search Engine Optimization
         </h3>
+        <Box>
+          <img src={accompseo} alt="seoaccomplishment" />
+        </Box>
       </Box>
     </Flex>
   )
@@ -188,6 +192,9 @@ function ThirdSlider({ dir }){
         <h3>
           Graphic Design
         </h3>
+        <Box>
+          <img src={graphix} alt="seoaccomplishment" />
+        </Box>
       </Box>
       <Box
         className="sliderBox"
@@ -195,6 +202,9 @@ function ThirdSlider({ dir }){
         <h3>
           Web Development
         </h3>
+        <Box>
+          <img src={webdev} alt="seoaccomplishment" />
+        </Box>
       </Box>
       <Box
         className="sliderBox"
@@ -202,6 +212,9 @@ function ThirdSlider({ dir }){
         <h3>
           Digital Branding
         </h3>
+        <Box>
+          <img src={branding} alt="seoaccomplishment" />
+        </Box>
       </Box>
     </Flex>
   )
@@ -252,7 +265,20 @@ function reducer(state, action) {
 export default function AccomplishmentSlider() {
   const [state, dispatch] = useReducer(reducer, initState)
   
-  console.log(state)
+  useEffect(() => {
+
+    let vgdtl = gsap.timeline({ scrollTrigger: {
+      trigger: ".accompvgd",
+      toggleActions: "restart none none none",
+      start: "top center"
+    }})
+
+    vgdtl.fromTo(".accompvgd", {
+      y: -300,
+      opacity: 0
+    }, { duration: 1, y: 0, opacity: 1})
+
+  }, [])
 
   const ServiceSlider = () => {
 
@@ -270,7 +296,9 @@ export default function AccomplishmentSlider() {
   }
   
   return (
-    <Box>
+    <Box
+      className="accompvgd"
+    >
       <Box 
         pl="10%"
         pt="105px"

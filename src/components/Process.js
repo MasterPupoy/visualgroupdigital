@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Flex, 
   Box,
@@ -14,9 +14,65 @@ import slantline2 from '../images/slantline2.svg';
 
 import Bizbut from '../components/Bizbut';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/process.css';
 
+gsap.registerPlugin(ScrollTrigger)
+
 export default function Process() {
+
+   useEffect(() => {
+
+    let proctl1 = gsap.timeline({ scrollTrigger: {
+      trigger: ".step1",
+      toggleActions: "restart none none none",
+      start: "top center"
+    }})
+
+    proctl1.fromTo(".step1", {
+      x : -100,
+      opacity: 0,
+    }, { duration: 1, opacity: 1, x: 0})
+    .fromTo(".svg1", {
+      x: 100,
+      opacity: 0
+    }, { duration : 1, opacity: 1, x: 0})
+
+    let proctl2 = gsap.timeline({ scrollTrigger: {
+      trigger: ".step1",
+      toggleActions: "restart none none none",
+      start: "bottom center"
+    }})
+
+    proctl2.fromTo(".step2", {
+      x : 100,
+      opacity: 0,
+    }, { duration: 1, opacity: 1, x: 0})
+    .fromTo(".svg2", {
+      x: -100,
+      opacity: 0
+    }, { duration : 1, opacity: 1, x: 0})
+
+    let proctl3 = gsap.timeline({ scrollTrigger: {
+      trigger: ".step2",
+      toggleActions: "restart none none none",
+      start: "bottom center"
+    }})
+
+    proctl3.fromTo(".step3", {
+      x : -100,
+      opacity: 0,
+    }, { duration: 1, opacity: 1, x: 0})
+    .fromTo(".svg3", {
+      x: 100,
+      opacity: 0
+    }, { duration : 1, opacity: 1, x: 0})
+
+  })
+
+
   return (
     <Flex
       flexDirection="column"
@@ -34,7 +90,7 @@ export default function Process() {
             "50%",
             "50%"
           ]}
-          pt="20px"
+          className="step1"
         >
           <h3
             className="steps"
@@ -48,8 +104,8 @@ export default function Process() {
             Consulting
           </Text>
           <Text
-            className="stepP"
-            fontSize="sm"
+            className="stepP stepp1"
+            fontSize="md"
           >
             Initial consulting is a crucial part of a successful relationship. 
             This is where we get together and determine the strengths and weaknesses of your business. 
@@ -74,7 +130,7 @@ export default function Process() {
             "100%"
           ]}
         >
-          <img src={consulting} alt="consulting.svg" className="svg" />
+          <img src={consulting} alt="consulting.svg" className="svg svg1" />
           <img src={slantline} alt="slantline.svg" className="leftdrop" />
         </Box>
       </Flex>
@@ -97,7 +153,7 @@ export default function Process() {
             "100%"
           ]}
         >
-          <img src={development} alt="consulting.svg" className="svg" /> 
+          <img src={development} alt="consulting.svg" className="svg svg2" /> 
           <img src={slantline2} alt="slantline2.svg" className="rightdrop" />
         </Box>
         <Box
@@ -108,7 +164,7 @@ export default function Process() {
             "50%",
             "50%"
           ]}
-          pt="20px"
+          className="step2"
         >
           <h3
             className="steps"
@@ -123,7 +179,7 @@ export default function Process() {
           </Text>
           <Text
             className="stepP"
-            fontSize="sm"
+            fontSize="md"
           >
             Visual Group Digital will take the info from our initial consulting 
             and overlay decades of combined experience to devise an effective 
@@ -143,7 +199,7 @@ export default function Process() {
             "50%",
             "50%"
           ]}
-          pt="20px"
+          className="step3"
         >
           <h3
             className="steps"
@@ -157,7 +213,7 @@ export default function Process() {
             Marketing
           </Text>
           <Text
-             fontSize="sm"
+             fontSize="md"
             className="stepP"
           >
             Lastly, we’ll reach the marketing step, where our planning comes to life. 
@@ -183,12 +239,13 @@ export default function Process() {
             "100%"
           ]}
         >
-          <img src={marketing} alt="consulting.svg" className="svg" />
+          <img src={marketing} alt="consulting.svg" className="svg svg3" />
         </Box>
       </Flex>
       <Flex
         justifyContent="center"
         alignItems="center"
+        pt="100px"
       >
         <Bizbut />
       </Flex>

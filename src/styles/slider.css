@@ -21,13 +21,15 @@
 
 .sliderBox > h3 {
   font-family: dm-sans;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 23px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
 
-color: #1D1D1D;
-text-align: center;
+  padding: 10px 0px;
+
+  color: #1D1D1D;
+  text-align: center;
 }
 
 .leftArrow {

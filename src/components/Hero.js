@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   Flex, 
   Box,
@@ -15,10 +15,99 @@ import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import indexpic from '../images/index.png';
 import '../styles/hero.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Hero() {
+
+  useEffect(() => {
+
+    let mounted = true;
+
+    if(mounted) {
+      
+      let tl = gsap.timeline({scrollTrigger: {
+        trigger: ".hero-section",
+        scrub: 1,
+        start: "top top",
+      }})
+
+      tl.to(".marketing", {
+        y: -200,
+        duration: 1,
+        ease: "ease"
+      })
+      .to(".submarketing", {
+        y: -200,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to(".shape05", {
+        y: -150,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".shape06", {
+        y: -150,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".shape07", {
+        y: -100,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".shape03", {
+        y: -170,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".shape04", {
+        y: -80,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to(".shape08", {
+        y: -70,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to(".indexbanner", {
+      y: -90,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      .to(".shape01", {
+      y: -50,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      .to(".shape02", {
+      y: -70,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      .to("#herobizbut", {
+      y: -200,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      
+      
+
+    }
+
+    return () => {
+      mounted = false
+    }
+
+  })
+
   return (
     <Flex
       flexDirection="column"
@@ -70,7 +159,7 @@ export default function Hero() {
             Brand To Maximise Client Potential.
           </Text>
           <Box>
-            <Bizbut />
+            <Bizbut id="herobizbut" />
           </Box>
         </Flex>
         <Box
@@ -121,7 +210,7 @@ export default function Hero() {
             "100px"
           ]}
         w="100%"
-
+        className="heroheadhead"
       >
         <Box
           className="p1"
