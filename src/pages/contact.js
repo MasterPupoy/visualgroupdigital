@@ -125,24 +125,14 @@ export default function Contact({ location }) {
                   </h5> 
                 </Box>
               </Flex>
-              <Flex
-                pt="30px"
-              >
-                <Box
-                  className="social"
-                >
-                  <img src={facebook} alt="facebooklogo.svg" />
-                  <img src={twitter} alt="twitter.svg" />
-                  <img src={insta} alt="instagram.svg" />
-                </Box>
-              </Flex>
             </Flex>
           </Box>
           </Flex>
           <Flex
             w="930px"
-            pl="173px"
             flexDirection="column"
+            justifyContent="center"
+            px="50px"
           >
             <Box
               className="contactgetstarted"
@@ -245,6 +235,7 @@ export default function Contact({ location }) {
             </Box>
             <Box
               className="contactgetstarted3"
+              pt="50px"
             >
               <h3>
                 Lastly, tell us about the project

@@ -28,8 +28,6 @@ import facebookAds from '../images/offers/facebookads.svg';
 import seo from '../images/offers/seo.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 
-
-import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
 import monitor from '../images/features/monitor.svg';
 import medal from '../images/features/medal.svg';
@@ -37,6 +35,11 @@ import brush from '../images/features/brush.svg';
 
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Facebook_advertising({ location }) {
   const headerText = "FACEBOOK"
@@ -85,7 +88,7 @@ export default function Facebook_advertising({ location }) {
     setHeight(window.innerHeight);
   }
 
- useEffect(() => {
+  useEffect(() => {
 
     if(isBrowser){
       updateDimensions();
@@ -94,6 +97,73 @@ export default function Facebook_advertising({ location }) {
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
+
+   useEffect(() => {
+
+    let dmtl = gsap.timeline({scrollTrigger : {
+      trigger: ".digimark",
+      start: "top center",
+      toggleActions: "restart none none none"
+    }})
+
+    dmtl.fromTo(".firstfb", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+    .fromTo(".next-gen", {
+      x: -200,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+    .fromTo(".rocketpic", {
+      x: 200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1}, ">")
+    .fromTo(".ecomtxt", {
+      x: -200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo(".ecomlearn", {
+      x: -200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo("#ecomlearn", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1})
+  }) 
+
+  useEffect(() => {
+
+    let cardstl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatwedo",
+      start: "bottom center",
+      toggleActions: "restart none none none"
+    }})
+
+    cardstl.fromTo(".whatwedo", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, y: 0, opacity: 1})
+      .fromTo(".ofc1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc4", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc5", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+  })
 
   return (
     <Box className="main">
@@ -134,12 +204,21 @@ export default function Facebook_advertising({ location }) {
             <Text
               as="h3"
               fontSize="5xl"
+              className="firstfb"
             >
-              Facebook Ad Placements
+              Facebook Ad 
+            </Text>
+            <Text
+              as="h3"
+              fontSize="5xl"
+              className="next-gen"
+            >
+              <span>Placements</span>
             </Text>
             <Text
               as="p"
               fontSize="xl"
+              className="ecomtxt"
             >
               Facebook, with a user base of over 2 billion accounts, is the most popular social media network worldwide.
               Research shows that in the UK alone, Facebook’s active users have reached almost 45 million, topping the 
@@ -150,9 +229,9 @@ export default function Facebook_advertising({ location }) {
                in reaching their target consumer market in a cost-effective way. Building an organic following and running paid ads 
                are two popular methods for increasing revenue that we can help you with! 
             </Text>
-            <LearnMoreButton />
+            <LearnMoreButton id="ecomlearn" link="/contact" />
           </Box>
-          <Box
+          <Flex
             ml={[
               "0px",
               "0px",
@@ -166,29 +245,24 @@ export default function Facebook_advertising({ location }) {
               "50%", // 62em+
             ]}
             pt="10px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={fblogo} alt="rocketpc.svg" style={{ borderRadius: "10px", width: "550px", height: "400px"}} />
-          </Box>
+            <img src={fblogo} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", width: "550px", height: "400px"}} />
+          </Flex>
         </Flex>
         <Flex
           flexDirection="row"
           flexWrap="noWrap"
           w="100%"
           className="whatwedo"
-          pl="20%"
+          justifyContent="center"
+          alignItems="center"
           pt="123px"
         >
           <Box>
             <h3>
               Visual Group Digital as your Facebook Ad Agency
             </h3>
-          </Box>
-          <Box
-            alignSelf="center"
-            pl="20px"
-          >
-            <img src={line1} alt="line.svg" />
           </Box>
         </Flex>
         <Flex
@@ -198,8 +272,7 @@ export default function Facebook_advertising({ location }) {
           margin="auto"
         >
           <Box
-            className="biggerCards"
-            h="600px"
+            className="biggerCards ofc1"
           >
             <img src={digitalMarketing} alt="digitalmarketing.svg" />
             <h3>
@@ -236,8 +309,7 @@ export default function Facebook_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-            className="biggerCards"
-            h="600px"
+            className="biggerCards ofc2"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -265,7 +337,7 @@ export default function Facebook_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-              className="biggerCards"
+            className="biggerCards ofc3"
           >
             <img src={facebookAds} alt="digitalmarketing.svg" />
             <h3>
@@ -296,25 +368,22 @@ export default function Facebook_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-            className="biggerCards"
+            className="biggerCards2 ofc4"
           >
-            <img src={digitalBranding} alt="digitalmarketing.svg" />
+            <img src={facebookAds} alt="digitalmarketing.svg" />
             <h3>
-              Account and Campaign Management
+              Account and Campaign Creation
             </h3>
             <p>
               <ul>
-                <li>
-                  3T1R - Track, Test, Tweak, Repeat. Marketing should be data-driven and measurable to properly gauge effectiveness and improvement. Our marketing results will be the basis for future activities and campaigns.
+               <li>
+                   3T1R - Track, Test, Tweak, Repeat. Marketing should be data-driven and measurable to properly gauge effectiveness and improvement. Our marketing results will be the basis for future activities and campaigns.
                 </li>
                 <li>
                   Track audience reach, engagement, click-through, leads, and the ROI of paid campaigns.
                 </li>
                 <li>
                   Manage campaign parameters and analyse for performance improvements.
-                </li>
-                <li>
-                  Monitor customer engagement and interaction from organic posts.
                 </li>
                 <li>
                   Report engagement, leads, and sales derived from paid social campaigns and use that data to improve performance on future campaigns.
@@ -333,7 +402,7 @@ export default function Facebook_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-            className="biggerCards"
+            className="biggerCards2 ofc5"
           >
             <img src={seo} alt="digitalmarketing.svg" />
             <h3>
@@ -386,16 +455,10 @@ export default function Facebook_advertising({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */} 
         <Flex
-          pl={[
-            "30px",
-            "30px",
-            "30px",
-            "50px",
-            "108px"
-          ]}
           flexDirection="row"
           flexWrap="wrap"
           justifyContent="center"
+          alignItems="center"
         >
           <Box>
             <h3

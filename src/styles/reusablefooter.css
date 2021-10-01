@@ -1,6 +1,7 @@
 
 .circular {
-  position: relative;
-  bottom: 250px;
-  left: 100%;
+  position: absolute;
+  bottom: 12%;
+  left: 82%;
+  opacity: 0.6;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Flex, 
   Box,
@@ -16,14 +16,86 @@ import shape6 from '../images/Polygon.svg';
 import shape7 from '../images/Ellipse1.svg';
 import shape8 from '../images/back.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/reusablehero.css';
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ReusableHero({ image, header, subheader, paragraph, 
   imageClass = "reusableimageholder", separated = true }) {
   
-  
-    return (
+    useEffect(() => {
+      let tl = gsap.timeline({scrollTrigger: {
+        trigger: ".hero-section",
+        scrub: 1,
+        start: "top top",
+      }})
+
+      tl.to(".reusableheader", {
+        y: -200,
+        duration: 1,
+        ease: "ease"
+      })
+      .to(".reusablepara", {
+        y: -200,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to(".shape05", {
+        y: -150,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".reshape6", {
+        y: -150,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".reshape7", {
+        y: -100,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".reshape3", {
+        y: -170,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+       .to(".reshape4", {
+        y: -80,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to(".reshape8", {
+        y: -70,
+        duration: 1,
+        ease: "ease"
+      }, "<")
+      .to("#reusableimageholder", {
+      y: -90,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      .to(".reshape1", {
+      y: -50,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      .to(".reshape2", {
+      y: -70,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+      .to("#reusablebizbut", {
+      y: -200,
+      duration: 1,
+      ease: "ease"
+      }, "<")
+    })
+
+  return (
     <>
     <Flex
       className="hero-section reusablehero"
@@ -40,7 +112,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       w="100%"
     >
       <Box
-        pl="50px"
+        px="50px"
         pt={[
           "10px",
           "20px",
@@ -65,10 +137,11 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         <Text
           as="p"
           fontSize="2xl"
+          className="reusablepara"
         >
           {paragraph}
         </Text>
-        <Bizbut />
+        <Bizbut id="reusablebizbut" />
       </Box>
       <Box
         className="shapeParent"
@@ -93,7 +166,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         <img src={shape6} alt="svg" className="reshape6" />
         <img src={shape7} alt="svg" className="reshape7" />
         <img src={shape8} alt="svg" className="reshape8" />
-        <img src={image} alt="someimha" className={imageClass} />
+        <img src={image} alt="someimha" className={imageClass} id="reusableimageholder" />
       </Box>
       <Box
        width={[

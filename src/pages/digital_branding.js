@@ -26,7 +26,12 @@ import barchart from '../images/features/barchart.svg';
 import medal from '../images/features/medal.svg';
 import brush from '../images/features/brush.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/digital_branding.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Digital_branding({ location }) {
   const headerText = "BRAND"
@@ -99,6 +104,29 @@ export default function Digital_branding({ location }) {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
 
+  useEffect(() => {
+    
+    let digibrandtl = gsap.timeline({ scrollTrigger : {
+      trigger: ".digibrand",
+      start: "top center",
+      toggleAttribute: "restart none none none"
+    }})
+    
+    digibrandtl.fromTo(".digibrand", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, opacity: 1, x: 0})
+    .fromTo(".rocketpic", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, opacity: 1, x: 0})
+    .fromTo(".rocketpic2", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, opacity: 1, x: 0})
+
+  })
+
   return (
     <Box className="main">
       <SEO />
@@ -158,7 +186,7 @@ export default function Digital_branding({ location }) {
               <span className="biz">BUSINESS ENQUIRY</span>
             </button>
           </Box>
-          <Box
+          <Flex
             ml={[
               "0px",
               "0px",
@@ -169,28 +197,23 @@ export default function Digital_branding({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={brandingpic2} alt="rocketpc.svg" />
-          </Box>
+            <img src={brandingpic2} alt="rocketpc.svg" className="rocketpic" />
+          </Flex>
         </Flex>
         <Flex
           pt="50px"
-           pl={[
-            "10px",
-            "20px",
-            "60px",
-            "103px"
-          ]}
           flexWrap="wrap"
           alignItems="center" 
+          justifyContent="center"
         >
-          <Box
-            ml={[
+          <Flex
+            mr={[
               "0px",
               "0px",
               "70px",
@@ -204,10 +227,10 @@ export default function Digital_branding({ location }) {
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={brandingpic3} alt="rocketpc.svg" />
-          </Box>
+            <img src={brandingpic3} alt="rocketpc.svg" className="rocketpic2" />
+          </Flex>
           <Box
             className="digibrand"
              width={[

@@ -37,6 +37,8 @@ import monitor from '../images/features/monitor.svg';
 import medal from '../images/features/medal.svg';
 import brush from '../images/features/brush.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/socmedgrowth.css';
 import ReusableRanking from '../components/ReusableRanking';
@@ -112,6 +114,86 @@ export default function Search_engine_optimization({ location }) {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
 
+  useEffect(() => {
+
+    let cardstl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatwedo",
+      start: "bottom center",
+      toggleActions: "restart none none none"
+    }})
+
+    cardstl.fromTo(".whatwedo", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, y: 0, opacity: 1})
+      .fromTo(".ofc1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc4", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc5", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc6", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+    })
+
+    useEffect(() => {
+
+      let dmtl = gsap.timeline({scrollTrigger : {
+        trigger: ".digimark",
+        start: "top center",
+        toggleActions: "restart none none none"
+      }})
+  
+      dmtl.fromTo(".firstecom", {
+        x: -100,
+        opacity: 0
+      }, { duration: 1, x: 0, opacity: 1})
+      .fromTo(".ecomtxt", {
+        x: -200,
+        opacity: 0
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".rocketpic", {
+        x: 200,
+        opacity: 0
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo("#ecomlearn", {
+        opacity: 0
+      }, { duration: 0.5, opacity: 1})
+    }) 
+
+    useEffect(() => {
+
+      let seotl = gsap.timeline({ scrollTrigger : {
+        trigger: ".socmedgrowthlist1",
+        start: "top center",
+        toggleActions: "restart none none none"
+      }})
+
+      seotl.fromTo(".socmedgrowthlist1", {
+        y: 100,
+        opacity: 0
+      }, { duration: 1, opacity: 1, y:0 })
+      .fromTo(".seogrowthimg", {
+        opacity: 0
+      }, { duration: 1, opacity: 1})
+    })
+
   return (
     <Box className="main">
       <SEO />
@@ -152,20 +234,22 @@ export default function Search_engine_optimization({ location }) {
             <Text
               as="h3"
               fontSize="5xl"
+              className="firstecom"
             >
-              Search Engine Optimisation (SEO): <br/>
+              <span>Search Engine Optimisation (SEO):</span> <br/>
               An Organic Way to Reach Your Target Audience
             </Text>
             <Text
               as="p"
               fontSize="xl"
+              className="ecomtxt"
             >
               SEO is all about increasing your website’s visibility in search engines by improving your rankings. 
               When done right, SEO can boost your web traffic organically, leading to increases in customers and sales.
             </Text>
-            <LearnMoreButton />
+            <LearnMoreButton link="/contact" id="ecomlearn" />
           </Box>
-          <Box
+          <Flex
             ml={[
               "0px",
               "0px",
@@ -180,10 +264,10 @@ export default function Search_engine_optimization({ location }) {
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={seopic} alt="rocketpc.svg" style={{ borderRadius: "10px", }} />
-          </Box>
+            <img src={seopic} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", }} />
+          </Flex>
         </Flex>
         <Flex
           flexDirection="row"
@@ -213,7 +297,7 @@ export default function Search_engine_optimization({ location }) {
           margin="auto"
         >
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc1"
           >
             <img src={digitalMarketing} alt="digitalmarketing.svg" />
            
@@ -248,7 +332,7 @@ export default function Search_engine_optimization({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc2"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             
@@ -279,7 +363,7 @@ export default function Search_engine_optimization({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc3"
           >
             <img src={digitalBranding} alt="digitalmarketing.svg" />
             <p>
@@ -312,7 +396,7 @@ export default function Search_engine_optimization({ location }) {
             </Flex>
           </Box>  
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc4"
           >
             <img src={seo} alt="digitalmarketing.svg" />
           
@@ -343,7 +427,7 @@ export default function Search_engine_optimization({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc5"
           >
             <img src={socmed} alt="digitalmarketing.svg" />
           
@@ -374,7 +458,7 @@ export default function Search_engine_optimization({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc6"
           >
             <img src={graphics} alt="digitalmarketing.svg" />
           
@@ -428,16 +512,10 @@ export default function Search_engine_optimization({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl={[
-            "30px",
-            "30px",
-            "30px",
-            "50px",
-            "108px"
-          ]}
           flexDirection="row"
           flexWrap="wrap"
-            justifyContent="center"
+          justifyContent="center"
+          alignItems="center"
         >
           <Box>
             <h3
@@ -483,7 +561,7 @@ export default function Search_engine_optimization({ location }) {
               right kind of help, exactly when you need it
             </Text>
             <ul
-              className="socmedgrowthlist"
+              className="socmedgrowthlist socmedgrowthlist1"
             >
                <li>
                   <img src={check} alt="check.svg" /> High Traffic
@@ -509,7 +587,7 @@ export default function Search_engine_optimization({ location }) {
             </ul>
           </Box>
           <Box>
-            <img src={growth} alt="seo_growth" />
+            <img src={growth} alt="seo_growth" className="seogrowthimg" />
           </Box>
         </Flex>
         

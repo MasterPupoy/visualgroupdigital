@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Flex, 
   Box,
@@ -7,8 +7,31 @@ import {
 
 import '../styles/reusableranking.css';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ReusableRanking({ textArray }) {
+
+  useEffect(() => {
+    
+    let ranktl = gsap.timeline({ scrollTrigger: {
+      trigger: ".reusablerankingnum",
+      start: "top center",
+      toggleActions: "restart none none none"
+    }})
+
+    ranktl.fromTo(".rrfirstclass", {
+      x: -300,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+    .fromTo(".rrsecondclass", {
+      x: -300,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+
+  })
   
   return (
     <Flex
@@ -31,17 +54,16 @@ export default function ReusableRanking({ textArray }) {
                 "40%"
               ]}
               h={[
-                "600px",
-                "600px",
-                "600px",
-                "600px",
-                "600px",
-                "316px"
+                "300px",
+                "300px",
+                "300px",
+                "300px",
+                "300px",
+                "300px"
               ]}
-              alignItems="center"
               className={steps.classes}
-              mr="50px"
-              mt="60px"
+              justifyContent="center"
+              alignItems="center"
             >
               <Box>
                 <Text
@@ -55,7 +77,7 @@ export default function ReusableRanking({ textArray }) {
                 w="70%"
               >
                 <Text
-                  fontSize="3xl"
+                  fontSize="2xl"
                   as="h3"
                 >  
                   {steps.header}

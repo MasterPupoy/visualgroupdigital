@@ -13,7 +13,7 @@ import oxtedFestival from '../images/logo/oxtedfestival.svg';
 import simonKemp from '../images/logo/simonkemp.svg';
 import surreyCedar from '../images/logo/surreycedar.svg'
 
-import delishus from '../images/logo/delishus.svg';
+import delishus from '../images/logo/delishnew.svg';
 import manetain from '../images/logo/manetain.png';
 import doggo from '../images/logo/doggo.svg';
 import redsacks from '../images/logo/redsacks.svg';
@@ -47,6 +47,7 @@ export default function Slideshow() {
   <>
     <Box
       mx="20px"
+      px="9%"
     >
       <Box
         pt="100px"
@@ -88,6 +89,7 @@ export default function Slideshow() {
     w="100%"
     className="slideshow"
     overflowX="hidden"
+    pt="20px"
     >
       <Flex
       justifyContent="space-between"

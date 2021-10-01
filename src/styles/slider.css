@@ -6,6 +6,13 @@
   box-shadow: 3px 3px 10px #0A2F53;
   margin: 10px 32px;
 
+  transition: all 0.25s ease-out;
+
+}
+
+.sliderBox:hover {
+  box-shadow: 12px 12px 10px #0A2F53; 
+  transition: all 0.25s ease-in;
 }
 
 .sliderBox > div {

@@ -45,7 +45,7 @@
 .biggerCards {
   filter: drop-shadow(0px 10px 20px rgba(10, 47, 83, 0.102));
   width: 315px;
-  height: 650px;
+  height: 550px;
   background: #fff;
   border-radius: 10px;
   margin: 0px 38px 53px 38px;
@@ -61,7 +61,7 @@
 
   text-align: center;
 
-  padding: 30px 0px;
+  padding: 20px 0px;
   color: #42495B;
 }
 
@@ -69,9 +69,9 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 20px;
-  height: 370px;
+  font-size: 13px;
+  
+  height: 300px;
 
   color: #42495B;
   margin-left: 30px;
@@ -83,5 +83,49 @@
   margin: 10px auto;
   
 }
+
+.biggerCards2 {
+  filter: drop-shadow(0px 10px 20px rgba(10, 47, 83, 0.102));
+  width: 315px;
+  height: 570px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0px 38px 53px 38px;
+}
+
+.biggerCards2 > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 25px;
+  /* identical to box height */
+
+  text-align: center;
+
+  padding: 20px 0px;
+  color: #42495B;
+}
+
+.biggerCards2 > p {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  
+  height: 300px;
+
+  color: #42495B;
+  margin-left: 30px;
+  margin-right: 17px;
+}
+
+.biggerCards2 > img {
+  display: block;
+  margin: 10px auto;
+  
+}
+
+
 
 

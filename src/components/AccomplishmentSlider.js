@@ -63,7 +63,11 @@ function FirstSlider({ dir }){
           Digital marketing
         </h3>
          <Box>
-          <img src={socmedmark} alt="fbaccomplishment" />
+           <a
+            href="/digital_marketing"
+           >
+            <img src={socmedmark} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
+           </a>
         </Box>
       </Box>
       <Box
@@ -73,7 +77,11 @@ function FirstSlider({ dir }){
           e-commerce
         </h3>
         <Box>
-          <img src={ecom} alt="fbaccomplishment" />
+          <a
+            href="/ecommerce_marketing"
+          >
+            <img src={ecom} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
       <Box
@@ -83,7 +91,11 @@ function FirstSlider({ dir }){
           Facebook advertising
         </h3>
         <Box>
-          <img src={accompfb} alt="fbaccomplishment" />
+          <a
+            href="/facebook_advertising"
+          >
+            <img src={accompfb} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
     </Flex>
@@ -128,7 +140,11 @@ function SecondSlider({ dir }){
           Google advertising
         </h3>
         <Box>
-          <img src={accompgoog} alt="accompgoogle" />
+          <a
+            href="/google_advertising"
+          >
+            <img src={accompgoog} alt="accompgoogle" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
       <Box
@@ -138,7 +154,11 @@ function SecondSlider({ dir }){
           Social Media Growth
         </h3>
         <Box>
-          <img src={accompsocmed} alt="socmend" />
+          <a
+            href="/social_media_growth"
+          >
+            <img src={accompsocmed} alt="socmend" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
       <Box
@@ -148,7 +168,11 @@ function SecondSlider({ dir }){
           Search Engine Optimization
         </h3>
         <Box>
-          <img src={accompseo} alt="seoaccomplishment" />
+          <a
+            href="/search_engine_optimization"
+          >
+            <img src={accompseo} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
     </Flex>
@@ -193,7 +217,11 @@ function ThirdSlider({ dir }){
           Graphic Design
         </h3>
         <Box>
-          <img src={graphix} alt="seoaccomplishment" />
+          <a
+            href="/graphic_design"
+          >
+            <img src={graphix} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
       <Box
@@ -203,7 +231,11 @@ function ThirdSlider({ dir }){
           Web Development
         </h3>
         <Box>
-          <img src={webdev} alt="seoaccomplishment" />
+          <a
+            href="/web_development"
+          >
+            <img src={webdev} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
       <Box
@@ -213,7 +245,11 @@ function ThirdSlider({ dir }){
           Digital Branding
         </h3>
         <Box>
-          <img src={branding} alt="seoaccomplishment" />
+          <a
+            href="/digital_branding"
+          >
+            <img src={branding} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+          </a>
         </Box>
       </Box>
     </Flex>

@@ -22,6 +22,7 @@ export default function ClientTestimonials() {
 
     let testimonialtl = gsap.timeline({ scrollTrigger: {
       trigger: ".testimonialtop",
+      toggleActions: "restart none none none",
       start: "top center",
     }})
 

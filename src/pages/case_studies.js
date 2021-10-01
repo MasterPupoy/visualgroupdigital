@@ -47,6 +47,7 @@ import terrilyn from '../images/scraped/terri_lynn.json';
 import online from '../images/scraped/online_fitness_freedom.json';
 import reign from '../images/scraped/reign_supreme.json';
 
+
 import '../styles/casestudies.css';
 
 function ClientView({ num }) {
@@ -341,63 +342,31 @@ function ClientView({ num }) {
             </Box>
             <Flex
               mt="30px"
+              justifyContent="center"
             >
-              <Box>
-                <Flex
-                  w="220px"
-                  ml="30px"
-                  flexDirection="column"
-                  mt="50px"
-                >
-                  <Box
-                    alignSelf="center"
-                    py="20px"
-                  >
-                    <Badge
-                      colorScheme={client.colorScheme}
-                    >{client.type}</Badge>
-                  </Box>
-                  <Box
-                    className="viewsSider"
-                    py="20px"
-                  >
-                    <img src={figma} alt="figma.logo" style={{ display: "inline-block"}} />
-                    <span>WEBSITE DESIGN</span>
-                  </Box>
-                  <Box>
-                    <img src={fbadcopy} alt="figma.logo" style={{ display: "inline-block"}} />
-                  </Box>
-                  <Box
-                    className="viewsSider"
-                    py="20px"
-                  >
-                    <img src={brandng} alt="figma.logo" style={{ display: "inline-block"}} />
-                    <span>BRANDING</span>
-                  </Box>
-                </Flex>
-              </Box>
               <Flex
-                bg={client.colorScheme}
                 w="100%"
-                justifyContent="space-between"
+                justifyContent="center"
                 alignItems="center"
                 p="20px"
                 borderRadius="12px"
               >
-                <Box
+                <Flex
                   w="50%"
                   borderRadius="70px"
                   px="10px"
+                  justifyContent="center"
                 >
-                  <img src={client.img1} alt="client_showcase" style={{ borderRadius: "12px"}} />
-                </Box>
-                <Box
+                  <img src={client.img1} alt="client_showcase" style={{ borderRadius: "12px", height: "500px", width: "500px"}} />
+                </Flex>
+                <Flex
                   w="50%"
                   borderRadius="70px"
                   px="10px"
+                  justifyContent="center"
                 >
-                  <img src={client.img2} alt="client_showcase" style={{ borderRadius: "12px"}}  />
-                </Box>
+                  <img src={client.img2} alt="client_showcase" style={{ borderRadius: "12px", height: "500px", width: "500px"}}  />
+                </Flex>
               </Flex>
             </Flex>
             <Flex
@@ -477,7 +446,6 @@ export default function Case_studies({ location }) {
           mt="100px"
         >
           <Box>
-
             <h3
               className="casefeatures"
             >
@@ -495,7 +463,7 @@ export default function Case_studies({ location }) {
             </p>
           </Box>
         </Flex>
-        <Flex
+        {/* <Flex
           mt="50px"
           mx="20px"
           h="100px"
@@ -568,79 +536,37 @@ export default function Case_studies({ location }) {
           >
             All
           </button>
-        </Flex>
+        </Flex> */}
         <Flex
           justifyContent="center"
+          className="clientContainer"
         >
           <ClientView num={activeQty} />
         </Flex>
-        <Box
-          textAlign="right"
-          mt="50px"
-          mx="150px"
-          h="100px"
+        <Flex
+          w="100%"
+          justifyContent="center"
+          mx="50px"
         >
-          <button
-            className={
-              (activeQty === 5) 
-              ? "activeselector"
-              : "qtyselector"
-            }
-            onClick={() => {
-              setActiveQty(5)
-            }}
-          >
-            5
-          </button>
-          <button
-            className={
-            (activeQty === 10) 
-            ? "activeselector"
-            : "qtyselector"
-            }
-            onClick={() => {
-              setActiveQty(10)
-            }}
-          >
-            10
-          </button>
-          <button
-            className={
-              (activeQty === 15) 
-              ? "activeselector"
-              : "qtyselector"
-            }
-            onClick={() => {
-              setActiveQty(15)
-            }}
-          >
-            15
-          </button>
-          <button
-            className={
-              (activeQty === 20) 
-              ? "activeselector"
-              : "qtyselector"
-            }
-            onClick={() => {
-              setActiveQty(20)
-            }}
-          >
-            20
-          </button>
-          <button
-            className={
-              (activeQty === 26) 
-              ? "activeselector"
-              : "qtyselector"
-            }
-            onClick={() => {
-              setActiveQty(26)
-            }}
-          >
-            All
-          </button>
-        </Box>
+          {(activeQty < 26)
+            ?<button
+                className="button button--aylen"
+                onClick={() => {
+                  setActiveQty(num => {
+                    if(activeQty === 25){
+                      return 26;
+                    }
+
+                    return num + 5
+                  })
+                }}
+              >
+                SHOW MORE
+              </button>
+            : null
+          
+          }
+        </Flex>
         <StaticLogo />    
         <ReusableFooter 
           text={text}

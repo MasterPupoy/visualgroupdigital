@@ -90,7 +90,7 @@
   text-decoration: none;
 }
 
-.social > img {
+.social > a {
   display: inline-block;
   padding: 0px 10px;
 }

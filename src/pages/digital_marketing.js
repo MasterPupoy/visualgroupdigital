@@ -35,8 +35,13 @@ import monitor from '../images/features/monitor.svg';
 import medal from '../images/features/medal.svg';
 import brush from '../images/features/brush.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Marketing({ location }) {
   const headerText = "DIGITAL MARKETING"
@@ -47,7 +52,7 @@ export default function Marketing({ location }) {
   const rankingArray = [
     {
       num: 1,
-      header: "Traffic",
+      header: "Increased Traffic",
       para: "As you gain more visibility with digital marketing, your total number of conversions and sales will increase.",
       classes: "rrfirstclass",
       img: hex,
@@ -109,6 +114,50 @@ export default function Marketing({ location }) {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
+  useEffect(() => {
+
+    let dmtl = gsap.timeline({scrollTrigger : {
+      trigger: ".digimark",
+      start: "top center",
+      toggleActions: "restart none none none"
+    }})
+
+    dmtl.fromTo(".digimark", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+    .fromTo(".rocketpic", {
+      x: -200,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1}, ">")
+
+  })
+
+  useEffect(() => {
+
+    let cardstl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatwedo",
+      start: "bottom center",
+      toggleActions: "restart none none none"
+    }})
+
+    cardstl.fromTo(".whatwedo", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, y: 0, opacity: 1})
+      .fromTo(".ofc1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+  })
 
   return (
     <Box className="main">
@@ -161,9 +210,9 @@ export default function Marketing({ location }) {
               with our SEO services. We will get you on page one for 
               all your top keyword searches for your business.
             </Text>
-            <LearnMoreButton />
+            <LearnMoreButton link="/contact" />
           </Box>
-          <Box
+          <Flex
             ml={[
               "0px",
               "0px",
@@ -174,33 +223,27 @@ export default function Marketing({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
-            pt="10px"
-            px="20px"
-            textAlign="center"
+            pt="10px" 
+            justifyContent="center"
+            alignItems="center"
           >
-            <img src={rocketpc} alt="rocketpc.svg" />
-          </Box>
+            <img src={rocketpc} alt="rocketpc.svg" className="rocketpic" />
+          </Flex>
         </Flex>
         <Flex
           flexDirection="row"
           flexWrap="noWrap"
           w="100%"
+          mt="50px"
           className="whatwedo"
-          pl="20%"
-          pt="123px"
+          justifyContent="center"
         >
           <Box>
             <h3>
               Marketing Services
             </h3>
-          </Box>
-          <Box
-            alignSelf="center"
-            pl="20px"
-          >
-            <img src={line1} alt="line.svg" />
           </Box>
         </Flex>
         <Flex
@@ -209,7 +252,7 @@ export default function Marketing({ location }) {
           flexWrap="wrap"
         >
           <Box
-            className="offerCards"
+            className="offerCards ofc1"
           >
             <img src={digitalMarketing} alt="digitalmarketing.svg" />
             <h3>
@@ -224,13 +267,16 @@ export default function Marketing({ location }) {
             >
               <button
                 className="bizbut"
+                onClick={() => {
+                  window.location.assign("/ecommerce_marketing")
+              }}
               >
                 BUSINESS ENQUIRY
               </button>
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc2"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -243,6 +289,9 @@ export default function Marketing({ location }) {
               justifyContent="center"
               alignItems="center"
               pt="10px"
+              onClick={() => {
+                window.location.assign("/web_development")
+              }}
             >
               <button
                 className="bizbut"
@@ -252,7 +301,7 @@ export default function Marketing({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc3"
           >
             <img src={facebookAds} alt="digitalmarketing.svg" />
             <h3>
@@ -268,13 +317,16 @@ export default function Marketing({ location }) {
             >
               <button
                 className="bizbut"
+                onClick={() => {
+                  window.location.assign("/facebook_advertising")
+              }}
               >
                 BUSINESS ENQUIRY
               </button>
             </Flex>
           </Box>
         </Flex>
-        <Box
+        {/* <Box
           pt="130px"
         >
           <h3
@@ -287,33 +339,21 @@ export default function Marketing({ location }) {
           >
             <hr />
           </Box>
-        </Box>
-        <Flex
-          pt="80px"
-          justifyContent="center"
-          alignItems="center"
-        > 
-          <img src={features} alt="marketing_features.svg" />
-        </Flex>
-        <Flex
+        </Box> */}
+        {/* <Flex
           w="100%"
           justifyContent="center"
           pt="60px"
           pb="110px"
         >
           <Bizbut />
-        </Flex>
+        </Flex> */}
         <Flex
-          pl={[
-            "30px",
-            "30px",
-            "30px",
-            "50px",
-            "108px"
-          ]}
           flexDirection="row"
           flexWrap="wrap"
           justifyContent="center"
+          alignItems="center"
+          my="50px"
         >
           <Box>
             <h3
@@ -322,9 +362,7 @@ export default function Marketing({ location }) {
               WHY <span>US?</span>
             </h3>
           </Box>
-          <Box
-            pt="20px"
-          >
+          <Box>
             <p
               className="whyus"
             >

@@ -3,12 +3,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 244px;
-  line-height: 325px;
+  font-size: 180px;
   /* identical to box height */
 
-
-  color: #F1F1F1;
+  color: #F1F1F1;;
 }
 
 .reusablerankingbody > h3 {
@@ -41,10 +39,10 @@
 }
 
 .rrfirstclass {
-  border-right: 0.5px solid #d9d9d9;
+  /* border-right: 0.5px solid #d9d9d9; */
 }
 
 .rrsecondclass {
-  padding-top: 100px;
+
 }
 

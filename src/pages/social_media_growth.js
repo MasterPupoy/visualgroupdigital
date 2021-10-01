@@ -36,6 +36,8 @@ import monitor from '../images/features/monitor.svg';
 import medal from '../images/features/medal.svg';
 import brush from '../images/features/brush.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/socmedgrowth.css';
 import ReusableRanking from '../components/ReusableRanking';
@@ -110,6 +112,71 @@ export default function Social_media_growth({ location }) {
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
+
+  useEffect(() => {
+
+    let dmtl = gsap.timeline({scrollTrigger : {
+      trigger: ".digimark",
+      start: "top center",
+      toggleActions: "restart none none none"
+    }})
+
+    dmtl.fromTo(".firstecom", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+    .fromTo(".ecomlearn", {
+      x: -200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo(".rocketpic", {
+      x: 200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo("#ecomlearn", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1})
+  }) 
+
+  useEffect(() => {
+
+    let cardstl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatwedo",
+      start: "bottom center",
+      toggleActions: "restart none none none"
+    }})
+
+    cardstl.fromTo(".whatwedo", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, y: 0, opacity: 1})
+      .fromTo(".ofc1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc4", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc5", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc6", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+    })
+
+
   return (
     <Box className="main">
       <SEO />
@@ -138,7 +205,7 @@ export default function Social_media_growth({ location }) {
           alignItems="center"
           alignItems="center"
         >
-        <Box
+        <Flex
           ml={[
               "0px",
               "0px",
@@ -153,10 +220,10 @@ export default function Social_media_growth({ location }) {
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={socmedgrowth} alt="rocketpc.svg" style={{ borderRadius: "10px", }} />
-          </Box>
+            <img src={socmedgrowth} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", }} />
+          </Flex>
           <Box
             className="digimark"
              width={[
@@ -165,16 +232,19 @@ export default function Social_media_growth({ location }) {
               "50%", // 48em-62em
               "40%", // 62em+
             ]}
+            mx="50px"
           >
             <Text
               as="h3"
               fontSize="5xl"
+              className="firstecom"
             >
-              Organic Social Media
+              Organic <span>Social Media</span>
             </Text>
             <Text
               as="p"
               fontSize="xl"
+              className="ecomlearn"
             >
               <strong>Social Media platforms are among the most used sites on the internet.</strong> Social media activities like posting photos, 
               viewing influencer posts, and browsing through news feeds are a daily routine for a growing number of people.
@@ -182,7 +252,7 @@ export default function Social_media_growth({ location }) {
               <br />
               Organic Social Media allows an individual or entity to post any content they want, free of charge. Businesses use Organic Social Media to advertise free promotions, create more brand awareness and visibility, strengthen their market positioning, widen their audience and consumer base, and increase engagement with their customers!
             </Text>
-            <LearnMoreButton />
+            <LearnMoreButton link="/contact" id="ecomlearn" />
           </Box>
         </Flex>
         <Flex
@@ -199,12 +269,6 @@ export default function Social_media_growth({ location }) {
               Organic Social Media Specialist
             </h3>
           </Box>
-          <Box
-            alignSelf="center"
-            pl="20px"
-          >
-            <img src={line1} alt="line.svg" />
-          </Box>
         </Flex>
         <Flex
           pt="50px"
@@ -213,7 +277,7 @@ export default function Social_media_growth({ location }) {
           margin="auto"
         >
           <Box
-            className="widerCards"
+            className="widerCards ofc1"
           >
             <img src={digitalMarketing} alt="digitalmarketing.svg" />
             <h3>
@@ -257,7 +321,7 @@ export default function Social_media_growth({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards"
+            className="widerCards ofc2"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -279,7 +343,7 @@ export default function Social_media_growth({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc3"
           >
             <img src={digitalBranding} alt="digitalmarketing.svg" />
             <h3>
@@ -300,7 +364,7 @@ export default function Social_media_growth({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards2"
+            className="widerCards2 ofc4"
           >
             <img src={socmed} alt="digitalmarketing.svg" />
             <h3>
@@ -321,7 +385,7 @@ export default function Social_media_growth({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards"
+            className="widerCards ofc5"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -353,7 +417,7 @@ export default function Social_media_growth({ location }) {
             </Flex>
           </Box>
           <Box
-            className="widerCards"
+            className="widerCards ofc6"
           >
             <img src={seo} alt="digitalmarketing.svg" />
             <h3>

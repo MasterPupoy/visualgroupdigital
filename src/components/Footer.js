@@ -142,10 +142,11 @@ export default function Footer() {
             Services
           </h3>
           <ul>
-            <li>Marketing</li>
-            <li>Branding</li>
-            <li>Case Studies</li>
-            <li>Portfolio</li>
+            {serviceslinks.map((link) => {
+              return (
+                <li key={link.key} ><a href={`${link.key}`}>{link.tab}</a></li>
+              )
+            })}
           </ul>
         </Box>
         <Box className="footerlistservices">
@@ -165,7 +166,7 @@ export default function Footer() {
           <ul>
             {quicklinks.map(link => {
               return (
-                <li><a href={`${link.key}`}>{link.tab}</a></li>
+                <li key={link.key} ><a href={`${link.key}`}>{link.tab}</a></li>
               )
             })}
           </ul>
@@ -179,9 +180,25 @@ export default function Footer() {
         <Box
           className="social"
         >
-          <img src={facebook} alt="facebooklogo.svg" style={{ height: "35px", width: "35px" }} />
-          <img src={twitter} alt="twitter.svg" style={{ height: "45px", width: "45px" }} />
-          <img src={insta} alt="instagram.svg" style={{ height: "45px", width: "45px" }} />
+          <a
+            href="https://www.facebook.com/visualgrouponlineltd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={facebook} alt="facebooklogo.svg" style={{ height: "35px", width: "35px",  cursor: "pointer"  }} />
+          </a>
+          <a
+          
+          >
+            <img src={twitter} alt="twitter.svg" style={{ height: "30px", width: "30px",  cursor: "pointer"  }} />
+          </a>
+          <a
+            href="https://www.instagram.com/visualgroupdigitalltd"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={insta} alt="instagram.svg" style={{ height: "30px", width: "30px", cursor: "pointer" }} />
+          </a>
         </Box>
       </Flex>
       <Box
@@ -203,7 +220,7 @@ export default function Footer() {
           className="footerfoot"
         >
           <h3>
-            All copyright reserved By Visual Group Digital 2021            
+            All copyright reserved By Visual Group Digital &copy; 2021            
           </h3>
         </Box>
         <Box

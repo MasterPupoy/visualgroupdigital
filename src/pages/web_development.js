@@ -21,12 +21,23 @@ import webdevelopment from '../images/webdevelopment.png';
 
 import line1 from '../images/line1.svg';
 
-import digitalMarketing from '../images/offers/digital_marketing.svg';
-import eCommerce from '../images/offers/e-commerce.svg';
-import facebookAds from '../images/offers/facebookads.svg';
+import digitalMarketing from '../images/ux.svg';
+import eCommerce from '../images/ppc.svg';
+import facebookAds from '../images/api.svg';
+import api2 from '../images/api2.svg';
+import tech from '../images/virtual.svg';
+import netlogo from '../images/netlogo.png';
+import js from '../images/javascript.svg';
+import scala from '../images/scala.svg';
+import java from '../images/java.svg';
+import php from '../images/php.svg';
+import data from '../images/big-data.svg';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/digital_branding.css';
 
@@ -77,7 +88,7 @@ export default function Web_development({ location }) {
     setHeight(window.innerHeight);
   }
 
- useEffect(() => {
+  useEffect(() => {
 
     if(isBrowser){
       updateDimensions();
@@ -87,6 +98,82 @@ export default function Web_development({ location }) {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
 
+  useEffect(() => {
+    
+    let digibrandtl = gsap.timeline({ scrollTrigger : {
+      trigger: ".digibrand",
+      start: "top center",
+      toggleAttribute: "restart none none none"
+    }})
+    
+    digibrandtl.fromTo(".digibrand", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, opacity: 1, x: 0})
+    .fromTo(".rocketpic", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, opacity: 1, x: 0})
+
+  })
+
+  useEffect(() => {
+
+    let cardstl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatwedo",
+      start: "bottom center",
+      toggleActions: "restart none none none"
+    }})
+
+    cardstl.fromTo(".whatwedo", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, y: 0, opacity: 1})
+      .fromTo(".ofc1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc4", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc5", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc6", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc7", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc8", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc9", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc10", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc11", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+  })
 
   return (
     <Box className="main">
@@ -148,7 +235,7 @@ export default function Web_development({ location }) {
               <span className="biz">BUSINESS ENQUIRY</span>
             </button>
           </Box>
-          <Box
+          <Flex
             ml={[
               "0px",
               "0px",
@@ -163,10 +250,10 @@ export default function Web_development({ location }) {
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={webdevelopment} alt="rocketpc.svg" />
-          </Box>
+            <img src={webdevelopment} alt="rocketpc.svg" className="rocketpic" />
+          </Flex>
         </Flex>
         <Box
          mt="210px"
@@ -283,13 +370,6 @@ export default function Web_development({ location }) {
         </Box>
         <Flex
           mt="100px"
-            pl={[
-            "30px",
-            "30px",
-            "30px",
-            "50px",
-            "108px"
-          ]}
           flexDirection="row"
           flexWrap="wrap"
           justifyContent="center"
@@ -339,9 +419,9 @@ export default function Web_development({ location }) {
           flexWrap="wrap"
         >
           <Box
-            className="offerCards"
+            className="offerCards ofc1"
           >
-            <img src={digitalMarketing} alt="digitalmarketing.svg" />
+            <img src={digitalMarketing} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
              Web Design
             </h3>
@@ -360,9 +440,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc2"
           >
-            <img src={eCommerce} alt="digitalmarketing.svg" />
+            <img src={eCommerce} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}}  />
             <h3>
              Business Solutions
             </h3>
@@ -382,9 +462,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc3"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={facebookAds} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               Third Party API Integration &amp; Development
             </h3>
@@ -403,9 +483,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc4"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={api2} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               REST Based Development
             </h3>
@@ -425,9 +505,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc5"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={tech} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               Technology &amp; Frameworks
             </h3>
@@ -447,9 +527,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc6"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={netlogo} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               .Net Framework
             </h3>
@@ -469,9 +549,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc7"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={java} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               Java Framework
             </h3>
@@ -491,11 +571,11 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc8"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={scala} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
-            Scala Framework
+              Scala Framework
             </h3>
             <p>
               Used to develop the most elaborate commercial software with a statically typed out language that has both functional and object-oriented programming concepts.
@@ -513,9 +593,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc9"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={php} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               PHP Development
             </h3>
@@ -535,9 +615,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc10"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={js} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               JavaScript Development
             </h3>
@@ -557,9 +637,9 @@ export default function Web_development({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc11"
           >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
+            <img src={data} alt="digitalmarketing.svg" style={{ width: "70px", height: "70px"}} />
             <h3>
               Big Data Capabilities
             </h3>

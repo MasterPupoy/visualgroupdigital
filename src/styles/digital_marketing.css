@@ -22,6 +22,16 @@
   1px 1px 0 #0A2F53;
 }
 
+.digimark > h3 > span {
+  font-family: dm-sans;
+  font-style: normal;
+ 
+  font-size: 48px;
+  line-height: 62px;
+
+  color: #0A2F53;
+}
+
 .digimark > p {
   font-family: dm-sans;
   font-style: normal;

@@ -19,6 +19,9 @@ import whatisvgd from '../images/whatisvgd.svg';
 import ceo from '../images/ceo.png';
 import aboutus from '../images/pekture.png';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/about.css';
 
 export default function About({ location }) {
@@ -47,6 +50,37 @@ export default function About({ location }) {
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
+
+  useEffect(() => {
+    
+    let ceotl = gsap.timeline({ scrollTrigger : {
+      trigger: ".hero-section",
+      start: "bottom center",
+    }})
+
+    ceotl.fromTo(".founderfounder", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+    .fromTo(".founderpos", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+    .fromTo(".foundername", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+    .fromTo(".ceo", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+    .fromTo(".foundertxt1", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+    .fromTo(".foundertxt2", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+    .fromTo("#aboutusceolearnmore", {
+      opacity: 0
+    }, { duration: 1, opacity: 1})
+
+  })
 
   return (
     <Box className="main">
@@ -87,24 +121,28 @@ export default function About({ location }) {
             <Text
               as="h3"
               fontSize="5xl"
+              className="founderfounder"
             >
               FOUNDER
             </Text>
             <Text
               as="h2"
               fontSize="5xl"
+              className="foundername"
             >
               RICKY INGRAM
             </Text>
             <Text
               as="h3"
               fontSize="5xl"
+              className="founderpos"
             >
-              Chief Executive Officer of Visual Group Digital.
+              CEO of Visual Group Digital.
             </Text>
             <Text
               as="p"
               fontSize="xl"
+              className="foundertxt1"
             >
               It all started when the founders, Ricky and Kerryann, 
               self-branded and marketed their own businesses to success. 
@@ -115,6 +153,7 @@ export default function About({ location }) {
             <Text
               as="p"
               fontSize="xl"
+              className="foundertxt2"
             >
               Visual Group Digital leading marketing, branding and web development 
               agency. Who strategically plan the design of websites that empower 
@@ -124,9 +163,12 @@ export default function About({ location }) {
               other marketing agencies is the one-of-a-kind thought that we put into 
               each new account.
             </Text>
-            <LearnMoreButton />
+            <LearnMoreButton 
+              id="aboutusceolearnmore" 
+              link="/contact"
+            />
           </Box>
-          <Box
+          <Flex
             ml={[
               "0px",
               "0px",
@@ -137,14 +179,15 @@ export default function About({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
+            alignItems="center"
           >
             <img src={ceo} alt="ceo.png" className="ceo" />
-          </Box>
+          </Flex>
         </Flex>
         <Flex
           pt="100px"

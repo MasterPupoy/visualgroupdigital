@@ -11,7 +11,7 @@ import oxtedFestival from '../images/logo/oxtedfestival.svg';
 import simonKemp from '../images/logo/simonkemp.svg';
 import surreyCedar from '../images/logo/surreycedar.svg'
 
-import delishus from '../images/logo/delishus.svg';
+import delishus from '../images/logo/delishnew.svg';
 import manetain from '../images/logo/manetain.png';
 import doggo from '../images/logo/doggo.svg';
 import redsacks from '../images/logo/redsacks.svg';

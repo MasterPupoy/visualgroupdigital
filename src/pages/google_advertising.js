@@ -32,8 +32,13 @@ import monitor from '../images/features/monitor.svg';
 import medal from '../images/features/medal.svg';
 import brush from '../images/features/brush.svg';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Google_advertising({ location }) {
   const headerText = "GOOGLE ADS"
@@ -44,7 +49,7 @@ export default function Google_advertising({ location }) {
  const rankingArray = [
     {
       num: 1,
-      header: "Traffic",
+      header: "Increased Traffic",
       para: "As you gain more visibility with digital marketing, your total number of conversions and sales will increase.",
       classes: "rrfirstclass",
       img: hex,
@@ -106,6 +111,58 @@ export default function Google_advertising({ location }) {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
 
+  
+  useEffect(() => {
+
+    let dmtl = gsap.timeline({scrollTrigger : {
+      trigger: ".digimark",
+      start: "top center",
+      toggleActions: "restart none none none"
+    }})
+
+    dmtl.fromTo(".firstecom", {
+      x: -100,
+      opacity: 0
+    }, { duration: 1, x: 0, opacity: 1})
+    .fromTo(".ecomtxt", {
+      x: -200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo(".rocketpic", {
+      x: 200,
+      opacity: 0
+    }, { duration: 0.5, x: 0, opacity: 1})
+    .fromTo("#ecomlearn", {
+      opacity: 0
+    }, { duration: 0.5, opacity: 1})
+  });
+
+  useEffect(() => {
+
+    let cardstl = gsap.timeline({ scrollTrigger: {
+      trigger: ".whatwedo",
+      start: "bottom center",
+      toggleActions: "restart none none none"
+    }})
+
+    cardstl.fromTo(".whatwedo", {
+        opacity: 0,
+        y: -100
+      }, { duration: 0.5, y: 0, opacity: 1})
+      .fromTo(".ofc1", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc2", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+      .fromTo(".ofc3", {
+        opacity: 0,
+        x: 100
+      }, { duration: 0.5, x: 0, opacity: 1})
+    })
+
   return (
     <Box className="main">
       <SEO />
@@ -133,7 +190,7 @@ export default function Google_advertising({ location }) {
           flexWrap="wrap"
           alignItems="center"
         >
-          <Box
+          <Flex
             
             width={[
               "0%", // 0-30em
@@ -144,10 +201,10 @@ export default function Google_advertising({ location }) {
             ]}
             pt="10px"
             px="20px"
-            textAlign="center"
+            justifyContent="center"
           >
-            <img src={google} alt="rocketpc.svg" style={{ borderRadius: "10px", width: "600px", height: "500px"}} />
-          </Box>
+            <img src={google} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", width: "600px", height: "500px"}} />
+          </Flex>
           <Box
             className="digimark"
             width={[
@@ -162,13 +219,15 @@ export default function Google_advertising({ location }) {
             <Text
               as="h3"
               fontSize="5xl"
+              className="firstecom"
             >
-              Google Ads Pay-Per-Click (PPC) <br />
+              <span>Google Ads Pay-Per-Click (PPC)</span> <br />
               Management
             </Text>
             <Text
               as="p"
               fontSize="xl"
+              className="ecomtxt"
             >
               Google is head-and-shoulders above any other website as the most used search engine on the internet. 
               It has transcended itself from a brand to a verb, 
@@ -177,7 +236,7 @@ export default function Google_advertising({ location }) {
               <br />
               Google handles over 5 billion searches per day. By utilising Google Ads, your business will be displayed to people who are actively seeking out the products and services you provide. PPC means you only pay each time your ad is clicked by your prospective customers, meaning you only pay for results! Successful businesses recognise the benefits of Google Ads PPC in sending high-value traffic to their website.
             </Text>
-            <LearnMoreButton />
+            <LearnMoreButton id="ecomlearn" link="/contact" />
           </Box>
         </Flex>
         <Flex
@@ -185,19 +244,13 @@ export default function Google_advertising({ location }) {
           flexWrap="noWrap"
           w="100%"
           className="whatwedo"
-          pl="20%"
           pt="123px"
+          justifyContent="center"
         >
           <Box>
             <h3>
               Visual Group Digital as your Google Ads PPC Agency
             </h3>
-          </Box>
-          <Box
-            alignSelf="center"
-            pl="20px"
-          >
-            <img src={line1} alt="line.svg" />
           </Box>
         </Flex>
         <Flex
@@ -207,7 +260,7 @@ export default function Google_advertising({ location }) {
           margin="auto"
         >
           <Box
-            className="offerCards"
+            className="offerCards ofc1"
           >
             <img src={digitalMarketing} alt="digitalmarketing.svg" />
             <h3>
@@ -231,7 +284,7 @@ export default function Google_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc2"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -254,7 +307,7 @@ export default function Google_advertising({ location }) {
             </Flex>
           </Box>
           <Box
-            className="offerCards"
+            className="offerCards ofc3"
           >
             <img src={facebookAds} alt="digitalmarketing.svg" />
             <h3>

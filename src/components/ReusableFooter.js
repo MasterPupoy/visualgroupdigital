@@ -19,7 +19,7 @@ export default function ReusableFooter({ text }) {
         "800px",
         "800px",
         "800px",
-        "700px",
+        "300px",
       ]}
       w="100%"
       bg="#fff"
@@ -27,17 +27,19 @@ export default function ReusableFooter({ text }) {
         "20px",
         "20px",
         "150px",
-        "250px"
+        "150px"
       ]}
       overflowX="hidden"
       alignItems="center"
+      justifyContent="center"
     >
       <Flex
         alignItems="center"
         flexWrap="wrap"
-        alignSelf="center"
       >
-        <Box>
+        <Box
+          mx="20px"
+        >
           <img src={emoji} alt="emoji" />
         </Box>
         <Box
@@ -47,6 +49,8 @@ export default function ReusableFooter({ text }) {
               "100%",
               "50%"
             ]}
+          overflowX="hidden"
+          mx="50px"
         >
           <Text
             as="h1"
@@ -70,27 +74,20 @@ export default function ReusableFooter({ text }) {
               "100%",
               "20%"
             ]}
+          p="20px"
         >
-          <h2
+          <Text
             className="requesth2"
+            fontSize="2xl"
           >
             Why Wait? <br/>
             Start Now
-          </h2>
+          </Text>
           <button
             className="bizbut indexBizbut"
           >
             BUSINESS ENQUIRY
           </button>
-        </Box>
-        <Box
-          w={[
-            "0px",
-            "0px",
-            "100%",
-            "100%"
-          ]}
-        >
           <img src={circle_el} alt="svg" className="circular" />
         </Box>
       </Flex>
