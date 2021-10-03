@@ -91,8 +91,8 @@ export default function Our_portfolio({ location }) {
           </Box>
         </Flex>
         <Box
-          className="portbox"
-          w="95%"
+          className="portshowcase2"
+          w="80%"
           m="auto"
         >
           <Flex

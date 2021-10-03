@@ -31,12 +31,18 @@
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-
-
 }
 
 .portshowcase > img {
   padding: 10px 9px;
   border-radius: 9px;
+  width: 250px;
+}
+
+.portshowcase2 {
+  border-radius: 29px;
+  background: #ffffff;
+  box-shadow:  28px 28px 48px #b5b5b5,
+             -28px -28px 48px #ffffff;
 }
 

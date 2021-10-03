@@ -60,25 +60,25 @@ export default function About({ location }) {
 
     ceotl.fromTo(".founderfounder", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
     .fromTo(".founderpos", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
     .fromTo(".foundername", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
     .fromTo(".ceo", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
     .fromTo(".foundertxt1", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
     .fromTo(".foundertxt2", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
     .fromTo("#aboutusceolearnmore", {
       opacity: 0
-    }, { duration: 1, opacity: 1})
+    }, { duration: 0.5, opacity: 1})
 
   })
 

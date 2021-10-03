@@ -163,6 +163,9 @@ export default function Slideshow() {
         >
           <button
             className="seeMore button--aylen"
+            onClick={() => {
+              window.location.assign("/case_studies")
+            }}
           >
             <span>
               SEE MORE OF OUR CLIENTS
@@ -170,7 +173,7 @@ export default function Slideshow() {
           </button>
           <a
             className="reqCB"
-            href="#"
+            href="/contact"
           >
             REQUEST A CALL BACK &gt;
           </a>

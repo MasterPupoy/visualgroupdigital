@@ -15,9 +15,7 @@ import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import MobileNav from '../components/MobileNav';
 
-import brandng from '../images/brandng.png';
-import fbadcopy from '../images/fbadcopy.png';
-import figma from '../images/figma.png';
+import chevron from '../images/chevron.svg';
 import casestudies from '../images/features/casestudies.png';
 
 import sd from '../images/scraped/sodelishus.json';
@@ -67,8 +65,8 @@ function ClientView({ num }) {
       link: "oxtedfest.co.uk",
       subheader: "Music Festival based in Oxted",
       type: "CONCERT BOOKING",
-      img1: ox[1],
-      img2: ox[2],
+      img1: ox[0],
+      img2: ox[3],
       page: "/case_studies/oxtedfest",
       colorScheme: "green.300"
     },
@@ -76,8 +74,8 @@ function ClientView({ num }) {
       link: "maneuk.com",
       subheader: "Hair Thickening Solutions Company",
       type: "HAIR PRODUCTS",
-      img1: man[0],
-      img2: man[1],
+      img1: man[12],
+      img2: man[11],
       page: "/case_studies/maneuk",
       colorScheme: "yellow.300"
     },
@@ -85,8 +83,8 @@ function ClientView({ num }) {
       link: "hellovans.com",
       subheader: "Online Van removals comparison company",
       type: "vAN COMPANY",
-      img1: hello[1],
-      img2: hello[2],
+      img1: hello[0],
+      img2: hello[7],
       page: "/case_studies/hellovans",
       colorScheme: "blue.300"
     },
@@ -94,8 +92,8 @@ function ClientView({ num }) {
       link: "houseofstrength.co.uk",
       subheader: "A leading uk manufacturer and distributor of weighted plates and olympic bars",
       type: "GYM EQUIPMENTS",
-      img1: house[1],
-      img2: house[2],
+      img1: house[7],
+      img2: house[12],
       page: "/case_studies/house_of_strength",
       colorScheme: "teal.300"
     },
@@ -103,8 +101,8 @@ function ClientView({ num }) {
       link: "subfranticmusic.com",
       subheader: "The number one online live streaming service for musicians",
       type: "Online music streaming",
-      img1: sub[1],
-      img2: sub[2],
+      img1: sub[3],
+      img2: sub[5],
       page: "/case_studies/subfrantic_music",
       colorScheme: "orange.300",
     },
@@ -112,7 +110,7 @@ function ClientView({ num }) {
       link: "bossybitchmaid.me.uk",
       subheader: "England's most unique maid and butler service",
       type: "Bossy Bitch Maids",
-      img1: boss[1],
+      img1: boss[8],
       img2: boss[2],
       colorScheme: "red.300",
       page: "/case_studies/bossy_bitch_maid"
@@ -130,8 +128,8 @@ function ClientView({ num }) {
       link: "sussexremovals.co.uk",
       subheader: "Sussex Tailored Removals is a friendly and Professional Removals and Storage In Sussex.",
       type: "Removal Company",
-      img1: suss[1],
-      img2: suss[2],
+      img1: suss[0],
+      img2: suss[1],
       colorScheme: "green.300",
       page: "/case_studies/sussex_removals"
     },
@@ -139,8 +137,8 @@ function ClientView({ num }) {
       link: "schtech.co.uk",
       subheader: "We Listen, Create & Deliver YOUR Technology Solutions.",
       type: "Technology Company",
-      img1: sch[1],
-      img2: sch[2],
+      img1: sch[5],
+      img2: sch[8],
       colorScheme: "blue.300",
       page: "/case_studies/sch_tech"
     },
@@ -148,8 +146,8 @@ function ClientView({ num }) {
       link: "citydoggo.com",
       subheader: "City Doggo introduces a return to nature for your metropolitan pet. Our first HERO product, the Oui Oui Patch is an eco-friendly, odour-free, real grass pet toilet for your flat or balcony.",
       type: "Pet Products Company",
-      img1: city[1],
-      img2: city[2],
+      img1: city[4],
+      img2: city[10],
       colorScheme: "green.300",
       page: "/case_studies/city_doggo"
     },
@@ -157,8 +155,8 @@ function ClientView({ num }) {
       link: "procleanpartnership.co.uk",
       subheader: "We Listen, Create & Deliver YOUR Technology Solutions.",
       type: "Luxury cleaning service.",
-      img1: pro[1],
-      img2: pro[2],
+      img1: pro[4],
+      img2: pro[5],
       colorScheme: "gray.300",
       page: "/case_studies/proclean"
     },
@@ -175,8 +173,8 @@ function ClientView({ num }) {
       link: "slynote.com",
       subheader: "Slynote makes sending encrypted data simple, no technical knowledge required or understanding of how encryption works, all you need is the basic requirement to send private data to another person or persons securely and quickly.",
       type: "Encrypted notes Company",
-      img1: sly[1],
-      img2: sly[2],
+      img1: sly[0],
+      img2: sly[5],
       colorScheme: "teal.300",
       page: "/case_studies/slynote"
     },
@@ -184,8 +182,8 @@ function ClientView({ num }) {
       link: "arenheatingplumbing.co.uk",
       subheader: "Plumbing and heating company based in London",
       type: "Plumbing and heating company",
-      img1: aren[1],
-      img2: aren[2],
+      img1: aren[0],
+      img2: aren[1],
       colorScheme: "red.300",
       page: "/case_studies/aren_heating"
     },
@@ -202,8 +200,8 @@ function ClientView({ num }) {
       link: "lbpcourse.com",
       subheader: "LifeBalance Portal",
       type: "Life Balance Company",
-      img1: lbp[1],
-      img2: lbp[2],
+      img1: lbp[8],
+      img2: lbp[7],
       colorScheme: "gray.300",
       page: "/case_studies/life_balance"
     },
@@ -211,7 +209,7 @@ function ClientView({ num }) {
       link: "virtlx.com",
       subheader: "The real-time monitoring platform forCustomer feedback",
       type: "Real-time Monitoring Platform",
-      img1: virt[1],
+      img1: virt[0],
       img2: virt[2],
       colorScheme: "blue.300",
       page: "/case_studies/virtlx"
@@ -229,8 +227,8 @@ function ClientView({ num }) {
       link: "bodiesmadeonline.com",
       subheader: "You’ll Taken The First Steps To Transforming Your Body & Life.",
       type: "Fitness Services",
-      img1: bod[1],
-      img2: bod[2],
+      img1: bod[8],
+      img2: bod[0],
       colorScheme: "teal.300",
       page: "/case_studies/bodiesmade_online"
     },
@@ -238,8 +236,8 @@ function ClientView({ num }) {
       link: "tailoredremoval.co.uk",
       subheader: "Removals and storage company based in Sussex",
       type: "Tailored Removal Company",
-      img1: tailor[1],
-      img2: tailor[2],
+      img1: tailor[12],
+      img2: tailor[13],
       colorScheme: "yellow.300",
       page: "/case_studies/sussex_tailored"
     },
@@ -247,7 +245,7 @@ function ClientView({ num }) {
       link: "readerschool.org/v1/",
       subheader: "A full interactive and fun e-learning platform for children.",
       type: "Online Children Learning platform",
-      img1: reader[1],
+      img1: reader[3],
       img2: reader[2],
       colorScheme: "cyan.300",
       page: "/case_studies/readers_school"
@@ -265,7 +263,7 @@ function ClientView({ num }) {
       link: "terrilynn.com",
       subheader: "Terri Lynn's FREE fundraising program makes it easy for you to raise money for your cause! Get started today with a personal Online Webstore.",
       type: "Lifestyle Company",
-      img1: terrilyn[1],
+      img1: terrilyn[4],
       img2: terrilyn[2],
       colorScheme: "red.300",
       page: "/case_studies/terri_lyn"
@@ -274,8 +272,8 @@ function ClientView({ num }) {
       link: "onlinefitnessfreedom.com",
       subheader: "Improve Their Marketing & Branding To Help Them Maximise Their Clientele Potential.",
       type: "Fitness Services",
-      img1: online[1],
-      img2: online[2],
+      img1: online[5],
+      img2: online[6],
       colorScheme: "yellow.300",
       page: "/case_studies/online_fitness_freedom"
     },
@@ -283,8 +281,8 @@ function ClientView({ num }) {
       link: "reignsupremeuk.com",
       subheader: "Accountant In Kent, Who Speaks To You More Than Just Once A Year",
       type: "Business & Accounting Company",
-      img1: reign[1],
-      img2: reign[2],
+      img1: reign[7],
+      img2: reign[3],
       colorScheme: "teal.300",
       page: "/case_studies/reign_supreme"
     },
@@ -294,7 +292,7 @@ function ClientView({ num }) {
     let mounted = true;
 
     if(mounted){
-      console.log(viewsarray.length)
+   
       let newarr = []
 
       for (let i = 0; i < num; i++){
@@ -330,11 +328,13 @@ function ClientView({ num }) {
               mt="30px"
               className="viewshead"
             >
-              <h3>
+              <Text
+                as="h3"
+              >
                 <a href={`https://${client.link}/`} target="_blank">
                   {client.link}
                 </a>
-              </h3>
+              </Text>
 
               <p>
                 {client.subheader}
@@ -357,7 +357,7 @@ function ClientView({ num }) {
                   px="10px"
                   justifyContent="center"
                 >
-                  <img src={client.img1} alt="client_showcase" style={{ borderRadius: "12px", height: "500px", width: "500px"}} />
+                  <img src={client.img1} alt="client_showcase" style={{ borderRadius: "12px"}} />
                 </Flex>
                 <Flex
                   w="50%"
@@ -365,7 +365,7 @@ function ClientView({ num }) {
                   px="10px"
                   justifyContent="center"
                 >
-                  <img src={client.img2} alt="client_showcase" style={{ borderRadius: "12px", height: "500px", width: "500px"}}  />
+                  <img src={client.img2} alt="client_showcase" style={{ borderRadius: "12px"}}  />
                 </Flex>
               </Flex>
             </Flex>
@@ -414,7 +414,12 @@ export default function Case_studies({ location }) {
     if(isBrowser){
       updateDimensions();
       window.addEventListener("resize", updateDimensions);
+      
+      if(window.scrollY !== 0){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
+
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []); 
@@ -423,6 +428,7 @@ export default function Case_studies({ location }) {
   return (
     <Box
       className="main"
+      overflowX="hidden"
     >
       <SEO />
       <Box>
@@ -546,23 +552,22 @@ export default function Case_studies({ location }) {
         <Flex
           w="100%"
           justifyContent="center"
-          mx="50px"
+          my="100px"
         >
           {(activeQty < 26)
-            ?<button
-                className="button button--aylen"
-                onClick={() => {
-                  setActiveQty(num => {
-                    if(activeQty === 25){
-                      return 26;
-                    }
+            ?<Box
+            onClick={() => {
+              setActiveQty(num => {
+                if(activeQty === 25){
+                  return 26;
+                }
 
-                    return num + 5
-                  })
-                }}
-              >
-                SHOW MORE
-              </button>
+                return num + 5
+              })
+            }}
+          >
+            <img src={chevron} alt="chevron" className="chevronseemore" />
+          </Box>
             : null
           
           }

@@ -16,9 +16,9 @@ export default function ReusableFooter({ text }) {
     <Flex 
       mt="100px"
       h={[
-        "800px",
-        "800px",
-        "800px",
+        "1000px",
+        "1000px",
+        "900px",
         "300px",
       ]}
       w="100%"
@@ -36,6 +36,7 @@ export default function ReusableFooter({ text }) {
       <Flex
         alignItems="center"
         flexWrap="wrap"
+        overflowX="hidden"
       >
         <Box
           mx="20px"
