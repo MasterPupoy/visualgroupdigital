@@ -551,11 +551,20 @@ export default function Search_engine_optimization({ location }) {
           <Box>
             <Text
               fontSize="5xl"
+              style={{
+                color : "#0A2F53",
+                fontFamily: "dm-sans"
+              }}
             >
               SEO Features
             </Text>
             <Text
-              fontSize="2xl"
+              fontSize="1xl"
+              py="10px"
+               style={{
+                color : "#0A2F53",
+                fontFamily: "dm-sans"
+              }}
             >
               Achieve all your goals and aspirations with the <br /> 
               right kind of help, exactly when you need it
