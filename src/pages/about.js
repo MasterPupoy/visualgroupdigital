@@ -213,8 +213,10 @@ export default function About({ location }) {
           justifyContent="center"
           alignItems="center"
           pt="158px"
+          px="20px"
+          className="parallax"
         >
-          <img src={whatisvgd} alt="whatisvgd.svg" />
+      
         </Flex>
         <Box
           pl="10%"

@@ -166,3 +166,16 @@
   color: #1D1D1D;
 
 }
+
+.parallax {
+  background-image: url("../images/whatisvgd.svg");
+
+  /* Set a specific height */
+  min-height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}

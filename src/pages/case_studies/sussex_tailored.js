@@ -4,6 +4,8 @@ import {
   Box,
   Badge
 } from '@chakra-ui/react';
+import Lightbox from 'react-awesome-lightbox';
+import "react-awesome-lightbox/build/style.css";
 
 import SEO from '../../components/Seo';
 import Nav from '../../components/Nav';
@@ -13,11 +15,6 @@ import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
 
 import tailor from '../../images/scraped/sussex_tailored.json';
-
-
-import brandng from '../../images/brandng.png';
-import fbadcopy from '../../images/fbadcopy.png';
-import figma from '../../images/figma.png';
 
 
 import '../../styles/casestudies.css';
@@ -35,6 +32,9 @@ export default function Sodelishus({ location }) {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }
+ const [openGal, setOpenGal] = useState(false);
+ const [activeIndex, setActiveIndex] = useState(0);
+ const allimages = tailor.map(img => img)
 
  useEffect(() => {
 
@@ -67,6 +67,12 @@ export default function Sodelishus({ location }) {
               Tailored Removal 
             </h1>
           </Box>
+                <Box
+                  alignSelf="center"
+                  py="20px"
+                >
+                  <Badge>Tailored Removal Company"</Badge>
+                </Box>
         </Flex>
         <Box
           w="95%"
@@ -99,44 +105,9 @@ export default function Sodelishus({ location }) {
             </p>
           </Box> */}
           <Flex>
-            <Box
-              w="20%"
-            >
-              <Flex
-                h="540px"
-                flexDirection="column"
-                mt="50px"
-                justifyContent="center"
-                px="10px"
-              >
-                <Box
-                  alignSelf="center"
-                  py="20px"
-                >
-                  <Badge>Tailored Removal Company"</Badge>
-                </Box>
-                <Box
-                  className="viewsSider"
-                  py="20px"
-                >
-                  <img src={figma} alt="figma.logo" style={{ display: "inline-block"}} />
-                  <span>WEBSITE DESIGN</span>
-                </Box>
-                <Box>
-                  <img src={fbadcopy} alt="figma.logo" style={{ display: "inline-block"}} />
-                </Box>
-                <Box
-                  className="viewsSider"
-                  py="20px"
-                >
-                  <img src={brandng} alt="figma.logo" style={{ display: "inline-block"}} />
-                  <span>BRANDING</span>
-                </Box>
-              </Flex>
-            </Box>
             <Flex
               flexWrap="wrap"
-              w="80%"
+              w="100%"
               justifyContent="center"
             >
               {tailor.map((img, i) => {
@@ -145,7 +116,19 @@ export default function Sodelishus({ location }) {
                     w="25%"
                     m="5px"
                   >
-                    <img key={i} src={img} alt={img} style={{ borderRadius: "2px"}} />
+                    <img 
+                      key={i} 
+                      src={img} 
+                      alt={img} 
+                      style={{ 
+                        borderRadius: "2px",
+                        cursor: "pointer"
+                      }}
+                      onClick={() => {
+                        setOpenGal(true)
+                        setActiveIndex(i);
+                      }}
+                    />
                   </Box>
                 )
               })}
@@ -188,6 +171,13 @@ export default function Sodelishus({ location }) {
         />
         <Footer />
       </Box>
+      {(openGal) 
+        ? <Lightbox 
+          images={allimages} 
+          startIndex={activeIndex}
+          onClose={() => setOpenGal(prevState => !prevState)} 
+        /> 
+        : null}
     </Box>
   )
 }

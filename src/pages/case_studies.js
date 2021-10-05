@@ -5,6 +5,9 @@ import {
   Badge,
   Text
 } from '@chakra-ui/react';
+import Lightbox from 'react-awesome-lightbox';
+import "react-awesome-lightbox/build/style.css";
+
 
 import SEO from '../components/Seo';
 import Nav from '../components/Nav';
@@ -48,7 +51,7 @@ import reign from '../images/scraped/reign_supreme.json';
 
 import '../styles/casestudies.css';
 
-function ClientView({ num }) {
+function ClientView({ num, setActiveImg, setOpen }) {
   const [views, setViews] = useState([])
 
   const viewsarray = [
@@ -308,7 +311,12 @@ function ClientView({ num }) {
     }
 
   }, [num])
-  
+
+    const [currentImageIndex, setCurrentIndex] = useState(0);
+
+    const gotoPrevious = () => {}
+
+    const gotoNext = () => {}
 
   return(
     <Box
@@ -357,7 +365,16 @@ function ClientView({ num }) {
                   px="10px"
                   justifyContent="center"
                 >
-                  <img src={client.img1} alt="client_showcase" style={{ borderRadius: "12px"}} />
+                  <img 
+                    src={client.img1} 
+                    alt="client_showcase" 
+                    className="imgholder" 
+                    onClick={() => {
+                      setActiveImg(client.img1)
+                      setOpen(true)
+                    }}
+                  />
+              
                 </Flex>
                 <Flex
                   w="50%"
@@ -365,7 +382,16 @@ function ClientView({ num }) {
                   px="10px"
                   justifyContent="center"
                 >
-                  <img src={client.img2} alt="client_showcase" style={{ borderRadius: "12px"}}  />
+               
+                  <img 
+                    src={client.img2} 
+                    alt="client_showcase" 
+                    className="imgholder"
+                    onClick={() => {
+                      setActiveImg(client.img2)
+                      setOpen(true)
+                    }} 
+                  />
                 </Flex>
               </Flex>
             </Flex>
@@ -393,6 +419,8 @@ export default function Case_studies({ location }) {
 
   const [activeQty, setActiveQty] = useState(5);
   
+  const [Open, setOpen] = useState(false);
+  const [activeImg, setActiveImg] = useState("");
 
   const headerText = "CASE"
   const subheader = "STUDIES"
@@ -547,7 +575,11 @@ export default function Case_studies({ location }) {
           justifyContent="center"
           className="clientContainer"
         >
-          <ClientView num={activeQty} />
+          <ClientView 
+            num={activeQty} 
+            setActiveImg={setActiveImg}
+            setOpen={setOpen}
+          />
         </Flex>
         <Flex
           w="100%"
@@ -578,6 +610,11 @@ export default function Case_studies({ location }) {
         />
         <Footer />
       </Box>
+      {(Open) ? <Lightbox image={activeImg} onClose={() => setOpen(prevState => !prevState)} /> : null}
     </Box>
   )
+}
+
+export {
+  ClientView,
 }
