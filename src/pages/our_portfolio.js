@@ -8,55 +8,19 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
 
-import anothaweb from '../images/portfolio/anothaweb.png';
-import bar from '../images/portfolio/bar.png';
-import delish from '../images/portfolio/delish.png';
-import delish2 from '../images/portfolio/delish2.png';
-import hair from '../images/portfolio/hair.png';
-import map from '../images/portfolio/map.png';
-import oxted from '../images/portfolio/oxted.png';
-import van from '../images/portfolio/van.png';
-import web from '../images/portfolio/web.png';
-import casestudies from '../images/features/casestudies.png';
+import portfolio from '../images/Portfolio.png';
 
-import { ClientView } from './case_studies';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import sd from '../images/scraped/sodelishus.json';
-import ox from '../images/scraped/oxted_festival.json';
-import man from '../images/scraped/mane_uk.json';
-import hello from '../images/scraped/hello_vans.json';
-import house from '../images/scraped/house_of_strengh.json';
-import sub from '../images/scraped/subfrantic-music.json';
-import boss from '../images/scraped/bossy_bitch_maid.json';
-import capital from '../images/scraped/capital_clue_hunts.json';
-import suss from '../images/scraped/sussex_removals.json';
-import sch from '../images/scraped/sch_tech.json';
-import city from '../images/scraped/city_doggo.json';
-import pro from '../images/scraped/proclean.json';
-import bee from '../images/scraped/beemoved.json';
-import sly from '../images/scraped/slynote.json';
-import aren from '../images/scraped/aren_heating_plumbing.json';
-import exp from '../images/scraped/expert_apps.json';
-import lbp from '../images/scraped/life_balance.json';
-import virt from '../images/scraped/virtlx.json';
-import bw from '../images/scraped/black_and_white_london.json';
-import bod from '../images/scraped/bodiesmade_online.json';
-import tailor from '../images/scraped/sussex_tailored.json';
-import reader from '../images/scraped/readers_school.json';
-import intune from '../images/scraped/intune_consulting.json';
-import terrilyn from '../images/scraped/terri_lynn.json';
-import online from '../images/scraped/online_fitness_freedom.json';
-import reign from '../images/scraped/reign_supreme.json';
-
-import Lightbox from 'react-awesome-lightbox';
 import "react-awesome-lightbox/build/style.css";
 
-
 import '../styles/our_portfolio.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Our_portfolio({ location }) {
   const headerText = "OUR"
@@ -72,11 +36,9 @@ export default function Our_portfolio({ location }) {
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-  }
+  };
 
-
- useEffect(() => {
-
+  useEffect(() => { 
     if(isBrowser){
       updateDimensions();
       window.addEventListener("resize", updateDimensions);
@@ -84,51 +46,52 @@ export default function Our_portfolio({ location }) {
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
-
-  const allImages = [
-    {
-      src: anothaweb,
-    },
-    {
-      src: bar,
-    },
-    {
-      src: delish,
-    },
-    {
-      src: delish2,
-    },
-    {
-      src: hair,
-    },
-    {
-      src: map,
-    },
-    {
-      src: oxted,
-    },
-    {
-      src: van,
-    },
-    {
-      src: web,
-    },
-    {
-      src: sch[0],
-    },
-    {
-      src: city[2]
-    },
-    {
-      src: bee[1]
-    }
-  ]
  
-  const [openGal, setOpenGal] = useState(false);
- const [activeIndex, setActiveIndex] = useState(0);
-  
+  useEffect(() => {
+
+    gsap.to(".ourwork", {
+      scrollTrigger : {
+        trigger: ".triggerport",
+        start: "top center",
+        scrub: 1
+      },
+      y: -400
+    });
+
+    gsap.to(".holder1", {
+      scrollTrigger : {
+        trigger: ".triggerport",
+        start: "top center",
+        scrub: 1
+      },
+      y: -400
+    });
+
+    gsap.to(".holder2", {
+      scrollTrigger : {
+        trigger: ".triggerport",
+        start: "top center",
+        scrub: 1
+      },
+      y: -300
+    });
+
+    gsap.to(".holder3", {
+      scrollTrigger : {
+        trigger: ".triggerport",
+        start: "top center",
+        scrub: 1
+      },
+      y: -200
+    });
+
+  });
+
   return (
-    <Box className="main">
+    <Box 
+      className="main"
+      overflowX="hidden"
+    >
       <SEO />
       <Box>
         {
@@ -140,104 +103,376 @@ export default function Our_portfolio({ location }) {
           header={headerText}
           subheader={subheader}
           paragraph={paragraph}
-          image={casestudies}
+          image={portfolio}
           separated={false}
           imageClass="digitalmarkbanner"
         />
-        <Flex
-          flexDirection="column"
-          justifyContent="center"
-          py="50px"
-        >
-          <Box
-            className="portLinks"
-          >
-            {/* <a href="/our_portfolio">WEBSITE DESIGN</a>
-            <a href="/our_portfolio">WEBSITE DEVELOPMENT</a>
-            <a href="/our_portfolio">E-COMMERCE MARKETING</a>
-            <a href="/our_portfolio">GRAPHIC DESIGNS</a>
-            <a href="/our_portfolio">SOCIAL MEDIA MARKETING</a> */}
-            <Text as="a">WEBSITE DESIGN</Text>
-            <Text as="a">WEBSITE DEVELOPMENT</Text>
-            <Text as="a">E-COMMERCE MARKETING</Text>
-            <Text as="a">GRAPHIC DESIGNS</Text>
-            <Text as="a">SOCIAL MEDIA MARKETING</Text>
-          </Box>
-          <Box
-            className="portLinks"
-          >
-            {/* <a href="/our_portfolio">FACEBOOK AD COPY</a>
-            <a href="/our_portfolio">BRANDING</a>
-            <a href="/our_portfolio">GOOGLE ADVERTISING</a> */}
-            <Text as="a">FACEBOOK AD COPY</Text>
-            <Text as="a">BRANDING</Text>
-            <Text as="a">GOOGLE ADVERTISING</Text>
-          </Box>
-        </Flex>
         <Box
-          className="portshowcase2"
-          w="80%"
-          m="auto"
+          w="100%"
+          className="triggerport"
         >
-          <Flex
-            className="portshowcase"
-            flexWrap="wrap"
-            flexDirection="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            {allImages.map((img, i) => {
-              return (
-                <img 
-                  key={i} 
-                  src={img.src} 
-                  alt={img.src} 
-                  style={{ 
-                    borderRadius: "2px",
-                    cursor: "pointer"
-                  }}
-                  onClick={() => {
-                    setOpenGal(true)
-                    setActiveIndex(i);
-                  }}
-                />
-              )
-            })}
-          </Flex>
-          <Flex
-            justifyContent="center"
-            py="50px"
-          >
-            <Box>
-              <button 
-                className="button button--aylen "
-                onClick={() => {
-                  window.location.assign('/case_studies')
+          <Box>
+            <Text
+              as="h3"
+              fontSize="7xl"
+              fontStyle="dm-sans"
+              color="#0a2f53"
+              my="100px"
+              mx="10%"
+              className="ourwork"
+            >
+              Our Work<span
+                style={{
+                  color: "#ee6f19"
                 }}
               >
-                <span>SEE MORE</span>
-              </button>
-            </Box>
-          </Flex>
+                .
+              </span>
+            </Text>
+            <Flex
+              flexWrap="wrap"
+              justifyContent="center"
+            >
+              <Box
+               className="img1holder holder1"
+               onClick={() => {
+                 window.location.assign("/case_studies/sodelishus")
+               }}
+              >
+                <Box
+                  className="textoverlay1"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    So Delishus
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    Sodelishus is a health-focused food company
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img2holder holder2"
+                onClick={() => {
+                 window.location.assign("/case_studies/oxtedfest")
+               }}
+              >
+                 <Box
+                  className="textoverlay2"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Oxted Festival
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    Music Festival based in Oxted
+                  </Text>
+                </Box>
+              </Box>
+               <Box
+                className="img3holder holder3"
+                onClick={() => {
+                 window.location.assign("/case_studies/maneuk")
+               }}
+              >
+                <Box
+                  className="textoverlay3"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Mane UK
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    Hair Thickening Solutions Company
+                  </Text>
+                </Box>
+              </Box>
+            </Flex>
+            <Flex
+              flexWrap="wrap"
+              justifyContent="center"
+            >
+              <Box
+                className="img4holder holder1"
+                onClick={() => {
+                 window.location.assign("/case_studies/house_of_strength")
+               }}
+              >
+                <Box
+                  className="textoverlay4"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    House Of Strength
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    A leading uk manufacturer and distributor of weighted plates and
+                    <br/>
+                    olympic bars
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img5holder holder2"
+                 onClick={() => {
+                 window.location.assign("/case_studies/subfrantic_music")
+               }}
+              >
+                <Box
+                  className="textoverlay5"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Subfrantic Music
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    The number one online live streaming service for musicians
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img6holder holder3"
+              >
+                <Box
+                  className="textoverlay6"
+                   onClick={() => {
+                 window.location.assign("/case_studies/bossy_bitch_maid")
+               }}
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Boss Bitch Maid
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    England's most unique maid and butler service
+                  </Text>
+                </Box>
+              </Box>
+            </Flex>
+            <Flex
+              flexWrap="wrap"
+              justifyContent="center"
+            >
+              <Box
+                className="img7holder holder1"
+                onClick={() => {
+                 window.location.assign("/case_studies/bee_moved")
+               }}
+                
+              >
+                <Box
+                  className="textoverlay7"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Beemoved
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                   Trusted Brighton removals &amp; storage company get a free qoute from BEE MOVED
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img8holder holder2"
+                onClick={() => {
+                 window.location.assign("/case_studies/expert_apps")
+               }}
+              >
+                <Box
+                  className="textoverlay8"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Expert Apps
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                   App Development Platform for Business
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img9holder holder3"
+                onClick={() => {
+                 window.location.assign("/case_studies/bodiesmade_online")
+               }}
+              >
+                <Box
+                  className="textoverlay9"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Bodies Made Online
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                   You’ll Taken The First Steps To Transforming Your Body &amp; Life.
+                  </Text>
+                </Box>
+              </Box>
+            </Flex>
+             <Flex
+              flexWrap="wrap"
+              justifyContent="center"
+            >
+              <Box
+                className="img10holder holder1"
+                onClick={() => {
+                 window.location.assign("/case_studies/slynote")
+               }}
+              >
+                <Box
+                  className="textoverlay10"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Sly note
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    Slynote makes sending encrypted data simple, no technical knowledge required or understanding of how encryption works.
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img11holder holder2"
+                 onClick={() => {
+                 window.location.assign("/case_studies/black_and_white")
+               }}
+              >
+                <Box
+                  className="textoverlay11"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Black and White London
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                    We specialise in promotional business gifts, printed promotional items and branded corporate merchandise.
+                  </Text>
+                </Box>
+              </Box>
+              <Box
+                className="img12holder holder3"
+                 onClick={() => {
+                 window.location.assign("/case_studies/capital_clue_hunts")
+               }}
+              >
+                <Box
+                  className="textoverlay12"
+                >
+                  <Text
+                    fontSize="3xl"
+                    as="h3"
+                    fontFamily="dm-sans"
+                  >
+                    Capital Clue Hunts
+                  </Text>
+                  <Text
+                    fontSize="md"
+                    as="p"
+                    fontFamily="dm-sans"
+                  >
+                   Real world adventure games in London. All you need is a phone, a team and a sharp mind for the cryptic.
+                  </Text>
+                </Box>
+              </Box>
+            </Flex>
+          </Box>
         </Box>
-        {/* <ClientView
-          num={}
-          setActiveImg={}
-          setOpen={}
-        /> */}
-        <StaticLogo />
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+        >
+          <button
+            // className="businessEnquiryButton"
+            className="button button--aylen"
+            onClick={() => {
+              window.location.assign('/case_studies')
+            }}
+          >
+            <span className="biz">SEE MORE</span>
+          </button>
+        </Flex>
         <ReusableFooter 
           text={text}
         />
         <Footer />
       </Box>
-      {(openGal) 
-        ? <Lightbox 
-          images={allImages} 
-          startIndex={activeIndex}
-          onClose={() => setOpenGal(prevState => !prevState)} 
-        /> 
-        : null}
     </Box>
   )
 }

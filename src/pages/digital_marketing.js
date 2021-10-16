@@ -13,21 +13,15 @@ import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
-import Bizbut from '../components/Bizbut';
 import StaticLogo from '../components/StaticLogo';
 import MobileNav from '../components/MobileNav';
 
-
-import rocketpc from '../images/rocketpc.png';
-import digimark from '../images/digimark.png';
-
-import line1 from '../images/line1.svg';
+import rocketpc from '../images/dm2.png';
+import digimark from '../images/dmbanner.png';
 
 import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
-
-import features from '../images/features/features.svg';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';

@@ -22,8 +22,8 @@ import socmedbanner from '../images/socmedbanner.svg';
 import bizcard from '../images/bizcard.svg';
 import logodes from '../images/logodes.svg';
 import webdev from '../images/webdevelopment.svg';
-import branding from '../images/branding.png';
-import brandingpic2 from '../images/brandingpic2.png';
+import branding from '../images/gdbanner.png';
+import brandingpic2 from '../images/gdpic.png';
 
 import hex from '../images/features/hex.svg';
 import barchart from '../images/features/barchart.svg';
@@ -35,6 +35,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/digital_branding.css';
 
+gsap.registerPlugin(ScrollTrigger);
 export default function Graphic_design({ location }) {
   const headerText = "GRAPHIC"
   const subheader = "DESIGN"
@@ -117,11 +118,11 @@ export default function Graphic_design({ location }) {
     digibrandtl.fromTo(".digibrand", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".rocketpic", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
 
   })
 
@@ -143,11 +144,11 @@ export default function Graphic_design({ location }) {
         />
         <Flex
           pt="50px"
-           pl={[
+           px={[
             "10px",
             "20px",
             "60px",
-            "103px"
+            "60px"
           ]}
           flexWrap="wrap"
           alignItems="center" 
@@ -158,7 +159,7 @@ export default function Graphic_design({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
           >
             <Text
@@ -189,7 +190,7 @@ export default function Graphic_design({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
             pt="10px"
             px="20px"

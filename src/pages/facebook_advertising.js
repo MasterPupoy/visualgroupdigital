@@ -16,17 +16,14 @@ import LearnMoreButton from '../components/LearnMoreButton';
 import StaticLogo from '../components/StaticLogo';
 import MobileNav from '../components/MobileNav';
 
+import fblogo from '../images/fbads.png';
+import digimark from '../images/fbadsbanner.png';
 
-import fblogo from '../images/fblogo.jpg';
-import digimark from '../images/digimark.png';
-
-import line1 from '../images/line1.svg';
 
 import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
 import seo from '../images/offers/seo.svg';
-import digitalBranding from '../images/offers/digitalbranding.svg';
 
 import barchart from '../images/features/barchart.svg';
 import monitor from '../images/features/monitor.svg';
@@ -103,32 +100,31 @@ export default function Facebook_advertising({ location }) {
     let dmtl = gsap.timeline({scrollTrigger : {
       trigger: ".digimark",
       start: "top center",
-      toggleActions: "restart none none none"
     }})
 
     dmtl.fromTo(".firstfb", {
       x: -100,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".next-gen", {
       x: -200,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".rocketpic", {
       x: 200,
       opacity: 0
-    }, { duration: 0.5, x: 0, opacity: 1}, ">")
+    }, { duration: 0.25, x: 0, opacity: 1}, ">")
     .fromTo(".ecomtxt", {
       x: -200,
       opacity: 0
-    }, { duration: 0.5, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".ecomlearn", {
       x: -200,
       opacity: 0
-    }, { duration: 0.5, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo("#ecomlearn", {
       opacity: 0
-    }, { duration: 0.5, opacity: 1})
+    }, { duration: 0.25, opacity: 1})
   }) 
 
   useEffect(() => {
@@ -142,27 +138,27 @@ export default function Facebook_advertising({ location }) {
     cardstl.fromTo(".whatwedo", {
         opacity: 0,
         y: -100
-      }, { duration: 0.5, y: 0, opacity: 1})
+      }, { duration: 0.25, y: 0, opacity: 1})
       .fromTo(".ofc1", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc2", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc3", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc4", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc5", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
   })
 
   return (

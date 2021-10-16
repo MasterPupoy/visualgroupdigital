@@ -15,7 +15,6 @@ import ReusableFooter from '../components/ReusableFooter';
 import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
 
-import whatisvgd from '../images/whatisvgd.svg';
 import ceo from '../images/ceo.png';
 import aboutus from '../images/pekture.png';
 
@@ -23,6 +22,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/about.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About({ location }) {
 

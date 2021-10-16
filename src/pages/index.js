@@ -64,23 +64,23 @@ export default function Index({ location }) {
       indextl.fromTo(".whatwedo", {
         opacity: 0,
         x: -100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".indexsub", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1}, ">")
+      }, { duration: 0.25, x: 0, opacity: 1}, ">")
       .fromTo(".icard1", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".icard2", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".icard3", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
     }
     
     return () => window.removeEventListener("resize", updateDimensions);
@@ -90,18 +90,18 @@ export default function Index({ location }) {
     
     let indextl2 = gsap.timeline({ scrollTrigger : {
       trigger: ".vgd",
-      toggleActions: "restart none none none",
+      toggleActions: "none none none none",
       start: "top center",
     }})
 
     indextl2.fromTo(".vgd",{ 
       opacity: 0,
       x: -100
-    }, { duration: 0.5, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".whatwedo2",{ 
       opacity: 0,
       x: -100
-    }, { duration: 0.5, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
 
   })
 
@@ -110,18 +110,18 @@ export default function Index({ location }) {
 
     let whatweoffertl = gsap.timeline({ scrollTrigger: {
       trigger: ".whatweoffer",
-      toggleActions: "restart none none none",
+      toggleActions: "none none none none",
       start: "20% center"
     }})
 
     whatweoffertl.fromTo(".whatweoffer", {
       opacity: 0,
       x: -100
-    }, { duration: 0.5, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".subwhatweoffer", {
       opacity: 0,
       x: -100
-    }, { duration: 0.5, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
 
   })
 
@@ -135,37 +135,37 @@ export default function Index({ location }) {
 
       abouttl.to(".aboutusindex", {
         y: -20,
-        duration: 1,
+        duration: 0.25,
         ease: "ease"
       })
       .to(".spag", {
         y: -10,
-        duration: 1,
+        duration: 0.25,
         ease: "ease"
       }, "<")
        .to(".triangol", {
         y: -15,
-        duration: 1,
+        duration: 0.25,
         ease: "ease"
       }, "<")
        .to(".orangespag", {
         y: -10,
-        duration: 1,
+        duration: 0.25,
         ease: "ease"
       }, "<")
        .to(".circol", {
         y: -17,
-        duration: 1,
+        duration: 0.25,
         ease: "ease"
       }, "<")
        .to(".fatTriangle", {
         y: -8,
-        duration: 1,
+        duration: 0.25,
         ease: "ease"
       }, "<")
       .to(".aboutuspic", {
       y: -9,
-      duration: 1,
+      duration: 0.25,
       ease: "ease"
       }, "<")
     
@@ -175,6 +175,7 @@ export default function Index({ location }) {
   return (
     <Box
       className="main"
+      overflowX="hidden"
     >
       <SEO />
       {

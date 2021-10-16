@@ -18,12 +18,9 @@ import MobileNav from '../components/MobileNav';
 
 
 import ecom from '../images/ecom.png';
-import digimark from '../images/digimark.png';
-
-import line1 from '../images/line1.svg';
+import digimark from '../images/E-Commerce.png';
 
 import digitalMarketing from '../images/offers/digital_marketing.svg';
-import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 

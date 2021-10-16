@@ -106,7 +106,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         "600px",
         "500px",
         "500px",
-        "700px",
+        "600px",
         "900px"
       ]}
       w="100%"
@@ -159,6 +159,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           "270px",
           "300px"
         ]}
+        px="50px"
       >
         <img src={shape3} alt="svg" className="reshape3" />
         <img src={shape4} alt="svg" className="reshape4" />

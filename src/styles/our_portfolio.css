@@ -46,3 +46,471 @@
              -28px -28px 48px #ffffff;
 }
 
+.portfolioContainer {
+	background: linear-gradient(-45deg, #ee6f19, #0a2f53, #FFFCF5);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.img1holder {
+  background-image: url(../images/portfolio/delish.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px 30px;
+  cursor: pointer;
+}
+
+.textoverlay1 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay1 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay1 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img1holder:hover .textoverlay1 {
+  opacity: 1;
+}
+
+.img2holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1Q51B0TOu8iiDpZEy83NP-lqt5uB2jV-P");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.textoverlay2 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay2 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay2 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img2holder:hover .textoverlay2 {
+  opacity: 1;
+}
+
+.img3holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=19n4VEZ_c1H7CJDdj1na0HInwuFyw3Nji");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.textoverlay3 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay3 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay3 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img3holder:hover .textoverlay3 {
+  opacity: 1;
+}
+
+
+.img4holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1gFDTIWRjM_d-wI8HtpzIsqN6EYFNvA_5");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.textoverlay4 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay4 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay4 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img4holder:hover .textoverlay4 {
+  opacity: 1;
+}
+
+
+.img5holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1UE75KPLdIRajUUeIDg1E0kgczVHL9hqE");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+
+.textoverlay5 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay5 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay5 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img5holder:hover .textoverlay5 {
+  opacity: 1;
+}
+
+
+.img6holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1tHsg-m5JoICT785tjok56mgFK8uo963W");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.textoverlay6 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay6 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay6 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img6holder:hover .textoverlay6 {
+  opacity: 1;
+}
+
+
+.img7holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1-nyQTD7d2fQZMJ-zeB27_ShXnrRd2kXY");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.textoverlay7 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay7 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay7 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img7holder:hover .textoverlay7 {
+  opacity: 1;
+}
+
+
+.img8holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1gdt3vChSaIf3QBVmXxzIfX-OeOxPiz6k");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.textoverlay8 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+}
+
+.textoverlay8 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay8 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img8holder:hover .textoverlay8 {
+  opacity: 1;
+}
+
+.img9holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1pflk7S6fkYNSJT0s6zx0SX4IyP92TYWw");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+}
+
+.textoverlay9 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.textoverlay9 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay9 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img9holder:hover .textoverlay9 {
+  opacity: 1;
+}
+
+.img10holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1USLSNCOzIE8lc7qJXxzO9a8iTmnTJ2Pg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+}
+
+.textoverlay10 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.textoverlay10 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay10 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img10holder:hover .textoverlay10 {
+  opacity: 1;
+}
+
+.img11holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1E4RJMdMrKAiPi0jydi1C8gC92iIgpo_I");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+}
+
+.textoverlay11 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.textoverlay11 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay11 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img11holder:hover .textoverlay11 {
+  opacity: 1;
+}
+
+.img12holder {
+  background-image: url("https://drive.google.com/uc?export=view&id=1OPMrnwUfTjTSqyziPiCQ91iBnOU8uRia");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 700px;
+  margin: 20px;
+}
+
+.textoverlay12 { 
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(10, 47, 83, 0.90);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.textoverlay12 > p {
+  position: absolute;
+  bottom: 20%;
+  padding: 10px;
+}
+
+.textoverlay12 > h3 {
+  position: absolute;
+  bottom: 30%;
+  padding: 10px;
+}
+
+.img12holder:hover .textoverlay12 {
+  opacity: 1;
+}

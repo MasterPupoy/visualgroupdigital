@@ -74,7 +74,7 @@ function FirstSlider({ dir }){
         className="sliderBox"
       > 
         <h3>
-          e-commerce
+          E-commerce
         </h3>
         <Box>
           <a

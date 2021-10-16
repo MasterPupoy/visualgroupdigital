@@ -22,9 +22,9 @@
 }
 
 .banner-section {
-  margin-top: 194px;
+  padding-top: 194px;
   flex-wrap: wrap;
-  
+
 }
 
 .marketing {
@@ -32,7 +32,9 @@
   font-family: dm-sans, sans-serif;
   font-style: normal;
   font-weight: bold;
-  height: auto;
+
+  position: relative;
+  z-index: 1;
 }
 
 .submarketing {

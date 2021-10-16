@@ -16,7 +16,7 @@ import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
 
-import branding from '../images/branding.png';
+import webdev from '../images/webdevbanner.png';
 import webdevelopment from '../images/webdevelopment.png';
 
 import line1 from '../images/line1.svg';
@@ -40,6 +40,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/digital_branding.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Web_development({ location }) {
   const headerText = "WEB"
@@ -188,7 +190,7 @@ export default function Web_development({ location }) {
           header={headerText}
           subheader={subheader}
           paragraph={paragraph}
-          image={branding}
+          image={webdev}
           separated={false}
           imageClass="digitalmarkbanner"
         />

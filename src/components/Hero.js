@@ -132,9 +132,9 @@ export default function Hero() {
           className="banner-section"
           height={[
             "600px",
-            "400px",
-            "400px",
-            "300px"
+            "600px",
+            "600px",
+            "600px"
           ]}
           width={[
             "100%", // 0-30em

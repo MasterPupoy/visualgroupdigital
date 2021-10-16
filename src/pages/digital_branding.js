@@ -16,9 +16,9 @@ import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
 
-import branding from '../images/brandbg.png';
-import brandingpic2 from '../images/brandingpic2.png';
-import brandingpic3 from '../images/brandingpic3.png';
+import branding from '../images/branddevbanner.png';
+import brandingpic2 from '../images/branddev1.png';
+import brandingpic3 from '../images/branddev2.png';
 
 
 import hex from '../images/features/hex.svg';
@@ -115,15 +115,15 @@ export default function Digital_branding({ location }) {
     digibrandtl.fromTo(".digibrand", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".rocketpic", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".rocketpic2", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
 
   })
 

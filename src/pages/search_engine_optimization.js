@@ -17,8 +17,8 @@ import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
 
 
-import seopic from '../images/seopic.png';
-import digimark from '../images/digimark.png';
+import seopic from '../images/seo2.png';
+import digimark from '../images/seobanner.png';
 
 import line1 from '../images/line1.svg';
 
