@@ -407,13 +407,14 @@ export default function Index({ location }) {
         h="500px"
         flexWrap="wrap"
         mt="100px"
+        
       >
         <Box
           w={[
             "100%",
             "100%",
             "50%",
-            "500px"
+            "400px"
           ]}
           h="500px"
           mx={[

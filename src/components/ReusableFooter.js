@@ -25,7 +25,7 @@ export default function ReusableFooter({ text }) {
             "100%",
             "100%",
             "50%",
-            "500px"
+            "400px"
           ]}
           h="500px"
           mx={[
