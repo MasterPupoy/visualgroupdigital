@@ -147,7 +147,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
     },
     {
       link: "citydoggo.com",
-      subheader: "City Doggo introduces a return to nature for your metropolitan pet. Our first HERO product, the Oui Oui Patch is an eco-friendly, odour-free, real grass pet toilet for your flat or balcony.",
+      subheader: "City Doggo introduces a return to nature for your metropolitan pet.",
       type: "Pet Products Company",
       img1: city[4],
       img2: city[10],
@@ -165,7 +165,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
     },
     {
       link: "beemoved.com",
-      subheader: "TRUSTED Brighton REMOVALS & STORAGE COMPANY GET A FREE QUOTE FROM BEE MOVED",
+      subheader: "Trusted Brighton removals & storage company.",
       type: "Transport Company",
       img1: bee[1],
       img2: bee[2],
@@ -174,7 +174,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
     },
     {
       link: "slynote.com",
-      subheader: "Slynote makes sending encrypted data simple, no technical knowledge required or understanding of how encryption works, all you need is the basic requirement to send private data to another person or persons securely and quickly.",
+      subheader: "Slynote makes sending encrypted data simple.",
       type: "Encrypted notes Company",
       img1: sly[0],
       img2: sly[5],
@@ -219,7 +219,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
     },
     {
       link: "blackandwhitelondon.co.uk",
-      subheader: "Black and White London, a leading UK Supplier of promotional items. We specialise in promotional business gifts, printed promotional items and branded corporate merchandise",
+      subheader: "Leading UK Supplier of promotional items.",
       type: "Promotional Company",
       img1: bw[1],
       img2: bw[2],
@@ -264,7 +264,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
     },
      {
       link: "terrilynn.com",
-      subheader: "Terri Lynn's FREE fundraising program makes it easy for you to raise money for your cause! Get started today with a personal Online Webstore.",
+      subheader: "Terri Lynn's FREE fundraising program makes it easy for you to raise money for your cause!",
       type: "Lifestyle Company",
       img1: terrilyn[4],
       img2: terrilyn[2],
@@ -312,12 +312,6 @@ function ClientView({ num, setActiveImg, setOpen }) {
 
   }, [num])
 
-    const [currentImageIndex, setCurrentIndex] = useState(0);
-
-    const gotoPrevious = () => {}
-
-    const gotoNext = () => {}
-
   return(
     <Box
       w="90%"
@@ -344,9 +338,13 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 </a>
               </Text>
 
-              <p>
+              <Text
+                as="h5"
+                fontStyle="dm-sans"
+                fontSize="md"
+              >
                 {client.subheader}
-              </p>
+              </Text>
             </Box>
             <Flex
               mt="30px"

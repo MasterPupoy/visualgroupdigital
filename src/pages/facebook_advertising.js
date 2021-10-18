@@ -132,7 +132,6 @@ export default function Facebook_advertising({ location }) {
     let cardstl = gsap.timeline({ scrollTrigger: {
       trigger: ".whatwedo",
       start: "bottom center",
-      toggleActions: "restart none none none"
     }})
 
     cardstl.fromTo(".whatwedo", {

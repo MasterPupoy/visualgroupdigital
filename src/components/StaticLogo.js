@@ -38,6 +38,17 @@ import adaptingHomes from '../images/logo/adaptinghomes.svg';
 import onlineFitnessFreedom from '../images/logo/onlinefitnessfreedom.svg';
 import intuneConsulting from '../images/logo/intuneconsulting.svg';
 
+import bw from '../images/bw.png';
+import bbm from '../images/BBM Logo.png';
+import dm from '../images/dmgroundworks.png';
+import grantspace from '../images/grantspace.png';
+import healingtuning from '../images/healingtuning.png';
+import honestgrapes from '../images/honestgrapes.png';
+import racehorseclub from '../images/racehorseclub.png';
+import rockit from '../images/rockit.png';
+import viralmerch from '../images/viralmerchandising.png';
+
+
 import '../styles/slideshow.css';
 
 
@@ -45,13 +56,14 @@ export default function Slideshow() {
   
  return (
   <>
-    <Box
+    <Flex
+      mt="100px"
       mx="20px"
       px="9%"
+      justifyContent="center"
+      alignItems="center"
     >
-      <Box
-        pt="100px"
-      >
+      <Box>
         <Text
           className="addlogo"
           fontSize="3xl"
@@ -60,28 +72,19 @@ export default function Slideshow() {
           ADD YOUR LOGO HERE.
         </Text>
       </Box>
-      <Flex
-        justifyContent="space-between"
-        pt="17px"
+      <Box
+        mx="10px"
       >
-        <Box>
-          <Text
-            className="addlogop"
-            fontSize="lg"
-          >
-            We’ve worked with more than 100 companies since 2015 Check out some of the <br />
-            fantastic clients we have brought to the UK and International Markets.
-          </Text>
-        </Box>
-        {/* <Box>
-          <h3
-            className="addlogo"
-          >
-            Our Clients
-          </h3>
-        </Box> */}
-      </Flex>
-    </Box>
+        <Text
+          className="addlogop"
+          fontSize="lg"
+        >
+          We’ve worked with more than 100 companies since 2015 Check out some of the <br />
+          fantastic clients we have brought to the UK and International Markets.
+        </Text>
+      </Box>
+  
+    </Flex>
     
     <Flex
     flexDirection="row"
@@ -152,6 +155,31 @@ export default function Slideshow() {
         <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" />
         <img src={intuneConsulting} alt="intuneconsulting.svg" />
       </Flex>
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        w="100%"
+        px="4%"
+  
+      >
+        <img src={bw} alt="portfoliofm.svg" className="addon"/>
+        <img src={bbm} alt="hydroinstal.svg" className="addon" />
+        <img src={dm} alt="futurefitness.svg" className="addon" />
+        <img src={viralmerch} alt="intuneconsulting.svg" className="addon" />
+      </Flex>
+       {/* <Flex
+        justifyContent="center"
+        alignItems="center"
+        w="100%"
+        px="4%"
+  
+      >
+        <img src={rockit} alt="intuneconsulting.svg" className="addon2" />
+        <img src={grantspace} alt="schtech.svg" className="addon2" />
+        <img src={healingtuning} alt="adaptinghomes.svg" className="addon2" />
+        <img src={racehorseclub} alt="onlinefitnessfreedom.svg" className="addon2" />
+        <img src={honestgrapes} alt="intuneconsulting.svg" className="addon2" />
+      </Flex> */}
       <Flex
         justifyContent="center"
         alignItems="center"

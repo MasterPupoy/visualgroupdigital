@@ -27,48 +27,45 @@ export default function Process() {
 
     let proctl1 = gsap.timeline({ scrollTrigger: {
       trigger: ".step1",
-      toggleActions: "restart none none none",
       start: "top center"
     }})
 
     proctl1.fromTo(".step1", {
       x : -100,
       opacity: 0,
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".svg1", {
       x: 100,
       opacity: 0
-    }, { duration : 1, opacity: 1, x: 0})
+    }, { duration : 0.25, opacity: 1, x: 0})
 
     let proctl2 = gsap.timeline({ scrollTrigger: {
       trigger: ".step1",
-      toggleActions: "restart none none none",
       start: "bottom center"
     }})
 
     proctl2.fromTo(".step2", {
       x : 100,
       opacity: 0,
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".svg2", {
       x: -100,
       opacity: 0
-    }, { duration : 1, opacity: 1, x: 0})
+    }, { duration : 0.25, opacity: 1, x: 0})
 
     let proctl3 = gsap.timeline({ scrollTrigger: {
       trigger: ".step2",
-      toggleActions: "restart none none none",
       start: "bottom center"
     }})
 
     proctl3.fromTo(".step3", {
       x : -100,
       opacity: 0,
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".svg3", {
       x: 100,
       opacity: 0
-    }, { duration : 1, opacity: 1, x: 0})
+    }, { duration : 0.25, opacity: 1, x: 0})
 
   })
 

@@ -53,12 +53,15 @@ body {
 }
 
 .aboutusindex {
-  font-family: dm-sans;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 42px;
+ padding-top: 5px;
 
-  color: #302E22;
+  font-family: dm-Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+
+  color: #0A2F53; 
 }
 
 .aboutusindex ~ p {
@@ -112,9 +115,32 @@ body {
   font-family: poppins;
   font-style: normal;
   font-weight: 600;
-  line-height: 54px;
+  line-height: 121px;
 
-  color: #0A2F53;
+  color: #EE6F19;
+  animation: changecolor 5s ease infinite;
+}
+
+@keyframes changecolor {
+  0% {
+    color: #0A2F53;
+  }
+
+  25% {
+    color: aquamarine;
+  }
+
+  50% {
+    color: #EE6F19;
+  }
+
+  75% {
+    color: aqua;
+  }
+
+  100% {
+    color: #0A2F53;
+  }
 }
 
 .requesth2 {

@@ -314,6 +314,10 @@ export default function AccomplishmentSlider() {
       opacity: 0
     }, { duration: 1, y: 0, opacity: 1})
 
+    setInterval(() => {
+      dispatch({ dir : "right" })
+    }, 2000);
+
   }, [])
 
   const ServiceSlider = () => {

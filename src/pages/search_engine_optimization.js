@@ -18,7 +18,7 @@ import StaticLogo from '../components/StaticLogo';
 
 
 import seopic from '../images/seo2.png';
-import digimark from '../images/seobanner.png';
+import digimark from '../images/smg.png';
 
 import line1 from '../images/line1.svg';
 
@@ -119,37 +119,36 @@ export default function Search_engine_optimization({ location }) {
     let cardstl = gsap.timeline({ scrollTrigger: {
       trigger: ".whatwedo",
       start: "bottom center",
-      toggleActions: "restart none none none"
     }})
 
     cardstl.fromTo(".whatwedo", {
         opacity: 0,
         y: -100
-      }, { duration: 0.5, y: 0, opacity: 1})
+      }, { duration: 0.25, y: 0, opacity: 1})
       .fromTo(".ofc1", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc2", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc3", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc4", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc5", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc6", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
     })
 
     useEffect(() => {
@@ -157,24 +156,23 @@ export default function Search_engine_optimization({ location }) {
       let dmtl = gsap.timeline({scrollTrigger : {
         trigger: ".digimark",
         start: "top center",
-        toggleActions: "restart none none none"
       }})
   
       dmtl.fromTo(".firstecom", {
         x: -100,
         opacity: 0
-      }, { duration: 1, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ecomtxt", {
         x: -200,
         opacity: 0
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".rocketpic", {
         x: 200,
         opacity: 0
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo("#ecomlearn", {
         opacity: 0
-      }, { duration: 0.5, opacity: 1})
+      }, { duration: 0.25, opacity: 1})
     }) 
 
     useEffect(() => {
@@ -182,16 +180,15 @@ export default function Search_engine_optimization({ location }) {
       let seotl = gsap.timeline({ scrollTrigger : {
         trigger: ".socmedgrowthlist1",
         start: "top center",
-        toggleActions: "restart none none none"
       }})
 
       seotl.fromTo(".socmedgrowthlist1", {
         y: 100,
         opacity: 0
-      }, { duration: 1, opacity: 1, y:0 })
+      }, { duration: 0.25, opacity: 1, y:0 })
       .fromTo(".seogrowthimg", {
         opacity: 0
-      }, { duration: 1, opacity: 1})
+      }, { duration: 0.25, opacity: 1})
     })
 
   return (

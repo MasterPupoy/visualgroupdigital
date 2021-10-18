@@ -20,7 +20,7 @@ import Footer from '../components/Footer';
 
 import shape5 from '../images/small_circle.svg';
 import line1 from '../images/line1.svg';
-import circle_el from '../images/circle_el.svg';
+import rect from '../images/rect.svg';
 
 import spag from '../images/spag.svg';
 import triangol from '../images/triangol.svg';
@@ -58,7 +58,6 @@ export default function Index({ location }) {
 
       let indextl = gsap.timeline({ scrollTrigger : {
         trigger: ".whatwedo",
-        toggleActions: "restart none none none",
       }})
 
       indextl.fromTo(".whatwedo", {
@@ -90,7 +89,6 @@ export default function Index({ location }) {
     
     let indextl2 = gsap.timeline({ scrollTrigger : {
       trigger: ".vgd",
-      toggleActions: "none none none none",
       start: "top center",
     }})
 
@@ -110,7 +108,6 @@ export default function Index({ location }) {
 
     let whatweoffertl = gsap.timeline({ scrollTrigger: {
       trigger: ".whatweoffer",
-      toggleActions: "none none none none",
       start: "20% center"
     }})
 
@@ -361,7 +358,6 @@ export default function Index({ location }) {
         >
           <Text
             className="aboutusindex"
-            fontSize="5xl"
           >
             About Us
           </Text>
@@ -373,10 +369,8 @@ export default function Index({ location }) {
             success. That lesson laid the foundation for the 
             creation of Visual Group, a marketing agency dedicated 
             to driving results for businesses around the world.
-          </Text>
-          <Text
-            fontSize="md"
-          >
+            <br/>
+            <br/>
             From humble beginnings, Visual Group has grown into an 
             agency capable of web development, brand development, 
             full marketing strategies, and more. Throughout the 
@@ -408,9 +402,7 @@ export default function Index({ location }) {
         </Box>
       </Flex>
       <Flex
-        bg="#fff"
         w="100%"
-        justifyContent="center"
         alignItems="center"
         h="500px"
         flexWrap="wrap"
@@ -423,28 +415,38 @@ export default function Index({ location }) {
             "50%",
             "500px"
           ]}
+          h="500px"
+          mx={[
+            "0px",
+            "200px"
+          ]}
+          className="pattern-dots-lg"
         >
           <Text
               className="requesth1"
-              fontSize="4xl"
+              fontSize="9xl"
+              style={{
+                transform: "translate(50%, 50%)"
+              }}
             >
-              REQUEST A FREE CALLBACK <br />
-              TODAY
+              START NOW!
+            
             </Text>
-            <Text>
+            {/* <Text>
               Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
               we can help decide where you need to start and which of our services would benefit you the most.
-            </Text>
+            </Text> */}
         </Box>
         <Box
           p="20px"
         >
            <Text
               className="requesth2"
-              fontSize="2xl"
+              fontSize="4xl"
             >
-              Why Wait? <br/>
-              Start Now
+              
+              Request a callback <br/>
+              today!
             </Text>
             <button
               className="bizbut indexBizbut"
@@ -452,9 +454,9 @@ export default function Index({ location }) {
               BUSINESS ENQUIRY
             </button>
         </Box>
-        <Box>
-          <img src={circle_el} alt="svg" className="circle_el" />
-        </Box>
+        {/* {/* <Box>
+          <img src={rect} alt="svg" className="circle_el" />
+        </Box> */}
       </Flex>
       <Footer />
     </Box>

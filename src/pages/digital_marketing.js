@@ -113,7 +113,6 @@ export default function Marketing({ location }) {
     let dmtl = gsap.timeline({scrollTrigger : {
       trigger: ".digimark",
       start: "top center",
-      toggleActions: "restart none none none"
     }})
 
     dmtl.fromTo(".digimark", {
@@ -132,7 +131,6 @@ export default function Marketing({ location }) {
     let cardstl = gsap.timeline({ scrollTrigger: {
       trigger: ".whatwedo",
       start: "bottom center",
-      toggleActions: "restart none none none"
     }})
 
     cardstl.fromTo(".whatwedo", {

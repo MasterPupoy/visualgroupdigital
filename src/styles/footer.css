@@ -3,7 +3,7 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 16px;
   padding: 0px 10px;
   color: rgba(10, 47, 83, 0.71);
@@ -83,11 +83,18 @@
 
   padding: 10px 0px;
 
+  cursor: pointer;
+  transition: 0.5s ease-in;
   color: rgba(10, 47, 83, 0.58);
 }
 
 .footerlist > ul > li > a, .footerlistservices > ul > li > a {
   text-decoration: none;
+}
+
+.footerlist > ul > li > a:hover, .footerlistservices > ul > li > a:hover {
+  transition: 0.5s ease-out;
+  color: #EE6F19;
 }
 
 .social > a {

@@ -65,7 +65,6 @@ export default function Slideshow() {
     
       let slideshowtl = gsap.timeline({ scrollTrigger : {
         trigger: ".heroheadhead",
-        toggleActions: "restart none none none",
         start: "top center"
       }})
 

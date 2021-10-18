@@ -12,7 +12,6 @@ import map from '../images/map.svg';
 import facebook from '../images/facebook.svg';
 import twitter from '../images/twitter.svg';
 import insta from '../images/insta.svg';
-import logoline from '../images/logoline.svg';
 
 import '../styles/footer.css';
 
@@ -55,6 +54,21 @@ export default function Footer() {
     }  
   ]
 
+  const communitylinks = [
+     {
+      tab : 'What We do?',
+      key : '/about'
+    },
+    {
+      tab : 'Our Work',
+      key : '/case_studies'
+    },
+    {
+      tab : 'Company',
+      key : '/our_portfolio'
+    },
+  ]
+
 
   return (
     <Box
@@ -62,14 +76,15 @@ export default function Footer() {
       pt="77px"
     >
       <Flex
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
         w="100%"
+        px="190px"
         flexWrap="wrap"
       >
         <Flex
           flexDirection="row"
-          px="30px"
+          alignItems="center"
         >
           <Box>
             <img src={message} alt="message.svg" />
@@ -84,7 +99,7 @@ export default function Footer() {
         </Flex>
         <Flex
           flexDirection="row"
-          px="30px"
+          alignItems="center"
         >
           <Box>
             <img src={map} alt="message.svg" />
@@ -100,7 +115,7 @@ export default function Footer() {
         </Flex>
         <Flex
           flexDirection="row"
-          px="30px"
+          alignItems="center"
           flexWrap="wrap"
         >
           <Box>
@@ -154,9 +169,11 @@ export default function Footer() {
             Community
           </h3>
           <ul>
-            <li>What We do?</li>
-            <li>Our process</li>
-            <li>Company</li>
+            {communitylinks.map(link => {
+              return (
+                <li key={link.key} ><a href={`${link.key}`}>{link.tab}</a></li>
+              )
+            })}
           </ul>
         </Box>
         <Box className="footerlist">

@@ -196,7 +196,7 @@ export default function Nav({ loc, page, main }) {
               <a
                 href={'/search_engine_optimization'}
                 className={
-                  (key === '/seo_opt') 
+                  (key === '/search_engine_optimization') 
                   ? "activeSecondary"
                   : null
                 }

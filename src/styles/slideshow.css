@@ -8,6 +8,13 @@
   filter: invert(100%);
   display: block;
   width: fit-content;
+
+}
+
+.addon {
+  width: 90px;
+  height: 90px;
+  margin: 0px 80px;
 }
 
 .seeMore {

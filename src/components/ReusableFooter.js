@@ -13,85 +13,62 @@ import '../styles/reusablefooter.css';
 
 export default function ReusableFooter({ text }) {
   return (
-    <Flex 
-      mt="100px"
-      h={[
-        "1000px",
-        "1000px",
-        "900px",
-        "300px",
-      ]}
-      w="100%"
-      bg="#fff"
-      px={[
-        "20px",
-        "20px",
-        "150px",
-        "150px"
-      ]}
-      overflowX="hidden"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Flex
+        <Flex
+        w="100%"
         alignItems="center"
+        h="500px"
         flexWrap="wrap"
-        overflowX="hidden"
+        mt="100px"
       >
         <Box
-          mx="20px"
-        >
-          <img src={emoji} alt="emoji" />
-        </Box>
-        <Box
-           w={[
-              "100%",
-              "100%",
-              "100%",
-              "50%"
-            ]}
-          overflowX="hidden"
-          mx="50px"
-        >
-          <Text
-            as="h1"
-            fontSize="3xl"
-            className="requesth1"
-          >
-            {text}
-          </Text>
-          <Text
-            as="p"
-            fontSize="md"
-          >
-            Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
-            we can help decide where you need to start and which of our services would benefit you the most.
-          </Text>
-        </Box>
-        <Box
           w={[
-              "100%",
-              "100%",
-              "100%",
-              "20%"
-            ]}
+            "100%",
+            "100%",
+            "50%",
+            "500px"
+          ]}
+          h="500px"
+          mx={[
+            "0px",
+            "200px"
+          ]}
+          className="pattern-dots-lg"
+        >
+          <Text
+              className="requesth1"
+              fontSize="9xl"
+              style={{
+                transform: "translate(50%, 50%)"
+              }}
+            >
+              START NOW!
+            
+            </Text>
+            {/* <Text>
+              Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
+              we can help decide where you need to start and which of our services would benefit you the most.
+            </Text> */}
+        </Box>
+        <Box
           p="20px"
         >
-          <Text
-            className="requesth2"
-            fontSize="2xl"
-          >
-            Why Wait? <br/>
-            Start Now
-          </Text>
-          <button
-            className="bizbut indexBizbut"
-          >
-            BUSINESS ENQUIRY
-          </button>
-          <img src={circle_el} alt="svg" className="circular" />
+           <Text
+              className="requesth2"
+              fontSize="4xl"
+            >
+              
+              Request a callback <br/>
+              today!
+            </Text>
+            <button
+              className="bizbut indexBizbut"
+            >
+              BUSINESS ENQUIRY
+            </button>
         </Box>
-      </Flex>
-    </Flex>
+        {/* {/* <Box>
+          <img src={rect} alt="svg" className="circle_el" />
+        </Box> */}
+      </Flex> 
   )
 }
