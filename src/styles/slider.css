@@ -30,12 +30,12 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 23px;
 
   padding: 10px 0px;
 
-  color: #1D1D1D;
+  color: rgba(52, 52, 52, 0.66);
   text-align: center;
 }
 

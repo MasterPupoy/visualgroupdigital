@@ -29,7 +29,6 @@ export default function OfferCard() {
     let offercardstl = gsap.timeline({ scrollTrigger: {
       trigger: ".offercardscontainer",
       start: "top center",
-      toggleActions: "restart none none none",
     }})
 
     offercardstl.fromTo(".ofc1", {

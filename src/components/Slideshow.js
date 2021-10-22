@@ -36,6 +36,16 @@ import adaptingHomes from '../images/logo/adaptinghomes.svg';
 import onlineFitnessFreedom from '../images/logo/onlinefitnessfreedom.svg';
 import intuneConsulting from '../images/logo/intuneconsulting.svg';
 
+import bw from '../images/bw.png';
+import bbm from '../images/BBM Logo.png';
+import dm from '../images/dmgroundworks.png';
+import grantspace from '../images/grantspace.png';
+import healingtuning from '../images/healingtuning.png';
+import honestgrapes from '../images/honestgrapes.png';
+import racehorseclub from '../images/racehorseclub.png';
+import rockit from '../images/rockit.png';
+import viralmerch from '../images/viralmerchandising.png';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/slideshow.css';
@@ -108,12 +118,13 @@ export default function Slideshow() {
       ref={set1}
       overflowX="hidden"
     >
-      <img src={chessmoves} alt="chessmoveslogo" />
-      <img src={oxtedFestival} alt="oxtedfestival" />
-      <img src={tailoredRemoval} alt="tailoredremovallogo" />
-      <img src={surreyCedar} alt="surreycedarlogo" />
-      <img src={oneroof} alt="onerooflogo" />
-      <img src={simonKemp} alt="simonKemp" />
+      <img src={chessmoves} alt="chessmoveslogo" className="logopng" />
+      <img src={oxtedFestival} alt="oxtedfestival" className="logopng" />
+      <img src={tailoredRemoval} alt="tailoredremovallogo" className="logopng" />
+      <img src={surreyCedar} alt="surreycedarlogo" className="logopng" />
+      {/* <img src={oneroof} alt="onerooflogo" /> */}
+      <img src={honestgrapes} alt="intuneconsulting.svg" className="addon3" />
+      <img src={simonKemp} alt="simonKemp" className="logopng" />
     </Flex>
     <Flex
       justifyContent="space-between"
@@ -122,14 +133,14 @@ export default function Slideshow() {
       px="2%"
       ref={set2}
     >
-      <img src={delishus} alt="delishus.svg" />
-      <img src={manetain} alt="manetain.svg" />
-      <img src={doggo} alt="doggo.svg" />
-      <img src={redsacks} alt="redsacks.svg" />
-      <img src={beautifulsouls} alt="beautifulsouls.svg" />
-      <img src={cleaningspecialistproviders} alt="cleaningspecialistproviders.svg" />
-      <img src={provest} alt="provest.svg" />
-      <img src={secretcalm} alt="secretcalm.svg" />
+      <img src={delishus} alt="delishus.svg" className="logopng" />
+      <img src={manetain} alt="manetain.svg" className="logopng" />
+      <img src={doggo} alt="doggo.svg" className="logopng" />
+      <img src={redsacks} alt="redsacks.svg" className="logopng" />
+      <img src={beautifulsouls} alt="beautifulsouls.svg" className="logopng" />
+      <img src={cleaningspecialistproviders} alt="cleaningspecialistproviders.svg" className="logopng" />
+      <img src={provest} alt="provest.svg" className="logopng" />
+      <img src={secretcalm} alt="secretcalm.svg" className="logopng" />
     </Flex>
     <Flex
       justifyContent="space-between"
@@ -138,13 +149,14 @@ export default function Slideshow() {
       px="4%"
       ref={set3}
     >
-      <img src={houseofstrength} alt="houseofstreng.svg" />
-      <img src={fitify} alt="fitify.svg" />
-      <img src={reignsupreme} alt="reignsupreme.svg" />
-      <img src={rebecca} alt="rebecca.svg" />
-      <img src={regency} alt="regency.svg" />
-      <img src={keating} alt="keating.svg" />
-      <img src={outperform} alt="outperform.svg" />
+      <img src={houseofstrength} alt="houseofstreng.svg" className="logopng" />
+      <img src={fitify} alt="fitify.svg" className="logopng" />
+      <img src={reignsupreme} alt="reignsupreme.svg" className="logopng" />
+      <img src={rebecca} alt="rebecca.svg" className="logopng" />
+      <img src={regency} alt="regency.svg" className="logopng" />
+      <img src={keating} alt="keating.svg" className="logopng" />
+      <img src={grantspace} alt="schtech.svg" className="addon"/>
+      {/* <img src={outperform} alt="outperform.svg" /> */}
     </Flex>
     <Flex
       justifyContent="space-between"
@@ -153,13 +165,38 @@ export default function Slideshow() {
       px="4%"
       ref={set4}
     >
-      <img src={portfolioFm} alt="portfoliofm.svg" />
-      <img src={hydroInstal} alt="hydroinstal.svg" />
-      <img src={futurefitness} alt="futurefitness.svg" />
-      <img src={schTech} alt="schtech.svg" />
-      <img src={adaptingHomes} alt="adaptinghomes.svg" />
-      <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" />
-      <img src={intuneConsulting} alt="intuneconsulting.svg" />
+        <img src={portfolioFm} alt="portfoliofm.svg" className="logopng" />
+        <img src={hydroInstal} alt="hydroinstal.svg" className="logopng" />
+        <img src={futurefitness} alt="futurefitness.svg" className="logopng"/>
+        <img src={schTech} alt="schtech.svg"  className="logopng" />
+        <img src={adaptingHomes} alt="adaptinghomes.svg" className="logopng"/>
+        <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" className="logopng"/>
+        <img src={intuneConsulting} alt="intuneconsulting.svg" className="logopng"/>
+      
+    </Flex>
+    <Flex 
+      justifyContent="center"
+      alignItems="center"
+      w="100%"
+      px="4%"
+
+    >
+      <img src={bw} alt="portfoliofm.svg"  className="addon"/>
+      <img src={bbm} alt="hydroinstal.svg"  className="addon"/>
+      <img src={dm} alt="futurefitness.svg" className="addon" />
+      <img src={viralmerch} alt="intuneconsulting.svg" className="addon" />
+      <img src={rockit} alt="intuneconsulting.svg" className="logopng" />
+    </Flex>
+      <Flex
+      justifyContent="center"
+      alignItems="center"
+      w="100%"
+      px="4%"
+
+    >
+      <img src={healingtuning} alt="adaptinghomes.svg" className="addon2" />
+    
+      <img src={racehorseclub} alt="onlinefitnessfreedom.svg" className="addon4" />
     </Flex>
     <Flex
       justifyContent="center"

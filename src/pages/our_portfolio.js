@@ -117,7 +117,7 @@ export default function Our_portfolio({ location }) {
               fontSize="7xl"
               fontStyle="dm-sans"
               color="#0a2f53"
-              my="100px"
+              mt="100px"
               mx="10%"
               className="ourwork"
             >
@@ -128,6 +128,17 @@ export default function Our_portfolio({ location }) {
               >
                 .
               </span>
+            </Text>
+            <Text
+              as="h3"
+              fontSize="2xl"
+              fontStyle="dm-sans"
+              color="rgba(52, 52, 52, 0.66)"
+              mx="10%"
+              mb="100px"
+              className="ourwork"
+            >
+              Here are some of the best brands we'd work with.
             </Text>
             <Flex
               flexWrap="wrap"
