@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import {
   Flex,
   Box,
-  Text
+  Text,
+  Image
 } from "@chakra-ui/react";
 
 import SEO from "../components/Seo";
 import Nav from "../components/Nav";
 import MobileNav from "../components/MobileNav";
-import Hero from "../components/Hero";
-import SiderCircles from "../components/Illustrations/SiderCircles";
+
 import Slideshow from "../components/Slideshow";
 import Cards from "../components/Cards";
 import Process from "../components/Process";
@@ -17,10 +17,10 @@ import OfferCard from "../components/OfferCard";
 import AccomplishmentSlider from "../components/AccomplishmentSlider";
 import LearnMoreButton from '../components/LearnMoreButton';
 import Footer from '../components/Footer';
+import ReusableHero from '../components/ReusableHero';
 
 import shape5 from '../images/small_circle.svg';
 import line1 from '../images/line1.svg';
-import rect from '../images/rect.svg';
 
 import spag from '../images/spag.svg';
 import triangol from '../images/triangol.svg';
@@ -28,10 +28,12 @@ import orangespag from '../images/orangespag.svg';
 import fatTriangle from '../images/fatTriangle.svg';
 
 import aboutus from '../images/aboutus.png';
+import indexpic from '../images/index.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import '../styles/hero.css';
 import '../styles/index.css';
 import ClientTestimonials from "../components/ClientTestimonials";
 
@@ -168,6 +170,9 @@ export default function Index({ location }) {
     
   })
 
+  const headerText = "Marketing & Development Agency"
+  const paragraph = "We Help Businesses Improve Their Marketing & Brand To Maximise Client Potential."
+
 
   return (
     <Box
@@ -176,16 +181,62 @@ export default function Index({ location }) {
     >
       <SEO />
       {
-        (width > 1028) 
+        (width > 1300) 
         ? <Nav loc={location} page='/' />
-        : <MobileNav />
+        : <MobileNav page="/" />
       }
+      <ReusableHero 
+        header={headerText}
+        paragraph={paragraph}
+        image={indexpic}
+        imageClass="digitalmarkbanner"
+      />
       <Flex
-        w="100%"
+        display={[
+          "none",
+          "none",
+          "block",
+          "block",
+          "block"
+        ]}
       >
-        <Hero />
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          height={[
+            "500px",
+            "350px",
+            "375px",
+            "100px",
+            "100px"
+          ]}
+          w="100%"
+          className="heroheadhead"
+        >
+          <Flex
+            className="p1"
+            justifyContent="center"
+            flexDirection="column"
+          >
+            <Text
+              fontSize="4xl"
+              className="herohead"
+            >
+              Our Clients
+            </Text>
+            <Text
+              fontSize="md"
+              className="heropara"
+            >
+              We’ve worked with more than 100 companies 
+              since 2015 Check out some of the fantastic <br />
+              clients we have brought to the UK and International 
+              Markets.
+            </Text>
+          </Flex>
+        </Flex>
+        <Slideshow />
       </Flex>
-      <Slideshow />
    
       <Flex
         pt="5%"
@@ -197,8 +248,23 @@ export default function Index({ location }) {
             "45%", // 48em-62em
             "5%", // 62em+
           ]}
+          display={[
+            "none",
+            "none",
+            "block",
+            "block",
+            "block"
+          ]}
         >
-          <SiderCircles />
+          <svg width="115" height="327" viewBox="0 0 115 327" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <rect x="0.738281" y="0.452148" width="113.367" height="325.93" fill="url(#pattern0)"/>
+            <defs>
+            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlinkHref="#image0" transform="scale(0.0104167 0.00362319)"/>
+            </pattern>
+            <image id="image0" width="96" height="276" xlinkHref="data:image/png;base64,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"/>
+            </defs>
+          </svg>
         </Box>
         <Box
           pl="10%"
@@ -218,9 +284,23 @@ export default function Index({ location }) {
             w="100%"
             className="whatwedo"
           >
-            <Box>
+            <Box
+              w={[
+                "47%",
+                "36%",
+                "36%",
+                "38%",
+                "21%"
+              ]}
+            >
               <Text
-                fontSize="4xl"
+                fontSize={[
+                  "38px",
+                  "38px",
+                  "45px",
+                  "45px",
+                  "45px"
+                ]}
               >
                 What We Do
               </Text>
@@ -228,6 +308,13 @@ export default function Index({ location }) {
             <Box
               alignSelf="center"
               pl="20px"
+              w={[
+                "20%",
+                "20%",
+                "50%",
+                "50%",
+                "50%"
+              ]}
             >
               <img src={line1} alt="line.svg" />
             </Box>
@@ -238,7 +325,7 @@ export default function Index({ location }) {
               "100%",
               "50%",
               "50%",
-              "100%"
+              "50%"
             ]}
             className="indexsub"
           >
@@ -248,7 +335,7 @@ export default function Index({ location }) {
             >
               At Visual Group Digital, we help businesses 
               flourish by following a comprehensive 3-step 
-              process of <br/>
+              process of
               consulting, development, and marketing.
             </Text>
           </Box>
@@ -272,7 +359,13 @@ export default function Index({ location }) {
           flexDirection="row"
           flexWrap="noWrap"
           w="100%"
-          pl="17%"
+          pl={[
+            "10%",
+            "10%",
+            "10%",
+            "17%",
+            "17%",
+          ]}
           className="whatwedo"
         >
           <Box>
@@ -406,7 +499,13 @@ export default function Index({ location }) {
         alignItems="center"
         h="500px"
         flexWrap="wrap"
-        mt="100px"
+        mt={[
+          "50px",
+          "75px",
+          "100px",
+          "100px",
+          "100px"
+        ]}
         
       >
         <Box
@@ -416,19 +515,39 @@ export default function Index({ location }) {
             "50%",
             "400px"
           ]}
-          h="500px"
+          h={[
+            "250px",
+            "250px",
+            "350px",
+            "500px",
+            "500px"
+          ]}
           mx={[
             "0px",
+            "0px",
+            "50px",
+            "100px",
             "200px"
           ]}
           className="pattern-dots-lg"
         >
           <Text
               className="requesth1"
-              fontSize="9xl"
-              style={{
-                transform: "translate(50%, 50%)"
-              }}
+              fontSize={[
+                "50px",
+                "60px",
+                "60px",
+                "60px",
+                "65px"
+              ]}
+              transform={[
+                "translate(0%, 50%)",
+                "translate(7%, 50%)",
+                "translate(7%, 100%)",
+                "translate(15%, 130%)",
+                "translate(35%, 130%)",
+              ]}
+  
             >
               START NOW!
             
@@ -440,13 +559,26 @@ export default function Index({ location }) {
         </Box>
         <Box
           p="20px"
+          w={[
+            "100%",
+            "100%",
+            "36%",
+            "30%",
+            "30%"
+          ]}
         >
            <Text
               className="requesth2"
-              fontSize="4xl"
+              fontSize={[
+                "30px",
+                "30px",
+                "30px",
+                "50px",
+                "50px"
+              ]}
             >
               
-              Request a callback <br/>
+              Request a callback
               today!
             </Text>
             <button

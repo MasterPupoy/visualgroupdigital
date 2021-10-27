@@ -5,16 +5,13 @@ import {
   FormControl,
   FormLabel,
   Textarea,
-  Input
+  Input,
+  Text
 } from '@chakra-ui/react';
 import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
-
-import facebook from '../images/facebook.svg';
-import twitter from '../images/twitter.svg';
-import insta from '../images/insta.svg';
 
 import message from '../images/message.svg';
 import map from '../images/map.svg';
@@ -50,37 +47,67 @@ export default function Contact({ location }) {
          {
           (width > 1280) 
           ? <Nav loc={location} page='/contact' />
-          : <MobileNav />
+          : <MobileNav page='/contact' />
         }
         <Flex
           justifyContent="center"
           pt="93px"
+          mx="50px"
         >
           <Flex
             justifyContent="center"
             alignItems="center"
-            h="863px"
+            display={[
+              "none",
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
+            h={[
+              "0px",
+              "0px",
+              "0px",
+              "863px",
+              "863px",
+              "863px"
+            ]}
             className="contactside"
             pr="50px"
+            w={[
+              "0px",
+              "0px",
+              "0px",
+              "30%",
+              "30%"
+            ]}
           >
-          <Box
-            w="277px"
-          >
+          <Box>
             <Box
             className="contact"
             >
-              <h3>
+              <Text
+                as="h3"
+              >
                 Contact Details
-              </h3>
+              </Text>
             </Box>
             <Flex
-              
-              w="100%"
+              w={[
+                "0px",
+                "0px",
+                "0px",
+                "100%",
+                "100%",
+                "100%"
+              ]}
               flexDirection="column"
             >
               <Flex
                 flexDirection="row"
                 pt="30px"
+                alignItems="center"
               >
                 <Box>
                   <img src={map} alt="message.svg" />
@@ -97,6 +124,7 @@ export default function Contact({ location }) {
               <Flex
                 flexDirection="row"
                 pt="30px"
+                alignItems="center"
               >
                 <Box>
                   <img src={map} alt="message.svg" />
@@ -113,6 +141,7 @@ export default function Contact({ location }) {
               <Flex
                 flexDirection="row"
                 pt="30px"
+                alignItems="center"
               >
                 <Box>
                   <img src={message} alt="message.svg" />
@@ -128,23 +157,50 @@ export default function Contact({ location }) {
             </Flex>
           </Box>
           </Flex>
+
+
           <Flex
-            w="930px"
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "90%",
+              "90%"
+            ]}
             flexDirection="column"
             justifyContent="center"
-            px="50px"
+            flexWrap="wrap"
+            mx="50px"
           >
             <Box
               className="contactgetstarted"
               h="190px"
             >
-              <h3>
+              <Text
+                as="h3"
+                fontSize={[
+                  "23px",
+                  "23px",
+                  "32px",
+                  "32px",
+                  "32px"
+                ]}
+              >
                 Get started
-              </h3>
-              <p>
+              </Text>
+              <Text
+                as="p"
+                fontSize={[
+                  "14px",
+                  "14px",
+                  "14px",
+                  "22px",
+                  "22px"
+                ]}
+              >
                 It only takes a few minutes to kick off a project. 
                 Fill in the details below and we’ll be in touch.
-              </p>
+              </Text>
             </Box>
             <Box
               className="contactgetstarted2"
@@ -158,10 +214,12 @@ export default function Contact({ location }) {
                 justifyContent="center"
                 flexDirection="column"
                 w="100%"
+                flexWrap="wrap"
               >
                 <Flex
                   justifyContent="space-between"
                   w="100%"
+                  flexWrap="wrap"
                 >
                   <Box 
                     w="358px"
@@ -198,6 +256,7 @@ export default function Contact({ location }) {
                   justifyContent="space-between"
                   w="100%"
                   pt="20px"
+                  flexWrap="wrap"
                 >
                   <Box 
                     w="358px"

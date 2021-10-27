@@ -79,12 +79,19 @@ export default function Footer() {
         justifyContent="space-between"
         alignItems="center"
         w="100%"
-        px="190px"
+        px={[
+          "10px",
+          "10px",
+          "70px",
+          "190px",
+          "190px"
+        ]}
         flexWrap="wrap"
       >
         <Flex
           flexDirection="row"
           alignItems="center"
+          py="20px"
         >
           <Box>
             <img src={message} alt="message.svg" />
@@ -100,6 +107,7 @@ export default function Footer() {
         <Flex
           flexDirection="row"
           alignItems="center"
+          py="20px"
         >
           <Box>
             <img src={map} alt="message.svg" />
@@ -117,6 +125,7 @@ export default function Footer() {
           flexDirection="row"
           alignItems="center"
           flexWrap="wrap"
+          py="20px"
         >
           <Box>
             <img src={map} alt="message.svg" />
@@ -139,10 +148,25 @@ export default function Footer() {
           "150px",
           "190px"
         ]}
-        pt="132px"
+        pt={[
+          "50px",
+          "50px",
+          "100px",
+          "100px",
+          "100px"
+        ]}
         flexWrap="wrap"
       >
-        <Box className="footerabout">
+        <Box className="footerabout" 
+          w={[
+            "100%",
+            "100%",
+            "50%",
+            "25%",
+            "25%"
+          ]}
+          py="20px"
+        >
           <h3>
             About
           </h3>
@@ -152,7 +176,16 @@ export default function Footer() {
             and marketing.
           </p>
         </Box>
-        <Box className="footerlist">
+        <Box className="footerlist"
+           w={[
+            "100%",
+            "100%",
+            "50%",
+            "25%",
+            "25%"
+          ]}
+          py="20px"
+        >
           <h3>
             Services
           </h3>
@@ -164,7 +197,16 @@ export default function Footer() {
             })}
           </ul>
         </Box>
-        <Box className="footerlistservices">
+        <Box className="footerlistservices"
+           w={[
+            "100%",
+            "100%",
+            "50%",
+            "25%",
+            "25%"
+          ]}
+          py="20px"
+        >
           <h3>
             Community
           </h3>
@@ -176,7 +218,16 @@ export default function Footer() {
             })}
           </ul>
         </Box>
-        <Box className="footerlist">
+        <Box className="footerlist"
+           w={[
+            "100%",
+            "100%",
+            "50%",
+            "25%",
+            "25%"
+          ]}
+          py="20px"
+        >
           <h3>
             Quick Links
           </h3>
@@ -191,7 +242,13 @@ export default function Footer() {
       </Flex>
       <Flex
         w="100%"
-        pl="190px"
+        pl={[
+          "50px",
+          "50px",
+          "70px",
+          "190px",
+          "190px"
+        ]}
         pt="50px" 
       >
         <Box

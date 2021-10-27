@@ -30,7 +30,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       let tl = gsap.timeline({scrollTrigger: {
         trigger: ".hero-section",
         scrub: 1,
-        start: "top top",
+        start: "center center",
       }})
 
       tl.to(".reusableheader", {
@@ -98,57 +98,76 @@ export default function ReusableHero({ image, header, subheader, paragraph,
   return (
     <>
     <Flex
+      mt={[
+        "20px",
+        "20px",
+        "20px",
+        "0px",
+        "0px"
+      ]}
       className="hero-section reusablehero"
       overflowX="hidden"
       overflowY="hidden"
       flexWrap="wrap"
+      justifyContent="space-between"
       height={[
         "600px",
-        "500px",
-        "500px",
         "600px",
-        "900px"
+        "600px",
+        "750px",
+        "750px"
       ]}
       w="100%"
     >
       <Box
-        px="50px"
         pt={[
-          "10px",
-          "20px",
+          "50%",
+          "40%",
           "150px",
-          "200px"
+          "180px"
         ]}
         width={[
           "100%", // 0-30em
           "100%", // 30em-48em
           "50%", // 48em-62em
-          "30%", // 62em+
-          "40%"
+          "50%", // 62em+
+          "50%"
         ]}
+        px="50px"
       >
         <Text
           className="reusableheader"
-          fontSize="5xl"
+          fontSize={["30px", "35px", "35px", "50px"]}
+          lineHeight={["30px", "30px", "30px", "62px"]}
         >
           {header} {(separated) ? <br /> : null }
           <span>{subheader}</span>
         </Text>
         <Text
           as="p"
-          fontSize="2xl"
+          fontSize={["8px", "15px", "20px", "30px"]}
           className="reusablepara"
         >
           {paragraph}
         </Text>
-        <Bizbut id="reusablebizbut" />
+        <Box
+          w={[
+            "100%",
+            "100%",
+            "355px",
+            "355px",
+            "355px"
+          ]}
+        >
+          <Bizbut id="reusablebizbut" />
+        </Box>
       </Box>
       <Box
         className="shapeParent"
         width={[
           "0px ", // 0-30em
           "0%", // 30em-48em
-          "30%", // 48em-62em
+          "50%", // 48em-62em
           "50%",
           "50%" // 62em+
         ]}
@@ -156,7 +175,8 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           "0px",
           "0px",
           "170px",
-          "270px",
+          "240px",
+          "280px",
           "300px"
         ]}
         px="50px"

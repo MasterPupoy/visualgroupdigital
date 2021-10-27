@@ -35,6 +35,12 @@
   padding-right: 17px;
 }
 
+@media screen and (max-width: 378px ){
+  .offerCards > p {
+    height: 210px;
+  }
+}
+
 .offerCards > img {
   display: block;
   margin: 10px auto;

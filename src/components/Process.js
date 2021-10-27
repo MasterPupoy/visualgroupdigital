@@ -27,7 +27,7 @@ export default function Process() {
 
     let proctl1 = gsap.timeline({ scrollTrigger: {
       trigger: ".step1",
-      start: "top center"
+      start: "top bottom"
     }})
 
     proctl1.fromTo(".step1", {
@@ -41,7 +41,7 @@ export default function Process() {
 
     let proctl2 = gsap.timeline({ scrollTrigger: {
       trigger: ".step1",
-      start: "bottom center"
+      start: "bottom 80%",
     }})
 
     proctl2.fromTo(".step2", {
@@ -55,7 +55,7 @@ export default function Process() {
 
     let proctl3 = gsap.timeline({ scrollTrigger: {
       trigger: ".step2",
-      start: "bottom center"
+      start: "bottom 80%"
     }})
 
     proctl3.fromTo(".step3", {
@@ -112,7 +112,13 @@ export default function Process() {
           </Text>
         </Box>
         <Box
-          pl="80px"
+          pl={[
+            "0px",
+            "0px",
+            "0px",
+            "80px",
+            "80px"
+          ]}
           w={[
             "0%",
             "0%",
@@ -121,6 +127,7 @@ export default function Process() {
             "50%"
           ]}
           h={[
+            "0%",
             "0%",
             "0%",
             "100%",
@@ -133,9 +140,22 @@ export default function Process() {
       </Flex>
       <Flex
         flexWrap="wrap"
+        pt={[
+          "50px",
+          "50px",
+          "30px",
+          "0px",
+          "0px"
+        ]}
       >
         <Box
-          pr="80px"
+          pr={[
+            "0px",
+            "0px",
+            "0px",
+            "80px",
+            "80px"
+          ]}
            w={[
             "0%",
             "0%",
@@ -144,6 +164,7 @@ export default function Process() {
             "50%"
           ]}
           h={[
+            "0%",
             "0%",
             "0%",
             "100%",
@@ -187,6 +208,13 @@ export default function Process() {
       </Flex>
       <Flex
         flexWrap="wrap"
+        pt={[
+          "50px",
+          "50px",
+          "30px",
+          "0px",
+          "0px"
+        ]}
       >
         <Box
           w={[
@@ -221,7 +249,13 @@ export default function Process() {
           </Text>
         </Box>
         <Box
-          pl="80px"
+          pl={[
+            "0px",
+            "0px",
+            "0px",
+            "80px",
+            "80px"
+          ]}
            w={[
             "0%",
             "0%",
@@ -230,6 +264,7 @@ export default function Process() {
             "50%"
           ]}
           h={[
+            "0%",
             "0%",
             "0%",
             "100%",
@@ -244,7 +279,11 @@ export default function Process() {
         alignItems="center"
         pt="100px"
       >
-        <Bizbut />
+        <Box
+          w="350px"
+        >
+          <Bizbut />
+        </Box>
       </Flex>
     </Flex>
   )

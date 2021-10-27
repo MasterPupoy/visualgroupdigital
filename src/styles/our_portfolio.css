@@ -65,7 +65,33 @@
 	}
 }
 
-.img1holder {
+/* .allcontainer {
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); 
+  backdrop-filter: blur( 12px );
+  -webkit-backdrop-filter: blur( 12px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+} */
+
+.picContainer > img {
+  background-color: #0a2f53;
+  width: 300px;
+  margin: 5px 5px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px 0 #d5d5d5;
+  cursor: pointer;
+
+  transition: 0.5s ease-out;
+}
+
+.picContainer > img:hover {
+  box-shadow: 8px 5px 10px 0 #d5d5d5;
+  transition: 0.5s ease-in;
+}
+
+/* .img1holder {
   background-image: url(../images/portfolio/delish.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -513,4 +539,4 @@
 
 .img12holder:hover .textoverlay12 {
   opacity: 1;
-}
+} */

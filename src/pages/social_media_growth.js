@@ -30,11 +30,11 @@ import socmed from '../images/offers/socmed.svg';
 
 import check from '../images/check.svg';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import monitor from '../images/features/monitor.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import monitor from '../images/features/monitor.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -182,7 +182,7 @@ export default function Social_media_growth({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/social_media_growth' main="/marketing" />
-          : <MobileNav />
+          : <MobileNav main="/social_media_growth" />
         }
         <ReusableHero 
           header={headerText}

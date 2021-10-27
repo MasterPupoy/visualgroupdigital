@@ -26,11 +26,11 @@ import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import monitor from '../images/features/monitor.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import monitor from '../images/features/monitor.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -168,7 +168,7 @@ export default function Google_advertising({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/google_advertising' main="/marketing" />
-          : <MobileNav />
+          : <MobileNav main="/google_advertising" />
         }
         <ReusableHero 
           header={headerText}
@@ -219,7 +219,7 @@ export default function Google_advertising({ location }) {
               fontSize="5xl"
               className="firstecom"
             >
-              <span>Google Ads Pay-Per-Click (PPC)</span> <br />
+              <span>Google Ads</span> <br />
               Management
             </Text>
             <Text

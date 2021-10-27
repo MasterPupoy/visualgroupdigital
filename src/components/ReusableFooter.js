@@ -21,25 +21,45 @@ export default function ReusableFooter({ text }) {
         mt="100px"
       >
         <Box
-          w={[
+             w={[
             "100%",
             "100%",
             "50%",
             "400px"
           ]}
-          h="500px"
+          h={[
+            "250px",
+            "250px",
+            "350px",
+            "500px",
+            "500px"
+          ]}
           mx={[
             "0px",
+            "0px",
+            "50px",
+            "100px",
             "200px"
           ]}
-          className="pattern-dots-lg"
+          className="pattern-dots-lg" 
         >
           <Text
-              className="requesth1"
-              fontSize="9xl"
-              style={{
-                transform: "translate(50%, 50%)"
-              }}
+               className="requesth1"
+              fontSize={[
+                "50px",
+                "60px",
+                "60px",
+                "60px",
+                "65px"
+              ]}
+              transform={[
+                "translate(0%, 50%)",
+                "translate(7%, 50%)",
+                "translate(7%, 100%)",
+                "translate(15%, 130%)",
+                "translate(35%, 130%)",
+              ]}
+  
             >
               START NOW!
             
@@ -51,10 +71,23 @@ export default function ReusableFooter({ text }) {
         </Box>
         <Box
           p="20px"
+           w={[
+            "100%",
+            "100%",
+            "36%",
+            "45%",
+            "45%"
+          ]}
         >
            <Text
               className="requesth2"
-              fontSize="4xl"
+              fontSize={[
+                "30px",
+                "30px",
+                "30px",
+                "50px",
+                "50px"
+              ]}
             >
               
               Request a callback <br/>

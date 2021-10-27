@@ -187,26 +187,34 @@ export default function Slideshow() {
         w="100%"
         pt="20px"
       >
-        <Box
-          alignSelf="center"
+        <Flex
+          w="400px"
+          justifyContent="space-between"
+          alignItems="center"
         >
-          <button
-            className="seeMore button--aylen"
-            onClick={() => {
-              window.location.assign("/case_studies")
-            }}
+          <Box
+            alignSelf="center"
           >
-            <span>
-              SEE MORE OF OUR CLIENTS
-            </span>
-          </button>
-          <a
-            className="reqCB"
-            href="/contact"
-          >
-            REQUEST A CALL BACK &gt;
-          </a>
-        </Box>
+            <button
+              className="seeMore button--aylen"
+              onClick={() => {
+                window.location.assign("/case_studies")
+              }}
+            >
+              <span>
+                SEE MORE OF OUR CLIENTS
+              </span>
+            </button>
+          </Box>
+          <Box>
+            <a
+              className="reqCB"
+              href="/contact"
+            >
+              REQUEST A CALL BACK &gt;
+            </a>
+          </Box>
+        </Flex>
       </Flex>
     </Flex>
   </>

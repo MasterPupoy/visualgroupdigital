@@ -461,7 +461,7 @@ export default function Case_studies({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
-          : <MobileNav />
+          : <MobileNav  page='/case_studies' />
         }
         <ReusableHero 
           header={headerText}
@@ -585,7 +585,10 @@ export default function Case_studies({ location }) {
           my="100px"
         >
           {(activeQty < 26)
-            ?<Box
+            ?<Flex
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="column"
             onClick={() => {
               setActiveQty(num => {
                 if(activeQty === 25){
@@ -597,7 +600,22 @@ export default function Case_studies({ location }) {
             }}
           >
             <img src={chevron} alt="chevron" className="chevronseemore" />
-          </Box>
+            <Text
+              as="h3"
+              mt="50px"
+              fontSize={[
+                "20px",
+                "20px",
+                "30px",
+                "30px",
+                "30px"
+              ]}
+              fontFamily="dm-sans"
+              color="#0A2F53"
+            >
+              View More
+            </Text>
+          </Flex>
             : null
           
           }

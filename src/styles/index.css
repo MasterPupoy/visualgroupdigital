@@ -117,30 +117,7 @@ body {
   font-weight: 600;
   line-height: 121px;
 
-  color: #EE6F19;
-  animation: changecolor 5s ease infinite;
-}
-
-@keyframes changecolor {
-  0% {
-    color: #0A2F53;
-  }
-
-  25% {
-    color: aquamarine;
-  }
-
-  50% {
-    color: #EE6F19;
-  }
-
-  75% {
-    color: aqua;
-  }
-
-  100% {
-    color: #0A2F53;
-  }
+  color: #0A2F53;
 }
 
 .requesth2 {

@@ -25,10 +25,10 @@ import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
 import seo from '../images/offers/seo.svg';
 
-import barchart from '../images/features/barchart.svg';
-import monitor from '../images/features/monitor.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import barchart from '../images/features/barchart.png';
+import monitor from '../images/features/monitor.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
 
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
@@ -167,7 +167,7 @@ export default function Facebook_advertising({ location }) {
          {
           (width > 1280) 
           ? <Nav loc={location} page='/facebook_advertising' main="/marketing" />
-          : <MobileNav />
+          : <MobileNav main="/facebook_advertising" />
         }
         <ReusableHero 
           header={headerText}

@@ -12,11 +12,11 @@
 }
 
 .contactside {
-  border-right: 0.5px solid #000000;;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.15);;
 }
 
 .contactgetstarted {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
 }
 
 .contactgetstarted > h3 {
@@ -39,7 +39,7 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+
   line-height: 28px;
   /* or 140% */
 
@@ -62,7 +62,7 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+
   line-height: 40px;
   /* identical to box height, or 125% */
 

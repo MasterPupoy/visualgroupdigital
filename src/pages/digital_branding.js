@@ -20,11 +20,12 @@ import branding from '../images/branddevbanner.png';
 import brandingpic2 from '../images/branddev1.png';
 import brandingpic3 from '../images/branddev2.png';
 
+import righta from '../images/righta.png';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -134,7 +135,7 @@ export default function Digital_branding({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/digital_branding' main="/branding" />
-          : <MobileNav />
+          : <MobileNav main="/branding" />
         }
         <ReusableHero 
           header={headerText}
@@ -283,6 +284,14 @@ export default function Digital_branding({ location }) {
               <p>
                 As a company, what do you want to achieve? We, at Visual Group Digital, will take an in-depth study on your business goals, your present business status, and the gap that we have to bridge by designing the perfect brand image and identity.
               </p>
+              <Flex
+                flexDirection="row"
+                w="50px"
+                h="50px"
+                mt="50px"
+              >
+                <img src={righta} alt="rightarrow" />
+              </Flex>
             </Box>
             <Box
               className="slidercards"

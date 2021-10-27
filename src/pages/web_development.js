@@ -33,8 +33,8 @@ import java from '../images/java.svg';
 import php from '../images/php.svg';
 import data from '../images/big-data.svg';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -184,7 +184,7 @@ export default function Web_development({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/web_development' main="/branding" />
-          : <MobileNav />
+          : <MobileNav main="/web_development"/>
         }
         <ReusableHero 
           header={headerText}
@@ -219,7 +219,7 @@ export default function Web_development({ location }) {
               fontSize="5xl"
             >
               Website Development: <br />
-              Your Gateway to an Impressive Online Customer Experience
+              Your Online Customer Experience
             </Text>
             <Text
               as="p"
@@ -257,7 +257,7 @@ export default function Web_development({ location }) {
             <img src={webdevelopment} alt="rocketpc.svg" className="rocketpic" />
           </Flex>
         </Flex>
-        <Box
+        {/* <Box
          mt="210px"
           overflowX="scroll"
           className="brandingslider"
@@ -369,13 +369,14 @@ export default function Web_development({ location }) {
               </h3>
             </Box>
           </Flex>
-        </Box>
+        </Box> */}
         <Flex
           mt="100px"
           flexDirection="row"
           flexWrap="wrap"
           justifyContent="center"
           pt="50px"
+          alignItems="center"
         >
           <Box>
             <h3

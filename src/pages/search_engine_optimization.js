@@ -31,11 +31,11 @@ import graphics from '../images/offers/graphics.svg';
 import growth from '../images/growth.png';
 import check from '../images/check.svg';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import monitor from '../images/features/monitor.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import monitor from '../images/features/monitor.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -198,7 +198,7 @@ export default function Search_engine_optimization({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/search_engine_optimization' main="/marketing" />
-          : <MobileNav />
+          : <MobileNav main="/search_engine_optimization" />
         }
         <ReusableHero 
           header={headerText}
@@ -218,6 +218,7 @@ export default function Search_engine_optimization({ location }) {
           flexWrap="wrap"
           alignItems="center"
           alignItems="center"
+          justifyContent="center"
         >
           <Box
              className="digimark"
@@ -233,7 +234,7 @@ export default function Search_engine_optimization({ location }) {
               fontSize="5xl"
               className="firstecom"
             >
-              <span>Search Engine Optimisation (SEO):</span> <br/>
+              <span>SEO</span> <br/>
               An Organic Way to Reach Your Target Audience
             </Text>
             <Text
@@ -247,7 +248,7 @@ export default function Search_engine_optimization({ location }) {
             <LearnMoreButton link="/contact" id="ecomlearn" />
           </Box>
           <Flex
-            ml={[
+               ml={[
               "0px",
               "0px",
               "70px",
@@ -257,11 +258,11 @@ export default function Search_engine_optimization({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
-            pt="10px"
-            px="20px"
+            pt="10px" 
             justifyContent="center"
+            alignItems="center"
           >
             <img src={seopic} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", }} />
           </Flex>

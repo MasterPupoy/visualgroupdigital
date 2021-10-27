@@ -199,39 +199,6 @@ export default function Hero() {
           <img src={shape2} alt="svg" className="shape02" />
         </Box>
       </Flex>
-      <Flex
-        justifyContent="center"
-        alignItems="center"
-         height={[
-            "500px",
-            "350px",
-            "375px",
-            "100px",
-            "100px"
-          ]}
-        w="100%"
-        className="heroheadhead"
-      >
-        <Box
-          className="p1"
-        >
-          <Text
-            fontSize="4xl"
-            className="herohead"
-          >
-            Our Clients
-          </Text>
-          <Text
-            fontSize="md"
-            className="heropara"
-          >
-            We’ve worked with more than 100 companies 
-            since 2015 Check out some of the fantastic <br />
-            clients we have brought to the UK and International 
-            Markets.
-          </Text>
-        </Box>
-      </Flex>
     </Flex>
   )
 }

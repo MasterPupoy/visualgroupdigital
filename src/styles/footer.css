@@ -53,11 +53,11 @@
 
 
 .footerlistservices {
-  padding: 0px 90px 0px 70px;
+  padding: 0px 70px;
 }
 
 .footerlist {
-  padding: 0px 90px;
+  padding: 0px 70px;
 }
 
 .footerlist > h3, .footerlistservices > h3 {
@@ -122,4 +122,8 @@
   color: rgba(10, 47, 83, 0.63);
 }
 
-
+@media screen and (max-width: 500px) {
+  .footerfoot > h3 {
+    font-size: 10px;
+  }
+}

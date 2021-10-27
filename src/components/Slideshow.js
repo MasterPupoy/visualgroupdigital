@@ -198,33 +198,41 @@ export default function Slideshow() {
     
       <img src={racehorseclub} alt="onlinefitnessfreedom.svg" className="addon4" />
     </Flex>
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-      w="100%"
-      pt="20px"
-    >
-      <Box
-        alignSelf="center"
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        w="100%"
+        pt="20px"
       >
-        <button
-          className="seeMore button--aylen"
-          onClick={() => {
-            window.location.assign("/case_studies")
-          }}
+        <Flex
+          w="400px"
+          justifyContent="space-between"
+          alignItems="center"
         >
-          <span>
-            SEE MORE OF OUR CLIENTS
-          </span>
-        </button>
-        <a
-          className="reqCB"
-          href="/contact"
-        >
-          REQUEST A CALL BACK &gt;
-        </a>
-      </Box>
-    </Flex>
+          <Box
+            alignSelf="center"
+          >
+            <button
+              className="seeMore button--aylen"
+              onClick={() => {
+                window.location.assign("/case_studies")
+              }}
+            >
+              <span>
+                SEE MORE OF OUR CLIENTS
+              </span>
+            </button>
+          </Box>
+          <Box>
+            <a
+              className="reqCB"
+              href="/contact"
+            >
+              REQUEST A CALL BACK &gt;
+            </a>
+          </Box>
+        </Flex>
+      </Flex>
   </Flex>
   )
 }

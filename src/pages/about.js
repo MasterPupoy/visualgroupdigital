@@ -14,6 +14,7 @@ import LearnMoreButton from '../components/LearnMoreButton';
 import ReusableFooter from '../components/ReusableFooter';
 import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
+import vgd from '../images/dfaod.png';
 
 import ceo from '../images/ceo.png';
 import aboutus from '../images/pekture.png';
@@ -84,13 +85,15 @@ export default function About({ location }) {
   })
 
   return (
-    <Box className="main">
+    <Box 
+      className="main"
+      overflowX="hidden"
+    >
       <SEO />
-      <Box>
         {
-          (width > 1028) 
+          (width > 1300) 
           ? <Nav loc={location} page='/about' />
-          : <MobileNav />
+          : <MobileNav  page='/about' />
         }
         <ReusableHero 
           header={headerTxt}
@@ -100,8 +103,7 @@ export default function About({ location }) {
         />
         <Flex
           pt="90px"
-          pl="103px"
-          pl={[
+          px={[
             "10px",
             "20px",
             "60px",
@@ -115,8 +117,9 @@ export default function About({ location }) {
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "30%", // 48em-62em
-              "40%", // 62em+
+              "100%",
+              "50%", // 48em-62em
+              "50%", // 62em+
             ]}
           >
             <Text
@@ -170,7 +173,7 @@ export default function About({ location }) {
             />
           </Box>
           <Flex
-            ml={[
+            mx={[
               "0px",
               "0px",
               "70px",
@@ -179,10 +182,11 @@ export default function About({ location }) {
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
-              "50%", // 62em+
+              "100%",
+              "37%", // 48em-62em
+              "37%", // 62em+
             ]}
-            pt="10px"
+            pt="50px"
             px="20px"
             justifyContent="center"
             alignItems="center"
@@ -192,21 +196,42 @@ export default function About({ location }) {
         </Flex>
         <Flex
           pt="100px"
-          pl="103px"
+          px={[
+            "13px",
+            "13px",
+            "23px",
+            "103px",
+            "103px"
+          ]}
           flexDirection="column"
           overflowX="none"
+          w="100%"
         >
           <Box>
-            <h3
+            <Text
               className="valuesvgd"
+              fontSize={[
+                "40px",
+                "40px",
+                "56px",
+                "56px",
+                "56px"
+              ]}
             >
               Visual Group Digital
-            </h3>
-            <h3
+            </Text>
+            <Text
               className="valuesvgdword"
+              fontSize={[
+                "40px",
+                "40px",
+                "56px",
+                "56px",
+                "56px"
+              ]}
             >
               CORE VALUES
-            </h3>
+            </Text>
           </Box>
         </Flex>
         <Values /> 
@@ -215,22 +240,33 @@ export default function About({ location }) {
           alignItems="center"
           pt="158px"
           px="20px"
-          className="parallax"
+          w={[
+            "0%",
+            "0%",
+            "100%",
+            "100%",
+            "100%"
+          ]}
         >
-      
+          <img src={vgd} alt="vgd" />
         </Flex>
         <Box
-          pl="10%"
+          pl={[
+            "10px",
+            "10px",
+            "10%",
+            "10%",
+            "10%"
+          ]}
         >
           <h3 className="ourprocess">
             OUR <span>PROCESS</span>
           </h3>
         </Box>
         <Process /> 
-        <StaticLogo />
+        {/* <StaticLogo /> */}
         <ReusableFooter text={text} />
         <Footer />
       </Box>
-    </Box>
   )
 }

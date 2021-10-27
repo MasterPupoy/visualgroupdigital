@@ -27,9 +27,9 @@ export default function Values() {
 
     if(mounted) {
 
-      tl1.fromTo(set1.current, { x: -1500 }, { x : 1400, duration : 15, ease : 'none' }); 
+      tl1.fromTo(set1.current, { x: -1500 }, { x : 1400, duration : 10, ease : 'none' }); 
       tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 10, ease : 'none' });
-      tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 13, ease : 'none' });
+      tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 10, ease : 'none' });
     }
 
     return () => {

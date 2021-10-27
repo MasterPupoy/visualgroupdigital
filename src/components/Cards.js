@@ -38,8 +38,8 @@ export default function Cards() {
           h={[
             "230px",
             "230px",
-            "270px",
-            "270px"
+            "230px",
+            "280px"
           ]}
         >
           <h3
@@ -81,10 +81,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
+             "230px",
             "230px",
             "230px",
-            "270px",
-            "270px"
+            "280px"
           ]}
         >
           <h3
@@ -123,10 +123,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
+              "230px",
             "230px",
             "230px",
-            "270px",
-            "270px"
+            "280px"
           ]}
         >
           <h3

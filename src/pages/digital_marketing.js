@@ -23,11 +23,15 @@ import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
 import facebookAds from '../images/offers/facebookads.svg';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import monitor from '../images/features/monitor.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import monitor from '../images/features/monitor.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
+
+import growth from '../images/growth.png';
+import check from '../images/check.svg';
+
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -158,7 +162,7 @@ export default function Marketing({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/digital_marketing' main="/marketing" />
-          : <MobileNav />
+          : <MobileNav main="/marketing" />
         }
         <ReusableHero 
           header={headerText}
@@ -367,6 +371,64 @@ export default function Marketing({ location }) {
         <ReusableRanking 
           textArray={rankingArray}
         />
+        <Flex
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
+          mt="50px"
+          mx="20px"
+        >
+          <Box>
+            <Text
+              fontSize="5xl"
+              style={{
+                color : "#0A2F53",
+                fontFamily: "dm-sans"
+              }}
+            >
+              Digital Marketing Features
+            </Text>
+            <Text
+              fontSize="1xl"
+              py="10px"
+               style={{
+                color : "#0A2F53",
+                fontFamily: "dm-sans"
+              }}
+            >
+              Achieve all your goals and aspirations with the <br /> 
+              right kind of help, exactly when you need it
+            </Text>
+            <ul
+              className="socmedgrowthlist socmedgrowthlist1"
+            >
+               <li>
+                  <img src={check} alt="check.svg" /> High Traffic
+                </li>
+                 <li>
+                  <img src={check} alt="check.svg" /> Google Search Ranking
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> More leads
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> High income
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> More brand awareness
+                </li>
+                <li>
+                  <img src={check} alt="check.svg" /> Business growth
+                </li> 
+                <li>
+                  <img src={check} alt="check.svg" /> Data reports every two weeks
+                </li> 
+            </ul>
+          </Box>
+          <Box>
+            <img src={growth} alt="seo_growth" className="seogrowthimg" />
+          </Box>
+        </Flex>
         <AccomplishmentSlider />
         <ClientTestimonials /> 
         <StaticLogo />

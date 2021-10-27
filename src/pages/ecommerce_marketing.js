@@ -25,9 +25,9 @@ import facebookAds from '../images/offers/facebookads.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import monitor from '../images/features/monitor.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import monitor from '../images/features/monitor.png';
 
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
@@ -158,7 +158,7 @@ export default function Ecommerce_marketing({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/ecommerce_marketing' main="/marketing" />
-          : <MobileNav />
+          : <MobileNav  main='/ecommerce_marketing' />
         }
         <ReusableHero 
           header={headerText}
@@ -189,10 +189,10 @@ export default function Ecommerce_marketing({ location }) {
           >
             <Text
               as="h3"
-              fontSize="5xl"
+              fontSize="4xl"
               className="firstecom"
             >
-              <span>E-Commerce or Digital Stores:</span>
+              <span>E-Commerce:</span>
             </Text>
             <Text
               as="h3"

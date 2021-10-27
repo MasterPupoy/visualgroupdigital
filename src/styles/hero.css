@@ -10,8 +10,8 @@
 
   background-image: url('../images/BG.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 0px 0px;
+  background-size: cover;
+  background-position: center bottom;
 }
 
 .indexbanner {

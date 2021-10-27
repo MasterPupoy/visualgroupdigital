@@ -25,10 +25,10 @@ import webdev from '../images/webdevelopment.svg';
 import branding from '../images/gdbanner.png';
 import brandingpic2 from '../images/gdpic.png';
 
-import hex from '../images/features/hex.svg';
-import barchart from '../images/features/barchart.svg';
-import medal from '../images/features/medal.svg';
-import brush from '../images/features/brush.svg';
+import hex from '../images/features/hex.png';
+import barchart from '../images/features/barchart.png';
+import medal from '../images/features/medal.png';
+import brush from '../images/features/brush.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -133,7 +133,7 @@ export default function Graphic_design({ location }) {
         {
           (width > 1280) 
           ? <Nav loc={location} page='/graphic_design' main="/branding" />
-          : <MobileNav />
+          : <MobileNav main="/graphic_design" />
         }
         <ReusableHero 
           header={headerText}

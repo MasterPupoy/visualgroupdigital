@@ -11,8 +11,10 @@ export default function Bizbut({ id }) {
   return (
     <Flex
       flexWrap="wrap"
+      justifyContent="space-between"
       alignItems="center"
       id={id}
+      w="100%"
     >
       <Box>
         <button
