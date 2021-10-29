@@ -170,7 +170,6 @@ export default function Contact({ location }) {
             flexDirection="column"
             justifyContent="center"
             flexWrap="wrap"
-            mx="50px"
           >
             <Box
               className="contactgetstarted"

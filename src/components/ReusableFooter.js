@@ -21,10 +21,11 @@ export default function ReusableFooter({ text }) {
         mt="100px"
       >
         <Box
-             w={[
+            w={[
             "100%",
             "100%",
             "50%",
+            "40%",
             "400px"
           ]}
           h={[
@@ -53,7 +54,7 @@ export default function ReusableFooter({ text }) {
                 "65px"
               ]}
               transform={[
-                "translate(0%, 50%)",
+                "translate(15%, 50%)",
                 "translate(7%, 50%)",
                 "translate(7%, 100%)",
                 "translate(15%, 130%)",
@@ -69,15 +70,24 @@ export default function ReusableFooter({ text }) {
               we can help decide where you need to start and which of our services would benefit you the most.
             </Text> */}
         </Box>
-        <Box
+        <Flex
           p="20px"
-           w={[
+          w={[
             "100%",
             "100%",
             "36%",
-            "45%",
-            "45%"
+            "40%",
+            "40%"
           ]}
+          justifyContent="center"
+          flexDirection={[
+            "row",
+            "row",
+            "column",
+            "column",
+            "column"
+          ]}
+          alignItems="center"
         >
            <Text
               className="requesth2"
@@ -93,12 +103,23 @@ export default function ReusableFooter({ text }) {
               Request a callback <br/>
               today!
             </Text>
-            <button
-              className="bizbut indexBizbut"
+            <Box
+              alignSelf={[
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+              px="10px"
             >
-              BUSINESS ENQUIRY
-            </button>
-        </Box>
+              <button
+                className="bizbut indexBizbut"
+              >
+                BUSINESS ENQUIRY
+              </button>
+            </Box>
+        </Flex>
         {/* {/* <Box>
           <img src={rect} alt="svg" className="circle_el" />
         </Box> */}

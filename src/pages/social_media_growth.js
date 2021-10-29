@@ -176,7 +176,7 @@ export default function Social_media_growth({ location }) {
 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
       <Box>
         {
@@ -193,7 +193,7 @@ export default function Social_media_growth({ location }) {
         />
         <Flex
           pt="50px"
-           pl={[
+          px={[
             "10px",
             "20px",
             "60px",
@@ -203,17 +203,12 @@ export default function Social_media_growth({ location }) {
           alignItems="center"
           alignItems="center"
         >
-        <Flex
-          ml={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
+          <Flex
             width={[
               "100%", // 0-30em
-              "100%", // 30em-48em
-              "50%", // 48em-62em
+              "100%", // 30em-48em  
+              "100%",
+              "100%", // 48em-62em
               "40%", // 62em+
             ]}
             pt="10px"
@@ -224,10 +219,11 @@ export default function Social_media_growth({ location }) {
           </Flex>
           <Box
             className="digimark"
-             width={[
+            width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
+              "100%",
+              "100%", // 48em-62em
               "40%", // 62em+
             ]}
             mx="50px"
@@ -258,12 +254,13 @@ export default function Social_media_growth({ location }) {
           flexWrap="noWrap"
           w="100%"
           className="whatwedo"
-          pl="20%"
+          px="20px"
           pt="123px"
+          justifyContent="center"
         >
           <Box>
             <h3>
-              Visual Group Digital as your <br />
+              Visual Group Digital as your
               Organic Social Media Specialist
             </h3>
           </Box>
@@ -463,7 +460,7 @@ export default function Social_media_growth({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl={[
+          px={[
             "30px",
             "30px",
             "30px",
@@ -473,6 +470,7 @@ export default function Social_media_growth({ location }) {
           flexDirection="row"
           flexWrap="wrap"
           justifyContent="center"
+          alignItems="center"
         >
           <Box>
             <h3
@@ -483,6 +481,7 @@ export default function Social_media_growth({ location }) {
           </Box>
           <Box
             pt="20px"
+            px="20px"
           >
             <p
               className="whyus"

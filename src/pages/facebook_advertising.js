@@ -161,7 +161,7 @@ export default function Facebook_advertising({ location }) {
   })
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
       <Box>
          {
@@ -178,7 +178,7 @@ export default function Facebook_advertising({ location }) {
         />
         <Flex
           pt="50px"
-          pl={[
+          px={[
             "10px",
             "20px",
             "60px",
@@ -192,8 +192,9 @@ export default function Facebook_advertising({ location }) {
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
-              "40%", // 62em+
+              "100%",
+              "100%", // 48em-62em
+              "50%", // 62em+
             ]}
           >
             <Text
@@ -227,17 +228,12 @@ export default function Facebook_advertising({ location }) {
             <LearnMoreButton id="ecomlearn" link="/contact" />
           </Box>
           <Flex
-            ml={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "60%", // 48em-62em
-              "50%", // 62em+
+              "100%",
+              "100%", // 48em-62em
+              "40%", // 62em+
             ]}
             pt="10px"
             justifyContent="center"
@@ -463,7 +459,7 @@ export default function Facebook_advertising({ location }) {
             </h3>
           </Box>
           <Box
-            pt="20px"
+            p="20px"
           >
             <p
               className="whyus"

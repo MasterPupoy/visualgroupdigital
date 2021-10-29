@@ -346,7 +346,7 @@ export default function AccomplishmentSlider() {
         <Box
           className="vgd"
         >
-          OUR WORKS
+         
         </Box>
         <Flex
           flexDirection="row"
@@ -356,7 +356,7 @@ export default function AccomplishmentSlider() {
         >
           <Box>
             <h3>
-              What We Accomplished
+             OUR WORKS 
             </h3>
           </Box>
         </Flex>

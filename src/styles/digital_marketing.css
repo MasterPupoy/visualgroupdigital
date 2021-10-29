@@ -1,9 +1,17 @@
 
 .digitalmarkbanner {
   position: relative;
-  bottom: 267%;
+  bottom: 318%;
   left: 10%;
   z-index: 0;
+}
+
+@media screen and (max-width : 1250px) {
+
+  .digitalmarkbanner {
+    bottom: 257%;
+  }
+
 }
 
 .digimark > h3 {
@@ -52,7 +60,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
-  line-height: 35px;
+  line-height: 40px;
 
   color: #0A2F53;
   text-align: center;
@@ -82,7 +90,7 @@
   line-height: 179.7%;
   /* or 31px */
 
-  padding-left: 70px;
+
 
   color: #1D1D1D;
 

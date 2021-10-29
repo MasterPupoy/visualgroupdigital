@@ -1,14 +1,25 @@
+.logoContainer {
+  position: relative;
+  /* left: -100px; */
+  width: 100%;
+}
+
 .slideshow {
   background: none;
   margin-bottom: 10px;
 }
 
+.logos {
+  position: absolute;
+  margin: 0px 10px;
+  left: -100px;
+}
+
 .logopng {
   -webkit-filter: invert(100%); /* Safari/Chrome */
   filter: invert(100%);
-  display: block;
   width: fit-content;
-
+  align-self: center;
 }
 
 .addon {

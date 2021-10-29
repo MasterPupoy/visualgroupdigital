@@ -156,9 +156,8 @@ export default function Marketing({ location }) {
   })
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/digital_marketing' main="/marketing" />
@@ -173,7 +172,7 @@ export default function Marketing({ location }) {
         />
         <Flex
           pt="50px"
-           pl={[
+           px={[
             "10px",
             "20px",
             "60px",
@@ -181,13 +180,15 @@ export default function Marketing({ location }) {
           ]}
           flexWrap="wrap"
           alignItems="center"
+          justifyContent="center"
         >
           <Box
             className="digimark"
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
+              "100%",
+              "100%", // 48em-62em
               "40%", // 62em+
             ]}
           >
@@ -209,7 +210,7 @@ export default function Marketing({ location }) {
             <LearnMoreButton link="/contact" />
           </Box>
           <Flex
-            ml={[
+            mx={[
               "0px",
               "0px",
               "70px",
@@ -218,8 +219,9 @@ export default function Marketing({ location }) {
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
-              "50%", // 62em+
+              "100%",
+              "100%", // 48em-62em
+              "40%", // 62em+
             ]}
             pt="10px" 
             justifyContent="center"
@@ -350,6 +352,7 @@ export default function Marketing({ location }) {
           justifyContent="center"
           alignItems="center"
           my="50px"
+          w="100%"
         >
           <Box>
             <h3
@@ -358,12 +361,14 @@ export default function Marketing({ location }) {
               WHY <span>US?</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            py="20px"
+          >
             <p
               className="whyus"
             >
               At Visual Group Digital, we specialise in helping
-              businesses introduce their brand, <br /> 
+              businesses introduce their brand,
               connect with their target audience, and develop an effective marketing strategy.
             </p>
           </Box>
@@ -436,7 +441,7 @@ export default function Marketing({ location }) {
           text={text}
         />
         <Footer />
-      </Box>
     </Box>
+
   )
 }

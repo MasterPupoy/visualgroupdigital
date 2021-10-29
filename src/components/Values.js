@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import {
   Box, 
@@ -18,43 +18,70 @@ export default function Values() {
 
   useEffect(() => {
 
-    let mounted = true;
+    gsap.set(".box", {
+      x: (i) => i * 700
+    });
     
-    const tl1 = gsap.timeline({ repeat: -1 });
-    const tl2 = gsap.timeline({ repeat: -1 });
-    const tl3 = gsap.timeline({ repeat: -1 });
-    const tl4 =  gsap.timeline({ repeat: -1 });
 
-    if(mounted) {
+    gsap.to(".box", {
+      duration: 17,
+      ease: "none",
+      x: `+=2800`, //move each box 500px to right
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % `2800`) //force x value to be between 0 and 500 using modulus
+      },
+      repeat: -1
+    });
 
-      tl1.fromTo(set1.current, { x: -1500 }, { x : 1400, duration : 10, ease : 'none' }); 
-      tl2.fromTo(set2.current, { x: 1500 }, { x : -1500, duration : 10, ease : 'none' });
-      tl3.fromTo(set3.current, { x: -1500 }, { x : 1500, duration : 10, ease : 'none' });
-    }
+    
 
-    return () => {
-      mounted = false;
-      tl1.kill();
-      tl2.kill();
-      tl3.kill();
-      tl4.kill();
-    }
+    gsap.set(".box2", {
+      x: (i) => i * 700,
+    });
+    
+
+    gsap.to(".box2", {
+      duration: 15,
+      ease: "none",
+      x: `+=2800`, //move each box 500px to right
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % `2800`) //force x value to be between 0 and 500 using modulus
+      },
+      repeat: -1
+    });
+
+
+    gsap.set(".box3", {
+      x: (i) => i * 700,
+    });
+    
+
+    gsap.to(".box3", {
+      duration: 20,
+      ease: "none",
+      x: `+=2800`, //move each box 500px to right
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % `2800`) //force x value to be between 0 and 500 using modulus
+      },
+      repeat: -1
+    });
+
   })
 
 
   return (
     <Box
       mt="40px"
-      w="100%"
-      overflowX="hidden"
-      >
-      <Flex
-        overflowX="hidden"
-        flexWrap="nowrap"
-        w="2046px"
+      // overflowX="hidden"
+      h="900px"
+    >
+      <Box
+        // overflowX="hidden"
+
         ref={set1}
+        className="valuecontainer"
       >
-        <Box className="valuecard1">
+        <Box className="valuecard1 box">
           <h3>
             Honesty
           </h3>
@@ -64,7 +91,7 @@ export default function Values() {
             we <br /> value honesty in our communication!
           </p>
         </Box>
-        <Box className="valuecard2">
+        <Box className="valuecard2 box">
           <h3>
             Authenticity
           </h3>
@@ -75,7 +102,7 @@ export default function Values() {
             business’ needs and preferences.
           </p>
         </Box>
-        <Box className="valuecard1">
+        <Box className="valuecard1 box">
           <h3>
             Dynamic
           </h3>
@@ -84,14 +111,24 @@ export default function Values() {
             we bring <br />new ideas and unfailing effort to every client project!
           </p>
         </Box>
-      </Flex>
-      <Flex
-        overflowX="hidden"
-        flexWrap="nowrap"
-        w="2046px"
+        <Box className="valuecard2 box">
+          <h3>
+            Authenticity
+          </h3>
+          <p>
+            What sets us apart from other agencies is the quality of products <br />
+            and services we provide our clients. Every business is unique, so <br />
+            we take care of every client in a personalized way to fit their <br />
+            business’ needs and preferences.
+          </p>
+        </Box>
+      </Box>
+      <Box
+        // overflowX="hidden"
+        className="valuecontainer2"
         ref={set2}
       >
-        <Box className="valuecard2">
+        <Box className="valuecard2 box2">
           <h3>
             Straightforward
           </h3>
@@ -100,7 +137,7 @@ export default function Values() {
              to the point, and do not beat around the bush.
           </p>
         </Box>
-        <Box className="valuecard1">
+        <Box className="valuecard1 box2">
           <h3>
             Supportive
           </h3>
@@ -110,7 +147,7 @@ export default function Values() {
              to our clients at any time!
           </p>
         </Box>
-        <Box className="valuecard2">
+        <Box className="valuecard2 box2">
           <h3>
            Accountable 
           </h3>
@@ -121,16 +158,24 @@ export default function Values() {
             best from us!
           </p>
         </Box>
-      </Flex>
-      <Flex
-        overflowX="none"
-        whiteSpace="nowrap"
-        overflowX="hidden"
-        flexWrap="nowrap"
+        <Box className="valuecard1 box2">
+          <h3>
+            Supportive
+          </h3>
+          <p>
+            We are there to support our clients throughout their marketing <br />
+             journey. As experts in the field, we are ready to be of assistance <br />
+             to our clients at any time!
+          </p>
+        </Box>
+      </Box>
+      <Box
+        // overflowX="hidden"
+        className="valuecontainer"
         w="2046px"
         ref={set3}
       >
-        <Box className="valuecard1">
+        <Box className="valuecard1 box3">
           <h3>
             Encouraging
           </h3>
@@ -140,7 +185,7 @@ export default function Values() {
             leap of faith, and make their business venture a huge success.
           </p>
         </Box>
-        <Box className="valuecard2">
+        <Box className="valuecard2 box3">
           <h3>
             Reasonable
           </h3>
@@ -151,7 +196,7 @@ export default function Values() {
           </p>
 
         </Box>
-        <Box className="valuecard1">
+        <Box className="valuecard1 box3">
           <h3>
             Dedication
           </h3>
@@ -161,7 +206,18 @@ export default function Values() {
              services.
           </p>
         </Box>
-      </Flex>
+        <Box className="valuecard2 box3">
+          <h3>
+            Reasonable
+          </h3>
+          <p>
+            As business founders, we understand the triumphs of success, <br />
+            moments of failure, and everything in between. We’re empathetic <br />
+            to our clients’ needs, and we’re always willing to be reasonable.
+          </p>
+
+        </Box>
+      </Box>
     </Box>
   )
 }

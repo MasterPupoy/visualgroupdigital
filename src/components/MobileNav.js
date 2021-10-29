@@ -81,7 +81,7 @@ export default function MobileNav({ page, main }) {
       zIndex="99999"
       right="0"
       boxShadow="dark-lg"
-      py="50px"
+      py="10px"
       overflowY="auto"
     >
       <Flex
@@ -89,7 +89,7 @@ export default function MobileNav({ page, main }) {
         justifyContent="space-between"
         alignItems="center"
         px="30px"
-        py="20px"
+        py="10px"
       >
         <Box
           display={[
@@ -134,7 +134,7 @@ export default function MobileNav({ page, main }) {
             className={
             (key === '/') 
             ? "active"
-            : null
+            : "inactive"
           }
           >
             HOME
@@ -149,7 +149,7 @@ export default function MobileNav({ page, main }) {
             className={
             (key === '/about') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             ABOUT
@@ -163,7 +163,7 @@ export default function MobileNav({ page, main }) {
             className={
             (main === '/marketing') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             DIGITAL MARKETING
@@ -177,7 +177,7 @@ export default function MobileNav({ page, main }) {
             className={
             (main === '/ecommerce_marketing') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             E-COMMERCE MARKETING
@@ -191,7 +191,7 @@ export default function MobileNav({ page, main }) {
             className={
             (main === '/facebook_advertising') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             FACEBOOK ADVERTISING
@@ -205,7 +205,7 @@ export default function MobileNav({ page, main }) {
             className={
             (main === '/google_advertising') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             GOOGLE ADVERTISING
@@ -219,7 +219,7 @@ export default function MobileNav({ page, main }) {
             className={
             (main === '/social_media_growth') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             SOCIAL MEDIA GROWTH
@@ -233,7 +233,7 @@ export default function MobileNav({ page, main }) {
             className={
             (main === '/search_engine_optimization') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             SEARCH ENGINE OPTIMISATION
@@ -247,7 +247,7 @@ export default function MobileNav({ page, main }) {
             className={
               (main === '/branding') 
               ? "active"
-              : null
+              : "inactive" 
             }
           >
             DIGITAL BRANDING
@@ -261,7 +261,7 @@ export default function MobileNav({ page, main }) {
             className={
               (main === '/graphic_design') 
               ? "active"
-              : null
+              : "inactive" 
             }
           >
             GRAPHIC DESIGN
@@ -275,7 +275,7 @@ export default function MobileNav({ page, main }) {
             className={
               (main === '/web_development') 
               ? "active"
-              : null
+              : "inactive" 
             }
           >
             WEB DEVELOPMENT
@@ -289,7 +289,7 @@ export default function MobileNav({ page, main }) {
             className={
             (key === '/case_studies') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             CASE STUDIES
@@ -303,7 +303,7 @@ export default function MobileNav({ page, main }) {
             className={
             (key === '/our_portfolio') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             OUR PORTFOLIO
@@ -317,7 +317,7 @@ export default function MobileNav({ page, main }) {
             className={
             (key === '/contact') 
             ? "active"
-            : null
+            : "inactive" 
           }
           >
             CONTACT

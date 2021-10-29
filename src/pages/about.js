@@ -98,8 +98,10 @@ export default function About({ location }) {
         <ReusableHero 
           header={headerTxt}
           subheader={subheader}
+          separated={false}
           paragraph={paragraph}
           image={aboutus}
+          imageClass="digitalmarkbanner"
         />
         <Flex
           pt="90px"
@@ -118,7 +120,7 @@ export default function About({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "100%",
-              "50%", // 48em-62em
+              "100%", // 48em-62em
               "50%", // 62em+
             ]}
           >
@@ -183,7 +185,7 @@ export default function About({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "100%",
-              "37%", // 48em-62em
+              "100%", // 48em-62em
               "37%", // 62em+
             ]}
             pt="50px"

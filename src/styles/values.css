@@ -1,3 +1,21 @@
+.box2 {
+  top: 300px
+}
+
+.box3 {
+  top: 600px
+}
+
+.valuecontainer {
+  position: relative;
+  left: -660px;
+}
+
+.valuecontainer2 {
+  position: relative;
+  right: 660px;
+}
+
 
 .valuecard1 {
   background: #0A2F53;
@@ -10,6 +28,8 @@
 
   height: 288px;
   width: 660px;
+  
+  position: absolute;
 }
 
 .valuecard1 > h3 {
@@ -52,6 +72,8 @@
 
   height: 288px;
   width: 660px;
+
+  position: absolute;
 }
 
 .valuecard2 > h3 {

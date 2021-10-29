@@ -46,9 +46,11 @@ export default function Hellovans({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
+      <Box
+        mt="60px"
+      >
        {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
@@ -112,7 +114,13 @@ export default function Hellovans({ location }) {
               {hello.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                        <img 

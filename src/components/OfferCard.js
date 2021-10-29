@@ -66,7 +66,7 @@ export default function OfferCard() {
     let offercardstl3 = gsap.timeline({ scrollTrigger: {
       trigger: ".ofc6",
       start: "bottom center",
-      toggleActions: "restart none none none",
+
     }})
 
     offercardstl3.fromTo(".ofc7", {
@@ -187,7 +187,7 @@ export default function OfferCard() {
       >
         <img src={seo} alt="digitalmarketing.svg" />
         <h3>
-          Search Engine Optimization 
+          Search Engine Optimisation 
         </h3>
         <p>
           Small to medium businesses have recognised the advantages of Social Media Marketing (SMM), specifically Facebook, to reach their target market in a cost-effective way.

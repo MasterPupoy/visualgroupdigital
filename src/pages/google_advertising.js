@@ -42,7 +42,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Google_advertising({ location }) {
   const headerText = "GOOGLE ADS"
-  const subheader = "PAY-PER-CLICK (PPC) MANAGEMENT"
+  const subheader = "MANAGEMENT"
   const paragraph = "Google is the commonly used search engine across the worldwide web."
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
 
@@ -115,8 +115,8 @@ export default function Google_advertising({ location }) {
   useEffect(() => {
 
     let dmtl = gsap.timeline({scrollTrigger : {
-      trigger: ".digimark",
-      start: "top center",
+      trigger: ".rocket pic",
+      start: "top top",
     }})
 
     dmtl.fromTo(".firstecom", {
@@ -162,7 +162,7 @@ export default function Google_advertising({ location }) {
     })
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
       <Box>
         {
@@ -179,7 +179,7 @@ export default function Google_advertising({ location }) {
         />
         <Flex
           mt="50px"
-           pl={[
+           px={[
             "10px",
             "20px",
             "60px",
@@ -191,11 +191,11 @@ export default function Google_advertising({ location }) {
           <Flex
             
             width={[
-              "0%", // 0-30em
-              "0%", // 30em-48em
-              "0%", // 48em-62em
-              "50%", // 62em+
-              "50%"
+              "100%", // 0-30em
+              "100%", // 30em-48em
+              "100%",
+              "100%", // 48em-62em
+              "40%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -208,11 +208,12 @@ export default function Google_advertising({ location }) {
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
+              "100%",
               "100%", // 48em-62em
-              "40%",
-              "40%" // 62em+
+              "40%", // 62em+
             ]}
-            ml="20px"
+            mx="20px"
+            mt="30px"
           >
             <Text
               as="h3"
@@ -244,10 +245,11 @@ export default function Google_advertising({ location }) {
           className="whatwedo"
           pt="123px"
           justifyContent="center"
+          px="20px"
         >
           <Box>
             <h3>
-              Visual Group Digital as your Google Ads PPC Agency
+              Visual Group Digital as your Google Ads Agency
             </h3>
           </Box>
         </Flex>
@@ -350,7 +352,7 @@ export default function Google_advertising({ location }) {
           <img src={features} alt="marketing_features.svg" />
         </Flex> */}
         <Flex
-          pl={[
+          px={[
             "30px",
             "30px",
             "30px",
@@ -359,6 +361,9 @@ export default function Google_advertising({ location }) {
           ]}
           flexDirection="row"
           flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
+          mt="50px"
         >
           <Box>
             <h3
@@ -367,12 +372,14 @@ export default function Google_advertising({ location }) {
               Why <span>Visual Group Digital</span>
             </h3>
           </Box>
-          <Box>
+          <Box
+            my="10px"
+          >
             <p
               className="whyus"
             >
               We, at Visual Group Digital, will help you with the 
-              technical aspects and complexities <br /> of 
+              technical aspects and complexities of 
               Google Ads so you can optimize sales generation.
             </p>
           </Box>

@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   Flex,
   Box,
@@ -48,11 +48,32 @@ import racehorseclub from '../images/racehorseclub.png';
 import rockit from '../images/rockit.png';
 import viralmerch from '../images/viralmerchandising.png';
 
+import { gsap } from 'gsap';
 
 import '../styles/slideshow.css';
 
 
 export default function Slideshow() {
+
+  useEffect(() => {
+
+    gsap.set(".logos", {
+      x: (i) => i * 180
+    });
+    
+
+    gsap.to(".logos", {
+      duration: 30,
+      ease: "none",
+      x: `+=5300`, //move each box 500px to right
+      modifiers: {
+        x: gsap.utils.unitize(x => parseFloat(x) % `5300`) //force x value to be between 0 and 500 using modulus
+      },
+      repeat: -1
+    });
+
+  })
+
   
  return (
   <>
@@ -62,6 +83,13 @@ export default function Slideshow() {
       px="9%"
       justifyContent="center"
       alignItems="center"
+      display={[
+        "none",
+        "none",
+        "none",
+        "none",
+        "block"
+      ]}
     >
       <Box>
         <Text
@@ -93,6 +121,13 @@ export default function Slideshow() {
     className="slideshow"
     overflowX="hidden"
     pt="20px"
+         display={[
+        "none",
+        "none",
+        "none",
+        "none",
+        "block"
+      ]}
     >
       <Flex
       justifyContent="space-between"
@@ -147,7 +182,6 @@ export default function Slideshow() {
         alignItems="center"
         w="100%"
         px="4%"
-  
       >
         <img src={portfolioFm} alt="portfoliofm.svg" className="logopng" />
         <img src={hydroInstal} alt="hydroinstal.svg" className="logopng" />
@@ -178,7 +212,6 @@ export default function Slideshow() {
   
       >
         <img src={healingtuning} alt="adaptinghomes.svg" className="addon2" />
-      
         <img src={racehorseclub} alt="onlinefitnessfreedom.svg" className="addon4" />
       </Flex>
       <Flex
@@ -216,6 +249,109 @@ export default function Slideshow() {
           </Box>
         </Flex>
       </Flex>
+    </Flex>
+    
+    <Flex
+      mt="100px"
+      w="100%"
+      display={[
+        "block",
+        "block",
+        "block",
+        "block",
+        "none"
+      ]}
+      justifyContent="center"
+      flexDirection="column"
+    >
+      <Flex
+        w="100%"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Text
+          className="addlogo"
+          fontSize="xl"
+        >
+          WE WOULD <span>LOVE</span> TO <br/>
+          ADD YOUR LOGO HERE.
+        </Text>
+      </Flex>
+      <Flex
+        my="20px"
+        px="50px"
+        w="100%"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Text
+          fontSize="md"
+          textAlign="center"
+        >
+          We’ve worked with more than 100 companies since 2015 Check out some of the
+          fantastic clients we have brought to the UK and International Markets.
+        </Text>
+      </Flex>
+
+      <Flex
+        alignItems="center"
+        className='logoContainer'
+        h="150px"
+        overflowX="hidden"
+      >
+        <img src={chessmoves} alt="chessmoveslogo" className="logopng logos" />
+        <img src={oxtedFestival} alt="oxtedfestival" className="logopng logos" />
+        <img src={tailoredRemoval} alt="tailoredremovallogo" className="logopng logos" />
+        <img src={surreyCedar} alt="surreycedarlogo" className="logopng logos" />
+        {/* <img src={oneroof} alt="onerooflogo" /> */}
+        <img src={honestgrapes} alt="intuneconsulting.svg" className="addon3 logos" />
+        <img src={simonKemp} alt="simonKemp" className="logopng logos" />
+        <img src={doggo} alt="doggo.svg" className="logopng logos" />
+        <img src={redsacks} alt="redsacks.svg" className="logopng logos" />
+        <img src={beautifulsouls} alt="beautifulsouls.svg" className="logopng logos" />
+        <img src={cleaningspecialistproviders} alt="cleaningspecialistproviders.svg" className="logopng logos" />
+        <img src={provest} alt="provest.svg" className="logopng logos" />
+        <img src={secretcalm} alt="secretcalm.svg" className="logopng logos" />
+      
+        <img src={houseofstrength} alt="houseofstreng.svg" className="logopng logos" />
+        <img src={fitify} alt="fitify.svg" className="logopng logos" />
+        <img src={reignsupreme} alt="reignsupreme.svg" className="logopng logos" />
+        <img src={rebecca} alt="rebecca.svg" className="logopng logos" />
+        <img src={regency} alt="regency.svg" className="logopng logos" />
+        <img src={keating} alt="keating.svg" className="logopng logos" />
+        <img src={grantspace} alt="schtech.svg" className="addon logos"/>
+
+        <img src={portfolioFm} alt="portfoliofm.svg" className="logopng logos" />
+        {/* <img src={hydroInstal} alt="hydroinstal.svg" className="logopng logos" /> */}
+        <img src={futurefitness} alt="futurefitness.svg" className="logopng logos"/>
+        <img src={schTech} alt="schtech.svg"  className="logopng logos" />
+        <img src={adaptingHomes} alt="adaptinghomes.svg" className="logopng logos"/>
+        <img src={onlineFitnessFreedom} alt="onlinefitnessfreedom.svg" className="logopng logos"/>
+        <img src={intuneConsulting} alt="intuneconsulting.svg" className="logopng logos"/>
+
+          <img src={bw} alt="portfoliofm.svg"  className="addon logos"/>
+        <img src={bbm} alt="hydroinstal.svg"  className="addon logos"/>
+        <img src={dm} alt="futurefitness.svg" className="addon logos" />
+        <img src={viralmerch} alt="intuneconsulting.svg" className="addon logos" />
+        {/* <img src={rockit} alt="intuneconsulting.svg" className="logopng  logos" /> */}
+      </Flex>
+
+      <Flex
+        my="50px"
+        justifyContent="center"
+      >
+        <button
+          className="seeMore button--aylen"
+          onClick={() => {
+            window.location.assign("/case_studies")
+          }}
+        >
+          <span>
+            SEE MORE OF OUR CLIENTS
+          </span>
+        </button>
+      </Flex>
+
     </Flex>
   </>
   )

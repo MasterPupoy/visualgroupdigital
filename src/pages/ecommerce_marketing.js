@@ -77,11 +77,11 @@ export default function Ecommerce_marketing({ location }) {
   const isBrowser = typeof window !== "undefined"
   
   const [width, setWidth]   = useState();
-  const [height, setHeight] = useState();
+ 
   
   const updateDimensions = () => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
+
   }
 
  useEffect(() => {
@@ -152,7 +152,7 @@ export default function Ecommerce_marketing({ location }) {
     })
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
       <Box>
         {
@@ -169,7 +169,7 @@ export default function Ecommerce_marketing({ location }) {
         />
         <Flex
           pt="50px"
-           pl={[
+           px={[
             "10px",
             "20px",
             "60px",
@@ -183,6 +183,7 @@ export default function Ecommerce_marketing({ location }) {
              width={[
               "100%", // 0-30em
               "100%", // 30em-48em
+              "100%",
               "50%", // 48em-62em
               "40%", // 62em+
             ]}
@@ -205,6 +206,8 @@ export default function Ecommerce_marketing({ location }) {
               as="p"
               fontSize="xl"
               className="ecomtxt"
+              textAlign="justified"
+              px="10px"
             >
               Successful companies have diversified from brick-and-mortar operations by opening E-commerce stores. 
               These commercial channels act as online shops open 24/7. Consumers, particularly those with a busy 
@@ -212,18 +215,24 @@ export default function Ecommerce_marketing({ location }) {
               of a button. Amidst a sea of brands and ECommerce stores on the internet, what will you do to make your 
               brand stand out, drive more consumers to your site, and convert them into sales?
             </Text>
-            <LearnMoreButton id="ecomlearn" link="/contact" />
+            <Flex
+              justifyContent={[
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton id="ecomlearn" link="/contact" />
+            </Flex>
           </Box>
           <Flex
-             ml={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
+              "100%",
               "50%", // 48em-62em
               "40%", // 62em+
             ]}
@@ -242,6 +251,7 @@ export default function Ecommerce_marketing({ location }) {
           pt="123px"
           justifyContent="center"
           alignItems="center"
+          px="20px"
         >
           <Box>
             <h3>
@@ -389,12 +399,13 @@ export default function Ecommerce_marketing({ location }) {
             </h3>
           </Box>
           <Box
-            mt="10px"
+            mx="10px"
+            my="10px"
           >
             <p
               className="whyus"
             >
-              We, at Visual Group Digital, will help you design and develop an e-store that will optimise web traffic <br />
+              We, at Visual Group Digital, will help you design and develop an e-store that will optimise web traffic 
               (increase in consumer visits) and conversion rate (increase in transactions and amount spent).
             </p>
           </Box>

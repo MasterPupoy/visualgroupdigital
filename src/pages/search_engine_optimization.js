@@ -192,7 +192,7 @@ export default function Search_engine_optimization({ location }) {
     })
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
       <Box>
         {
@@ -224,8 +224,9 @@ export default function Search_engine_optimization({ location }) {
              className="digimark"
              width={[
               "100%", // 0-30em
-              "100%", // 30em-48em
-              "50%", // 48em-62em
+              "100%", // 30em-48em  
+              "100%",
+              "100%", // 48em-62em
               "40%", // 62em+
             ]}
           >
@@ -234,8 +235,8 @@ export default function Search_engine_optimization({ location }) {
               fontSize="5xl"
               className="firstecom"
             >
-              <span>SEO</span> <br/>
-              An Organic Way to Reach Your Target Audience
+              <span>SEO :</span> <br/>
+              Reaching Your Target Audience
             </Text>
             <Text
               as="p"
@@ -256,9 +257,10 @@ export default function Search_engine_optimization({ location }) {
             ]}
             width={[
               "100%", // 0-30em
-              "100%", // 30em-48em
-              "50%", // 48em-62em
-              "50%", // 62em+
+              "100%", // 30em-48em  
+              "100%",
+              "100%", // 48em-62em
+              "40%", // 62em+
             ]}
             pt="10px" 
             justifyContent="center"
@@ -272,18 +274,19 @@ export default function Search_engine_optimization({ location }) {
           flexWrap="noWrap"
           w="100%"
           className="whatwedo"
-          pl="20%"
+          justifyContent="center"
           pt="123px"
+          px="20px"
         >
           <Box>
             <h3>
-              Visual Group Digital as your <br />
+              Visual Group Digital as your
               SEO Specialist
             </h3>
           </Box>
           <Box
             alignSelf="center"
-            pl="20px"
+            pl="10px"
           >
             <img src={line1} alt="line.svg" />
           </Box>
@@ -524,14 +527,16 @@ export default function Search_engine_optimization({ location }) {
           </Box>
           <Box
             pt="20px"
+            px="10%"
+            textAlign="center"
           >
             <p
               className="whyus"
             >
              We, at Visual Group Digital, will optimise your website content 
-             with <br /> top-searched and relevant keywords. <br />
+             with top-searched and relevant keywords.
              We will analyse all aspects of your website and upgrade 
-             the portions <br /> that would benefit from improvements.
+             the portions that would benefit from improvements.
             </p>
           </Box>
         </Flex>

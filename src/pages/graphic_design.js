@@ -24,6 +24,7 @@ import logodes from '../images/logodes.svg';
 import webdev from '../images/webdevelopment.svg';
 import branding from '../images/gdbanner.png';
 import brandingpic2 from '../images/gdpic.png';
+import righta from '../images/righta.png';
 
 import hex from '../images/features/hex.png';
 import barchart from '../images/features/barchart.png';
@@ -234,6 +235,14 @@ export default function Graphic_design({ location }) {
                 <p>
                   creating a better experience and a more comfortable UI.
                 </p>
+                <Flex
+                  flexDirection="row"
+                  w="50px"
+                  h="50px"
+                  mt="50px"
+                >
+                  <img src={righta} alt="rightarrow" />
+                </Flex>
               </Box>
             </Flex>
             <Flex

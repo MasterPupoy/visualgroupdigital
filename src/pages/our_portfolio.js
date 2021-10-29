@@ -18,6 +18,7 @@ import Socmed from '../components/Socmed';
 import Seopt from '../components/Seopt';
 import All from '../components/All';
 import Graphics from '../components/Graphics';
+import StaticLogo from '../components/StaticLogo';
 
 import portfolio from '../images/Portfolio.png';
 
@@ -228,6 +229,7 @@ export default function Our_portfolio({ location }) {
       >
         <PortfolioContainer />
       </Flex>
+      <StaticLogo />
       <ReusableFooter 
         text={text}
       />

@@ -170,10 +170,19 @@ nav {
 
 .active {
   font-family: dm-sans;
+  font-size: 15px;
+  font-weight: 700;
+  color: #EE6F19;
+  border-bottom: 2px solid #EE6F19;
+
+}
+
+.inactive {
+  font-family: dm-sans;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
   color: #0A2F53;
-  border-bottom: 2px solid #0A2F53;
+
 }
 
 .activeSecondary {

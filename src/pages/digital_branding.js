@@ -128,8 +128,24 @@ export default function Digital_branding({ location }) {
 
   })
 
+  // useEffect(() => {
+
+  //   const container = document.querySelector(".brandingslider")
+
+  //   gsap.to(container, {
+  //     x: () => "-500px",
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: container,
+  //       invalidateOnRefresh: true,
+  //       scrub: 1,
+  //       end: () => "+=" + container.offsetWidth
+  //     }
+  //   })
+  // })
+
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
       <Box>
         {
@@ -146,14 +162,15 @@ export default function Digital_branding({ location }) {
         />
         <Flex
           pt="50px"
-           pl={[
+          px={[
             "10px",
             "20px",
             "60px",
-            "103px"
+            "70px"
           ]}
           flexWrap="wrap"
           alignItems="center" 
+          justifyContent="center"
         >
           <Box
             className="digibrand"
@@ -188,17 +205,11 @@ export default function Digital_branding({ location }) {
             </button>
           </Box>
           <Flex
-            ml={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "50%", // 62em+
+              "40%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -212,22 +223,23 @@ export default function Digital_branding({ location }) {
           flexWrap="wrap"
           alignItems="center" 
           justifyContent="center"
+          px={[
+            "10px",
+            "20px",
+            "60px",
+            "70px"
+          ]}
         >
           <Flex
-            mr={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
-            width={[
+           width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
+              "50%",
+              "40%", // 48em-62em
               "40%", // 62em+
             ]}
             pt="10px"
-            px="20px"
+            px="10px"
             justifyContent="center"
           >
             <img src={brandingpic3} alt="rocketpc.svg" className="rocketpic2" />
@@ -237,13 +249,20 @@ export default function Digital_branding({ location }) {
              width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
+              "40%", // 48em-62em
               "40%", // 62em+
             ]}
+            mx="20px"
           >
             <Text
               as="h3"
-              fontSize="5xl"
+              fontSize={[
+                "25px",
+                "25px",
+                "30px",
+                "30px",
+                "35px"
+              ]}
             >
               Visual Group Digital as your Digital Branding Agency
             </Text>
@@ -345,7 +364,7 @@ export default function Digital_branding({ location }) {
           </Flex>
         </Box>
         <Flex
-          pl={[
+          px={[
             "30px",
             "30px",
             "30px",
@@ -355,6 +374,7 @@ export default function Digital_branding({ location }) {
           flexDirection="row"
           flexWrap="wrap"
           justifyContent="center"
+          alignItems="center"
           pt="50px"
         >
           <Box>
@@ -365,7 +385,7 @@ export default function Digital_branding({ location }) {
             </h3>
           </Box>
           <Box
-            pt="20px"
+            mx="20px"
           >
             <p
               className="whyus"

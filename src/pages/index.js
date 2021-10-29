@@ -18,6 +18,7 @@ import AccomplishmentSlider from "../components/AccomplishmentSlider";
 import LearnMoreButton from '../components/LearnMoreButton';
 import Footer from '../components/Footer';
 import ReusableHero from '../components/ReusableHero';
+import ReusableFooter from "../components/ReusableFooter";
 
 import shape5 from '../images/small_circle.svg';
 import line1 from '../images/line1.svg';
@@ -192,21 +193,22 @@ export default function Index({ location }) {
         imageClass="digitalmarkbanner"
       />
       <Flex
-        display={[
-          "none",
-          "none",
-          "block",
-          "block",
-          "block"
-        ]}
+        // display={[
+        //   "none",
+        //   "none",
+        //   "block",
+        //   "block",
+        //   "block"
+        // ]}
+        flexDirection="column"
       >
         <Flex
           justifyContent="center"
           alignItems="center"
           height={[
-            "500px",
-            "350px",
-            "375px",
+            "250px",
+            "250px",
+            "250px",
             "100px",
             "100px"
           ]}
@@ -350,8 +352,8 @@ export default function Index({ location }) {
       >
         <Box
           className="vgd"
-          pt="190px"
-          pl="17%"
+          pt="100px"
+          pl="10%"
         >
           BUT HOW DO WE DO IT?
         </Box>
@@ -433,7 +435,8 @@ export default function Index({ location }) {
           "20px",
           "100px"
         ]}
-    
+        w="100%"
+        justifyContent="center"
         alignItems="center"
         flexDirection="row"
         flexWrap="wrap"
@@ -447,7 +450,6 @@ export default function Index({ location }) {
             "50%"
           ]}
           flexDirection="column"
-          alignSelf="flex-start"
         >
           <Text
             className="aboutusindex"
@@ -470,9 +472,28 @@ export default function Index({ location }) {
             company’s growth, our team has maintained the same attention 
             to detail with each client we work with.
           </Text>
-          <LearnMoreButton link="/about" />
+          <Flex
+            justifyContent={[
+              "center",
+              "center",
+              "center",
+              "flex-start",
+              "flex-start",
+              "flex-start"
+            ]}
+            w="100%"
+          >
+            <LearnMoreButton link="/about" />
+          </Flex>
         </Flex>
         <Box
+          mt={[
+            "200px",
+            "100px",
+            "0px",
+            "0px",
+            "0px"
+          ]}
           w={[
             "100%",
             "100%",
@@ -494,103 +515,7 @@ export default function Index({ location }) {
           <img src={fatTriangle} alt="svg" className="fatTriangle" />
         </Box>
       </Flex>
-      <Flex
-        w="100%"
-        alignItems="center"
-        h="500px"
-        flexWrap="wrap"
-        mt={[
-          "50px",
-          "75px",
-          "100px",
-          "100px",
-          "100px"
-        ]}
-        
-      >
-        <Box
-          w={[
-            "100%",
-            "100%",
-            "50%",
-            "400px"
-          ]}
-          h={[
-            "250px",
-            "250px",
-            "350px",
-            "500px",
-            "500px"
-          ]}
-          mx={[
-            "0px",
-            "0px",
-            "50px",
-            "100px",
-            "200px"
-          ]}
-          className="pattern-dots-lg"
-        >
-          <Text
-              className="requesth1"
-              fontSize={[
-                "50px",
-                "60px",
-                "60px",
-                "60px",
-                "65px"
-              ]}
-              transform={[
-                "translate(0%, 50%)",
-                "translate(7%, 50%)",
-                "translate(7%, 100%)",
-                "translate(15%, 130%)",
-                "translate(35%, 130%)",
-              ]}
-  
-            >
-              START NOW!
-            
-            </Text>
-            {/* <Text>
-              Not sure where to start? that's ok, we offer a free 30 minute consultation call to everyone! 
-              we can help decide where you need to start and which of our services would benefit you the most.
-            </Text> */}
-        </Box>
-        <Box
-          p="20px"
-          w={[
-            "100%",
-            "100%",
-            "36%",
-            "30%",
-            "30%"
-          ]}
-        >
-           <Text
-              className="requesth2"
-              fontSize={[
-                "30px",
-                "30px",
-                "30px",
-                "50px",
-                "50px"
-              ]}
-            >
-              
-              Request a callback
-              today!
-            </Text>
-            <button
-              className="bizbut indexBizbut"
-            >
-              BUSINESS ENQUIRY
-            </button>
-        </Box>
-        {/* {/* <Box>
-          <img src={rect} alt="svg" className="circle_el" />
-        </Box> */}
-      </Flex>
+      <ReusableFooter />
       <Footer />
     </Box>
   )

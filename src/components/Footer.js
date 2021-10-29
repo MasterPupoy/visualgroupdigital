@@ -83,8 +83,8 @@ export default function Footer() {
           "10px",
           "10px",
           "70px",
-          "190px",
-          "190px"
+          "100px",
+          "100px"
         ]}
         flexWrap="wrap"
       >
@@ -141,12 +141,11 @@ export default function Footer() {
       </Flex>
       <Flex
         w="100%"
-        pl="190px"
-        pl={[
+        px={[
           "10px",
           "20px",
-          "150px",
-          "190px"
+          "100px",
+          "100px"
         ]}
         pt={[
           "50px",
@@ -165,7 +164,6 @@ export default function Footer() {
             "25%",
             "25%"
           ]}
-          py="20px"
         >
           <h3>
             About
@@ -242,12 +240,12 @@ export default function Footer() {
       </Flex>
       <Flex
         w="100%"
-        pl={[
+        px={[
           "50px",
           "50px",
           "70px",
-          "190px",
-          "190px"
+          "100px",
+          "100px"
         ]}
         pt="50px" 
       >
@@ -285,7 +283,7 @@ export default function Footer() {
           "0px",
           "0px",
           "100px",
-          "190px"
+          "100px"
         ]}
         justifyContent="space-between"
         my="20px"

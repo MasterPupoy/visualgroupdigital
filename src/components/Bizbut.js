@@ -26,7 +26,15 @@ export default function Bizbut({ id }) {
           BUSINESS ENQUIRY
         </button>
       </Box>
-      <Box>
+      <Box
+        pt={[
+          "20px",
+          "20px",
+          "0px",
+          "0px",
+          "0px"
+        ]}
+      >
         <a
           className="reqCB"
           href="/contact"

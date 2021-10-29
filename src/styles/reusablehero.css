@@ -29,7 +29,6 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
   line-height: 25px;
 
   padding: 20px 0px;
@@ -39,45 +38,58 @@
 
 .reusableimageholder {
   position: relative;
-  bottom: 270%;
+  bottom: 295%;
   left: 10%;
   z-index: 0;
 }
 
 .reshape8 {
   position: relative;
-  bottom: 100%;
-  left: 70%;
+  bottom: 135%;
+  left: 86%;
+  z-index: 999;
 }
 
 .reshape7 {
   position: relative;
-  bottom: 50%;
+  bottom: 71%;
   left: 15%;
+}
+
+@media screen and (max-width : 1250px) {
+
+  .reshape7 {
+    bottom: 55%;
+  }
+
 }
 
 .reshape6 {
    position: relative;
-  bottom: 30%;
+  bottom: 45%;
   left: 70%;
+  z-index: 999;
 }
 
 .reshape05 {
   position: relative;
   top: 0;
   left: 10%;
+  z-index: 999;
 }
 
 .reshape4{
   position: relative;
   top: 200%;
   left: 50%;
+  z-index: 999;
 }
 
 .reshape3 {
   position: relative;
   top: 200%;
   left:  0%;
+  z-index: 999;
 }
 
 .reshape2 {
@@ -85,6 +97,7 @@
   bottom: -23%;
   left:  21%;
   z-index: 1;
+  z-index: 999;
   
 }
 
@@ -94,4 +107,5 @@
   left:  0%;
   z-index: 1;
   width: 100%;
+  z-index: 999;
 }

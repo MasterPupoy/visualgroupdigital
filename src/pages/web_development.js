@@ -216,7 +216,13 @@ export default function Web_development({ location }) {
           >
             <Text
               as="h3"
-              fontSize="5xl"
+              fontSize={[
+                "25px",
+                "25px",
+                "30px",
+                "30px",
+                "35px"
+              ]}
             >
               Website Development: <br />
               Your Online Customer Experience
@@ -386,7 +392,7 @@ export default function Web_development({ location }) {
             </h3>
           </Box>
           <Box
-            pt="20px"
+            mx="20px"
           >
             <p
               className="whyus"

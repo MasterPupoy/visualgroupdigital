@@ -30,26 +30,26 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       let tl = gsap.timeline({scrollTrigger: {
         trigger: ".hero-section",
         scrub: 1,
-        start: "center center",
+        start: "80% center",
       }})
 
       tl.to(".reusableheader", {
-        y: -200,
+        y: -150,
         duration: 1,
         ease: "ease"
       })
       .to(".reusablepara", {
-        y: -200,
+        y: -150,
         duration: 1,
         ease: "ease"
       }, "<")
       .to(".shape05", {
-        y: -150,
+        y: -100,
         duration: 1,
         ease: "ease"
       }, "<")
        .to(".reshape6", {
-        y: -150,
+        y: -100,
         duration: 1,
         ease: "ease"
       }, "<")
@@ -59,17 +59,17 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         ease: "ease"
       }, "<")
        .to(".reshape3", {
-        y: -170,
+        y: -150,
         duration: 1,
         ease: "ease"
       }, "<")
        .to(".reshape4", {
-        y: -80,
+        y: -50,
         duration: 1,
         ease: "ease"
       }, "<")
       .to(".reshape8", {
-        y: -70,
+        y: -40,
         duration: 1,
         ease: "ease"
       }, "<")
@@ -101,9 +101,9 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       mt={[
         "20px",
         "20px",
+        "60px",
         "20px",
-        "0px",
-        "0px"
+        "20px"
       ]}
       className="hero-section reusablehero"
       overflowX="hidden"
@@ -111,9 +111,9 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       flexWrap="wrap"
       justifyContent="space-between"
       height={[
-        "600px",
-        "600px",
-        "600px",
+        "700px",
+        "700px",
+        "700px",
         "750px",
         "750px"
       ]}
@@ -129,7 +129,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         width={[
           "100%", // 0-30em
           "100%", // 30em-48em
-          "50%", // 48em-62em
+          "100%", // 48em-62em
           "50%", // 62em+
           "50%"
         ]}
@@ -137,23 +137,24 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       >
         <Text
           className="reusableheader"
-          fontSize={["30px", "35px", "35px", "50px"]}
-          lineHeight={["30px", "30px", "30px", "62px"]}
+          fontSize={["37px", "37px", "37px", "50px"]}
+          lineHeight={["40px", "40px", "40px", "40px", "62px"]}
         >
           {header} {(separated) ? <br /> : null }
           <span>{subheader}</span>
         </Text>
         <Text
           as="p"
-          fontSize={["8px", "15px", "20px", "30px"]}
+          fontSize={["15px", "15px", "18px", "20px", "20px"]}
           className="reusablepara"
         >
           {paragraph}
         </Text>
         <Box
+          pt="20px"
           w={[
             "100%",
-            "100%",
+            "355px",
             "355px",
             "355px",
             "355px"
@@ -161,23 +162,38 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         >
           <Bizbut id="reusablebizbut" />
         </Box>
+        <Box
+          display={[
+            "block",
+            "block",
+            "block",
+            "none",
+            "none"
+          ]}
+        >
+          <img src={shape3} alt="svg" className="reshape3" />
+          <img src={shape4} alt="svg" className="reshape4" />
+          <img src={shape5} alt="svg" className="shape05" />
+          <img src={shape6} alt="svg" className="reshape6" />
+          <img src={shape8} alt="svg" className="reshape8" />
+        </Box>
       </Box>
       <Box
         className="shapeParent"
         width={[
-          "0px ", // 0-30em
+          "0%", // 0-30em
           "0%", // 30em-48em
-          "50%", // 48em-62em
+          "0%", // 48em-62em
           "50%",
           "50%" // 62em+
         ]}
         height={[
           "0px",
           "0px",
-          "170px",
-          "240px",
-          "280px",
-          "300px"
+          "0px",
+          "253px",
+          "263px",
+          "273px"
         ]}
         px="50px"
       >

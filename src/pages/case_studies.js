@@ -323,7 +323,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
             w="100%"
             className="caseStudyBox"
             my="35px"
-            px="25px"
+            px="10px"
           >
             <Box
               textAlign="center"
@@ -354,14 +354,14 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 w="100%"
                 justifyContent="center"
                 alignItems="center"
-                p="20px"
+                p="10px"
                 borderRadius="12px"
               >
                 <Flex
                   w="50%"
                   borderRadius="70px"
-                  px="10px"
                   justifyContent="center"
+                  mx="5px"
                 >
                   <img 
                     src={client.img1} 
@@ -377,8 +377,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 <Flex
                   w="50%"
                   borderRadius="70px"
-                  px="10px"
                   justifyContent="center"
+                  mx="5px"
                 >
                
                   <img 

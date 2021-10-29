@@ -46,9 +46,11 @@ export default function Sodelishus({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
+      <Box
+        mt="60px"
+      >
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
@@ -57,7 +59,6 @@ export default function Sodelishus({ location }) {
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
           flexDirection="column"
         >
           <Box>
@@ -93,7 +94,7 @@ export default function Sodelishus({ location }) {
             </p>
           </Box>
           <Box
-            px="160px"
+            px="50px"
             py="36px"
             className="caseparagraph"
           >
@@ -104,7 +105,10 @@ export default function Sodelishus({ location }) {
               When we moved here, I was shocked to find there was no range of low carb, low sugar, high protein products on the supermarket shelves (although low fat and gluten free products were). Crohn’s disease is complex, and there are many limitations on what you can and can’t eat. SoDelishUs is the answer to this gap and brings healthier foods to all families, myself and my family included.”
             </p>
           </Box>
-          <Flex>
+          <Flex
+            flexWrap="wrap"
+
+          >
             <Flex
               flexWrap="wrap"
               w="100%"
@@ -113,7 +117,13 @@ export default function Sodelishus({ location }) {
               {sd.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 

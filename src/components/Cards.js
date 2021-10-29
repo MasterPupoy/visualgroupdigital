@@ -15,13 +15,20 @@ export default function Cards() {
   return (
     <Flex
       pt="60px"  
-      justifyContent="space-evenly"
+      justifyContent={[
+        "flex-start",
+        "flex-start",
+        "flex-start",
+        "space-evenly",
+        "space-evenly",
+        "space-evenly"
+      ]}
       flexWrap="wrap"
     >
       <Box
         w={[
-          "100%",
-          "100%",
+          "75%",
+          "75%",
           "50%",
           "25%",
           "25%"
@@ -36,9 +43,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
-            "230px",
-            "230px",
-            "230px",
+            "270px",
+            "270px",
+            "343px",
+            "343px",
             "280px"
           ]}
         >
@@ -65,8 +73,8 @@ export default function Cards() {
       </Box>
       <Box
         w={[
-          "100%",
-          "100%",
+          "75%",
+          "75%",
           "50%",
           "25%",
           "25%"
@@ -81,9 +89,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
-             "230px",
-            "230px",
-            "230px",
+            "270px",
+            "270px",
+            "343px",
+            "343px",
             "280px"
           ]}
         >
@@ -107,8 +116,8 @@ export default function Cards() {
       </Box>
       <Box
         w={[
-          "100%",
-          "100%",
+          "75%",
+          "75%",
           "50%",
           "25%",
           "25%"
@@ -123,9 +132,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
-              "230px",
-            "230px",
-            "230px",
+            "270px",
+            "270px",
+            "343px",
+            "343px",
             "280px"
           ]}
         >
