@@ -95,8 +95,15 @@ export default function ReusableFooter({ text }) {
                 "30px",
                 "30px",
                 "30px",
-                "50px",
-                "50px"
+                "30px",
+                "30px"
+              ]}
+              alignSelf={[
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
               ]}
             >
               
@@ -111,7 +118,6 @@ export default function ReusableFooter({ text }) {
                 "flex-start",
                 "flex-start"
               ]}
-              px="10px"
             >
               <button
                 className="bizbut indexBizbut"
