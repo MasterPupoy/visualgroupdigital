@@ -40,8 +40,12 @@ export default function AccomplishmentSlider() {
 
   
   return (
-    <Box
+    <Flex
       className="accompvgd"
+      w="100%"
+    
+      flexDirection="column"
+      justifyContent="center"
     >
       <Box 
         px="10%"
@@ -87,8 +91,10 @@ export default function AccomplishmentSlider() {
       <Box
         pt="55px"
         w="100%"
+        maxWidth="1480px"
         overflowX="hidden"
         px="5%"
+        alignSelf="center"
       >
         <Flex
           justifyContent="center"
@@ -175,6 +181,6 @@ export default function AccomplishmentSlider() {
       >
         <ViewMore link="/our_portfolio" />
       </Flex>
-    </Box>
+    </Flex>
   )
 }

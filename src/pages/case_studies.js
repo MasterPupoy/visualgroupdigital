@@ -17,6 +17,7 @@ import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import MobileNav from '../components/MobileNav';
+import Slideshow from '../components/Slideshow';
 
 import chevron from '../images/chevron.svg';
 import casestudies from '../images/features/casestudies.png';
@@ -620,7 +621,8 @@ export default function Case_studies({ location }) {
           
           }
         </Flex>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

@@ -117,6 +117,7 @@ export default function About({ location }) {
           ]}
           flexWrap="wrap"
           alignItems="center"
+          justifyContent="space-between"
         >
           <Box
             className="founder"

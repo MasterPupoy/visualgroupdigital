@@ -13,6 +13,7 @@ import ReusableFooter from '../../components/ReusableFooter';
 import StaticLogo from '../../components/StaticLogo';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
+import Slideshow from '../../components/Slideshow';
 
 import pro from '../../images/scraped/proclean.json';
 
@@ -46,25 +47,27 @@ export default function Sodelishus({ location }) {
   }, []);
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="50px"
           flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
-              Pro Clena Partnership 
+              Pro Clean Partnership 
             </h1>
           </Box>
             <Box
@@ -113,7 +116,13 @@ export default function Sodelishus({ location }) {
               {pro.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                   
@@ -166,7 +175,8 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

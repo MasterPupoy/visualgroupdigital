@@ -98,7 +98,7 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
   line-height: 32px;
   /* identical to box height, or 133% */
 
@@ -115,10 +115,12 @@
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 30px;
   /* identical to box height, or 150% */
 
+
+  margin: 30px 0px;
   text-align: center;
   letter-spacing: -0.03em;
 

@@ -198,6 +198,7 @@ export default function Our_portfolio({ location }) {
             onClick={() => {
               setKey(button.key)
             }}
+            my="10px"
             mx="10px"
             borderBottom={(key === button.key) ? "3px solid #ee6f19" : null}
             _hover={{

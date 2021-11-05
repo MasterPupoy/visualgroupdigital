@@ -16,6 +16,7 @@ import MobileNav from '../../components/MobileNav';
 import suss from '../../images/scraped/sussex_removals.json';
 
 import '../../styles/casestudies.css';
+import Slideshow from '../../components/Slideshow';
 
 export default function Sodelishus({ location }) {
 
@@ -45,18 +46,19 @@ export default function Sodelishus({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          flexDirection="column"
+          mt="50px"
         >
           <Box>
             <h1
@@ -111,7 +113,13 @@ export default function Sodelishus({ location }) {
               {suss.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 
@@ -164,7 +172,8 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

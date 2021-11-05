@@ -48,16 +48,16 @@ export default function Sodelishus({ location }) {
   return (
     <Box className="main">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="50px"
           flexDirection="column"
         >
           <Box>
@@ -86,7 +86,7 @@ export default function Sodelishus({ location }) {
             className="viewshead"
           >
             <h3>
-                subfranticmusic.com
+              subfranticmusic.com
             </h3>
             <p>
              The number one online live streaming service for musicians 
@@ -113,7 +113,13 @@ export default function Sodelishus({ location }) {
               {sub.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                     w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                   <img 

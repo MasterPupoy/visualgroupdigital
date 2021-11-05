@@ -108,13 +108,19 @@ export default function Slideshow() {
         mx="20px"
         px="9%"
         flexDirection="column"
-        alignItems="center"
-        display={[
-          "none",
-          "none",
-          "none",
-          "none",
-          "flex"
+        alignItems={[
+          "center",
+          "center",
+          "center",
+          "center",
+          "flex-start"
+        ]}
+        alignSelf={[
+          "center",
+          "center",
+          "center",
+          "center",
+          "flex-start"
         ]}
       >
         <Box>
@@ -127,7 +133,13 @@ export default function Slideshow() {
           </Text>
         </Box>
         <Box
-          textAlign="center"
+          textAlign={[
+            "center",
+            "center",
+            "center",
+            "center",
+            "left"
+          ]}
           py="20px"
         > 
           <Text

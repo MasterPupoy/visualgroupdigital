@@ -104,11 +104,11 @@ export default function ReusableHero({ image, header, subheader, paragraph,
     <>
     <Flex
       mt={[
-        "20px",
-        "20px",
+        "25%",
+        "25%",
         "60px",
-        "20px",
-        "20px"
+        "40px",
+        "40px"
       ]}
       className="hero-section reusablehero"
       overflowX="hidden"
@@ -122,6 +122,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
         "90vh",
         "100vh"
       ]}
+      maxHeight="900px"
       w="100%"
     >
       <Box
@@ -145,7 +146,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           className="reusableheader"
           as="h3"
           fontSize={["37px", "37px", "37px", "50px"]}
-          lineHeight={["40px", "40px", "40px", "40px", "62px"]}
+          lineHeight={["40px", "40px", "40px", "50px", "62px"]}
         >
           {header} {(separated) ? <br /> : null }
           <span>{subheader}</span>

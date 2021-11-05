@@ -10,7 +10,8 @@ import "react-awesome-lightbox/build/style.css";
 import SEO from '../../components/Seo';
 import Nav from '../../components/Nav';
 import ReusableFooter from '../../components/ReusableFooter';
-import StaticLogo from '../../components/StaticLogo';
+// import StaticLogo from '../../components/StaticLogo';
+import Slideshow from '../../components/Slideshow';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
 
@@ -49,16 +50,17 @@ export default function Sodelishus({ location }) {
   return (
     <Box className="main">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          flexDirection="column"
+          mt="50px"
         >
           <Box>
             <h1
@@ -107,13 +109,19 @@ export default function Sodelishus({ location }) {
           <Flex>
             <Flex
               flexWrap="wrap"
-              w="80%"
+              w="100%"
               justifyContent="center"
             >
               {capital.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                     w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 
@@ -165,7 +173,8 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

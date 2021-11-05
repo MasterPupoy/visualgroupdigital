@@ -55,7 +55,7 @@ export default function ReusableFooter({ text }) {
                 "65px"
               ]}
               transform={[
-                "translate(15%, 50%)",
+                "translate(7%, 50%)",
                 "translate(20%, 50%)",
                 "translate(20%, 100%)",
                 "translate(15%, 130%)",
@@ -93,7 +93,7 @@ export default function ReusableFooter({ text }) {
            <Text
               className="requesth2"
               fontSize={[
-                "30px",
+                "20px",
                 "30px",
                 "30px",
                 "30px",

@@ -287,14 +287,21 @@ export default function Index({ location }) {
             flexWrap="wrap"
             w="100%"
             className="whatwedo"
+            justifyContent={[
+              "center",
+              "center",
+              "flex-start",
+              "flex-start",
+              "flex-start"
+            ]}
           >
             <Box
               w={[
-                "47%",
-                "36%",
-                "36%",
-                "38%",
-                "21%"
+                "50%",
+                "50%",
+                "50%",
+                "25%",
+                "25%"
               ]}
             >
               <Text
@@ -311,13 +318,12 @@ export default function Index({ location }) {
             </Box>
             <Box
               alignSelf="center"
-              pl="20px"
               w={[
-                "20%",
-                "20%",
                 "50%",
                 "50%",
-                "50%"
+                "50%",
+                "70%",
+                "70%"
               ]}
             >
               <img src={line1} alt="line.svg" />
@@ -327,11 +333,19 @@ export default function Index({ location }) {
             pt="26px"
             w={[
               "100%",
+              "100%",
               "50%",
               "50%",
               "50%"
             ]}
             className="indexsub"
+            textAlign={[
+              "center",
+              "center",
+              "left",
+              "left",
+              "left"
+            ]}
           >
             <Text
               fontSize="sm"
@@ -343,9 +357,11 @@ export default function Index({ location }) {
               consulting, development, and marketing.
             </Text>
           </Box>
-          <Box>
+          <Flex
+            justifyContent="center"
+          >
             <Cards />
-          </Box>
+          </Flex>
         </Box>
       </Flex>
       <Flex

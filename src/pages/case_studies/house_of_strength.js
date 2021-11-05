@@ -48,7 +48,7 @@ export default function Hellovans({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
        {
           (width > 1280) 
@@ -62,7 +62,9 @@ export default function Hellovans({ location }) {
           mt="60px"
           flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -115,7 +117,13 @@ export default function Hellovans({ location }) {
               {house.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                               w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                      <img 

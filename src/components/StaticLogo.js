@@ -292,23 +292,7 @@ export default function Slideshow() {
           fantastic clients we have brought to the UK and International Markets.
         </Text>
       </Flex>
-      <Newlogo />
-      <Flex
-        my="50px"
-        justifyContent="center"
-      >
-        <button
-          className="seeMore button--aylen"
-          onClick={() => {
-            window.location.assign("/case_studies")
-          }}
-        >
-          <span>
-            SEE MORE OF OUR CLIENTS
-          </span>
-        </button>
-      </Flex>
-
+      <Newlogo /> 
     </Flex>
   </>
   )

@@ -7,6 +7,7 @@ import {
 import Lightbox from 'react-awesome-lightbox';
 import "react-awesome-lightbox/build/style.css";
 
+import Slideshow from '../../components/Slideshow';
 import SEO from '../../components/Seo';
 import Nav from '../../components/Nav';
 import ReusableFooter from '../../components/ReusableFooter';
@@ -49,14 +50,15 @@ export default function Sodelishus({ location }) {
   return (
     <Box className="main">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
+          flexDirection="column"
           alignItems="center"
           m="10px"
         >
@@ -104,16 +106,24 @@ export default function Sodelishus({ location }) {
               When we moved here, I was shocked to find there was no range of low carb, low sugar, high protein products on the supermarket shelves (although low fat and gluten free products were). Crohn’s disease is complex, and there are many limitations on what you can and can’t eat. SoDelishUs is the answer to this gap and brings healthier foods to all families, myself and my family included.”
             </p>
           </Box> */}
-          <Flex>
+          <Flex
+            flexWrap="wrap"
+          >
             <Flex
               flexWrap="wrap"
-              w="80%"
+              w="100%"
               justifyContent="center"
             >
               {boss.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}  
                     m="5px"
                   >
                       <img 
@@ -165,7 +175,8 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

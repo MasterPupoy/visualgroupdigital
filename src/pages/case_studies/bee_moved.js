@@ -16,10 +16,7 @@ import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
 
 import bee from '../../images/scraped/beemoved.json';
-
-import brandng from '../../images/brandng.png';
-import fbadcopy from '../../images/fbadcopy.png';
-import figma from '../../images/figma.png';
+import Slideshow from '../../components/Slideshow';
 
 
 import '../../styles/casestudies.css';
@@ -53,18 +50,18 @@ export default function Sodelishus({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="50px"
           flexDirection="column"
         >
           <Box>
@@ -120,7 +117,13 @@ export default function Sodelishus({ location }) {
               {bee.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 
@@ -172,7 +175,8 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

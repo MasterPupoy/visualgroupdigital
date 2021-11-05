@@ -16,16 +16,16 @@ export default function Cards() {
     <Flex
       pt="60px"  
       justifyContent={[
-        "flex-start",
-        "flex-start",
-        "flex-start",
+        "center",
+        "center",
+        "center",
         "space-evenly",
         "space-evenly",
         "space-evenly"
       ]}
       flexWrap="wrap"
     >
-      <Box
+      <Flex
         w={[
           "75%",
           "75%",
@@ -35,6 +35,8 @@ export default function Cards() {
         ]}
         pt="10px"
         className="icard1"
+        alignItems="center"
+        flexDirection="column"
       >
         <Box>
           <img src={strat} alt="strategy.svg" className="cardIcon" />
@@ -43,10 +45,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
-            "270px",
-            "270px",
-            "343px",
-            "343px",
+            "325px",
+            "325px",
+            "325px",
+            "325px",
             "280px"
           ]}
         >
@@ -70,8 +72,8 @@ export default function Cards() {
         <Box>
           <LearnMoreButton />
         </Box>
-      </Box>
-      <Box
+      </Flex>
+      <Flex
         w={[
           "75%",
           "75%",
@@ -81,6 +83,8 @@ export default function Cards() {
         ]}
         pt="10px"
         className="icard2"
+        alignItems="center"
+        flexDirection="column"
       >
         <Box>
           <img src={designdev} alt="strategy.svg" className="cardIcon" />
@@ -89,10 +93,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
-            "270px",
-            "270px",
-            "343px",
-            "343px",
+            "325px",
+            "325px",
+            "325px",
+            "325px",
             "280px"
           ]}
         >
@@ -113,8 +117,8 @@ export default function Cards() {
         <Box>
           <LearnMoreButton />
         </Box>
-      </Box>
-      <Box
+      </Flex>
+      <Flex
         w={[
           "75%",
           "75%",
@@ -124,6 +128,8 @@ export default function Cards() {
         ]}
         pt="10px"
         className="icard3"
+        alignItems="center"
+        flexDirection="column"
       >
         <Box>
           <img src={management} alt="strategy.svg" className="cardIcon" />
@@ -132,10 +138,10 @@ export default function Cards() {
         <Box
           pt="50px"
           h={[
-            "270px",
-            "270px",
-            "343px",
-            "343px",
+            "325px",
+            "325px",
+            "325px",
+            "325px",
             "280px"
           ]}
         >
@@ -155,7 +161,7 @@ export default function Cards() {
         <Box>
           <LearnMoreButton />
         </Box>
-      </Box>
+      </Flex>
     </Flex>
   )
 }

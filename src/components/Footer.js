@@ -76,7 +76,13 @@ export default function Footer() {
       pt="77px"
     >
       <Flex
-        justifyContent="space-between"
+        justifyContent={[
+          "center",
+          "space-evenly",
+          "space-evenly",
+          "space-between",
+          "space-between"
+        ]}
         alignItems="center"
         w="100%"
         px={[
@@ -147,7 +153,7 @@ export default function Footer() {
           "100px",
           "100px"
         ]}
-        pt={[
+        py={[
           "50px",
           "50px",
           "100px",
@@ -164,11 +170,20 @@ export default function Footer() {
             "25%",
             "25%"
           ]}
+          py={[
+            "50px",
+            "50px",
+            "50px",
+            "0px",
+            "0px"
+          ]}
         >
           <h3>
             About
           </h3>
-          <p>
+          <p
+            style={{ paddingRight: "10px"}}
+          >
             At Visual Group Digital, we help businesses <br /> flourish by following a 
             comprehensive <br /> 3-step process of consulting, <br /> development, 
             and marketing.

@@ -14,6 +14,7 @@ import StaticLogo from '../../components/StaticLogo';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
 
+import Slideshow from '../../components/Slideshow';
 import sch from '../../images/scraped/sch_tech.json'
 
 import '../../styles/casestudies.css';
@@ -46,18 +47,19 @@ export default function Sodelishus({ location }) {
   }, []);
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="50px"
+          flexDirection="column"
         >
           <Box>
             <h1
@@ -112,7 +114,13 @@ export default function Sodelishus({ location }) {
               {sch.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                    w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 
@@ -164,7 +172,8 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

@@ -191,9 +191,9 @@ export default function Contact({ location }) {
               <Text
                 as="p"
                 fontSize={[
-                  "14px",
-                  "14px",
-                  "14px",
+                  "18px",
+                  "18px",
+                  "18px",
                   "22px",
                   "22px"
                 ]}
