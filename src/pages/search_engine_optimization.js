@@ -195,12 +195,12 @@ export default function Search_engine_optimization({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/search_engine_optimization' main="/marketing" />
           : <MobileNav main="/search_engine_optimization" />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}

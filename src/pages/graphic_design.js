@@ -130,7 +130,7 @@ export default function Graphic_design({ location }) {
   })
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
         {
           (width > 1280) 

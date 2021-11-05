@@ -458,12 +458,12 @@ export default function Case_studies({ location }) {
       overflowX="hidden"
     >
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav  page='/case_studies' />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}

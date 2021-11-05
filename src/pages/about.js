@@ -174,10 +174,21 @@ export default function About({ location }) {
               other marketing agencies is the one-of-a-kind thought that we put into 
               each new account.
             </Text>
-            <LearnMoreButton 
-              id="aboutusceolearnmore" 
-              link="/contact"
-            />
+            <Flex
+                           justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton 
+                id="aboutusceolearnmore" 
+                link="/contact"
+              />
+            </Flex>
           </Box>
           <Flex
             mx={[

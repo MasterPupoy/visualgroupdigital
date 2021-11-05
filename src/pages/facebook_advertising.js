@@ -165,12 +165,12 @@ export default function Facebook_advertising({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
          {
           (width > 1280) 
           ? <Nav loc={location} page='/facebook_advertising' main="/marketing" />
           : <MobileNav main="/facebook_advertising" />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}

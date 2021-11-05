@@ -165,12 +165,12 @@ export default function Google_advertising({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/google_advertising' main="/marketing" />
           : <MobileNav main="/google_advertising" />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}
