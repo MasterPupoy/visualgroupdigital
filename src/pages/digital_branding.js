@@ -10,9 +10,11 @@ import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import ReusableRanking from '../components/ReusableRanking';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
-import StaticLogo from '../components/StaticLogo';
+// import StaticLogo from '../components/StaticLogo';
+import Slideshow from '../components/Slideshow';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
 
@@ -147,12 +149,12 @@ export default function Digital_branding({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/digital_branding' main="/branding" />
           : <MobileNav main="/branding" />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -166,11 +168,11 @@ export default function Digital_branding({ location }) {
             "10px",
             "20px",
             "60px",
-            "70px"
+            "10%"
           ]}
           flexWrap="wrap"
           alignItems="center" 
-          justifyContent="center"
+          justifyContent="space-between"
         >
           <Box
             className="digibrand"
@@ -178,7 +180,7 @@ export default function Digital_branding({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 62em+
             ]}
           >
             <Text
@@ -197,19 +199,30 @@ export default function Digital_branding({ location }) {
               positive impressions to capture and engage your target 
               audience for favorable results and sales growth.
             </Text>
-            <button
-              // className="businessEnquiryButton"
-              className="button button--aylen"
+            <Flex
+                     justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
             >
-              <span className="biz">BUSINESS ENQUIRY</span>
-            </button>
+              <button
+                // className="businessEnquiryButton"
+                className="button button--aylen"
+              >
+                <span className="biz">BUSINESS ENQUIRY</span>
+              </button>
+            </Flex>
           </Box>
           <Flex
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -222,12 +235,12 @@ export default function Digital_branding({ location }) {
           pt="50px"
           flexWrap="wrap"
           alignItems="center" 
-          justifyContent="center"
+          justifyContent="space-between"
           px={[
             "10px",
             "20px",
             "60px",
-            "70px"
+            "10%"
           ]}
         >
           <Flex
@@ -235,8 +248,8 @@ export default function Digital_branding({ location }) {
               "100%", // 0-30em
               "100%", // 30em-48em
               "50%",
-              "40%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 48em-62em
+              "45%", // 62em+
             ]}
             pt="10px"
             px="10px"
@@ -249,8 +262,8 @@ export default function Digital_branding({ location }) {
              width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "40%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 48em-62em
+              "45%", // 62em+
             ]}
             mx="20px"
           >
@@ -272,12 +285,23 @@ export default function Digital_branding({ location }) {
             >
               At Visual Group Digital, we’ll make your brand come to life on digital platforms through a creative and targeted approach.
             </Text>
-            <button
-              // className="businessEnquiryButton"
-              className="button button--aylen"
+            <Flex
+                     justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
             >
-              <span className="biz">BUSINESS ENQUIRY</span>
-            </button>
+              <button
+                // className="businessEnquiryButton"
+                className="button button--aylen"
+              >
+                <span className="biz">BUSINESS ENQUIRY</span>
+              </button>
+            </Flex> 
           </Box>
         </Flex>
         <Box
@@ -309,7 +333,7 @@ export default function Digital_branding({ location }) {
                 h="50px"
                 mt="50px"
               >
-                <img src={righta} alt="rightarrow" />
+                <img src={righta} alt="rightarrow" className="righta" />
               </Flex>
             </Box>
             <Box
@@ -386,6 +410,7 @@ export default function Digital_branding({ location }) {
           </Box>
           <Box
             mx="20px"
+            textAlign="center"
           >
             <p
               className="whyus"
@@ -398,10 +423,11 @@ export default function Digital_branding({ location }) {
           <ReusableRanking 
             textArray={rankingArray}
           />
-     
-        <AccomplishmentSlider />
+        <OurWork /> 
+        {/* <AccomplishmentSlider /> */}
         <ClientTestimonials /> 
-        <StaticLogo />
+        {/* <StaticLogo /> */}
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

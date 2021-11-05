@@ -10,11 +10,13 @@ import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import ReusableRanking from '../components/ReusableRanking';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
+import Slideshow from '../components/Slideshow';
 
 import pwa from '../images/pwa.svg';
 import posterdesign from '../images/posterdesign.svg';
@@ -112,7 +114,7 @@ export default function Graphic_design({ location }) {
     
     let digibrandtl = gsap.timeline({ scrollTrigger : {
       trigger: ".digibrand",
-      start: "top center",
+      start: "top bottom",
       toggleAttribute: "restart none none none"
     }})
     
@@ -130,18 +132,19 @@ export default function Graphic_design({ location }) {
   return (
     <Box className="main">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/graphic_design' main="/branding" />
           : <MobileNav main="/graphic_design" />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}
           paragraph={paragraph}
           image={branding}
           imageClass="digitalmarkbanner"
+          separated={false}
         />
         <Flex
           pt="50px"
@@ -179,12 +182,23 @@ export default function Graphic_design({ location }) {
               the foundations of your brand such as logo designs, business stationery, 
               social media banners, flyers, and more...
             </Text>
-            <button
-              // className="businessEnquiryButton"
-              className="button button--aylen"
+            <Flex
+                     justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
             >
-              <span className="biz">BUSINESS ENQUIRY</span>
-            </button>
+              <button
+                // className="businessEnquiryButton"
+                className="button button--aylen"
+              >
+                <span className="biz">BUSINESS ENQUIRY</span>
+              </button>
+            </Flex>
           </Box>
           <Flex
             width={[
@@ -241,7 +255,7 @@ export default function Graphic_design({ location }) {
                   h="50px"
                   mt="50px"
                 >
-                  <img src={righta} alt="rightarrow" />
+                  <img src={righta} alt="rightarrow" className="righta" />
                 </Flex>
               </Box>
             </Flex>
@@ -351,11 +365,21 @@ export default function Graphic_design({ location }) {
         <Flex
           flexDirection="row"
           flexWrap="wrap"
-          justifyContent="center"
+          justifyContent="space-between"
+          w="100%"
+          px="10%"
           alignItems="center"
           pt="50px"
         >
-          <Box>
+          <Box
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%",
+              "50%"
+            ]}
+          >
             <h3
               className="digimarkfeatures"
             >
@@ -364,6 +388,14 @@ export default function Graphic_design({ location }) {
           </Box>
           <Box
             pt="20px"
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%",
+              "50%"
+            ]}
+            
           >
             <p
               className="whyus"
@@ -377,9 +409,11 @@ export default function Graphic_design({ location }) {
             textArray={rankingArray}
           />
 
-        <AccomplishmentSlider />
-        <ClientTestimonials /> 
-        <StaticLogo />
+        <OurWork />
+        {/* <AccomplishmentSlider /> */}
+        <ClientTestimonials />
+        <Slideshow /> 
+        {/* <StaticLogo /> */}
         <ReusableFooter 
           text={text}
         />

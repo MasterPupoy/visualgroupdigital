@@ -73,7 +73,7 @@ export default function Process() {
   return (
     <Flex
       flexDirection="column"
-      px="10%"
+      
       pt="100px"
     >
       <Flex
@@ -112,7 +112,7 @@ export default function Process() {
           </Text>
         </Box>
         <Box
-          pl={[
+          px={[
             "0px",
             "0px",
             "0px",
@@ -249,7 +249,7 @@ export default function Process() {
           </Text>
         </Box>
         <Box
-          pl={[
+          px={[
             "0px",
             "0px",
             "0px",

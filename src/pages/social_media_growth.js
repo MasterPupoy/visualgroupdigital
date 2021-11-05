@@ -9,13 +9,14 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
-
+import Slideshow from '../components/Slideshow';
 
 import socmedgrowth from '../images/socmedgrowth.jpg';
 import digimark from '../images/digimark.png';
@@ -117,7 +118,7 @@ export default function Social_media_growth({ location }) {
 
     let dmtl = gsap.timeline({scrollTrigger : {
       trigger: ".digimark",
-      start: "top center",
+      start: "top bottom",
     }})
 
     dmtl.fromTo(".firstecom", {
@@ -178,12 +179,12 @@ export default function Social_media_growth({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/social_media_growth' main="/marketing" />
           : <MobileNav main="/social_media_growth" />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -201,7 +202,7 @@ export default function Social_media_growth({ location }) {
           ]}
           flexWrap="wrap"
           alignItems="center"
-          alignItems="center"
+          justifyContent="space-between"
         >
           <Flex
             width={[
@@ -209,7 +210,7 @@ export default function Social_media_growth({ location }) {
               "100%", // 30em-48em  
               "100%",
               "100%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -227,6 +228,7 @@ export default function Social_media_growth({ location }) {
               "40%", // 62em+
             ]}
             mx="50px"
+            my="50px"
           >
             <Text
               as="h3"
@@ -246,7 +248,18 @@ export default function Social_media_growth({ location }) {
               <br />
               Organic Social Media allows an individual or entity to post any content they want, free of charge. Businesses use Organic Social Media to advertise free promotions, create more brand awareness and visibility, strengthen their market positioning, widen their audience and consumer base, and increase engagement with their customers!
             </Text>
-            <LearnMoreButton link="/contact" id="ecomlearn" />
+            <Flex
+              justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton link="/contact" id="ecomlearn" />
+            </Flex>
           </Box>
         </Flex>
         <Flex
@@ -258,7 +271,9 @@ export default function Social_media_growth({ location }) {
           pt="123px"
           justifyContent="center"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h3>
               Visual Group Digital as your
               Organic Social Media Specialist
@@ -482,11 +497,12 @@ export default function Social_media_growth({ location }) {
           <Box
             pt="20px"
             px="20px"
+            textAlign="center"
           >
             <p
               className="whyus"
             >
-              At Visual Group Digital, we specialise in helping businesses introduce their brand, <br />
+              At Visual Group Digital, we specialise in helping businesses introduce their brand,
               connect with their target audience, and develop an effective marketing strategy.
             </p>
           </Box>
@@ -495,9 +511,11 @@ export default function Social_media_growth({ location }) {
           <ReusableRanking 
             textArray={rankingArray}
           />
-        <AccomplishmentSlider />
-        <ClientTestimonials /> 
-        <StaticLogo />
+        <OurWork />
+        {/* <AccomplishmentSlider /> */}
+        <ClientTestimonials />
+        <Slideshow /> 
+        {/* <StaticLogo /> */}
         <ReusableFooter 
           text={text}
         />

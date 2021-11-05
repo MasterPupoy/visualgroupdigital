@@ -2,29 +2,64 @@ import React, { useState, useRef } from 'react'
 import Lightbox from 'react-awesome-lightbox';
 import {
   Flex,
+  Skeleton
 } from '@chakra-ui/react';
 
 import googleads from '../images/portfolio/googleads.json';
 
+import ga1 from '../images/googleads/ga1.jpg';
+import ga2 from '../images/googleads/ga2.jpg';
+import ga3 from '../images/googleads/ga3.jpg';
+import ga4 from '../images/googleads/ga4.jpg';
+import ga5 from '../images/googleads/ga5.jpg';
+import ga6 from '../images/googleads/ga6.jpg';
+import ga7 from '../images/googleads/ga7.jpg';
+import ga8 from '../images/googleads/ga8.jpg';
+import ga9 from '../images/googleads/ga9.jpg';
+import ga10 from '../images/googleads/ga10.jpg';
+import ga11 from '../images/googleads/ga11.jpg';
+import ga12 from '../images/googleads/ga12.jpg';
+
 import "react-awesome-lightbox/build/style.css";
 import '../styles/our_portfolio.css';
 
+function ImageSkeleton({ num = 12 }){
+  let all = []
+
+  for(let i = 0; i < num; i++){
+    all = [...all, <Skeleton key={i} w="300px" h="300px" startColor="blue.500" endColor="orange.500" className="loaderskel" /> ]
+  }
+
+  return all
+}
+
+function AdditionalImages(){
+  return (
+    <>
+      <img src={ga1} alt="googleads" />
+      <img src={ga2} alt="googleads" />
+      <img src={ga3} alt="googleads" />
+      <img src={ga4} alt="googleads" />
+      <img src={ga5} alt="googleads" />
+      <img src={ga6} alt="googleads" />
+      <img src={ga7} alt="googleads" />
+      <img src={ga8} alt="googleads" />
+      <img src={ga9} alt="googleads" />
+      <img src={ga10} alt="googleads" />
+      <img src={ga11} alt="googleads" />
+      <img src={ga12} alt="googleads" />
+    </>
+  )
+}
+
 export default function Googleads(){
   const seeMoreButton = useRef();
-  const [activeDiv, setActiveDiv] = useState(1);
+  const [loading, setLoading] = useState(true);
+
 
   const [Open, setOpen] = useState(false);
   const [activeImg, setActiveImg] = useState("");
 
-  const toggleDiv = () => {
-    if(activeDiv < 5){
-      setActiveDiv(val => val + 1);
-    }
-
-    if(activeDiv === 3){
-      seeMoreButton.current.style.display = "none";
-    }
-  };
 
   return (
     <Flex
@@ -51,9 +86,15 @@ export default function Googleads(){
         justifyContent="center"
         alignItems="center"
       >
+        {(loading)
+          ? <ImageSkeleton />
+          : <AdditionalImages />
+        }
         {googleads.map(img => {
           return (
-            <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+            <img key={img} src= {img} alt="portfoliopic" 
+            onLoad={() => setLoading(false)}
+            onClick={() => {
               setActiveImg(img)
               setOpen(true)
             }} />

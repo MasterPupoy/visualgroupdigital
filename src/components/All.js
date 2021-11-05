@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import {
   Flex,
+  Skeleton
 } from '@chakra-ui/react';
 
 import all from '../images/portfolio/all.json';
@@ -10,9 +11,20 @@ import "react-awesome-lightbox/build/style.css";
 
 import '../styles/our_portfolio.css';
 
+function ImageSkeleton({ num }){
+  let all = []
+
+  for(let i = 0; i < num; i++){
+    all = [...all, <Skeleton key={i} w="300px" h="300px" startColor="blue.500" endColor="orange.500" className="loaderskel" /> ]
+  }
+
+  return all
+}
+
 export default function All(){
   const seeMoreButton = useRef();
   
+  const [loading, setLoading] = useState(true);
   const [num, setNum] = useState(16);
   const [views, setViews] = useState([])
 
@@ -20,12 +32,16 @@ export default function All(){
   const [activeImg, setActiveImg] = useState("");
 
   const toggleNum = () => {
-    if(num < 360){
-      setNum(val => val + 16);
-    }
+    if(num < all.length){
+      setNum(val => {
+        let diff = all.length - val
+        
+        if(diff < 12){
+          return val + diff
+        }
 
-    if(num === 359){
-      seeMoreButton.current.style.display = "none";
+        return val + 12
+      });
     }
   };
 
@@ -41,11 +57,18 @@ export default function All(){
       }
 
       setViews(newarr)
-      
+
+
+      if(num >= all.length){
+        seeMoreButton.current.style.display = "none";
+      }
+
+
     }
 
     return () => {
       mounted = false;
+
     }
 
   }, [num])
@@ -75,9 +98,16 @@ export default function All(){
           justifyContent="center"
           alignItems="center"
         >
+          {(loading)
+            ? <ImageSkeleton num={num} />
+            : null
+          }
+
           {views.map(img => {
             return (
-              <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+              <img key={img} src= {img} alt="portfoliopic" 
+              onLoad={() => setLoading(false)}
+              onClick={() => {
                 setActiveImg(img)
                 setOpen(true)
               }} />

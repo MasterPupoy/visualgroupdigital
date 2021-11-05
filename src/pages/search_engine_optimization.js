@@ -9,13 +9,14 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
-
+import Slideshow from '../components/Slideshow';
 
 import seopic from '../images/seo2.png';
 import digimark from '../images/smg.png';
@@ -209,16 +210,16 @@ export default function Search_engine_optimization({ location }) {
         />
         <Flex
            pt="50px"
-           pl={[
+           px={[
             "10px",
             "20px",
             "60px",
-            "103px"
+            "10%"
           ]}
           flexWrap="wrap"
           alignItems="center"
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-between"
         >
           <Box
              className="digimark"
@@ -246,7 +247,18 @@ export default function Search_engine_optimization({ location }) {
               SEO is all about increasing your website’s visibility in search engines by improving your rankings. 
               When done right, SEO can boost your web traffic organically, leading to increases in customers and sales.
             </Text>
-            <LearnMoreButton link="/contact" id="ecomlearn" />
+            <Flex
+              justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton link="/contact" id="ecomlearn" />
+            </Flex>
           </Box>
           <Flex
                ml={[
@@ -260,7 +272,7 @@ export default function Search_engine_optimization({ location }) {
               "100%", // 30em-48em  
               "100%",
               "100%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 62em+
             ]}
             pt="10px" 
             justifyContent="center"
@@ -278,17 +290,13 @@ export default function Search_engine_optimization({ location }) {
           pt="123px"
           px="20px"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h3>
               Visual Group Digital as your
               SEO Specialist
             </h3>
-          </Box>
-          <Box
-            alignSelf="center"
-            pl="10px"
-          >
-            <img src={line1} alt="line.svg" />
           </Box>
         </Flex>
         <Flex
@@ -547,16 +555,27 @@ export default function Search_engine_optimization({ location }) {
 
         <Flex
           flexWrap="wrap"
-          justifyContent="center"
+          justifyContent=""
           alignItems="center"
           mt="50px"
+          px="10%"
         >
-          <Box>
+          <Box
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
+            px="50px"
+          >
             <Text
-              fontSize="5xl"
-              style={{
+              fontSize="4xl"
+                 style={{
                 color : "#0A2F53",
-                fontFamily: "dm-sans"
+                fontFamily: "dm-sans",
+                fontWeight: "bold"
               }}
             >
               SEO Features
@@ -598,14 +617,23 @@ export default function Search_engine_optimization({ location }) {
                 </li> 
             </ul>
           </Box>
-          <Box>
+          <Box
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
+          >
             <img src={growth} alt="seo_growth" className="seogrowthimg" />
           </Box>
         </Flex>
-        
-        <AccomplishmentSlider />
-        <ClientTestimonials /> 
-        <StaticLogo />
+        <OurWork />
+        {/* <AccomplishmentSlider /> */}
+        <ClientTestimonials />
+        <Slideshow /> 
+        {/* <StaticLogo /> */}
         <ReusableFooter 
           text={text}
         />

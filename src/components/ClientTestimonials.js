@@ -22,22 +22,21 @@ export default function ClientTestimonials() {
 
     let testimonialtl = gsap.timeline({ scrollTrigger: {
       trigger: ".testimonialtop",
-      toggleActions: "restart none none none",
       start: "top center",
     }})
 
     testimonialtl.fromTo(".testimonial1", {
       opacity: 0
-    }, { duration: 0.5, opacity: 1})
+    }, { duration: 0.25, opacity: 1})
     .fromTo(".testimonial2", {
       opacity: 0
-    }, { duration: 0.5, opacity: 1}, ">")
+    }, { duration: 0.25, opacity: 1}, ">")
     .fromTo(".testimonial3", {
       opacity: 0
-    }, { duration: 0.5, opacity: 1}, ">")
+    }, { duration: 0.25, opacity: 1}, ">")
     .fromTo(".testimonial4", {
       opacity: 0
-    }, { duration: 0.5, opacity: 1}, ">")
+    }, { duration: 0.25, opacity: 1}, ">")
 
 
   })
@@ -45,6 +44,7 @@ export default function ClientTestimonials() {
   return (
     <Box 
       pt="90px"
+      px="3%"
     >
       <Flex
         flexDirection="row"

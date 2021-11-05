@@ -19,6 +19,7 @@ import LearnMoreButton from '../components/LearnMoreButton';
 import Footer from '../components/Footer';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from "../components/ReusableFooter";
+import NewLogo from "../components/Newlogo";
 
 import shape5 from '../images/small_circle.svg';
 import line1 from '../images/line1.svg';
@@ -237,7 +238,8 @@ export default function Index({ location }) {
             </Text>
           </Flex>
         </Flex>
-        <Slideshow />
+        <NewLogo />
+        {/* <Slideshow /> */}
       </Flex>
    
       <Flex
@@ -269,7 +271,7 @@ export default function Index({ location }) {
           </svg>
         </Box>
         <Box
-          pl="10%"
+          px="5%"
         >
           <Box
             className="vgd"
@@ -349,11 +351,11 @@ export default function Index({ location }) {
       <Flex
         flexDirection="column"
         className="vgd2"
+        px="10%"
       >
         <Box
           className="vgd"
           pt="100px"
-          pl="10%"
         >
           BUT HOW DO WE DO IT?
         </Box>
@@ -361,13 +363,6 @@ export default function Index({ location }) {
           flexDirection="row"
           flexWrap="noWrap"
           w="100%"
-          pl={[
-            "10%",
-            "10%",
-            "10%",
-            "17%",
-            "17%",
-          ]}
           className="whatwedo"
         >
           <Box>
@@ -424,7 +419,13 @@ export default function Index({ location }) {
           </p>
         </Box>
       </Box>
-      <OfferCard />    
+      <Flex
+        px="10%"
+        w="100%"
+        justifyContent="center"
+      >
+        <OfferCard />    
+      </Flex>
       <AccomplishmentSlider />
       <ClientTestimonials />
       <Flex

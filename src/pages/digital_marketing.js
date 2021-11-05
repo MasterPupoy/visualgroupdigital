@@ -9,19 +9,16 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import StaticLogo from '../components/StaticLogo';
+import Slideshow from '../components/Slideshow';
 import MobileNav from '../components/MobileNav';
+import OurWorks from '../components/Ourworks';
 
 import rocketpc from '../images/dm2.png';
 import digimark from '../images/dmbanner.png';
-
-import digitalMarketing from '../images/offers/digital_marketing.svg';
-import eCommerce from '../images/offers/e-commerce.svg';
-import facebookAds from '../images/offers/facebookads.svg';
 
 import hex from '../images/features/hex.png';
 import barchart from '../images/features/barchart.png';
@@ -38,6 +35,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/digital_marketing.css';
 import ReusableRanking from '../components/ReusableRanking';
+import DigitalMarketingOffers from '../components/DigitalMarketingOffers';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,11 +93,9 @@ export default function Marketing({ location }) {
   const isBrowser = typeof window !== "undefined"
   
   const [width, setWidth]   = useState();
-  const [height, setHeight] = useState();
   
   const updateDimensions = () => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
   }
 
  useEffect(() => {
@@ -116,44 +112,20 @@ export default function Marketing({ location }) {
 
     let dmtl = gsap.timeline({scrollTrigger : {
       trigger: ".digimark",
-      start: "top center",
+      start: "top bottom",
     }})
 
     dmtl.fromTo(".digimark", {
       x: -100,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".rocketpic", {
       x: -200,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, ">")
+    }, { duration: 0.25, x: 0, opacity: 1}, ">")
 
   })
 
-  useEffect(() => {
-
-    let cardstl = gsap.timeline({ scrollTrigger: {
-      trigger: ".whatwedo",
-      start: "bottom center",
-    }})
-
-    cardstl.fromTo(".whatwedo", {
-        opacity: 0,
-        y: -100
-      }, { duration: 0.5, y: 0, opacity: 1})
-      .fromTo(".ofc1", {
-        opacity: 0,
-        x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
-      .fromTo(".ofc2", {
-        opacity: 0,
-        x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
-      .fromTo(".ofc3", {
-        opacity: 0,
-        x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
-  })
 
   return (
     <Box className="main" overflowX="hidden">
@@ -172,13 +144,13 @@ export default function Marketing({ location }) {
         />
         <Flex
           pt="50px"
-           px={[
+          px={[
             "10px",
             "20px",
             "60px",
-            "103px"
+            "10%"
           ]}
-          flexWrap="wrap"
+            flexWrap="wrap"
           alignItems="center"
           justifyContent="center"
         >
@@ -207,7 +179,18 @@ export default function Marketing({ location }) {
               with our SEO services. We will get you on page one for 
               all your top keyword searches for your business.
             </Text>
-            <LearnMoreButton link="/contact" />
+            <Flex
+                justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton link="/contact" />
+            </Flex>
           </Box>
           <Flex
             mx={[
@@ -245,84 +228,10 @@ export default function Marketing({ location }) {
           </Box>
         </Flex>
         <Flex
-          pt="50px"
-          justifyContent="center"
-          flexWrap="wrap"
+          px="10%"
+          w="100%"
         >
-          <Box
-            className="offerCards ofc1"
-          >
-            <img src={digitalMarketing} alt="digitalmarketing.svg" />
-            <h3>
-              E-commerce Store Development &amp; Marketing
-            </h3>
-            <p>
-             We can generate valuable site visitors with our bespoke lead generation services. We collaborate with your business to understand your product or service, process, and most importantly your prospects.
-            </p>
-            <Flex
-              justifyContent="center"
-              alignItems="center"
-            >
-              <button
-                className="bizbut"
-                onClick={() => {
-                  window.location.assign("/ecommerce_marketing")
-              }}
-              >
-                BUSINESS ENQUIRY
-              </button>
-            </Flex>
-          </Box>
-          <Box
-            className="offerCards ofc2"
-          >
-            <img src={eCommerce} alt="digitalmarketing.svg" />
-            <h3>
-              Mobile App Developement &amp; Marketing
-            </h3>
-            <p>
-              The world is relying more and more on digital devices. As a result, having digital services for your brand is important in order to keep up with competitors and customer expectations.
-            </p>
-            <Flex
-              justifyContent="center"
-              alignItems="center"
-              pt="10px"
-              onClick={() => {
-                window.location.assign("/web_development")
-              }}
-            >
-              <button
-                className="bizbut"
-              >
-                BUSINESS ENQUIRY
-              </button>
-            </Flex>
-          </Box>
-          <Box
-            className="offerCards ofc3"
-          >
-            <img src={facebookAds} alt="digitalmarketing.svg" />
-            <h3>
-              Email Marketing
-            </h3>
-            <p>
-              Email marketing is an important marketing toolkit that is especially effective in building brand loyalty and trust. Instead of providing you with email lead lists, we’ll help you build your own email list with people that share a genuine interest in your company.
-            </p>
-            <Flex
-              justifyContent="center"
-              alignItems="center"
-              pt="30px"
-            >
-              <button
-                className="bizbut"
-                onClick={() => {
-                  window.location.assign("/facebook_advertising")
-              }}
-              >
-                BUSINESS ENQUIRY
-              </button>
-            </Flex>
-          </Box>
+          <DigitalMarketingOffers />
         </Flex>
         {/* <Box
           pt="130px"
@@ -353,8 +262,17 @@ export default function Marketing({ location }) {
           alignItems="center"
           my="50px"
           w="100%"
+          px="10%"
         >
-          <Box>
+          <Box
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "30%",
+              "30%"
+            ]}
+          >
             <h3
               className="digimarkfeatures"
             >
@@ -363,6 +281,13 @@ export default function Marketing({ location }) {
           </Box>
           <Box
             py="20px"
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%",
+              "50%",
+            ]}
           >
             <p
               className="whyus"
@@ -381,14 +306,24 @@ export default function Marketing({ location }) {
           justifyContent="center"
           alignItems="center"
           mt="50px"
-          mx="20px"
+          px="10%"
         >
-          <Box>
+          <Box
+               w={[
+              "100%",
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
+             px="50px"
+          >
             <Text
-              fontSize="5xl"
+              fontSize="4xl"
               style={{
                 color : "#0A2F53",
-                fontFamily: "dm-sans"
+                fontFamily: "dm-sans",
+                fontWeight: "bold"
               }}
             >
               Digital Marketing Features
@@ -430,13 +365,23 @@ export default function Marketing({ location }) {
                 </li> 
             </ul>
           </Box>
-          <Box>
+          <Box
+               w={[
+              "100%",
+              "100%",
+              "100%",
+              "100%",
+              "50%"
+            ]}
+          >
             <img src={growth} alt="seo_growth" className="seogrowthimg" />
           </Box>
         </Flex>
-        <AccomplishmentSlider />
+        {/* <AccomplishmentSlider /> */}
+        <OurWorks />
         <ClientTestimonials /> 
-        <StaticLogo />
+        {/* <StaticLogo /> */}
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

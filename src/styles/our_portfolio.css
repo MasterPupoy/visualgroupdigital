@@ -75,6 +75,13 @@
 
 } */
 
+.loaderskel {
+  width: 300px;
+  margin: 5px 5px;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px 0 #d5d5d5;
+}
+
 .picContainer > img {
   background-color: #0a2f53;
   width: 300px;

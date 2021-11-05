@@ -10,11 +10,13 @@ import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import ReusableRanking from '../components/ReusableRanking';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
+import Slideshow from '../components/Slideshow';
 
 import webdev from '../images/webdevbanner.png';
 import webdevelopment from '../images/webdevelopment.png';
@@ -104,18 +106,17 @@ export default function Web_development({ location }) {
     
     let digibrandtl = gsap.timeline({ scrollTrigger : {
       trigger: ".digibrand",
-      start: "top center",
-      toggleAttribute: "restart none none none"
+      start: "top bottom",
     }})
     
     digibrandtl.fromTo(".digibrand", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
     .fromTo(".rocketpic", {
       x: -100,
       opacity: 0
-    }, { duration: 1, opacity: 1, x: 0})
+    }, { duration: 0.25, opacity: 1, x: 0})
 
   })
 
@@ -123,69 +124,68 @@ export default function Web_development({ location }) {
 
     let cardstl = gsap.timeline({ scrollTrigger: {
       trigger: ".whatwedo",
-      start: "bottom center",
-      toggleActions: "restart none none none"
+      start: "bottom bottom",
     }})
 
     cardstl.fromTo(".whatwedo", {
         opacity: 0,
         y: -100
-      }, { duration: 0.5, y: 0, opacity: 1})
+      }, { duration: 0.25, y: 0, opacity: 1})
       .fromTo(".ofc1", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc2", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc3", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc4", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc5", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc6", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc7", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc8", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc9", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc10", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
       .fromTo(".ofc11", {
         opacity: 0,
         x: 100
-      }, { duration: 0.5, x: 0, opacity: 1})
+      }, { duration: 0.25, x: 0, opacity: 1})
   })
 
   return (
     <Box className="main">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/web_development' main="/branding" />
           : <MobileNav main="/web_development"/>
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -196,19 +196,22 @@ export default function Web_development({ location }) {
         />
         <Flex
           pt="50px"
-           pl={[
+           px={[
             "10px",
             "20px",
             "60px",
-            "103px"
+            "10%"
           ]}
+          w="100%"
           flexWrap="wrap"
           alignItems="center"
+          justifyContent="space-between"
         >
           <Box
             className="digibrand"
               width={[
               "100%", // 0-30em
+              "100%",
               "100%", // 30em-48em
               "50%", // 48em-62em
               "40%", // 62em+
@@ -236,12 +239,23 @@ export default function Web_development({ location }) {
               page or drive them away in an instant! Invest in a strong web presence to keep 
               customers interested in your site rather than competitors' sites.
             </Text>
-            <button
-              // className="businessEnquiryButton"
-              className="button button--aylen"
+            <Flex
+              justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
             >
-              <span className="biz">BUSINESS ENQUIRY</span>
-            </button>
+              <button
+                // className="businessEnquiryButton"
+                className="button button--aylen"
+              >
+                <span className="biz">BUSINESS ENQUIRY</span>
+              </button>
+            </Flex>
           </Box>
           <Flex
             ml={[
@@ -252,9 +266,10 @@ export default function Web_development({ location }) {
             ]}
             width={[
               "100%", // 0-30em
+              "100%",
               "100%", // 30em-48em
               "50%", // 48em-62em
-              "40%", // 62em+
+              "45%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -672,10 +687,11 @@ export default function Web_development({ location }) {
           <ReusableRanking 
             textArray={rankingArray}
           />
-        
-        <AccomplishmentSlider />
-        <ClientTestimonials /> 
-        <StaticLogo />
+        <OurWork /> 
+        {/* <AccomplishmentSlider /> */}
+        <ClientTestimonials />
+        <Slideshow /> 
+        {/* <StaticLogo /> */}
         <ReusableFooter 
           text={text}
         />

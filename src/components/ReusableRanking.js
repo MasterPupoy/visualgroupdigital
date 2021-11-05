@@ -18,18 +18,17 @@ export default function ReusableRanking({ textArray }) {
     
     let ranktl = gsap.timeline({ scrollTrigger: {
       trigger: ".reusablerankingnum",
-      start: "top center",
-      toggleActions: "restart none none none"
+      start: "top bottom",
     }})
 
     ranktl.fromTo(".rrfirstclass", {
       x: -300,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.5, x: 0, opacity: 1})
     .fromTo(".rrsecondclass", {
       x: -300,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.5, x: 0, opacity: 1})
 
   })
   

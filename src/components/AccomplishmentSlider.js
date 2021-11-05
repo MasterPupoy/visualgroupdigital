@@ -165,7 +165,7 @@ function SecondSlider({ dir }){
         className="sliderBox"
       >
         <h3>
-          Search Engine Optimization
+          Search Engine Optimisation
         </h3>
         <Box>
           <a
@@ -305,14 +305,13 @@ export default function AccomplishmentSlider() {
 
     let vgdtl = gsap.timeline({ scrollTrigger: {
       trigger: ".accompvgd",
-      toggleActions: "restart none none none",
       start: "top center"
     }})
 
     vgdtl.fromTo(".accompvgd", {
       y: -300,
       opacity: 0
-    }, { duration: 1, y: 0, opacity: 1})
+    }, { duration: 0.25, y: 0, opacity: 1})
 
     setInterval(() => {
       dispatch({ dir : "right" })
@@ -356,7 +355,7 @@ export default function AccomplishmentSlider() {
         >
           <Box>
             <h3>
-             OUR WORKS 
+             OUR SERVICES 
             </h3>
           </Box>
         </Flex>

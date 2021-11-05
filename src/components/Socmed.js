@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Lightbox from 'react-awesome-lightbox';
 import {
   Flex,
+  Skeleton
 } from '@chakra-ui/react';
 
 import socmed from '../images/portfolio/socmed.json';
@@ -9,7 +10,18 @@ import socmed from '../images/portfolio/socmed.json';
 import "react-awesome-lightbox/build/style.css";
 import '../styles/our_portfolio.css';
 
+function ImageSkeleton({ num = 12}){
+  let all = []
+
+  for(let i = 0; i < num; i++){
+    all = [...all, <Skeleton key={i} w="300px" h="300px" startColor="blue.500" endColor="orange.500" className="loaderskel" /> ]
+  }
+
+  return all
+}
+
 export default function Socmed(){
+  const [loading, setLoading] = useState(true);
 
   const [Open, setOpen] = useState(false);
   const [activeImg, setActiveImg] = useState("");
@@ -39,9 +51,15 @@ export default function Socmed(){
         justifyContent="center"
         alignItems="center"
       >
+        {(loading)
+        ? <ImageSkeleton />
+        : null
+        }
         {socmed.map(img => {
           return (
-            <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+            <img key={img} src= {img} alt="portfoliopic" 
+            onLoad={() => setLoading(false)}
+            onClick={() => {
               setActiveImg(img)
               setOpen(true)
             }} />

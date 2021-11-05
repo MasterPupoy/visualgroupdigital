@@ -19,6 +19,7 @@ export default function ReusableFooter({ text }) {
         h="500px"
         flexWrap="wrap"
         mt="100px"
+        justifyContent="center"
       >
         <Box
             w={[
@@ -55,8 +56,8 @@ export default function ReusableFooter({ text }) {
               ]}
               transform={[
                 "translate(15%, 50%)",
-                "translate(7%, 50%)",
-                "translate(7%, 100%)",
+                "translate(20%, 50%)",
+                "translate(20%, 100%)",
                 "translate(15%, 130%)",
                 "translate(35%, 130%)",
               ]}
@@ -76,8 +77,8 @@ export default function ReusableFooter({ text }) {
             "100%",
             "100%",
             "36%",
-            "40%",
-            "40%"
+            "35 %",
+            "35%"
           ]}
           justifyContent="center"
           flexDirection={[

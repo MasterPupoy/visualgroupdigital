@@ -102,6 +102,12 @@
   padding: 0px 10px;
 }
 
+
+
+.social > a > img:hover {
+  filter: invert(58%) sepia(37%) saturate(4993%) hue-rotate(350deg) brightness(95%) contrast(96%);
+}
+
 .footerrule {
   margin: 64px 100px 0px 100px;
 }

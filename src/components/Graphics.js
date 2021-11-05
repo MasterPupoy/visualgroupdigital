@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import {
   Flex,
   Box,
-  Text
+  Text,
+  Skeleton
 } from '@chakra-ui/react';
 import Lightbox from 'react-awesome-lightbox';
 
@@ -14,7 +15,19 @@ import promodes from '../images/portfolio/graphics/promodes.json';
 
 import '../styles/our_portfolio.css';
 
+function ImageSkeleton({ num = 8 }){
+  let all = []
+
+  for(let i = 0; i < num; i++){
+    all = [...all, <Skeleton key={i} w="300px" h="300px" startColor="blue.500" endColor="orange.500" className="loaderskel" /> ]
+  }
+
+  return all
+}
+
 function Appui({ setActiveImg, setOpen}){
+  const [loading, setLoading] = useState(true);
+
   return (
   <Flex
     className="picContainer"
@@ -23,9 +36,16 @@ function Appui({ setActiveImg, setOpen}){
     justifyContent="center"
     alignItems="center"
   >
+    {(loading) 
+      ? <ImageSkeleton />
+      : null
+    }
+
     {appui.map(img => {
       return (
-        <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+        <img key={img} src= {img} alt="portfoliopic" 
+        onLoad={() => setLoading(false)}
+        onClick={() => {
           setActiveImg(img)
           setOpen(true)
         }} />
@@ -38,6 +58,8 @@ function Appui({ setActiveImg, setOpen}){
 }
 
 function Bizcard({ setActiveImg, setOpen}){
+  const [loading, setLoading] = useState(true);
+
   return (
   <Flex
     className="picContainer"
@@ -46,9 +68,15 @@ function Bizcard({ setActiveImg, setOpen}){
     justifyContent="center"
     alignItems="center"
   >
+     {(loading) 
+      ? <ImageSkeleton />
+      : null
+    }
     {bizcard.map(img => {
       return (
-        <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+        <img key={img} src= {img} alt="portfoliopic" 
+         onLoad={() => setLoading(false)}
+        onClick={() => {
           setActiveImg(img)
           setOpen(true)
         }} />
@@ -61,6 +89,8 @@ function Bizcard({ setActiveImg, setOpen}){
 }
 
 function Flyer({ setActiveImg, setOpen}){
+  const [loading, setLoading] = useState(true);
+
   return (
   <Flex
     className="picContainer"
@@ -69,9 +99,15 @@ function Flyer({ setActiveImg, setOpen}){
     justifyContent="center"
     alignItems="center"
   >
+     {(loading) 
+      ? <ImageSkeleton />
+      : null
+    }
     {flyer.map(img => {
       return (
-        <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+        <img key={img} src= {img} alt="portfoliopic" 
+         onLoad={() => setLoading(false)}
+        onClick={() => {
           setActiveImg(img)
           setOpen(true)
         }} />
@@ -84,6 +120,8 @@ function Flyer({ setActiveImg, setOpen}){
 }
 
 function Logo({ setActiveImg, setOpen}){
+  const [loading, setLoading] = useState(true);
+
   return (
   <Flex
     className="picContainer"
@@ -92,9 +130,15 @@ function Logo({ setActiveImg, setOpen}){
     justifyContent="center"
     alignItems="center"
   >
+     {(loading) 
+      ? <ImageSkeleton />
+      : null
+    }
     {logo.map(img => {
       return (
-        <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+        <img key={img} src= {img} alt="portfoliopic" 
+         onLoad={() => setLoading(false)}
+        onClick={() => {
           setActiveImg(img)
           setOpen(true)
         }} />
@@ -107,6 +151,8 @@ function Logo({ setActiveImg, setOpen}){
 }
 
 function Promodes({ setActiveImg, setOpen}){
+  const [loading, setLoading] = useState(true);
+
   return (
   <Flex
     className="picContainer"
@@ -115,9 +161,15 @@ function Promodes({ setActiveImg, setOpen}){
     justifyContent="center"
     alignItems="center"
   >
+     {(loading) 
+      ? <ImageSkeleton />
+      : null
+    }
     {promodes.map(img => {
       return (
-        <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+        <img key={img} src= {img} alt="portfoliopic" 
+         onLoad={() => setLoading(false)}
+        onClick={() => {
           setActiveImg(img)
           setOpen(true)
         }} />
@@ -185,7 +237,6 @@ export default function Graphics() {
       flexDirection="column"
     >
       <Flex
-        mt="50px"
         px="50px"
         flexWrap="wrap"
         justifyContent="center"
@@ -207,11 +258,11 @@ export default function Graphics() {
             <Text
               fontFamily="dm-sans"
               fontSize={[
-                "15px",
-                "15px",
-                "15px",
-                "15px",
-                "15px"
+                "13px",
+                "13px",
+                "13px",
+                "13px",
+                "13px"
               ]}
               my="10px"
               fontWeight="bold"

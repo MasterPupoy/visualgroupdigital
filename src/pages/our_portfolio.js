@@ -186,6 +186,7 @@ export default function Our_portfolio({ location }) {
       />
       <Flex
         mt="100px"
+        mb="50px"
         px="50px"
         flexWrap="wrap"
         justifyContent="center"
@@ -207,13 +208,13 @@ export default function Our_portfolio({ location }) {
             <Text
               fontFamily="dm-sans"
               fontSize={[
-                "15px",
-                "15px",
-                "15px",
-                "15px",
-                "15px"
+                "13px",
+                "13px",
+                "13px",
+                "13px",
+                "13px"
               ]}
-              my="10px"
+              my="5px"
               fontWeight="bold"
               color={(key === button.key) ? "#ee6f19" : "#848484"}
             >

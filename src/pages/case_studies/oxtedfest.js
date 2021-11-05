@@ -20,6 +20,7 @@ import MobileNav from '../../components/MobileNav';
 import ox from '../../images/scraped/oxted_festival.json';
 
 import '../../styles/casestudies.css';
+import Slideshow from '../../components/Slideshow';
 
 export default function Oxtedfest({ location }) {
 
@@ -50,18 +51,16 @@ export default function Oxtedfest({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box
-        mt="60px"
-      >
       {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box> 
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="50px"
           flexDirection="column"
         >
           <Box>
@@ -177,7 +176,7 @@ export default function Oxtedfest({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

@@ -17,6 +17,7 @@ import MobileNav from '../../components/MobileNav';
 import sd from '../../images/scraped/sodelishus.json';
 
 import '../../styles/casestudies.css';
+import Slideshow from '../../components/Slideshow';
 
 export default function Sodelishus({ location }) {
 
@@ -48,18 +49,17 @@ export default function Sodelishus({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box
-        mt="60px"
-      >
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
           flexDirection="column"
+          mt="50px"
         >
           <Box>
             <h1
@@ -175,7 +175,7 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

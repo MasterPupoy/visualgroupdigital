@@ -174,6 +174,7 @@ export default function Contact({ location }) {
             <Box
               className="contactgetstarted"
               h="190px"
+              mx="50px"
             >
               <Text
                 as="h3"
@@ -203,7 +204,7 @@ export default function Contact({ location }) {
             </Box>
             <Box
               className="contactgetstarted2"
-            
+              mx="50px"
             >
               <h3>
                 First, tell us about yourself
@@ -294,6 +295,7 @@ export default function Contact({ location }) {
             <Box
               className="contactgetstarted3"
               pt="50px"
+              mx="50px"
             >
               <h3>
                 Lastly, tell us about the project

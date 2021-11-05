@@ -30,11 +30,12 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       let tl = gsap.timeline({scrollTrigger: {
         trigger: ".hero-section",
         scrub: 1,
-        start: "80% center",
+        start: "60% center",
       }})
 
       tl.to(".reusableheader", {
         y: -150,
+        zIndex: 0,
         duration: 1,
         ease: "ease"
       })
@@ -93,7 +94,11 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       duration: 1,
       ease: "ease"
       }, "<")
-    })
+
+      return () => {
+        tl.kill(true);
+      }
+    }, [])
 
   return (
     <>
@@ -113,18 +118,19 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       height={[
         "700px",
         "700px",
-        "700px",
-        "750px",
-        "750px"
+        "90vh",
+        "90vh",
+        "100vh"
       ]}
       w="100%"
     >
       <Box
         pt={[
-          "50%",
           "40%",
-          "150px",
-          "180px"
+          "20%",
+          "20%",
+          "120px",
+          "130px"
         ]}
         width={[
           "100%", // 0-30em
@@ -137,6 +143,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
       >
         <Text
           className="reusableheader"
+          as="h3"
           fontSize={["37px", "37px", "37px", "50px"]}
           lineHeight={["40px", "40px", "40px", "40px", "62px"]}
         >
@@ -147,11 +154,12 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           as="p"
           fontSize={["15px", "15px", "18px", "20px", "20px"]}
           className="reusablepara"
+          pt="10px"
         >
           {paragraph}
         </Text>
         <Box
-          pt="20px"
+          pt="90px"
           w={[
             "100%",
             "355px",
@@ -187,11 +195,19 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           "50%",
           "50%" // 62em+
         ]}
+        mt={[
+          "0px",
+          "0px",
+          "0px",
+          "52px",
+          "20px",
+          "20px"
+        ]}
         height={[
           "0px",
           "0px",
           "0px",
-          "253px",
+          "273px",
           "263px",
           "273px"
         ]}

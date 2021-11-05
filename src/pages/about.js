@@ -57,7 +57,7 @@ export default function About({ location }) {
     
     let ceotl = gsap.timeline({ scrollTrigger : {
       trigger: ".hero-section",
-      start: "bottom center",
+      start: "70% center",
     }})
 
     ceotl.fromTo(".founderfounder", {
@@ -81,6 +81,10 @@ export default function About({ location }) {
     .fromTo("#aboutusceolearnmore", {
       opacity: 0
     }, { duration: 0.25, opacity: 1})
+
+    return () => {
+      ceotl.kill(true);
+    }
 
   })
 
@@ -253,7 +257,7 @@ export default function About({ location }) {
           <img src={vgd} alt="vgd" />
         </Flex>
         <Box
-          pl={[
+          px={[
             "10px",
             "10px",
             "10%",
@@ -264,8 +268,8 @@ export default function About({ location }) {
           <h3 className="ourprocess">
             OUR <span>PROCESS</span>
           </h3>
+          <Process /> 
         </Box>
-        <Process /> 
         {/* <StaticLogo /> */}
         <ReusableFooter text={text} />
         <Footer />

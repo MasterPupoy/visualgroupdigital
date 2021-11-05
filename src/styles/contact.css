@@ -58,18 +58,17 @@
 }
 
 .contactgetstarted2 > h3 {
-  
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-
+  font-size: 32px;
   line-height: 40px;
   /* identical to box height, or 125% */
 
   text-align: center;
   letter-spacing: -0.03em;
 
-  color: #0A2F53;
+  color: #0A2F53;  
 }
 
 .inputField {

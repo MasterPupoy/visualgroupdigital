@@ -10,6 +10,7 @@ import "react-awesome-lightbox/build/style.css";
 import SEO from '../../components/Seo';
 import Nav from '../../components/Nav';
 import ReusableFooter from '../../components/ReusableFooter';
+import Slideshow from '../../components/Slideshow';
 import StaticLogo from '../../components/StaticLogo';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
@@ -49,16 +50,16 @@ export default function Hellovans({ location }) {
   return (
     <Box className="main">
       <SEO />
-      <Box>
        {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="60px"
           flexDirection="column"
         >
           <Box>
@@ -166,7 +167,7 @@ export default function Hellovans({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

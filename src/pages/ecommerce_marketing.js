@@ -9,13 +9,13 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import StaticLogo from '../components/StaticLogo';
 import MobileNav from '../components/MobileNav';
-
+import Slideshow from '../components/Slideshow';
 
 import ecom from '../images/ecom.png';
 import digimark from '../images/E-Commerce.png';
@@ -154,12 +154,12 @@ export default function Ecommerce_marketing({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/ecommerce_marketing' main="/marketing" />
           : <MobileNav  main='/ecommerce_marketing' />
         }
+      <Box>
         <ReusableHero 
           header={headerText}
           subheader={subheader}
@@ -177,6 +177,7 @@ export default function Ecommerce_marketing({ location }) {
           ]}
           flexWrap="wrap"
           alignItems="center"
+          justifyContent="space-between"
         >
           <Box
             className="digimark"
@@ -234,7 +235,7 @@ export default function Ecommerce_marketing({ location }) {
               "100%", // 30em-48em
               "100%",
               "50%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -391,7 +392,15 @@ export default function Ecommerce_marketing({ location }) {
           alignItems="center"
           mt="50px"
         >
-          <Box>
+          <Box
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "50%",
+              "50%"
+            ]}
+          >
             <h3
               className="digimarkfeatures"
             >
@@ -401,6 +410,13 @@ export default function Ecommerce_marketing({ location }) {
           <Box
             mx="10px"
             my="10px"
+            w={[
+              "100%",
+              "100%",
+              "100%",
+              "40%",
+              "40%"
+            ]}
           >
             <p
               className="whyus"
@@ -415,9 +431,11 @@ export default function Ecommerce_marketing({ location }) {
           textArray={rankingArray}
         />
      
-        <AccomplishmentSlider />
-        <ClientTestimonials /> 
-        <StaticLogo />
+        {/* <AccomplishmentSlider /> */}
+        <OurWork />
+        <ClientTestimonials />
+        <Slideshow /> 
+        {/* <StaticLogo /> */}
         <ReusableFooter 
           text={text}
         />

@@ -9,12 +9,14 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import StaticLogo from '../components/StaticLogo';
 import MobileNav from '../components/MobileNav';
+import Slideshow from '../components/Slideshow';
 
 import fblogo from '../images/fbads.png';
 import digimark from '../images/fbadsbanner.png';
@@ -186,6 +188,7 @@ export default function Facebook_advertising({ location }) {
           ]}
           flexWrap="wrap"
           alignItems="center"
+          justifyContent="space-between"
         >
           <Box
             className="digimark"
@@ -225,7 +228,18 @@ export default function Facebook_advertising({ location }) {
                in reaching their target consumer market in a cost-effective way. Building an organic following and running paid ads 
                are two popular methods for increasing revenue that we can help you with! 
             </Text>
-            <LearnMoreButton id="ecomlearn" link="/contact" />
+            <Flex
+                  justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton id="ecomlearn" link="/contact" />
+            </Flex>
           </Box>
           <Flex
             width={[
@@ -237,6 +251,7 @@ export default function Facebook_advertising({ location }) {
             ]}
             pt="10px"
             justifyContent="center"
+            
           >
             <img src={fblogo} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", width: "550px", height: "400px"}} />
           </Flex>
@@ -250,7 +265,9 @@ export default function Facebook_advertising({ location }) {
           alignItems="center"
           pt="123px"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h3>
               Visual Group Digital as your Facebook Ad Agency
             </h3>
@@ -474,9 +491,11 @@ export default function Facebook_advertising({ location }) {
         <ReusableRanking 
           textArray={rankingArray}
         />
-        <AccomplishmentSlider />
+        <OurWork />
+        {/* <AccomplishmentSlider /> */}
         <ClientTestimonials /> 
-        <StaticLogo />
+        {/* <StaticLogo /> */}
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

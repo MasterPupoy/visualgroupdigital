@@ -47,18 +47,17 @@ export default function Maneuk({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
-      <Box
-        mt="60px"
-      >
          {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="50px"
+          
         >
           <Box>
             <h1

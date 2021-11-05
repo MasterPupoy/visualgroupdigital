@@ -9,13 +9,14 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-import AccomplishmentSlider from '../components/AccomplishmentSlider';
+// import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import OurWork from '../components/Ourworks';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
 import MobileNav from '../components/MobileNav';
 import StaticLogo from '../components/StaticLogo';
-
+import Slideshow from '../components/Slideshow';
 
 import google from '../images/google.jpg';
 import digimark from '../images/digimark.png';
@@ -186,6 +187,7 @@ export default function Google_advertising({ location }) {
             "103px"
           ]}
           flexWrap="wrap"
+          justifyContent="space-between"
           alignItems="center"
         >
           <Flex
@@ -195,7 +197,7 @@ export default function Google_advertising({ location }) {
               "100%", // 30em-48em
               "100%",
               "100%", // 48em-62em
-              "40%", // 62em+
+              "55%", // 62em+
             ]}
             pt="10px"
             px="20px"
@@ -247,7 +249,9 @@ export default function Google_advertising({ location }) {
           justifyContent="center"
           px="20px"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h3>
               Visual Group Digital as your Google Ads Agency
             </h3>
@@ -388,9 +392,11 @@ export default function Google_advertising({ location }) {
         <ReusableRanking 
           textArray={rankingArray}
         />
-        <AccomplishmentSlider />
-        <ClientTestimonials /> 
-        <StaticLogo />
+        <OurWork />
+        {/* <AccomplishmentSlider /> */}
+        <ClientTestimonials />
+        <Slideshow /> 
+        {/* <StaticLogo /> */}
         <ReusableFooter 
           text={text}
         />

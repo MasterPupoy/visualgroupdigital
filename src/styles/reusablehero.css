@@ -6,7 +6,8 @@
   font-weight: bold;
 
   color: #0A2F53;
-
+  position: relative;
+  z-index: 0;
 
 }
 

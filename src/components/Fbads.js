@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import {
   Flex,
+  Skeleton
 } from '@chakra-ui/react';
 
 import fbads from '../images/portfolio/fbads.json';
@@ -10,10 +11,20 @@ import "react-awesome-lightbox/build/style.css";
 
 import '../styles/our_portfolio.css';
 
+function ImageSkeleton({ num }){
+  let all = []
+
+  for(let i = 0; i < num; i++){
+    all = [...all, <Skeleton key={i} w="300px" h="300px" startColor="blue.500" endColor="orange.500" className="loaderskel" /> ]
+  }
+
+  return all
+}
+
 export default function Fbads(){
   const seeMoreButton = useRef();
-
-  const [num, setNum] = useState(10);
+  const [loading, setLoading] = useState(true); 
+  const [num, setNum] = useState(12);
   const [views, setViews] = useState([])
 
   const [Open, setOpen] = useState(false);
@@ -22,11 +33,15 @@ export default function Fbads(){
  
   const toggleNum = () => {
     if(num < fbads.length){
-      setNum(val => val + 10);
-    }
+      setNum(val => {
+        let diff = fbads.length - val
+        
+        if(diff < 12){
+          return val + diff
+        }
 
-    if(num === fbads.length){
-      seeMoreButton.current.style.display = "none";
+        return val + 12
+      });
     }
   };
 
@@ -40,6 +55,10 @@ export default function Fbads(){
 
       for (let i = 0; i < num; i++){
         newarr.push(fbads[i]);
+      }
+
+      if(num >= fbads.length){
+        seeMoreButton.current.style.display = "none";
       }
 
       setViews(newarr)
@@ -77,9 +96,17 @@ export default function Fbads(){
         justifyContent="center"
         alignItems="center"
       >
+        {(loading)
+          ? <ImageSkeleton num={num} />
+          : null
+        }
+
+
         {views.map(img => {
           return (
-            <img key={img} src= {img} alt="portfoliopic" onClick={() => {
+            <img key={img} src= {img} alt="portfoliopic" 
+            onLoad={() => setLoading(false)}
+            onClick={() => {
               setActiveImg(img)
               setOpen(true)
             }} />

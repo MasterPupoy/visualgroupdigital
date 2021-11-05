@@ -38,11 +38,11 @@ export default function Footer() {
   const serviceslinks = [
      {
       tab : 'Marketing',
-      key : '/marketing'
+      key : '/digital_marketing'
     },
     {
       tab : 'Branding',
-      key : '/branding'
+      key : '/digital_branding'
     },
     {
       tab : 'Case Studies',
@@ -262,7 +262,7 @@ export default function Footer() {
           <a
           
           >
-            <img src={twitter} alt="twitter.svg" style={{ height: "30px", width: "30px",  cursor: "pointer"  }} />
+            <img src={twitter} alt="twitter.svg" style={{ height: "30px", width: "30px",  cursor: "pointer" }} />
           </a>
           <a
             href="https://www.instagram.com/visualgroupdigitalltd"

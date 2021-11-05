@@ -17,6 +17,7 @@ import MobileNav from '../../components/MobileNav';
 import hello from '../../images/scraped/hello_vans.json';
 
 import '../../styles/casestudies.css';
+import Slideshow from '../../components/Slideshow';
 
 export default function Hellovans({ location }) {
 
@@ -48,24 +49,24 @@ export default function Hellovans({ location }) {
   return (
     <Box className="main" overflowX="hidden">
       <SEO />
+      {
+         (width > 1280) 
+         ? <Nav loc={location} page='/case_studies' />
+         : <MobileNav />
+       }
       <Box
-        mt="60px"
       >
-       {
-          (width > 1280) 
-          ? <Nav loc={location} page='/case_studies' />
-          : <MobileNav />
-        }
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="60px"
+          flexDirection="column"
         >
           <Box>
             <h1
               className="title"
             >
-              Sodelishus
+              Hello Vans
             </h1>
           </Box>
             <Box
@@ -172,7 +173,7 @@ export default function Hellovans({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <Slideshow />
         <ReusableFooter 
           text={text}
         />

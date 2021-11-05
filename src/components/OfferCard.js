@@ -28,40 +28,39 @@ export default function OfferCard() {
 
     let offercardstl = gsap.timeline({ scrollTrigger: {
       trigger: ".offercardscontainer",
-      start: "top center",
+      start: "top bottom",
     }})
 
     offercardstl.fromTo(".ofc1", {
       x: 300,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".ofc2", {
       x: 500,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, 0.5)
+    }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
     .fromTo(".ofc3", {
       x: 700,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, 0.5)
+    }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
 
     let offercardstl2 = gsap.timeline({ scrollTrigger: {
       trigger: ".ofc3",
       start: "bottom center",
-      toggleActions: "restart none none none",
     }})
 
     offercardstl2.fromTo(".ofc4", {
       x: 300,
       opacity: 0 
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".ofc5", {
       x: 500,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, 0.5)
+    }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
     .fromTo(".ofc6", {
       x: 700,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, 0.5)
+    }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
 
     let offercardstl3 = gsap.timeline({ scrollTrigger: {
       trigger: ".ofc6",
@@ -72,15 +71,15 @@ export default function OfferCard() {
     offercardstl3.fromTo(".ofc7", {
       x: 300,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1})
+    }, { duration: 0.25, x: 0, opacity: 1})
     .fromTo(".ofc8", {
       x: 500,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, 0.5)
+    }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
     .fromTo(".ofc9", {
       x: 700,
       opacity: 0
-    }, { duration: 1, x: 0, opacity: 1}, 0.5)
+    }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
 
   })
 
@@ -90,12 +89,13 @@ export default function OfferCard() {
       flexWrap="wrap"
       justifyContent="space-evenly"
       pt="63px"
+      w="100%"
       className="offercardscontainer"
       overflowX="hidden"
     >
 
       <Box
-        className="offerCards ofc1"
+        className="offerCards1 ofc1"
       >
         <img src={digitalMarketing} alt="digitalmarketing.svg" />
         <h3>
