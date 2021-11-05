@@ -98,7 +98,7 @@ export default function Ecommerce_marketing({ location }) {
 
     let dmtl = gsap.timeline({scrollTrigger : {
       trigger: ".digimark",
-      start: "top center",
+      start: "top bottom",
     }})
 
     dmtl.fromTo(".firstecom", {

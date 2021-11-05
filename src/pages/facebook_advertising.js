@@ -101,7 +101,7 @@ export default function Facebook_advertising({ location }) {
 
     let dmtl = gsap.timeline({scrollTrigger : {
       trigger: ".digimark",
-      start: "top center",
+      start: "top bottom",
     }})
 
     dmtl.fromTo(".firstfb", {

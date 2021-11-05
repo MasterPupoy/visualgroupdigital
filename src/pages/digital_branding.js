@@ -111,7 +111,7 @@ export default function Digital_branding({ location }) {
     
     let digibrandtl = gsap.timeline({ scrollTrigger : {
       trigger: ".digibrand",
-      start: "top center",
+      start: "top bottom",
       toggleAttribute: "restart none none none"
     }})
     
