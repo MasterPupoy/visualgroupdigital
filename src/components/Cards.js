@@ -148,7 +148,7 @@ export default function Cards() {
           <h3
             className="cardh"
           >
-            Strategy &amp; Research
+            Management &amp; Marketing
           </h3>
           <p
             className="cardp"

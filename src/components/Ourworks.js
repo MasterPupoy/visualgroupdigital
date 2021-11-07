@@ -10,7 +10,7 @@ import seo8 from '../images/ourwork/seo8.jpg';
 import googleads from '../images/ourwork/googleads.jpg';
 import fbadss from '../images/ourwork/fbadss.jpg';
 import socmedmarketing from '../images/ourwork/social_media_2.jpg';
-import socmedad from '../images/ourwork/socmedad.jpg';
+import socmedad from '../images/ourwork/insta.jpg';
 
 import ViewMore from '../components/ViewMoreButton';
 

@@ -20,6 +20,7 @@ import Footer from '../components/Footer';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from "../components/ReusableFooter";
 import NewLogo from "../components/Newlogo";
+import OurWork from "../components/Ourworks";
 
 import shape5 from '../images/small_circle.svg';
 import line1 from '../images/line1.svg';
@@ -442,7 +443,8 @@ export default function Index({ location }) {
       >
         <OfferCard />    
       </Flex>
-      <AccomplishmentSlider />
+      <OurWork />
+      {/* <AccomplishmentSlider /> */}
       <ClientTestimonials />
       <Flex
         mt="100px"

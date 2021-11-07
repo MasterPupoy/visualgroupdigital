@@ -103,13 +103,6 @@ export default function ReusableHero({ image, header, subheader, paragraph,
   return (
     <>
     <Flex
-      mt={[
-        "25%",
-        "25%",
-        "60px",
-        "40px",
-        "40px"
-      ]}
       className="hero-section reusablehero"
       overflowX="hidden"
       overflowY="hidden"
@@ -201,8 +194,8 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           "0px",
           "0px",
           "52px",
-          "20px",
-          "20px"
+          "0px",
+          "0px"
         ]}
         height={[
           "0px",
