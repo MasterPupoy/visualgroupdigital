@@ -218,7 +218,7 @@ export default function Graphic_design({ location }) {
           mt="210px"
           overflowX="scroll"
           className="brandingslider"
-          mx="50px"
+          mx="5%"
         >
           <Flex
             w="3236px"

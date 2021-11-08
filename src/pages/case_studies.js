@@ -51,6 +51,7 @@ import reign from '../images/scraped/reign_supreme.json';
 
 
 import '../styles/casestudies.css';
+import ViewMoreButton from '../components/ViewMoreButton';
 
 function ClientView({ num, setActiveImg, setOpen }) {
   const [views, setViews] = useState([])
@@ -401,7 +402,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
               my="50px"
             >
               <Box>
-                <LearnMoreButton link={client.page} />
+                <ViewMoreButton link={client.page} />
               </Box>
             </Flex>
           </Box>

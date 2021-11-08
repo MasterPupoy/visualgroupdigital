@@ -13,11 +13,11 @@ import Process from '../components/Process';
 import LearnMoreButton from '../components/LearnMoreButton';
 import ReusableFooter from '../components/ReusableFooter';
 import MobileNav from '../components/MobileNav';
-import StaticLogo from '../components/StaticLogo';
-import vgd from '../images/dfaod.png';
+import vgdlogo from "../images/v-logo.svg";
+import OurWork from '../components/Ourworks';
 
-import ceo from '../images/ceo.png';
-import aboutus from '../images/pekture.png';
+import ceo from '../images/ceo.jpg';
+import aboutus from '../images/aboutus.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -86,7 +86,7 @@ export default function About({ location }) {
       ceotl.kill(true);
     }
 
-  })
+  }, [])
 
   return (
     <Box 
@@ -105,7 +105,7 @@ export default function About({ location }) {
           separated={false}
           paragraph={paragraph}
           image={aboutus}
-          imageClass="digitalmarkbanner"
+          imageClass="aboutusbanner"
         />
         <Flex
           pt="90px"
@@ -126,7 +126,7 @@ export default function About({ location }) {
               "100%", // 30em-48em
               "100%",
               "100%", // 48em-62em
-              "50%", // 62em+
+              "40%", // 62em+
             ]}
           >
             <Text
@@ -175,14 +175,7 @@ export default function About({ location }) {
               each new account.
             </Text>
             <Flex
-                           justifyContent={[
-                "center",
-                "center",
-                "center",
-                "center",
-                "flex-start",
-                "flex-start"
-              ]}
+              justifyContent="center"
             >
               <LearnMoreButton 
                 id="aboutusceolearnmore" 
@@ -191,25 +184,19 @@ export default function About({ location }) {
             </Flex>
           </Box>
           <Flex
-            mx={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
               "100%",
               "100%", // 48em-62em
-              "37%", // 62em+
+              "60%", // 62em+
             ]}
-            pt="50px"
             px="20px"
+            pt="50px"
             justifyContent="center"
             alignItems="center"
           >
-            <img src={ceo} alt="ceo.png" className="ceo" />
+            <img src={ceo} alt="ceo.png" className="ceo" style={{ width: "100%"}} />
           </Flex>
         </Flex>
         <Flex
@@ -254,10 +241,10 @@ export default function About({ location }) {
         </Flex>
         <Values /> 
         <Flex
-          justifyContent="center"
+          justifyContent="space-evenly"
           alignItems="center"
-          pt="158px"
-          px="20px"
+          py="58px"
+          px="10%"
           w={[
             "0%",
             "0%",
@@ -266,7 +253,30 @@ export default function About({ location }) {
             "100%"
           ]}
         >
-          <img src={vgd} alt="vgd" />
+          {/* <img src={vgd} alt="vgd" /> */}
+          <Flex
+            flexDirection="column"
+            w="50%"
+          >
+            <Text
+             className="ourprocess"
+            >
+              WHAT IS <br/> 
+              <span>VISUAL GROUP DIGITAL</span>
+            </Text>
+            <Text
+              className="subwhatwedo"
+            >
+              At Visual Group Digital, we help businesses flourish by following a comprehensive 3-step process of consulting, development, and marketing.
+            </Text>
+          </Flex>
+          <Flex
+            py="20px"
+            justifyContent="center"
+            alignItems="center"
+          >
+              <img src={vgdlogo} alt="logo" style={{ width: "500px"}} />
+          </Flex>
         </Flex>
         <Box
           px={[
@@ -282,6 +292,7 @@ export default function About({ location }) {
           </h3>
           <Process /> 
         </Box>
+        <OurWork />
         {/* <StaticLogo /> */}
         <ReusableFooter text={text} />
         <Footer />

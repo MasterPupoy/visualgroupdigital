@@ -29,7 +29,7 @@ import seo from '../images/offers/seo.svg';
 import digitalBranding from '../images/offers/digitalbranding.svg';
 import socmed from '../images/offers/socmed.svg';
 import graphics from '../images/offers/graphics.svg';
-import growth from '../images/growth.png';
+import growth from '../images/growth.jpg';
 import check from '../images/check.svg';
 
 import hex from '../images/features/hex.png';
@@ -626,7 +626,7 @@ export default function Search_engine_optimization({ location }) {
               "50%"
             ]}
           >
-            <img src={growth} alt="seo_growth" className="seogrowthimg" />
+            <img src={growth} alt="seo_growth" className="seogrowthimg" style={{ borderRadius: "10px"}} />
           </Box>
         </Flex>
         <OurWork />

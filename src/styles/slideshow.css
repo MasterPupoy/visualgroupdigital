@@ -18,7 +18,7 @@
 .logopng {
   /* -webkit-filter: invert(100%);  */
   /* filter: invert(100%); */
-  width: 150px;
+  /* width: 150px; */
   margin: 0px 30px;
   align-self: center;
 }
@@ -33,13 +33,13 @@
 
 .addon2 {
   /* width: 150px; */
-  height: 150px;
+  /* height: 150px; */
   /* margin: 0px 80px; */
   /* filter: invert(100%); */
 }
 
 .addon3 {
-  width: 150px;
+  /* width: 150px; */
   /* height: 50px; */
   /* margin: 0px 80px; */
   /* filter: invert(60%); */

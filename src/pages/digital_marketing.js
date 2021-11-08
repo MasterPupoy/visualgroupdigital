@@ -17,7 +17,7 @@ import Slideshow from '../components/Slideshow';
 import MobileNav from '../components/MobileNav';
 import OurWorks from '../components/Ourworks';
 
-import rocketpc from '../images/dm2.png';
+import rocketpc from '../images/dm2.jpg';
 import digimark from '../images/dmbanner.png';
 
 import hex from '../images/features/hex.png';
@@ -26,7 +26,7 @@ import monitor from '../images/features/monitor.png';
 import medal from '../images/features/medal.png';
 import brush from '../images/features/brush.png';
 
-import growth from '../images/growth.png';
+import growth from '../images/dmfeat.jpg';
 import check from '../images/check.svg';
 
 
@@ -374,7 +374,7 @@ export default function Marketing({ location }) {
               "50%"
             ]}
           >
-            <img src={growth} alt="seo_growth" className="seogrowthimg" />
+            <img src={growth} alt="seo_growth" className="seogrowthimg" style={{ borderRadius: "10px"}} />
           </Box>
         </Flex>
         {/* <AccomplishmentSlider /> */}

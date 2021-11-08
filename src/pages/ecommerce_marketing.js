@@ -17,7 +17,7 @@ import StaticLogo from '../components/StaticLogo';
 import MobileNav from '../components/MobileNav';
 import Slideshow from '../components/Slideshow';
 
-import ecom from '../images/ecom.png';
+import ecom from '../images/ecom.jpg';
 import digimark from '../images/E-Commerce.png';
 
 import digitalMarketing from '../images/offers/digital_marketing.svg';
@@ -124,7 +124,7 @@ export default function Ecommerce_marketing({ location }) {
     .fromTo("#ecomlearn", {
       opacity: 0
     }, { duration: 0.25, opacity: 1})
-  }) 
+  }, []) 
 
   useEffect(() => {
 
@@ -149,7 +149,7 @@ export default function Ecommerce_marketing({ location }) {
         opacity: 0,
         x: 100
       }, { duration: 0.25, x: 0, opacity: 1})
-    })
+    }, [])
 
   return (
     <Box className="main" overflowX="hidden">
@@ -198,10 +198,10 @@ export default function Ecommerce_marketing({ location }) {
             </Text>
             <Text
               as="h3"
-              fontSize="5xl"
+              fontSize="4xl"
               className="next-gen"
             >
-              The Next Generation of Shopping
+              The Next Gen of Shopping
             </Text>
             <Text
               as="p"

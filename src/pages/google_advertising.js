@@ -203,7 +203,7 @@ export default function Google_advertising({ location }) {
             px="20px"
             justifyContent="center"
           >
-            <img src={google} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", width: "600px", height: "500px"}} />
+            <img src={google} alt="rocketpc.svg" className="rocketpic"  />
           </Flex>
           <Box
             className="digimark"

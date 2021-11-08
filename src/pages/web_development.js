@@ -118,7 +118,7 @@ export default function Web_development({ location }) {
       opacity: 0
     }, { duration: 0.25, opacity: 1, x: 0})
 
-  })
+  }, [])
 
   useEffect(() => {
 
@@ -175,7 +175,7 @@ export default function Web_development({ location }) {
         opacity: 0,
         x: 100
       }, { duration: 0.25, x: 0, opacity: 1})
-  })
+  }, [])
 
   return (
     <Box className="main" overflowX="hidden">
@@ -424,6 +424,7 @@ export default function Web_development({ location }) {
           className="whatwedo"
           pl="20%"
           pt="123px"
+         
         >
           <Box>
             <h3>
@@ -441,6 +442,9 @@ export default function Web_development({ location }) {
           pt="50px"
           justifyContent="center"
           flexWrap="wrap"
+          w="100%"
+          px="5%"
+          // maxW="1400px"
         >
           <Box
             className="offerCards ofc1"

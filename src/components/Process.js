@@ -67,7 +67,7 @@ export default function Process() {
       opacity: 0
     }, { duration : 0.25, opacity: 1, x: 0})
 
-  })
+  }, [])
 
 
   return (

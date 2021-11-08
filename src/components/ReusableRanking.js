@@ -30,7 +30,7 @@ export default function ReusableRanking({ textArray }) {
       opacity: 0
     }, { duration: 0.5, x: 0, opacity: 1})
 
-  })
+  }, [])
   
   return (
     <Flex

@@ -14,13 +14,14 @@ import Slideshow from "../components/Slideshow";
 import Cards from "../components/Cards";
 import Process from "../components/Process";
 import OfferCard from "../components/OfferCard";
-import AccomplishmentSlider from "../components/AccomplishmentSlider";
+import LogoIndex from "../components/LogoIndex";
 import LearnMoreButton from '../components/LearnMoreButton';
 import Footer from '../components/Footer';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from "../components/ReusableFooter";
 import NewLogo from "../components/Newlogo";
 import OurWork from "../components/Ourworks";
+import vgdlogo from "../images/v-logo.svg";
 
 import shape5 from '../images/small_circle.svg';
 import line1 from '../images/line1.svg';
@@ -106,7 +107,7 @@ export default function Index({ location }) {
       x: -100
     }, { duration: 0.25, x: 0, opacity: 1})
 
-  })
+  }, [])
 
  
   useEffect(() => {
@@ -125,7 +126,7 @@ export default function Index({ location }) {
       x: -100
     }, { duration: 0.25, x: 0, opacity: 1})
 
-  })
+  }, [])
 
   useEffect(() => {
     
@@ -171,7 +172,7 @@ export default function Index({ location }) {
       ease: "ease"
       }, "<")
     
-  })
+  }, [])
 
   const headerText = "Marketing & Development Agency"
   const paragraph = "We Help Businesses Improve Their Marketing & Brand To Maximise Client Potential."
@@ -239,7 +240,8 @@ export default function Index({ location }) {
             </Text>
           </Flex>
         </Flex>
-        <NewLogo />
+        <LogoIndex />
+        {/* <NewLogo /> */}
         {/* <Slideshow /> */}
       </Flex>
    
@@ -288,49 +290,48 @@ export default function Index({ location }) {
             flexWrap="wrap"
             w="100%"
             className="whatwedo"
-            justifyContent={[
-              "center",
-              "center",
-              "flex-start",
-              "flex-start",
-              "flex-start"
-            ]}
+     
           >
             <Box
               w={[
-                "50%",
-                "50%",
-                "50%",
-                "25%",
-                "25%"
+                "100%",
+                "100%",
+                "100%",
+                "100%",
+                "100%"
               ]}
             >
               <Text
                 fontSize={[
                   "38px",
                   "38px",
-                  "45px",
-                  "45px",
-                  "45px"
+                  "38px",
+                  "38px",
+                  "38px"
                 ]}
+                fontFamily="dm-sans"
+                fontStyle="normal"
+                fontWeight="bold"
+                lineHeight="47px"
+                color="#0A2F53"
               >
-                What We Do
+                What is Visual Group Digital
               </Text>
             </Box>
-            <Box
+            {/* <Box
               alignSelf="center"
               w={[
                 "50%",
                 "50%",
                 "50%",
-                "70%",
-                "70%"
+                "60%",
+                "60%"
               ]}
             >
               <img src={line1} alt="line.svg" />
-            </Box>
+            </Box> */}
           </Flex>
-          <Box
+          {/* <Box
             pt="26px"
             w={[
               "100%",
@@ -357,11 +358,49 @@ export default function Index({ location }) {
               process of
               consulting, development, and marketing.
             </Text>
-          </Box>
+          </Box> */}
           <Flex
+            alignItems="center"
             justifyContent="center"
+            w="100%"
+            flexWrap="wrap"
+            py="20px"
           >
-            <Cards />
+            <Flex
+              w={[
+                "100%",
+                "100%",
+                "100%",
+                "50%",
+                "50%"
+              ]}
+              py="20px"
+              justifyContent="center"
+            >
+              <img src={vgdlogo} alt="logo" />
+            </Flex>
+            <Text
+              w={[
+                "100%",
+                "100%",
+                "100%",
+                "50%",
+                "50%"
+              ]}
+              fontSize="md"
+              className="subwhatwedo"
+            >
+              At Visual Group Digital, we help businesses flourish by following a comprehensive 3-step process of consulting, development, and marketing.
+              Initial consulting is a crucial part of a successful relationship. This is where we get together and determine the strengths and weaknesses of your business. Everything, including your business’ origin story, vision, and mission will be explored to gain a personalised view of your needs. Understanding your business will enable us to develop an interesting brand story that catches attention and converts!
+              <br/>
+              <br/>
+              Development is the second part of our process, and it’s where we take the insights gained from consulting and put them to work. With your help, we’ll design a solution that is smart, focused, and uniquely yours.
+              <br />
+              <br />
+              Lastly, we’ll reach the marketing step, where our planning comes to life. During this final step in the process, we’ll work with you to execute on your marketing strategy and drive results!
+
+            </Text>
+            {/* <Cards /> */}
           </Flex>
         </Box>
       </Flex>
@@ -372,7 +411,7 @@ export default function Index({ location }) {
       >
         <Box
           className="vgd"
-          pt="100px"
+          pt="50px"
         >
           BUT HOW DO WE DO IT?
         </Box>
@@ -448,14 +487,14 @@ export default function Index({ location }) {
       <ClientTestimonials />
       <Flex
         mt="100px"
-        mx={[
+        px={[
           "10px",
           "10px",
           "20px",
-          "100px"
+          "10%"
         ]}
         w="100%"
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
         flexDirection="row"
         flexWrap="wrap"

@@ -1,3 +1,18 @@
+.aboutusbanner {
+  position: relative;
+  bottom: 294%;
+  left: 11%;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1200px){
+  .aboutusbanner {
+
+  bottom: 245%;
+
+}
+}
+
 
 .founder > h3 {
   font-family: momcake;
@@ -60,6 +75,7 @@
 
 .ceo {
   width: 100%;
+  border-radius: 5px;
 }
 
 .valuesvgd {
@@ -104,7 +120,6 @@
   color: #0A2F53;
 
 
-  padding-top: 133px;
 }
 
 .ourprocess > span {

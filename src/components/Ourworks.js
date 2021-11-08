@@ -15,10 +15,9 @@ import socmedad from '../images/ourwork/insta.jpg';
 import ViewMore from '../components/ViewMoreButton';
 
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/slider.css';
-import ViewMoreButton from '../components/ViewMoreButton';
+
 
 
 export default function AccomplishmentSlider() {

@@ -156,9 +156,9 @@ export default function Footer() {
         py={[
           "50px",
           "50px",
-          "100px",
-          "100px",
-          "100px"
+          "50px",
+          "50px",
+          "50px"
         ]}
         flexWrap="wrap"
       >
@@ -174,9 +174,10 @@ export default function Footer() {
             "50px",
             "50px",
             "50px",
-            "0px",
-            "0px"
+            "20px",
+            "20px"
           ]}
+          px="2%"
         >
           <h3>
             About
@@ -262,7 +263,7 @@ export default function Footer() {
           "100px",
           "100px"
         ]}
-        pt="50px" 
+        pt="0px" 
       >
         <Box
           className="social"
@@ -311,10 +312,18 @@ export default function Footer() {
           </h3>
         </Box>
         <Box
-          className="footerfoot"  
-        >
-          <h3>
+          className="footerfoot"
+          >
+          <Text
+            as="h3"
+            _hover={{
+              color: "#EE6F19",
+              cursor: "pointer"
+            }}    
+          >
             Terms &amp; Conditons
+          </Text>
+          <h3>
           </h3>
         </Box>
       </Flex>

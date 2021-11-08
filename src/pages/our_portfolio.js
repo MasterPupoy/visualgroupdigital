@@ -20,6 +20,15 @@ import All from '../components/All';
 import Graphics from '../components/Graphics';
 import StaticLogo from '../components/StaticLogo';
 
+import expertapps from '../images/caseport/expertapps.png';
+import hello from '../images/caseport/hello.jpg';
+import hofs from '../images/caseport/hofs.jpg';
+import mane from '../images/caseport/mane.jpg';
+import oxted from '../images/caseport/oxted.jpg';
+import slynot from '../images/caseport/slynot.jpg';
+import subfrantic from '../images/caseport/subfrantic.jpg';
+import delish from '../images/caseport/delishz.png';
+
 import portfolio from '../images/Portfolio.png';
 
 import { gsap } from 'gsap';
@@ -28,6 +37,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "react-awesome-lightbox/build/style.css";
 
 import '../styles/our_portfolio.css';
+import LearnMoreButton from '../components/LearnMoreButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -231,6 +241,49 @@ export default function Our_portfolio({ location }) {
       >
         <PortfolioContainer />
       </Flex>
+      <Flex
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        mt="100px"
+      >
+        <Box>
+          <h3
+            className="casefeatures"
+          >
+            CASE <span>STUDIES</span>              
+          </h3>
+        </Box>
+        <Box
+          px="100px"
+          pt="20px"
+        >
+          <p
+            className="casesmaller"
+          >
+            Below, you’ll find some of our favorite brands that we’ve worked with. In every case, Visual Group Digital had a significant impact on marketing strategies, conversions, brand identity, and performance. If you work with us, you can expect the same level of quality, effort, and attention to detail put into your company.
+          </p>
+        </Box>
+      </Flex>
+      <Cases />
+      <Flex
+        w="100%"
+        justifyContent="center"
+        py="10px"
+      >
+        <Box>
+          <button
+          // className="businessEnquiryButton"
+          className="button button--aylen"
+          onClick={() => {
+            window.location.assign('/case_studies');
+          }}
+      
+        >
+          <span className="biz">GO TO CASE STUDIES</span>
+        </button>
+        </Box>
+      </Flex>
       <StaticLogo />
       <ReusableFooter 
         text={text}
@@ -240,4 +293,339 @@ export default function Our_portfolio({ location }) {
     </Box>
 
   )
+};
+
+
+function Cases(){
+  return (
+    <Flex
+      px="7%"
+      mt="100px"
+      flexDirection="column"
+    >
+      <Flex
+        className="caseportContainer"
+        flexDirection="row"
+        flexWrap="wrap"
+        justifyContent="space-evenly"
+        alignItems="center"
+        w="100%"
+        py="5%"
+        my="2%"
+      >
+        <Box
+          w="50%"
+          textAlign="center"
+        >
+          <img src={delish} alt="delishus" style={{ borderRadius: "10px"}} />
+        </Box>
+        <Flex
+          alignItems="center"
+          flexDirection="column"
+        >
+          <Text
+            py="10px"
+            fontSize="25px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+            color="#0A2F53"
+          >
+            SODELISHUS
+          </Text>
+          <Text
+            py="10px"
+            fontSize="20px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+          >
+            Health-Focused Baking
+          </Text>
+          <a 
+            href="https://www.sodelishus.co.uk/" 
+            target="_blank"
+            style={{
+              color: "#EE6F19"
+            }}
+          >
+            https://www.sodelishus.co.uk/
+          </a>
+          <Text
+            py="10px"
+            fontSize="18px"
+            textAlign="center"
+          >
+            Sodelishus is a health-focused food company
+          </Text>
+          <Flex
+            py="10px"
+            w="100%"
+            justifyContent="center"
+          >
+            <LearnMoreButton link="/case_studies/sodelishus" />
+          </Flex>
+        </Flex>
+      </Flex>
+       <Flex
+        className="caseportContainer"
+        flexDirection="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+        flexWrap="wrap"
+        my="2%"
+        w="100%"
+        py="5%"
+      >
+        <Box
+          w="50%"
+          textAlign="center"
+        >
+          <img src={oxted} alt="delishus" style={{ borderRadius: "10px"}} />
+        </Box>
+        <Flex
+           alignItems="center"
+          flexDirection="column"
+        >
+          <Text
+            py="10px"
+            fontSize="25px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+            color="#0A2F53"
+          >
+            OXTED
+          </Text>
+          <Text
+            py="10px"
+            fontSize="20px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+          >
+            Oxted Festival
+          </Text>
+          <a 
+            href="https://www.oxtedfest.co.uk/" 
+            target="_blank"
+            style={{
+              color: "#EE6F19"
+            }}
+          >
+            https://www.oxtedfest.co.uk/
+          </a>
+          <Text
+            py="10px"
+            fontSize="18px"
+            textAlign="center"
+          >
+            Music Festival based in Oxted
+          </Text>
+          <Flex
+            py="10px"
+            w="100%"
+            justifyContent="center"
+          >
+            <LearnMoreButton link="/case_studies/oxtedfest" />
+          </Flex>
+        </Flex>
+      </Flex>
+      <Flex
+        className="caseportContainer"
+        flexDirection="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+        w="100%"
+        flexWrap="wrap"
+        py="5%"
+        my="2%"
+      >
+        <Box
+          w="50%"
+          textAlign="center"
+        >
+          <img src={mane} alt="delishus" style={{ borderRadius: "10px"}} />
+        </Box>
+        <Flex
+           alignItems="center"
+          flexDirection="column"
+        >
+          <Text
+            py="10px"
+            fontSize="25px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+            color="#0A2F53"
+          >
+            MANE UK
+          </Text>
+          {/* <Text
+            py="10px"
+            fontSize="20px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+          >
+            Health-Focused Baking
+          </Text> */}
+          <a 
+            href="https://maneuk.com/" 
+            target="_blank"
+            style={{
+              color: "#EE6F19"
+            }}
+          >
+            https://maneuk.com/
+          </a>
+          <Text
+            py="10px"
+            fontSize="18px"
+            textAlign="center"
+          >
+            Hair Thickening Solutions Company
+          </Text>
+          <Flex
+            py="10px"
+            w="100%"
+            justifyContent="center"
+          >
+            <LearnMoreButton link="/case_studies/maneuk" />
+          </Flex>
+        </Flex>
+      </Flex>
+       <Flex
+        className="caseportContainer"
+        flexDirection="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+        flexWrap="wrap"
+        w="100%"
+        my="2%"
+        py="5%"
+      >
+        <Box
+          w="50%"
+          textAlign="center"
+        >
+          <img src={hello} alt="delishus" style={{ borderRadius: "10px"}} />
+        </Box>
+        <Flex
+           alignItems="center"
+          flexDirection="column"
+        >
+          <Text
+            py="10px"
+            fontSize="25px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+            color="#0A2F53"
+          >
+            HELLO VANS
+          </Text>
+          <Text
+            py="10px"
+            fontSize="20px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+          >
+            Removal Company
+          </Text>
+          <a 
+            href="https://hellovans.com/" 
+            target="_blank"
+            style={{
+              color: "#EE6F19"
+            }}
+          >
+            https://hellovans.com/
+          </a>
+          <Text
+            py="10px"
+            fontSize="18px"
+            textAlign="center"
+          >
+            Online Van removals comparison company
+          </Text>
+          <Flex
+            py="10px"
+            w="100%"
+            justifyContent="center"
+          >
+            <LearnMoreButton link="/case_studies/hellovans" />
+          </Flex>
+        </Flex>
+      </Flex>
+      <Flex
+        className="caseportContainer"
+        flexDirection="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+        my="2%"
+        flexWrap="wrap" 
+        w="100%"
+        py="5%"
+      >
+        <Box
+          w="50%"
+          textAlign="center"
+        >
+          <img src={subfrantic} alt="delishus" style={{ borderRadius: "10px"}} />
+        </Box>
+        <Flex
+           alignItems="center"
+          flexDirection="column"
+        >
+          <Text
+            py="10px"
+            fontSize="25px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+            color="#0A2F53"
+          >
+            SUBFRANTIC MUSIC
+          </Text>
+          <Text
+            py="10px"
+            fontSize="20px"
+            fontFamily="dm-sans"
+            fontStyle="normal"
+            fontWeight="bold"
+          >
+            Online Music Streaming
+          </Text>
+          <a 
+            href="https://subfranticmusic.com/" 
+            target="_blank"
+            style={{
+              color: "#EE6F19"
+            }}
+          >
+            https://subfranticmusic.com/
+          </a>
+          <Text
+            py="10px"
+            fontSize="18px"
+            textAlign="center"
+          >
+           The number one online live streaming service for musicians
+          </Text>
+          <Flex
+            py="10px"
+            w="100%"
+            justifyContent="center"
+          >
+            <LearnMoreButton link="/case_studies/subfrantic_music" />
+          </Flex>
+        </Flex>
+      </Flex> 
+    </Flex>
+  )
 }
+
+
+
