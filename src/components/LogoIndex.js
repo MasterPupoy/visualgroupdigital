@@ -128,13 +128,13 @@ export default function LogoIndex() {
           className='logoContainer'
           overflowX="hidden"
           justifyContent="center"
-          display={(div >= 1) ? "flex" : "none"}
+          // display={(div >= 1) ? "flex" : "none"}
         >
           <img src={l1} alt="chessmoveslogo" className="logopng " />
           <img src={l2} alt="oxtedfestival" className="logopng " />
           <img src={l3} alt="tailoredremovallogo" className="logopng " />
           <img src={l4} alt="surreycedarlogo" className="logopng " />
-          <img src={l5} alt="intuneconsulting.svg" className="addon3 " />
+          <img src={l5} alt="intuneconsulting.svg" className="logopng " />
           <img src={l6} alt="simonKemp" className="logopng " />
           <img src={l7} alt="doggo.svg" className="logopng " />
           <img src={l8} alt="redsacks.svg" className="logopng " />
@@ -150,19 +150,20 @@ export default function LogoIndex() {
           <img src={l18} alt="keating.svg" className="logopng " />
           <img src={l51} alt="cleaningspecialistproviders.svg" className="logopng " />  
           <img src={l52} alt="cleaningspecialistproviders.svg" className="logopng " />  
-        </Flex>
-        <Flex
-          alignItems="center"
-          flexWrap="wrap"
-          className='logoContainer'
-          overflowX="hidden"
-          justifyContent="center"
-          display={(div >= 2) ? "flex" : "none"}
-        >
           <img src={l19} alt="schtech.svg" className="addon "/>
-          <img src={l20} alt="portfoliofm.svg" className="logopng " />
-          <img src={l21} alt="futurefitness.svg" className="logopng "/>
+          <img src={l34} alt="surreycedarlogo" className="logopng " />
+          <img src={l45} alt="intuneconsulting.svg" className="logopng " />
           <img src={l22} alt="schtech.svg"  className="logopng " />
+          <img src={l33} alt="tailoredremovallogo" className="logopng " />
+          <img src={l44} alt="surreycedarlogo" className="logopng " />
+          <img src={l35} alt="intuneconsulting.svg" className="logopng " />
+          <img src={l36} alt="simonKemp" className="logopng " />
+          <img src={l37} alt="doggo.svg" className="logopng " />
+          <img src={l38} alt="redsacks.svg" className="logopng " />
+          <img src={l39} alt="beautifulsouls.svg" className="logopng " />
+          <img src={l40} alt="cleaningspecialistproviders.svg" className="logopng " /> 
+          <img src={l21} alt="futurefitness.svg" className="logopng "/>
+          <img src={l20} alt="portfoliofm.svg" className="logopng " />
           <img src={l23} alt="adaptinghomes.svg" className="logopng "/>
           <img src={l24} alt="onlinefitnessfreedom.svg" className="logopng "/>
           <img src={l25} alt="intuneconsulting.svg" className="logopng "/>
@@ -170,46 +171,45 @@ export default function LogoIndex() {
           <img src={l27} alt="hydroinstal.svg"  className="addon "/>
           <img src={l28} alt="futurefitness.svg" className="addon " />
           <img src={l29} alt="intuneconsulting.svg" className="addon " />
+          <img src={l42} alt="oxtedfestival" className="logopng " />
+          <img src={l43} alt="tailoredremovallogo" className="logopng " />
           <img src={l30} alt="chessmoveslogo" className="logopng " />
           <img src={l31} alt="chessmoveslogo" className="logopng " />
           <img src={l32} alt="oxtedfestival" className="logopng " />
-        </Flex>
-        <Flex
-          alignItems="center"
-          flexWrap="wrap"
-          className='logoContainer'
-          overflowX="hidden"
-          justifyContent="center"
-          display={(div >= 3) ? "flex" : "none"}
-        >
-          <img src={l33} alt="tailoredremovallogo" className="logopng " />
-          <img src={l34} alt="surreycedarlogo" className="logopng " />
-          <img src={l35} alt="intuneconsulting.svg" className="addon3 " />
-          <img src={l36} alt="simonKemp" className="logopng " />
-          <img src={l37} alt="doggo.svg" className="logopng " />
-          <img src={l38} alt="redsacks.svg" className="logopng " />
-          <img src={l39} alt="beautifulsouls.svg" className="logopng " />
-          <img src={l40} alt="cleaningspecialistproviders.svg" className="logopng " /> 
           <img src={l41} alt="chessmoveslogo" className="logopng " />
-          <img src={l42} alt="oxtedfestival" className="logopng " />
-          <img src={l43} alt="tailoredremovallogo" className="logopng " />
-          <img src={l44} alt="surreycedarlogo" className="logopng " />
-          <img src={l45} alt="intuneconsulting.svg" className="addon3 " />
           <img src={l46} alt="simonKemp" className="logopng " />
-        </Flex>
-        <Flex
-          alignItems="center"
-          flexWrap="wrap"
-          className='logoContainer'
-          overflowX="hidden"
-          justifyContent="center"
-          display={(div >= 4) ? "flex" : "none"}
-        >
           <img src={l47} alt="doggo.svg" className="logopng " />
           <img src={l48} alt="redsacks.svg" className="logopng " />
           <img src={l49} alt="beautifulsouls.svg" className="logopng " />
           <img src={l50} alt="cleaningspecialistproviders.svg" className="logopng " />  
         </Flex>
+        {/* <Flex
+          alignItems="center"
+          flexWrap="wrap"
+          className='logoContainer'
+          overflowX="hidden"
+          justifyContent="center"
+          // display={(div >= 2) ? "flex" : "none"}
+        >
+        </Flex>
+        <Flex
+          alignItems="center"
+          flexWrap="wrap"
+          className='logoContainer'
+          overflowX="hidden"
+          justifyContent="center"
+          // display={(div >= 3) ? "flex" : "none"}
+        >
+        </Flex>
+        <Flex
+          alignItems="center"
+          flexWrap="wrap"
+          className='logoContainer'
+          overflowX="hidden"
+          justifyContent="center"
+          // display={(div >= 4) ? "flex" : "none"}
+        >
+        </Flex> */}
         {/* <Flex
           alignItems="center"
           flexWrap="wrap"
@@ -228,6 +228,13 @@ export default function LogoIndex() {
         alignItems="center"
         w="100%"
         pt="20px"
+        display={[
+          "none",
+          "none",
+          "none",
+          "none",
+          "flex"
+        ]}
       >
         <Flex
           w="100%"
@@ -242,7 +249,7 @@ export default function LogoIndex() {
             <button
               className="seeMore button--aylen"
               onClick={() => {
-                toggleDiv()
+                window.location.assign("/our_portfolio")
               }}
             >
               <span>
@@ -263,7 +270,6 @@ export default function LogoIndex() {
               
     
     <Flex
-      mt="100px"
       w="100%"
       display={[
         "block",

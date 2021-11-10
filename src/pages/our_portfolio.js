@@ -38,6 +38,7 @@ import "react-awesome-lightbox/build/style.css";
 
 import '../styles/our_portfolio.css';
 import LearnMoreButton from '../components/LearnMoreButton';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,7 +107,7 @@ export default function Our_portfolio({ location }) {
       y: -200
     });
 
-  });
+  }, []);
 
   const buttons = [
     {
@@ -146,29 +147,21 @@ export default function Our_portfolio({ location }) {
   const PortfolioContainer = () => {
     switch (key) {
       case "E-Commerce Marketing":
-        return <Ecom />
-        break;
+        return <Ecom />;
       case "All":
-        return <All />
-        break;
+        return <All />;
       case "Facebook Advertising":
-        return <Fbads />
-        break;
+        return <Fbads />;
       case "Website Development":
-        return <Webdev />
-        break;
+        return <Webdev />;
       case "Google Advertising":
-        return <Googleads />
-        break;
+        return <Googleads />;
       case "Social Media Marketing":
-        return <Socmed />
-        break;
+        return <Socmed />;
       case "Search Engine Optimisation": 
-        return <Seopt />
-        break;
+        return <Seopt />;
       case "Graphic Design":
-        return <Graphics />
-        break;
+        return <Graphics />;
       default:
         break;
     }
@@ -284,6 +277,7 @@ export default function Our_portfolio({ location }) {
         </button>
         </Box>
       </Flex>
+      <AccomplishmentSlider />
       <StaticLogo />
       <ReusableFooter 
         text={text}

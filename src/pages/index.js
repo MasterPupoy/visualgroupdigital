@@ -10,8 +10,9 @@ import SEO from "../components/Seo";
 import Nav from "../components/Nav";
 import MobileNav from "../components/MobileNav";
 
-import Slideshow from "../components/Slideshow";
-import Cards from "../components/Cards";
+// import Slideshow from "../components/Slideshow";
+// import Cards from "../components/Cards";
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import Process from "../components/Process";
 import OfferCard from "../components/OfferCard";
 import LogoIndex from "../components/LogoIndex";
@@ -19,7 +20,7 @@ import LearnMoreButton from '../components/LearnMoreButton';
 import Footer from '../components/Footer';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from "../components/ReusableFooter";
-import NewLogo from "../components/Newlogo";
+// import NewLogo from "../components/Newlogo";
 import OurWork from "../components/Ourworks";
 import vgdlogo from "../images/v-logo.svg";
 
@@ -391,6 +392,8 @@ export default function Index({ location }) {
               className="subwhatwedo"
             >
               At Visual Group Digital, we help businesses flourish by following a comprehensive 3-step process of consulting, development, and marketing.
+              <br/>
+              <br/>
               Initial consulting is a crucial part of a successful relationship. This is where we get together and determine the strengths and weaknesses of your business. Everything, including your business’ origin story, vision, and mission will be explored to gain a personalised view of your needs. Understanding your business will enable us to develop an interesting brand story that catches attention and converts!
               <br/>
               <br/>
@@ -482,8 +485,8 @@ export default function Index({ location }) {
       >
         <OfferCard />    
       </Flex>
-      <OurWork />
-      {/* <AccomplishmentSlider /> */}
+      <AccomplishmentSlider />
+      {/* <OurWork /> */}
       <ClientTestimonials />
       <Flex
         mt="100px"

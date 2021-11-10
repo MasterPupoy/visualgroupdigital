@@ -9,7 +9,7 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-// import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import OurWork from '../components/Ourworks';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
@@ -629,8 +629,8 @@ export default function Search_engine_optimization({ location }) {
             <img src={growth} alt="seo_growth" className="seogrowthimg" style={{ borderRadius: "10px"}} />
           </Box>
         </Flex>
-        <OurWork />
-        {/* <AccomplishmentSlider /> */}
+        {/* <OurWork /> */}
+        <AccomplishmentSlider />
         <ClientTestimonials />
         <Slideshow /> 
         {/* <StaticLogo /> */}

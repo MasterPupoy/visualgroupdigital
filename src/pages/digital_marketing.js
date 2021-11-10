@@ -16,6 +16,7 @@ import StaticLogo from '../components/StaticLogo';
 import Slideshow from '../components/Slideshow';
 import MobileNav from '../components/MobileNav';
 import OurWorks from '../components/Ourworks';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 
 import rocketpc from '../images/dm2.jpg';
 import digimark from '../images/dmbanner.png';
@@ -377,8 +378,8 @@ export default function Marketing({ location }) {
             <img src={growth} alt="seo_growth" className="seogrowthimg" style={{ borderRadius: "10px"}} />
           </Box>
         </Flex>
-        {/* <AccomplishmentSlider /> */}
-        <OurWorks />
+        <AccomplishmentSlider />
+        {/* <OurWorks /> */}
         <ClientTestimonials /> 
         {/* <StaticLogo /> */}
         <Slideshow />

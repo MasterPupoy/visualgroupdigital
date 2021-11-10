@@ -9,7 +9,7 @@ import SEO from '../components/Seo';
 import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
-// import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import OurWork from '../components/Ourworks';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
@@ -21,7 +21,6 @@ import Slideshow from '../components/Slideshow';
 import google from '../images/google.jpg';
 import digimark from '../images/digimark.png';
 
-import line1 from '../images/line1.svg';
 
 import digitalMarketing from '../images/offers/digital_marketing.svg';
 import eCommerce from '../images/offers/e-commerce.svg';
@@ -392,8 +391,8 @@ export default function Google_advertising({ location }) {
         <ReusableRanking 
           textArray={rankingArray}
         />
-        <OurWork />
-        {/* <AccomplishmentSlider /> */}
+        {/* <OurWork /> */}
+        <AccomplishmentSlider />
         <ClientTestimonials />
         <Slideshow /> 
         {/* <StaticLogo /> */}

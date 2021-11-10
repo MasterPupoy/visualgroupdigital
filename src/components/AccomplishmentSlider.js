@@ -8,17 +8,25 @@ import {
 import left from '../images/left.svg';
 import right from '../images/right.svg';
 
-import accompfb from '../images/social.svg';
-import accompgoog from '../images/googadvert.svg';
-import accompseo from '../images/seooo.svg';
-import accompsocmed from '../images/socmedgrowth.svg';
-import graphix from '../images/graphix.svg';
-import webdev from '../images/webdev.svg';
-import branding from '../images/branding.svg';
+// import accompfb from '../images/social.svg';
+// import accompgoog from '../images/googadvert.svg';
+// import accompseo from '../images/seooo.svg';
+// import accompsocmed from '../images/socmedgrowth.svg';
+// import graphix from '../images/graphix.svg';
+// import webdev from '../images/webdev.svg';
+// import branding from '../images/branding.svg';
 
-import socmedmark from '../images/marketingsvg.svg';
+// import socmedmark from '../images/marketingsvg.svg';
 
-import ecom from '../images/undrawsecom.svg';
+import digibrand from '../images/ourwork/10.jpg';
+import graphics from '../images/ourwork/flyer.jpg';
+import webdev from '../images/ourwork/webdev.jpg'
+import seo8 from '../images/ourwork/seo8.jpg';
+import googleads from '../images/ourwork/googleads.jpg';
+import fbadss from '../images/ourwork/fbadss.jpg';
+import soc from '../images/ourwork/social_media_2.jpg';
+import socmedad from '../images/ourwork/insta.jpg';
+import ecom from '../images/ourwork/ecomhof.jpg';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -66,7 +74,7 @@ function FirstSlider({ dir }){
            <a
             href="/digital_marketing"
            >
-            <img src={socmedmark} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
+            <img src={soc} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
            </a>
         </Box>
       </Box>
@@ -94,7 +102,7 @@ function FirstSlider({ dir }){
           <a
             href="/facebook_advertising"
           >
-            <img src={accompfb} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
+            <img src={fbadss} alt="fbaccomplishment" style={{ cursor : "pointer"}} />
           </a>
         </Box>
       </Box>
@@ -143,7 +151,7 @@ function SecondSlider({ dir }){
           <a
             href="/google_advertising"
           >
-            <img src={accompgoog} alt="accompgoogle" style={{ cursor : "pointer"}} />
+            <img src={googleads} alt="accompgoogle" style={{ cursor : "pointer"}} />
           </a>
         </Box>
       </Box>
@@ -157,7 +165,7 @@ function SecondSlider({ dir }){
           <a
             href="/social_media_growth"
           >
-            <img src={accompsocmed} alt="socmend" style={{ cursor : "pointer"}} />
+            <img src={socmedad} alt="socmend" style={{ cursor : "pointer"}} />
           </a>
         </Box>
       </Box>
@@ -171,7 +179,7 @@ function SecondSlider({ dir }){
           <a
             href="/search_engine_optimization"
           >
-            <img src={accompseo} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+            <img src={seo8} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
           </a>
         </Box>
       </Box>
@@ -220,7 +228,7 @@ function ThirdSlider({ dir }){
           <a
             href="/graphic_design"
           >
-            <img src={graphix} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+            <img src={graphics} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
           </a>
         </Box>
       </Box>
@@ -248,7 +256,7 @@ function ThirdSlider({ dir }){
           <a
             href="/digital_branding"
           >
-            <img src={branding} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
+            <img src={digibrand} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
           </a>
         </Box>
       </Box>
@@ -355,7 +363,7 @@ export default function AccomplishmentSlider() {
         >
           <Box>
             <h3>
-             OUR SERVICES 
+             OUR WORK 
             </h3>
           </Box>
         </Flex>

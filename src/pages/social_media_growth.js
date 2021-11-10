@@ -10,7 +10,7 @@ import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import OurWork from '../components/Ourworks';
-// import AccomplishmentSlider from '../components/AccomplishmentSlider';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import Footer from '../components/Footer';
 import LearnMoreButton from '../components/LearnMoreButton';
@@ -511,8 +511,8 @@ export default function Social_media_growth({ location }) {
           <ReusableRanking 
             textArray={rankingArray}
           />
-        <OurWork />
-        {/* <AccomplishmentSlider /> */}
+        {/* <OurWork /> */}
+        <AccomplishmentSlider />
         <ClientTestimonials />
         <Slideshow /> 
         {/* <StaticLogo /> */}

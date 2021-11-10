@@ -10,8 +10,8 @@ import Nav from '../components/Nav';
 import ReusableHero from '../components/ReusableHero';
 import ReusableFooter from '../components/ReusableFooter';
 import ReusableRanking from '../components/ReusableRanking';
-import OurWork from '../components/Ourworks';
-// import AccomplishmentSlider from '../components/AccomplishmentSlider';
+// import OurWork from '../components/Ourworks';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 import ClientTestimonials from '../components/ClientTestimonials';
 import StaticLogo from '../components/StaticLogo';
 import Footer from '../components/Footer';
@@ -42,6 +42,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/digital_branding.css';
+// import OurWorkBranding from '../components/OurWorkBranding';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -691,8 +692,9 @@ export default function Web_development({ location }) {
           <ReusableRanking 
             textArray={rankingArray}
           />
-        <OurWork /> 
-        {/* <AccomplishmentSlider /> */}
+          {/* <OurWorkBranding /> */}
+        {/* <OurWork />  */}
+        <AccomplishmentSlider />
         <ClientTestimonials />
         <Slideshow /> 
         {/* <StaticLogo /> */}

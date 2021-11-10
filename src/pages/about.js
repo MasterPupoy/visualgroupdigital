@@ -23,6 +23,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/about.css';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -292,7 +293,8 @@ export default function About({ location }) {
           </h3>
           <Process /> 
         </Box>
-        <OurWork />
+        <AccomplishmentSlider />
+        {/* <OurWork /> */}
         {/* <StaticLogo /> */}
         <ReusableFooter text={text} />
         <Footer />

@@ -6,11 +6,8 @@ import {
   Box
 } from '@chakra-ui/react';
 
-import seo8 from '../images/ourwork/seo8.jpg';
-import googleads from '../images/ourwork/googleads.jpg';
-import fbadss from '../images/ourwork/fbadss.jpg';
-import socmedmarketing from '../images/ourwork/social_media_2.jpg';
-import socmedad from '../images/ourwork/insta.jpg';
+import fbadss from '../images/ourwork/10.jpg';
+import socmedmarketing from '../images/ourwork/flyer.jpg';
 import webdev from '../images/ourwork/webdev.jpg'
 
 import ViewMore from '../components/ViewMoreButton';
@@ -21,7 +18,7 @@ import '../styles/slider.css';
 
 
 
-export default function AccomplishmentSlider() {
+export default function OurWorkBranding() {
   
   useEffect(() => {
 
@@ -106,13 +103,13 @@ export default function AccomplishmentSlider() {
             className="sliderBox"
             >
             <h3>
-              Social Media Marketing
+              Digital Branding
             </h3>
             <Box>
               <a
-                href="/digital_marketing"
+                href="/digital_branding"
               >
-                <img src={socmedmarketing} alt="accompgoogle" style={{ cursor : "pointer", borderRadius: "5px"}} />
+                <img src={fbadss} alt="accompgoogle" style={{ cursor : "pointer", borderRadius: "5px"}} />
               </a>
             </Box>
           </Box>
@@ -120,41 +117,13 @@ export default function AccomplishmentSlider() {
             className="sliderBox"
           >
             <h3>
-              Facebook Advertising
+              Graphic Design
             </h3>
             <Box>
               <a
-                href="/facebook_advertising"
+                href="/graphic_design"
               >
-                <img src={fbadss} alt="socmend" style={{ cursor : "pointer", borderRadius: "5px"}} />
-              </a>
-            </Box>
-          </Box>
-          <Box
-            className="sliderBox"
-          >
-            <h3>
-              Google Advertising
-            </h3>
-            <Box>
-              <a
-                href="/google_advertising"
-              >
-                <img src={googleads} alt="seoaccomplishment" style={{ cursor : "pointer", borderRadius: "5px"}} />
-              </a>
-            </Box>
-          </Box>
-          <Box
-            className="sliderBox"
-          >
-            <h3>
-              Social Media Advertising
-            </h3>
-            <Box>
-              <a
-                href="/social_media_growth"
-              >
-                <img src={socmedad} alt="seoaccomplishment" style={{ cursor : "pointer", borderRadius: "5px"}} />
+                <img src={socmedmarketing} alt="socmend" style={{ cursor : "pointer", borderRadius: "5px"}} />
               </a>
             </Box>
           </Box>
@@ -171,20 +140,7 @@ export default function AccomplishmentSlider() {
                 <img src={webdev} alt="seoaccomplishment" style={{ cursor : "pointer", borderRadius: "5px"}} />
               </a>
             </Box>
-          </Box> <Box
-            className="sliderBox"
-          >
-            <h3>
-              Search Engine Optimisation
-            </h3>
-            <Box>
-              <a
-                href="/search_engine_optimization"
-              >
-                <img src={seo8} alt="seoaccomplishment" style={{ cursor : "pointer", borderRadius: "5px"}} />
-              </a>
-            </Box>
-          </Box>
+          </Box> 
         </Flex>
       </Box>
       <Flex
@@ -197,3 +153,4 @@ export default function AccomplishmentSlider() {
     </Flex>
   )
 }
+

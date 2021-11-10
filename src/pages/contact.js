@@ -54,7 +54,7 @@ export default function Contact({ location }) {
           pt="93px"
           mx="50px"
         >
-          <Flex
+          {/* <Flex
             justifyContent="center"
             alignItems="center"
             display={[
@@ -93,7 +93,7 @@ export default function Contact({ location }) {
                 Contact Details
               </Text>
             </Box>
-            <Flex
+            {/* <Flex
               w={[
                 "0px",
                 "0px",
@@ -156,7 +156,7 @@ export default function Contact({ location }) {
               </Flex>
             </Flex>
           </Box>
-          </Flex>
+          </Flex> */}
 
 
           <Flex
@@ -206,9 +206,6 @@ export default function Contact({ location }) {
               className="contactgetstarted2"
               mx="50px"
             >
-              <h3>
-                First, tell us about yourself
-              </h3>
               <Flex
                 pt="32px"
                 justifyContent="center"
@@ -222,7 +219,13 @@ export default function Contact({ location }) {
                   flexWrap="wrap"
                 >
                   <Box 
-                    w="358px"
+                    w={[
+                      "100%",
+                      "100%",
+                      "100%",
+                      "40%",
+                      "40%"
+                    ]}
                   >
                     <FormControl id="name">
                       <FormLabel>YOUR NAME</FormLabel>
@@ -237,7 +240,13 @@ export default function Contact({ location }) {
                     </FormControl>
                   </Box>
                   <Box
-                    w="358px"
+                     w={[
+                      "100%",
+                      "100%",
+                      "100%",
+                      "40%",
+                      "40%"
+                    ]}
                   >
                     <FormControl id="email">
                       <FormLabel>EMAIL</FormLabel>
@@ -259,7 +268,13 @@ export default function Contact({ location }) {
                   flexWrap="wrap"
                 >
                   <Box 
-                    w="358px"
+                    w={[
+                      "100%",
+                      "100%",
+                      "100%",
+                      "40%",
+                      "40%"
+                    ]}
                   >
                     <FormControl id="location">
                       <FormLabel>LOCATION</FormLabel>
@@ -275,7 +290,13 @@ export default function Contact({ location }) {
                     </FormControl>
                   </Box>
                   <Box
-                    w="358px"
+                     w={[
+                      "100%",
+                      "100%",
+                      "100%",
+                      "40%",
+                      "40%"
+                    ]}
                   >
                     <FormControl id="company_name">
                       <FormLabel>COMPANY NAME</FormLabel>
@@ -297,9 +318,7 @@ export default function Contact({ location }) {
               pt="50px"
               mx="50px"
             >
-              <h3>
-                Lastly, tell us about the project
-              </h3>
+
               <FormControl id="textarea" pt="20px">
                 <FormLabel>PROJECT DETAILS</FormLabel>
                 <Textarea

@@ -52,6 +52,7 @@ import reign from '../images/scraped/reign_supreme.json';
 
 import '../styles/casestudies.css';
 import ViewMoreButton from '../components/ViewMoreButton';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 
 function ClientView({ num, setActiveImg, setOpen }) {
   const [views, setViews] = useState([])
@@ -622,6 +623,7 @@ export default function Case_studies({ location }) {
           
           }
         </Flex>
+        <AccomplishmentSlider />
         <Slideshow />
         {/* <StaticLogo />     */}
         <ReusableFooter 

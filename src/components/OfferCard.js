@@ -20,7 +20,9 @@ import LearnMoreButton from './LearnMoreButton';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+
 import '../styles/cardoffers.css';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function OfferCard() {
 
@@ -81,7 +83,7 @@ export default function OfferCard() {
       opacity: 0
     }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
 
-  })
+  }, [])
 
   return (
     <Flex
@@ -92,6 +94,7 @@ export default function OfferCard() {
       w="100%"
       className="offercardscontainer"
       overflowX="hidden"
+      maxW="1400px"
     >
 
       <Box

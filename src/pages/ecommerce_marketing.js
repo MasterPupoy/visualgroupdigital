@@ -16,6 +16,7 @@ import LearnMoreButton from '../components/LearnMoreButton';
 import StaticLogo from '../components/StaticLogo';
 import MobileNav from '../components/MobileNav';
 import Slideshow from '../components/Slideshow';
+import AccomplishmentSlider from '../components/AccomplishmentSlider';
 
 import ecom from '../images/ecom.jpg';
 import digimark from '../images/E-Commerce.png';
@@ -431,8 +432,8 @@ export default function Ecommerce_marketing({ location }) {
           textArray={rankingArray}
         />
      
-        {/* <AccomplishmentSlider /> */}
-        <OurWork />
+        <AccomplishmentSlider />
+        {/* <OurWork /> */}
         <ClientTestimonials />
         <Slideshow /> 
         {/* <StaticLogo /> */}
