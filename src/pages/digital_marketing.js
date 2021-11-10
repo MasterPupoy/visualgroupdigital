@@ -125,7 +125,7 @@ export default function Marketing({ location }) {
       opacity: 0
     }, { duration: 0.25, x: 0, opacity: 1}, ">")
 
-  })
+  }, [])
 
 
   return (
@@ -374,6 +374,7 @@ export default function Marketing({ location }) {
               "100%",
               "50%"
             ]}
+            my="50px"
           >
             <img src={growth} alt="seo_growth" className="seogrowthimg" style={{ borderRadius: "10px"}} />
           </Box>

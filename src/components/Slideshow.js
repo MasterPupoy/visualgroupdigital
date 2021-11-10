@@ -312,7 +312,7 @@ export default function Slideshow() {
             className="addlogop"
             fontSize="lg"
           >
-            We’ve worked with more than 100 companies since 2015 Check out some of the <br />
+            We’ve worked with more than 100 companies since 2015 Check out some of the 
             fantastic clients we have brought to the UK and International Markets.
           </Text>
         </Box>

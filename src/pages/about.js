@@ -253,6 +253,13 @@ export default function About({ location }) {
             "100%",
             "100%"
           ]}
+          display={[
+            "none",
+            "none",
+            "none",
+            "flex",
+            "flex"
+          ]}
         >
           {/* <img src={vgd} alt="vgd" /> */}
           <Flex
@@ -280,6 +287,7 @@ export default function About({ location }) {
           </Flex>
         </Flex>
         <Box
+          mt="50px"
           px={[
             "10px",
             "10px",
