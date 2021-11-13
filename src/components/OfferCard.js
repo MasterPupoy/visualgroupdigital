@@ -83,6 +83,11 @@ export default function OfferCard() {
       opacity: 0
     }, { duration: 0.25, x: 0, opacity: 1}, 0.5)
 
+    return () => {
+      offercardstl.kill();
+      offercardstl2.kill();
+      offercardstl3.kill();
+    }
   }, [])
 
   return (

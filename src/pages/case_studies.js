@@ -257,7 +257,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       page: "/case_studies/readers_school"
     },
      {
-      link: "intune.consulting/",
+      link: "intune.consulting",
       subheader: "Whilst each organisation is unique, here are some specific offerings.",
       type: "Consulting Company",
       img1: intune[1],
@@ -274,15 +274,15 @@ function ClientView({ num, setActiveImg, setOpen }) {
       colorScheme: "red.300",
       page: "/case_studies/terri_lyn"
     },
-      {
-      link: "onlinefitnessfreedom.com",
-      subheader: "Improve Their Marketing & Branding To Help Them Maximise Their Clientele Potential.",
-      type: "Fitness Services",
-      img1: online[5],
-      img2: online[6],
-      colorScheme: "yellow.300",
-      page: "/case_studies/online_fitness_freedom"
-    },
+    //   {
+    //   link: "onlinefitnessfreedom.com",
+    //   subheader: "Improve Their Marketing & Branding To Help Them Maximise Their Clientele Potential.",
+    //   type: "Fitness Services",
+    //   img1: online[5],
+    //   img2: online[6],
+    //   colorScheme: "yellow.300",
+    //   page: "/case_studies/online_fitness_freedom"
+    // },
       {
       link: "reignsupremeuk.com",
       subheader: "Accountant In Kent, Who Speaks To You More Than Just Once A Year",
@@ -359,12 +359,21 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 alignItems="center"
                 p="10px"
                 borderRadius="12px"
+                flexWrap="wrap"
               >
                 <Flex
                   w="50%"
                   borderRadius="70px"
                   justifyContent="center"
                   mx="5px"
+                    w={[
+                    "100%",
+                    "100%",
+                    "100%",
+                    "40%",
+                    "40%"
+                  ]}
+                  my="5px"
                 >
                   <img 
                     src={client.img1} 
@@ -378,10 +387,17 @@ function ClientView({ num, setActiveImg, setOpen }) {
               
                 </Flex>
                 <Flex
-                  w="50%"
+                  w={[
+                    "100%",
+                    "100%",
+                    "100%",
+                    "40%",
+                    "40%"
+                  ]}
                   borderRadius="70px"
                   justifyContent="center"
                   mx="5px"
+                  my="5px"
                 >
                
                   <img 

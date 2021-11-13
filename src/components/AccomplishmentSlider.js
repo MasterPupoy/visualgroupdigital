@@ -383,6 +383,7 @@ export default function AccomplishmentSlider() {
           textAlign="right"
           justifyContent="flex-end"
           px="50px"
+          py="20px"
         >
           <button
             className="leftArrow"

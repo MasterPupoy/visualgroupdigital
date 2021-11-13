@@ -18,6 +18,8 @@ import intune from '../../images/scraped/intune_consulting.json';
 
 
 import '../../styles/casestudies.css';
+import Slideshow from '../../components/Slideshow';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Sodelishus({ location }) {
 
@@ -48,20 +50,23 @@ export default function Sodelishus({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="80px"
+          flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -87,7 +92,7 @@ export default function Sodelishus({ location }) {
             className="viewshead"
           >
             <h3>
-              intune.consulting/
+              intune.consulting
             </h3>
             <p>
               Whilst each organisation is unique, here are some specific offerings.
@@ -114,7 +119,13 @@ export default function Sodelishus({ location }) {
               {intune.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                                  w={[
+                      "90%",
+                      "90%",
+                      "50%",
+                      "30%",
+                      "25%"
+                    ]} 
                     m="5px"
                   >
                     <img 
@@ -139,9 +150,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -153,6 +166,7 @@ export default function Sodelishus({ location }) {
                 </button>
               </Box>
               <Box
+                my="5px"
                 mx="10px"
               >
                 <button   
@@ -166,7 +180,9 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <AccomplishmentSlider />
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

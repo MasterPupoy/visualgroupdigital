@@ -15,20 +15,17 @@
   border-right: 0.5px solid rgba(0, 0, 0, 0.15);;
 }
 
-.contactgetstarted {
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
-}
+
 
 .contactgetstarted > h3 {
   
   font-family: dm-sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 56px;
+  font-size: 46px;
   line-height: 64px;
   /* identical to box height, or 114% */
 
-  text-align: center;
   letter-spacing: -0.03em;
 
   color: #0A2F53;
@@ -52,7 +49,6 @@
 }
 
 .contactgetstarted2 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-top: 40px;
   padding-bottom: 40px;
 }

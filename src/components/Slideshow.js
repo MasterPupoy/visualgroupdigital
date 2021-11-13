@@ -294,7 +294,7 @@ export default function Slideshow() {
             className="addlogo"
             fontSize="3xl"
           >
-            WE WOULD <span>LOVE</span> TO <br/>
+            WE WOULD <span>LOVE</span> TO 
             ADD YOUR LOGO HERE.
           </Text>
         </Box>

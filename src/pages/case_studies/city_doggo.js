@@ -18,6 +18,7 @@ import Slideshow from '../../components/Slideshow';
 import city from '../../images/scraped/city_doggo.json';
 
 import '../../styles/casestudies.css';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Sodelishus({ location }) {
 
@@ -59,10 +60,12 @@ export default function Sodelishus({ location }) {
         <Flex
           justifyContent="center"
           alignItems="center"
-          mt="50px"
+          mt="80px"
           flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -146,9 +149,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -161,6 +166,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -173,6 +179,7 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
+        <AccomplishmentSlider />
         <Slideshow />
         {/* <StaticLogo />     */}
         <ReusableFooter 

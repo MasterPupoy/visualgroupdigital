@@ -18,6 +18,7 @@ import hello from '../../images/scraped/hello_vans.json';
 
 import '../../styles/casestudies.css';
 import Slideshow from '../../components/Slideshow';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Hellovans({ location }) {
 
@@ -146,9 +147,11 @@ export default function Hellovans({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -161,6 +164,7 @@ export default function Hellovans({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -173,6 +177,7 @@ export default function Hellovans({ location }) {
               </Box>
           </Flex>
         </Box>
+        <AccomplishmentSlider />
         <Slideshow />
         <ReusableFooter 
           text={text}

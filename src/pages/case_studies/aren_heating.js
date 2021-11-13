@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {
   Flex,
   Box,
-  Badge
+  Badge,
+  Text
 } from '@chakra-ui/react';
 import Lightbox from 'react-awesome-lightbox';
 import "react-awesome-lightbox/build/style.css";
@@ -17,6 +18,8 @@ import MobileNav from '../../components/MobileNav';
 import aren from '../../images/scraped/aren_heating_plumbing.json';
 
 import '../../styles/casestudies.css';
+import Slideshow from '../../components/Slideshow';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Sodelishus({ location }) {
 
@@ -47,25 +50,27 @@ export default function Sodelishus({ location }) {
   }, []); 
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="80px"
           flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
-              Aren Heating and Plumbing 
+              Aren Heating 
             </h1>
           </Box>
           <Box
@@ -86,9 +91,19 @@ export default function Sodelishus({ location }) {
             pt="30px"
             className="viewshead"
           >
-            <h3>
+            <Text
+              fontFamily="dm-sans"
+              fontSize={[
+                "24px",
+                "24px",
+                "30px",
+                "30px",
+                "30px"
+              ]}
+              as="h2"
+            >
               arenheatingplumbing.co.uk
-            </h3>
+            </Text>
             <p>
               Plumbing and heating company based in London
             </p>
@@ -114,7 +129,13 @@ export default function Sodelishus({ location }) {
               {aren.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                        w={[
+                      "90%",
+                      "90%",
+                      "50%",
+                      "30%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 
@@ -139,9 +160,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -154,6 +177,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -166,7 +190,9 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <AccomplishmentSlider />
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

@@ -468,6 +468,7 @@ export default function Facebook_advertising({ location }) {
           flexWrap="wrap"
           justifyContent="center"
           alignItems="center"
+          flexDirection="column"
         >
           <Box>
             <h3

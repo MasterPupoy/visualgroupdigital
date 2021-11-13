@@ -102,6 +102,16 @@
   margin: 0px 38px 53px 38px;
 }
 
+@media screen and (max-width: 320px){
+  .biggerCards {
+    height: 648px;
+  }
+
+  .biggerCards > p {
+    height: 400px;
+  }
+}
+
 .biggerCards > h3 {
   font-family: dm-sans;
   font-style: normal;

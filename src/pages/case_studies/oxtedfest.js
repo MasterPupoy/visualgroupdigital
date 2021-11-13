@@ -21,6 +21,7 @@ import ox from '../../images/scraped/oxted_festival.json';
 
 import '../../styles/casestudies.css';
 import Slideshow from '../../components/Slideshow';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Oxtedfest({ location }) {
 
@@ -149,9 +150,11 @@ export default function Oxtedfest({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -164,6 +167,7 @@ export default function Oxtedfest({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -176,6 +180,7 @@ export default function Oxtedfest({ location }) {
               </Box>
           </Flex>
         </Box>
+        <AccomplishmentSlider />
         <Slideshow />
         <ReusableFooter 
           text={text}

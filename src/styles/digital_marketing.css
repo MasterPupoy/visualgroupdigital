@@ -6,12 +6,40 @@
   z-index: 0;
 }
 
-@media screen and (max-width : 1250px) {
+@media screen and (min-width : 1240px) and (max-width: 1299px){
 
   .digitalmarkbanner {
     bottom: 257%;
   }
 
+  .reshape7 {
+    bottom: 33%;
+  }
+
+}
+
+@media  screen and (min-width : 1300px) and (max-width: 1400px) {
+  
+  .digitalmarkbanner {
+    bottom: 308%;
+  }
+}
+
+@media screen and (min-width : 1000px) and (max-width: 1240px) {
+  
+  .digitalmarkbanner {
+    bottom: 245%;
+  }
+
+  .reshape7 {
+    bottom: 35%;
+  }
+}
+
+@media screen and (min-width : 1000px) and (max-width: 1152px) {
+  .reshape7 {
+    bottom: 57%;
+  }
 }
 
 .digimark > h3 {
@@ -90,9 +118,15 @@
   line-height: 179.7%;
   /* or 31px */
 
-
+  text-align: center;
 
   color: #1D1D1D;
 
   opacity: 0.7;
+}
+
+@media screen and (max-width: 768px){
+  .whyus {
+    font-size: 14px;
+  }
 }

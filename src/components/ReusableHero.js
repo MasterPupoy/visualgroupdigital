@@ -123,7 +123,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           "40%",
           "20%",
           "20%",
-          "120px",
+          "232px",
           "130px"
         ]}
         width={[
@@ -202,7 +202,7 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           "0px",
           "0px",
           "273px",
-          "263px",
+          "273px",
           "273px"
         ]}
         px="50px"

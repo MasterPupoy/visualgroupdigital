@@ -16,6 +16,8 @@ import MobileNav from '../../components/MobileNav';
 
 import man from '../../images/scraped/mane_uk.json';
 import '../../styles/casestudies.css';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
+import Slideshow from '../../components/Slideshow';
 
 export default function Maneuk({ location }) {
 
@@ -56,7 +58,7 @@ export default function Maneuk({ location }) {
         <Flex
           justifyContent="center"
           alignItems="center"
-          mt="50px"
+          mt="80px"
           
         >
           <Box>
@@ -137,10 +139,12 @@ export default function Maneuk({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
-              >
+              my="5px"
+            >
                 <button   
                   className="button button--aylen "
                   onClick={() => {
@@ -152,6 +156,7 @@ export default function Maneuk({ location }) {
               </Box>
               <Box
                 mx="10px"
+              my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -164,7 +169,9 @@ export default function Maneuk({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <AccomplishmentSlider />
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

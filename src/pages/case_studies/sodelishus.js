@@ -18,6 +18,7 @@ import sd from '../../images/scraped/sodelishus.json';
 
 import '../../styles/casestudies.css';
 import Slideshow from '../../components/Slideshow';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Sodelishus({ location }) {
 
@@ -69,11 +70,11 @@ export default function Sodelishus({ location }) {
             </h1>
           </Box>
            <Box
-                  alignSelf="center"
-                  py="20px"
-                >
-                  <Badge>Food Company</Badge>
-                </Box>
+              alignSelf="center"
+              py="20px"
+            >
+              <Badge>Food Company</Badge>
+            </Box>
         </Flex>
         <Box
           w="95%"
@@ -94,7 +95,7 @@ export default function Sodelishus({ location }) {
             </p>
           </Box>
           <Box
-            px="50px"
+            px="5%"
             py="36px"
             className="caseparagraph"
           >
@@ -148,9 +149,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -163,6 +166,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -175,6 +179,7 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
+        <AccomplishmentSlider />
         <Slideshow />
         <ReusableFooter 
           text={text}

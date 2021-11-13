@@ -11,6 +11,7 @@ import Slideshow from '../../components/Slideshow';
 import SEO from '../../components/Seo';
 import Nav from '../../components/Nav';
 import ReusableFooter from '../../components/ReusableFooter';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 import StaticLogo from '../../components/StaticLogo';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
@@ -48,7 +49,7 @@ export default function Sodelishus({ location }) {
   }, []);
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
         {
           (width > 1280) 
@@ -60,9 +61,11 @@ export default function Sodelishus({ location }) {
           justifyContent="center"
           flexDirection="column"
           alignItems="center"
-          m="10px"
+          mt="80px"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -148,9 +151,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -163,6 +168,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -175,6 +181,7 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
+        <AccomplishmentSlider />
         <Slideshow />
         {/* <StaticLogo />     */}
         <ReusableFooter 
