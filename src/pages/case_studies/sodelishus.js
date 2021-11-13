@@ -60,7 +60,7 @@ export default function Sodelishus({ location }) {
           justifyContent="center"
           alignItems="center"
           flexDirection="column"
-          mt="50px"
+          mt="80px"
         >
           <Box>
             <h1

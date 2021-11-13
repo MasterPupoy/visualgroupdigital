@@ -13,10 +13,12 @@ import ReusableFooter from '../../components/ReusableFooter';
 import StaticLogo from '../../components/StaticLogo';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
+import Slideshow from '../../components/Slideshow';
 
 import sub from '../../images/scraped/subfrantic-music.json'
 
 import '../../styles/casestudies.css';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Sodelishus({ location }) {
 
@@ -46,7 +48,7 @@ export default function Sodelishus({ location }) {
   }, []);
 
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
         {
           (width > 1280) 
@@ -57,10 +59,12 @@ export default function Sodelishus({ location }) {
         <Flex
           justifyContent="center"
           alignItems="center"
-          mt="50px"
+          mt="80px"
           flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -144,9 +148,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -159,6 +165,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -171,7 +178,9 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <AccomplishmentSlider />
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

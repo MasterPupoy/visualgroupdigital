@@ -59,7 +59,7 @@ export default function Sodelishus({ location }) {
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="80px"
           flexDirection="column"
         >
           <Box

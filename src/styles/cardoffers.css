@@ -49,6 +49,12 @@
   margin: 0px 20px 53px 20px;
 }
 
+@media screen and (max-width: 500px){
+  .offerCards {
+    height: 500px;
+  }
+}
+
 .offerCards > h3 {
   font-family: dm-sans;
   font-style: normal;

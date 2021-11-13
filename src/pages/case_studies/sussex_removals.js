@@ -17,6 +17,7 @@ import suss from '../../images/scraped/sussex_removals.json';
 
 import '../../styles/casestudies.css';
 import Slideshow from '../../components/Slideshow';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 export default function Sodelishus({ location }) {
 
@@ -47,20 +48,22 @@ export default function Sodelishus({ location }) {
 
   return (
     <Box className="main" overflowX="hidden">
-      <SEO />
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <SEO />
       <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
           flexDirection="column"
-          mt="50px"
+          mt="80px"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -116,8 +119,8 @@ export default function Sodelishus({ location }) {
                     w={[
                       "90%",
                       "90%",
-                      "25%",
-                      "25%",
+                      "30%",
+                      "30%",
                       "25%"
                     ]}
                     m="5px"
@@ -145,9 +148,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -160,6 +165,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -172,6 +178,7 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
+        <AccomplishmentSlider />
         <Slideshow />
         {/* <StaticLogo />     */}
         <ReusableFooter 

@@ -53,7 +53,7 @@ export default function ReusableRanking({ textArray }) {
                 "40%"
               ]}
               h={[
-                "300px",
+                "500px",
                 "300px",
                 "300px",
                 "300px",

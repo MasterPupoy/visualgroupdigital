@@ -291,332 +291,140 @@ export default function Our_portfolio({ location }) {
 
 
 function Cases(){
+  const allcases = [
+    {
+      img: delish,
+      name: "SODELISHUS",
+      type: "Health-Focused Baking",
+      subtext: "Sodelishus is a health-focused food company",
+      link:  "https://www.sodelishus.co.uk/",
+      toCs: "/case_studies/sodelishus"
+    },
+    {
+      img: oxted,
+      name: "OXTED",
+      subtext: "Music Festival based in Oxted",
+      type: "Oxted Festival",
+      link:  "https://www.oxtedfest.co.uk/",
+      toCs: "/case_studies/oxtedfest"
+    },
+    {
+      img: mane,
+      name: "MANE UK",
+      subtext: "Hair Thickening Solutions Company",
+      type: "",
+      link:  "https://maneuk.com/",
+      toCs: "/case_studies/maneuk"
+    },
+    {
+      img: hello,
+      name: "HELLO VANS",
+      type: "Removal Company",
+      subtext: "Online Van removals comparison company",
+      link:  "https://hellovans.com/",
+      toCs: "/case_studies/hellovans"
+    },
+    {
+      img: subfrantic,
+      name: "SUBFRANTIC MUSIC",
+      type: "Online Music Streaming", 
+      subtext: "The number one online live streaming service for musicians",
+      link:  "https://subfranticmusic.com/",
+      toCs: "/case_studies/subfrantic_music"
+    },
+
+  ]
+
+
   return (
     <Flex
       px="7%"
       mt="100px"
       flexDirection="column"
     >
-      <Flex
-        className="caseportContainer"
-        flexDirection="row"
-        flexWrap="wrap"
-        justifyContent="space-evenly"
-        alignItems="center"
-        w="100%"
-        py="5%"
-        my="2%"
-      >
-        <Box
-          w="50%"
-          textAlign="center"
-        >
-          <img src={delish} alt="delishus" style={{ borderRadius: "10px"}} />
-        </Box>
-        <Flex
-          alignItems="center"
-          flexDirection="column"
-        >
-          <Text
-            py="10px"
-            fontSize="25px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-            color="#0A2F53"
-          >
-            SODELISHUS
-          </Text>
-          <Text
-            py="10px"
-            fontSize="20px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-          >
-            Health-Focused Baking
-          </Text>
-          <a 
-            href="https://www.sodelishus.co.uk/" 
-            target="_blank"
-            style={{
-              color: "#EE6F19"
-            }}
-          >
-            https://www.sodelishus.co.uk/
-          </a>
-          <Text
-            py="10px"
-            fontSize="18px"
-            textAlign="center"
-          >
-            Sodelishus is a health-focused food company
-          </Text>
+      {allcases.map(c => {
+
+        return(
           <Flex
-            py="10px"
+            className="caseportContainer"
+            flexDirection="row"
+            justifyContent="space-evenly"
+            alignItems="center"
+            my="2%"
+            flexWrap="wrap" 
             w="100%"
-            justifyContent="center"
+            py="5%"
           >
-            <LearnMoreButton link="/case_studies/sodelishus" />
-          </Flex>
-        </Flex>
-      </Flex>
-       <Flex
-        className="caseportContainer"
-        flexDirection="row"
-        justifyContent="space-evenly"
-        alignItems="center"
-        flexWrap="wrap"
-        my="2%"
-        w="100%"
-        py="5%"
-      >
-        <Box
-          w="50%"
-          textAlign="center"
-        >
-          <img src={oxted} alt="delishus" style={{ borderRadius: "10px"}} />
-        </Box>
-        <Flex
-           alignItems="center"
-          flexDirection="column"
-        >
-          <Text
-            py="10px"
-            fontSize="25px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-            color="#0A2F53"
-          >
-            OXTED
-          </Text>
-          <Text
-            py="10px"
-            fontSize="20px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-          >
-            Oxted Festival
-          </Text>
-          <a 
-            href="https://www.oxtedfest.co.uk/" 
-            target="_blank"
-            style={{
-              color: "#EE6F19"
-            }}
-          >
-            https://www.oxtedfest.co.uk/
-          </a>
-          <Text
-            py="10px"
-            fontSize="18px"
-            textAlign="center"
-          >
-            Music Festival based in Oxted
-          </Text>
-          <Flex
-            py="10px"
-            w="100%"
-            justifyContent="center"
-          >
-            <LearnMoreButton link="/case_studies/oxtedfest" />
-          </Flex>
-        </Flex>
-      </Flex>
-      <Flex
-        className="caseportContainer"
-        flexDirection="row"
-        justifyContent="space-evenly"
-        alignItems="center"
-        w="100%"
-        flexWrap="wrap"
-        py="5%"
-        my="2%"
-      >
-        <Box
-          w="50%"
-          textAlign="center"
-        >
-          <img src={mane} alt="delishus" style={{ borderRadius: "10px"}} />
-        </Box>
-        <Flex
-           alignItems="center"
-          flexDirection="column"
-        >
-          <Text
-            py="10px"
-            fontSize="25px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-            color="#0A2F53"
-          >
-            MANE UK
-          </Text>
-          {/* <Text
-            py="10px"
-            fontSize="20px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-          >
-            Health-Focused Baking
-          </Text> */}
-          <a 
-            href="https://maneuk.com/" 
-            target="_blank"
-            style={{
-              color: "#EE6F19"
-            }}
-          >
-            https://maneuk.com/
-          </a>
-          <Text
-            py="10px"
-            fontSize="18px"
-            textAlign="center"
-          >
-            Hair Thickening Solutions Company
-          </Text>
-          <Flex
-            py="10px"
-            w="100%"
-            justifyContent="center"
-          >
-            <LearnMoreButton link="/case_studies/maneuk" />
-          </Flex>
-        </Flex>
-      </Flex>
-       <Flex
-        className="caseportContainer"
-        flexDirection="row"
-        justifyContent="space-evenly"
-        alignItems="center"
-        flexWrap="wrap"
-        w="100%"
-        my="2%"
-        py="5%"
-      >
-        <Box
-          w="50%"
-          textAlign="center"
-        >
-          <img src={hello} alt="delishus" style={{ borderRadius: "10px"}} />
-        </Box>
-        <Flex
-           alignItems="center"
-          flexDirection="column"
-        >
-          <Text
-            py="10px"
-            fontSize="25px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-            color="#0A2F53"
-          >
-            HELLO VANS
-          </Text>
-          <Text
-            py="10px"
-            fontSize="20px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-          >
-            Removal Company
-          </Text>
-          <a 
-            href="https://hellovans.com/" 
-            target="_blank"
-            style={{
-              color: "#EE6F19"
-            }}
-          >
-            https://hellovans.com/
-          </a>
-          <Text
-            py="10px"
-            fontSize="18px"
-            textAlign="center"
-          >
-            Online Van removals comparison company
-          </Text>
-          <Flex
-            py="10px"
-            w="100%"
-            justifyContent="center"
-          >
-            <LearnMoreButton link="/case_studies/hellovans" />
-          </Flex>
-        </Flex>
-      </Flex>
-      <Flex
-        className="caseportContainer"
-        flexDirection="row"
-        justifyContent="space-evenly"
-        alignItems="center"
-        my="2%"
-        flexWrap="wrap" 
-        w="100%"
-        py="5%"
-      >
-        <Box
-          w="50%"
-          textAlign="center"
-        >
-          <img src={subfrantic} alt="delishus" style={{ borderRadius: "10px"}} />
-        </Box>
-        <Flex
-           alignItems="center"
-          flexDirection="column"
-        >
-          <Text
-            py="10px"
-            fontSize="25px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-            color="#0A2F53"
-          >
-            SUBFRANTIC MUSIC
-          </Text>
-          <Text
-            py="10px"
-            fontSize="20px"
-            fontFamily="dm-sans"
-            fontStyle="normal"
-            fontWeight="bold"
-          >
-            Online Music Streaming
-          </Text>
-          <a 
-            href="https://subfranticmusic.com/" 
-            target="_blank"
-            style={{
-              color: "#EE6F19"
-            }}
-          >
-            https://subfranticmusic.com/
-          </a>
-          <Text
-            py="10px"
-            fontSize="18px"
-            textAlign="center"
-          >
-           The number one online live streaming service for musicians
-          </Text>
-          <Flex
-            py="10px"
-            w="100%"
-            justifyContent="center"
-          >
-            <LearnMoreButton link="/case_studies/subfrantic_music" />
-          </Flex>
-        </Flex>
-      </Flex> 
+            <Box
+              w={[
+                "100%",
+                "100%",
+                "60%",
+                "50%",
+                "50%"
+              ]}
+              textAlign="center"
+              px={[
+                "5%",
+                "5%",
+                "5%",
+                "0",
+                "0"
+              ]}
+            >
+              <img src={c.img} alt="delishus" style={{ borderRadius: "10px"}} />
+            </Box>
+            <Flex
+              alignItems="center"
+              flexDirection="column"
+            >
+              <Text
+                py="10px"
+                fontSize="25px"
+                fontFamily="dm-sans"
+                fontStyle="normal"
+                fontWeight="bold"
+                color="#0A2F53"
+              >
+                {c.name}
+              </Text>
+              <Text
+                py="10px"
+                fontSize="20px"
+                fontFamily="dm-sans"
+                fontStyle="normal"
+                fontWeight="bold"
+              >
+                {c.type}
+              </Text>
+              <a 
+                href={c.link}
+                target="_blank"
+                style={{
+                  color: "#EE6F19"
+                }}
+              >
+                {c.link}
+              </a>
+              <Text
+                py="10px"
+                fontSize="18px"
+                textAlign="center"
+              >
+              {c.subtext}
+              </Text>
+              <Flex
+                py="10px"
+                w="100%"
+                justifyContent="center"
+              >
+                <LearnMoreButton link={c.toCs} />
+              </Flex>
+            </Flex>
+          </Flex> 
+        )
+      })
+      }
     </Flex>
   )
 }

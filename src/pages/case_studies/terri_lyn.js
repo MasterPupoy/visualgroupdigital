@@ -13,10 +13,11 @@ import ReusableFooter from '../../components/ReusableFooter';
 import StaticLogo from '../../components/StaticLogo';
 import Footer from '../../components/Footer';
 import MobileNav from '../../components/MobileNav';
-
+import Slideshow from '../../components/Slideshow';
 import terrilyn from '../../images/scraped/terri_lynn.json';
 
 import '../../styles/casestudies.css';
+import AccomplishmentSlider from '../../components/AccomplishmentSlider';
 
 
 export default function Sodelishus({ location }) {
@@ -48,20 +49,23 @@ export default function Sodelishus({ location }) {
   }, []);
   
   return (
-    <Box className="main">
+    <Box className="main" overflowX="hidden">
       <SEO />
-      <Box>
         {
           (width > 1280) 
           ? <Nav loc={location} page='/case_studies' />
           : <MobileNav />
         }
+      <Box>
         <Flex
           justifyContent="center"
           alignItems="center"
-          m="10px"
+          mt="80px"
+          flexDirection="column"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h1
               className="title"
             >
@@ -114,7 +118,13 @@ export default function Sodelishus({ location }) {
               {terrilyn.map((img, i) => {
                 return (
                   <Box
-                    w="25%"
+                      w={[
+                      "90%",
+                      "90%",
+                      "25%",
+                      "25%",
+                      "25%"
+                    ]}
                     m="5px"
                   >
                     <img 
@@ -139,9 +149,11 @@ export default function Sodelishus({ location }) {
               justifyContent="center"
               alignItems="center"
               my="20px"
+              flexWrap="wrap"
             >
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -154,6 +166,7 @@ export default function Sodelishus({ location }) {
               </Box>
               <Box
                 mx="10px"
+                my="5px"
               >
                 <button   
                   className="button button--aylen "
@@ -166,7 +179,9 @@ export default function Sodelishus({ location }) {
               </Box>
           </Flex>
         </Box>
-        <StaticLogo />    
+        <AccomplishmentSlider />
+        <Slideshow />
+        {/* <StaticLogo />     */}
         <ReusableFooter 
           text={text}
         />

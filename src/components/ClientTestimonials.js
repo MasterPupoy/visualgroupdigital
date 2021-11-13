@@ -42,9 +42,12 @@ export default function ClientTestimonials() {
   })
   
   return (
-    <Box 
+    <Flex 
       pt="90px"
       px="3%"
+      w="100%"
+      flexDirection="column"
+      alignItems="center"
     >
       <Flex
         flexDirection="row"
@@ -83,6 +86,7 @@ export default function ClientTestimonials() {
         alignItems="center"
         flexWrap="wrap"
         pt="100px"
+        maxW="1400px"
       >
         <Box
           w="500px"
@@ -313,6 +317,6 @@ export default function ClientTestimonials() {
           <img src={trustpilot} alt="trustpilot.png" />
         </Box>
       </Flex>
-    </Box>
+    </Flex>
   )
 }

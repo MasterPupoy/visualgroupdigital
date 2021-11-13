@@ -17,7 +17,7 @@ import vgdlogo from "../images/v-logo.svg";
 import OurWork from '../components/Ourworks';
 
 import ceo from '../images/ceo.jpg';
-import aboutus from '../images/aboutus.png';
+import aboutus from '../images/aboutusbanner.png';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -127,7 +127,7 @@ export default function About({ location }) {
               "100%", // 30em-48em
               "100%",
               "100%", // 48em-62em
-              "40%", // 62em+
+              "50%", // 62em+
             ]}
           >
             <Text
@@ -190,7 +190,7 @@ export default function About({ location }) {
               "100%", // 30em-48em
               "100%",
               "100%", // 48em-62em
-              "60%", // 62em+
+              "48%", // 62em+
             ]}
             px="20px"
             pt="50px"

@@ -1,16 +1,23 @@
 .aboutusbanner {
   position: relative;
-  bottom: 294%;
-  left: 11%;
+  bottom: 318%;
+  left: 10%;
   z-index: 0;
+  max-width: 600px;
 }
 
 @media screen and (max-width: 1200px){
   .aboutusbanner {
-
-  bottom: 245%;
-
+    bottom: 245%;
+  }
 }
+
+@media screen and (min-width : 1240px) and (max-width: 1299px){
+
+  .aboutusbanner {
+    bottom: 257%;
+  }
+
 }
 
 
