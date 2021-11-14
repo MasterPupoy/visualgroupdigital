@@ -5,64 +5,68 @@ import {
   Text
 } from '@chakra-ui/react';
 
-import l1 from '../images/newone/1.png';
-import l2 from '../images/newone/2.png';
-import l3 from '../images/newone/3.png';
-import l4 from '../images/newone/4.png';
-import l5 from '../images/newone/5.png';
-import l6 from '../images/newone/6.png';
-import l7 from '../images/newone/7.png';
-import l8 from '../images/newone/8.png';
-import l9 from '../images/newone/9.png';
-import l10 from '../images/newone/10.png';
+import l1 from '../images/newone/1.svg';
+import l2 from '../images/newone/2.svg';
+import l3 from '../images/newone/3.svg';
+import l4 from '../images/newone/4.svg';
+import l5 from '../images/newone/5.svg';
+import l6 from '../images/newone/6.svg';
+import l7 from '../images/newone/7.svg';
+import l8 from '../images/newone/8.svg';
+import l9 from '../images/newone/9.svg';
+import l10 from '../images/newone/10.svg';
 
-import l11 from '../images/newone/11.png';
-import l12 from '../images/newone/12.png';
-import l13 from '../images/newone/13.png';
-import l14 from '../images/newone/14.png';
-import l15 from '../images/newone/15.png';
-import l16 from '../images/newone/16.png';
-import l17 from '../images/newone/17.png';
-import l18 from '../images/newone/18.png';
-import l19 from '../images/newone/19.png';
-import l20 from '../images/newone/20.png';
+import l11 from '../images/newone/11.svg';
+import l12 from '../images/newone/12.svg';
+// import l13 from '../images/newone/13.svg';
+import l14 from '../images/newone/14.svg';
+import l15 from '../images/newone/15.svg';
+import l16 from '../images/newone/16.svg';
+import l17 from '../images/newone/17.svg';
+import l18 from '../images/newone/18.svg';
+import l19 from '../images/newone/19.svg';
+import l20 from '../images/newone/20.svg';
 
-import l21 from '../images/newone/21.png';
-import l22 from '../images/newone/22.png';
-import l23 from '../images/newone/23.png';
-import l24 from '../images/newone/24.png';
-import l25 from '../images/newone/25.png';
-import l26 from '../images/newone/26.png';
-import l27 from '../images/newone/27.png';
-import l28 from '../images/newone/28.png';
-import l29 from '../images/newone/29.png';
-import l30 from '../images/newone/30.png';
+import l21 from '../images/newone/21.svg';
+import l22 from '../images/newone/22.svg';
+import l23 from '../images/newone/23.svg';
+import l24 from '../images/newone/24.svg';
+import l25 from '../images/newone/25.svg';
+import l26 from '../images/newone/26.svg';
+import l27 from '../images/newone/27.svg';
+import l28 from '../images/newone/28.svg';
+import l29 from '../images/newone/29.svg';
+import l30 from '../images/newone/30.svg';
 
-import l31 from '../images/newone/31.png';
-import l32 from '../images/newone/32.png';
-import l33 from '../images/newone/33.png';
-import l34 from '../images/newone/34.png';
-import l35 from '../images/newone/35.png';
-import l36 from '../images/newone/36.png';
-import l37 from '../images/newone/37.png';
-import l38 from '../images/newone/38.png';
-import l39 from '../images/newone/39.png';
-import l40 from '../images/newone/40.png';
+import l31 from '../images/newone/31.svg';
+import l32 from '../images/newone/32.svg';
+import l33 from '../images/newone/33.svg';
+import l34 from '../images/newone/34.svg';
+import l35 from '../images/newone/35.svg';
+import l36 from '../images/newone/36.svg';
+import l37 from '../images/newone/37.svg';
+import l38 from '../images/newone/38.svg';
+import l39 from '../images/newone/39.svg';
+import l40 from '../images/newone/40.svg';
 
 
-import l41 from '../images/newone/41.png';
-import l42 from '../images/newone/42.png';
-import l43 from '../images/newone/43.png';
-import l44 from '../images/newone/44.png';
-import l45 from '../images/newone/45.png';
-import l46 from '../images/newone/46.png';
-import l47 from '../images/newone/47.png';
-import l48 from '../images/newone/48.png';
-import l49 from '../images/newone/49.png';
-import l50 from '../images/newone/50.png';
+import l41 from '../images/newone/41.svg';
+import l42 from '../images/newone/42.svg';
+import l43 from '../images/newone/43.svg';
+import l44 from '../images/newone/44.svg';
+import l45 from '../images/newone/45.svg';
+import l46 from '../images/newone/46.svg';
+import l47 from '../images/newone/47.svg';
+import l48 from '../images/newone/48.svg';
+import l49 from '../images/newone/49.svg';
+import l50 from '../images/newone/50.svg';
 
-import l51 from '../images/newone/51.png';
-import l52 from '../images/newone/52.png';
+// import l51 from '../images/newone/51.svg';
+import l52 from '../images/newone/52.svg';
+import l53 from '../images/newone/53.svg';
+import l54 from '../images/newone/54.svg';
+import l55 from '../images/newone/55.svg';
+import l56 from '../images/newone/56.svg';
 
 
 import { gsap } from 'gsap';
@@ -175,13 +179,13 @@ export default function Slideshow() {
           <img src={l10} alt="cleaningspecialistproviders.svg" className="logopng " />
           <img src={l11} alt="provest.svg" className="logopng " />
           <img src={l12} alt="secretcalm.svg" className="logopng " />
-          <img src={l13} alt="houseofstreng.svg" className="logopng " />
+          {/* <img src={l13} alt="houseofstreng.svg" className="logopng " /> */}
           <img src={l14} alt="fitify.svg" className="logopng " />
           <img src={l15} alt="reignsupreme.svg" className="logopng " />
           <img src={l16} alt="rebecca.svg" className="logopng " />
           <img src={l17} alt="regency.svg" className="logopng " />
           <img src={l18} alt="keating.svg" className="logopng " />
-          <img src={l51} alt="cleaningspecialistproviders.svg" className="logopng " />  
+          {/* <img src={l51} alt="cleaningspecialistproviders.svg" className="logopng " />   */}
           <img src={l52} alt="cleaningspecialistproviders.svg" className="logopng " />  
           <img src={l19} alt="schtech.svg" className="addon "/>
           <img src={l34} alt="surreycedarlogo" className="logopng " />
@@ -215,6 +219,10 @@ export default function Slideshow() {
           <img src={l48} alt="redsacks.svg" className="logopng " />
           <img src={l49} alt="beautifulsouls.svg" className="logopng " />
           <img src={l50} alt="cleaningspecialistproviders.svg" className="logopng " />  
+          <img src={l53} alt="cleaningspecialistproviders.svg" className="logopng " />  
+          <img src={l54} alt="cleaningspecialistproviders.svg" className="logopng " />  
+          <img src={l55} alt="cleaningspecialistproviders.svg" className="logopng " />  
+          <img src={l56} alt="cleaningspecialistproviders.svg" className="logopng " />  
         </Flex>
         {/* <Flex
           alignItems="center"
@@ -338,7 +346,7 @@ export default function Slideshow() {
         <img src={l11} alt="provest.svg" className="logopng logos" />
         <img src={l12} alt="secretcalm.svg" className="logopng logos" />
       
-        <img src={l13} alt="houseofstreng.svg" className="logopng logos" />
+        {/* <img src={l13} alt="houseofstreng.svg" className="logopng logos" /> */}
         <img src={l14} alt="fitify.svg" className="logopng logos" />
         <img src={l15} alt="reignsupreme.svg" className="logopng logos" />
         <img src={l16} alt="rebecca.svg" className="logopng logos" />
@@ -378,8 +386,12 @@ export default function Slideshow() {
         <img src={l48} alt="redsacks.svg" className="logopng logos" />
         <img src={l49} alt="beautifulsouls.svg" className="logopng logos" />
         <img src={l50} alt="cleaningspecialistproviders.svg" className="logopng logos" />  
-        <img src={l51} alt="cleaningspecialistproviders.svg" className="logopng logos" />  
+        {/* <img src={l51} alt="cleaningspecialistproviders.svg" className="logopng logos" />   */}
         <img src={l52} alt="cleaningspecialistproviders.svg" className="logopng logos" />  
+        <img src={l53} alt="cleaningspecialistproviders.svg" className="logopng " />  
+          <img src={l54} alt="cleaningspecialistproviders.svg" className="logopng logos" />  
+          <img src={l55} alt="cleaningspecialistproviders.svg" className="logopng logos" />  
+          <img src={l56} alt="cleaningspecialistproviders.svg" className="logopng logos" />  
         {/* <img src={rockit} alt="intuneconsulting.svg" className="logopng  logos" /> */}
       </Flex>
 

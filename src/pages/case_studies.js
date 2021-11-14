@@ -38,16 +38,21 @@ import bee from '../images/scraped/beemoved.json';
 import sly from '../images/scraped/slynote.json';
 import aren from '../images/scraped/aren_heating_plumbing.json';
 import exp from '../images/scraped/expert_apps.json';
-import lbp from '../images/scraped/life_balance.json';
-import virt from '../images/scraped/virtlx.json';
+// import lbp from '../images/scraped/life_balance.json';
+// import virt from '../images/scraped/virtlx.json';
 import bw from '../images/scraped/black_and_white_london.json';
 import bod from '../images/scraped/bodiesmade_online.json';
 import tailor from '../images/scraped/sussex_tailored.json';
 import reader from '../images/scraped/readers_school.json';
-import intune from '../images/scraped/intune_consulting.json';
-import terrilyn from '../images/scraped/terri_lynn.json';
-import online from '../images/scraped/online_fitness_freedom.json';
+// import intune from '../images/scraped/intune_consulting.json';
+// import terrilyn from '../images/scraped/terri_lynn.json';
+// import online from '../images/scraped/online_fitness_freedom.json';
 import reign from '../images/scraped/reign_supreme.json';
+
+import l47 from '../images/newone/47.svg';
+import l2 from '../images/newone/2.svg';
+
+
 
 
 import '../styles/casestudies.css';
@@ -62,8 +67,11 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "sodelishus.co.uk",
       subheader: "Sodelishus is a health-focused food company",
       type: "FOOD COMPANY",
+      logo: l47,
       img1: sd[1],
       img2: sd[2],
+      img3: sd[3],
+      img4: sd[5],
       page: "/case_studies/sodelishus",
       colorScheme: "gray"
     },
@@ -71,8 +79,11 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "oxtedfest.co.uk",
       subheader: "Music Festival based in Oxted",
       type: "CONCERT BOOKING",
+      logo: l2,
       img1: ox[0],
       img2: ox[3],
+      img3: ox[8],
+      img4: ox[4],
       page: "/case_studies/oxtedfest",
       colorScheme: "green.300"
     },
@@ -82,6 +93,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "HAIR PRODUCTS",
       img1: man[12],
       img2: man[11],
+      img3: man[3],
+      img4: man[10],
       page: "/case_studies/maneuk",
       colorScheme: "yellow.300"
     },
@@ -91,6 +104,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "vAN COMPANY",
       img1: hello[0],
       img2: hello[7],
+      img3: hello[3],
+      img4: hello[5],
       page: "/case_studies/hellovans",
       colorScheme: "blue.300"
     },
@@ -100,6 +115,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "GYM EQUIPMENTS",
       img1: house[7],
       img2: house[12],
+      img3: house[2],
+      img4: house[5],
       page: "/case_studies/house_of_strength",
       colorScheme: "teal.300"
     },
@@ -109,6 +126,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Online music streaming",
       img1: sub[3],
       img2: sub[5],
+      img3: sub[1],
+      img4: sub[4],
       page: "/case_studies/subfrantic_music",
       colorScheme: "orange.300",
     },
@@ -118,6 +137,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Bossy Bitch Maids",
       img1: boss[8],
       img2: boss[2],
+      img3: boss[3],
+      img4: boss[10],
       colorScheme: "red.300",
       page: "/case_studies/bossy_bitch_maid"
     },
@@ -127,6 +148,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Game Company",
       img1: capital[1],
       img2: capital[2],
+      img3: capital[9],
+      img4: capital[3],
       colorScheme: "blue.300",
       page: "/case_studies/capital_clue_hunts"
     },
@@ -136,6 +159,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Removal Company",
       img1: suss[0],
       img2: suss[1],
+      img3: suss[3],
+      img4: suss[2],
       colorScheme: "green.300",
       page: "/case_studies/sussex_removals"
     },
@@ -145,6 +170,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Technology Company",
       img1: sch[5],
       img2: sch[8],
+      img3: sch[9],
+      img4: sch[10],
       colorScheme: "blue.300",
       page: "/case_studies/sch_tech"
     },
@@ -154,6 +181,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Pet Products Company",
       img1: city[4],
       img2: city[10],
+      img3: city[11],
+      img4: city[8],
       colorScheme: "green.300",
       page: "/case_studies/city_doggo"
     },
@@ -163,6 +192,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Luxury cleaning service.",
       img1: pro[4],
       img2: pro[5],
+      img3: pro[7],
+      img4: pro[9],
       colorScheme: "gray.300",
       page: "/case_studies/proclean"
     },
@@ -172,6 +203,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Transport Company",
       img1: bee[1],
       img2: bee[2],
+      img3: bee[3],
+      img4: bee[4],
       colorScheme: "cyan.300",
       page: "/case_studies/bee_moved"
     },
@@ -181,6 +214,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Encrypted notes Company",
       img1: sly[0],
       img2: sly[5],
+      img3: sly[4],
+      img4: sly[2],
       colorScheme: "teal.300",
       page: "/case_studies/slynote"
     },
@@ -190,6 +225,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Plumbing and heating company",
       img1: aren[0],
       img2: aren[1],
+      img3: aren[2],
+      img4: aren[3],
       colorScheme: "red.300",
       page: "/case_studies/aren_heating"
     },
@@ -199,33 +236,38 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Encrypted notes Company",
       img1: exp[1],
       img2: exp[2],
+      img3: exp[5],
+      img4: exp[6],
       colorScheme: "cyan.300",
       page: "/case_studies/expert_apps"
     },
-    {
-      link: "lbpcourse.com",
-      subheader: "LifeBalance Portal",
-      type: "Life Balance Company",
-      img1: lbp[8],
-      img2: lbp[7],
-      colorScheme: "gray.300",
-      page: "/case_studies/life_balance"
-    },
-    {
-      link: "virtlx.com",
-      subheader: "The real-time monitoring platform forCustomer feedback",
-      type: "Real-time Monitoring Platform",
-      img1: virt[0],
-      img2: virt[2],
-      colorScheme: "blue.300",
-      page: "/case_studies/virtlx"
-    },
+    // {
+    //   link: "lbpcourse.com",
+    //   subheader: "LifeBalance Portal",
+    //   type: "Life Balance Company",
+    //   img1: lbp[8],
+    //   img2: lbp[7],
+    //   img3: lbp[2],
+    //   img4: lbp[3],
+    //   colorScheme: "gray.300",
+    //   page: "/case_studies/life_balance"
+    // },
+    // {
+    //   link: "virtlx.com",
+    //   subheader: "The real-time monitoring platform forCustomer feedback",
+    //   type: "Real-time Monitoring Platform",
+    //   img1: virt[0],
+    //   img2: virt[2],
+    //   colorScheme: "blue.300",
+    //   page: "/case_studies/virtlx"
+    // },
     {
       link: "blackandwhitelondon.co.uk",
       subheader: "Leading UK Supplier of promotional items.",
       type: "Promotional Company",
       img1: bw[1],
       img2: bw[2],
+      img3: bw[0],
       colorScheme: "red.300",
       page: "/case_studies/black_and_white"
     },
@@ -235,6 +277,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Fitness Services",
       img1: bod[8],
       img2: bod[0],
+      img3: bod[3],
+      img4: bod[7],
       colorScheme: "teal.300",
       page: "/case_studies/bodiesmade_online"
     },
@@ -244,6 +288,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Tailored Removal Company",
       img1: tailor[12],
       img2: tailor[13],
+      img3: tailor[2],
+      img4: tailor[0],
       colorScheme: "yellow.300",
       page: "/case_studies/sussex_tailored"
     },
@@ -253,27 +299,29 @@ function ClientView({ num, setActiveImg, setOpen }) {
       type: "Online Children Learning platform",
       img1: reader[3],
       img2: reader[2],
+      img3: reader[0],
+      img4: reader[1],
       colorScheme: "cyan.300",
       page: "/case_studies/readers_school"
     },
-     {
-      link: "intune.consulting",
-      subheader: "Whilst each organisation is unique, here are some specific offerings.",
-      type: "Consulting Company",
-      img1: intune[1],
-      img2: intune[2],
-      colorScheme: "gray",
-      page: "/case_studies/intune_consulting"
-    },
-     {
-      link: "terrilynn.com",
-      subheader: "Terri Lynn's FREE fundraising program makes it easy for you to raise money for your cause!",
-      type: "Lifestyle Company",
-      img1: terrilyn[4],
-      img2: terrilyn[2],
-      colorScheme: "red.300",
-      page: "/case_studies/terri_lyn"
-    },
+    //  {
+    //   link: "intune.consulting",
+    //   subheader: "Whilst each organisation is unique, here are some specific offerings.",
+    //   type: "Consulting Company",
+    //   img1: intune[1],
+    //   img2: intune[2],
+    //   colorScheme: "gray",
+    //   page: "/case_studies/intune_consulting"
+    // },
+    //  {
+    //   link: "terrilynn.com",
+    //   subheader: "Terri Lynn's FREE fundraising program makes it easy for you to raise money for your cause!",
+    //   type: "Lifestyle Company",
+    //   img1: terrilyn[4],
+    //   img2: terrilyn[2],
+    //   colorScheme: "red.300",
+    //   page: "/case_studies/terri_lyn"
+    // },
     //   {
     //   link: "onlinefitnessfreedom.com",
     //   subheader: "Improve Their Marketing & Branding To Help Them Maximise Their Clientele Potential.",
@@ -283,12 +331,14 @@ function ClientView({ num, setActiveImg, setOpen }) {
     //   colorScheme: "yellow.300",
     //   page: "/case_studies/online_fitness_freedom"
     // },
-      {
+    {
       link: "reignsupremeuk.com",
       subheader: "Accountant In Kent, Who Speaks To You More Than Just Once A Year",
       type: "Business & Accounting Company",
       img1: reign[7],
       img2: reign[3],
+      img3: reign[6],
+      img4: reign[2],
       colorScheme: "teal.300",
       page: "/case_studies/reign_supreme"
     },
@@ -336,8 +386,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
               <Text
                 as="h3"
               >
-                <a href={`https://${client.link}/`} target="_blank">
-                  {client.link}
+                <a href={`https://${client?.link}/`} target="_blank">
+                  {client?.link}
                 </a>
               </Text>
 
@@ -346,7 +396,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 fontStyle="dm-sans"
                 fontSize="md"
               >
-                {client.subheader}
+                {client?.subheader}
               </Text>
             </Box>
             <Flex
@@ -362,7 +412,6 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 flexWrap="wrap"
               >
                 <Flex
-                  w="50%"
                   borderRadius="70px"
                   justifyContent="center"
                   mx="5px"
@@ -370,19 +419,20 @@ function ClientView({ num, setActiveImg, setOpen }) {
                     "100%",
                     "100%",
                     "100%",
-                    "40%",
-                    "40%"
+                    "35%",
+                    "35%"
                   ]}
                   my="5px"
                 >
                   <img 
-                    src={client.img1} 
+                    src={client?.img1} 
                     alt="client_showcase" 
                     className="imgholder" 
                     onClick={() => {
-                      setActiveImg(client.img1)
+                      setActiveImg(client?.img1)
                       setOpen(true)
                     }}
+                    SameSite="None"
                   />
               
                 </Flex>
@@ -391,8 +441,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
                     "100%",
                     "100%",
                     "100%",
-                    "40%",
-                    "40%"
+                    "35%",
+                    "35%"
                   ]}
                   borderRadius="70px"
                   justifyContent="center"
@@ -401,14 +451,67 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 >
                
                   <img 
-                    src={client.img2} 
+                    src={client?.img2} 
                     alt="client_showcase" 
                     className="imgholder"
                     onClick={() => {
-                      setActiveImg(client.img2)
+                      setActiveImg(client?.img2)
+                      setOpen(true)
+                    }}
+                    SameSite="None"
+                  />
+                </Flex>
+                <Flex
+                  w={[
+                    "100%",
+                    "100%",
+                    "100%",
+                    "35%",
+                    "35%"
+                  ]}
+                  borderRadius="70px"
+                  justifyContent="center"
+                  mx="5px"
+                  my="5px"
+                >
+               
+                  <img 
+                    src={client?.img3} 
+                    alt="client_showcase" 
+                    className="imgholder"
+                    onClick={() => {
+                      setActiveImg(client?.img3)
                       setOpen(true)
                     }} 
+                    SameSite="None"
                   />
+                </Flex>
+                <Flex
+                  w={[
+                    "100%",
+                    "100%",
+                    "100%",
+                    "35%",
+                    "35%"
+                  ]}
+                  borderRadius="70px"
+                  justifyContent="center"
+                  mx="5px"
+                  my="5px"
+                >
+                {(client?.img4) 
+                  ? <img 
+                    src={client.img4} 
+                    alt="client_showcase" 
+                    className="imgholder"
+                    onClick={() => {
+                      setActiveImg(client.img4)
+                      setOpen(true)
+                    }} 
+                    SameSite="None"
+                  />
+                  : null
+                } 
                 </Flex>
               </Flex>
             </Flex>
@@ -419,7 +522,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
               my="50px"
             >
               <Box>
-                <ViewMoreButton link={client.page} />
+                <ViewMoreButton link={client?.page} />
               </Box>
             </Flex>
           </Box>
@@ -603,15 +706,15 @@ export default function Case_studies({ location }) {
           justifyContent="center"
           my="100px"
         >
-          {(activeQty < 26)
+          {(activeQty < 21)
             ?<Flex
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
             onClick={() => {
               setActiveQty(num => {
-                if(activeQty === 25){
-                  return 26;
+                if(activeQty === 20){
+                  return 21;
                 }
 
                 return num + 5

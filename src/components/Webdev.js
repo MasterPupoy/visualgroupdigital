@@ -37,11 +37,11 @@ export default function Webdev(){
       setNum(val => {
         let diff = webdev.length - val
         
-        if(diff < 12){
+        if(diff <= 8){
           return val + diff
         }
 
-        return val + 12
+        return val + 8
       });
     }
   };

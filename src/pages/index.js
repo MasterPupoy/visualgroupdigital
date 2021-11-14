@@ -228,7 +228,7 @@ export default function Index({ location }) {
               fontSize="4xl"
               className="herohead"
             >
-              Our Clients
+              Some of Our Clients
             </Text>
             <Text
               fontSize="md"

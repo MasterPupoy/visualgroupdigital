@@ -9,6 +9,7 @@
 @media screen and (max-width: 1200px){
   .aboutusbanner {
     bottom: 245%;
+    max-width: 400px;
   }
 }
 

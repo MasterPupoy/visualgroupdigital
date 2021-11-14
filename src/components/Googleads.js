@@ -33,21 +33,69 @@ function ImageSkeleton({ num = 12 }){
   return all
 }
 
-function AdditionalImages(){
+function AdditionalImages({ setActiveImg, setOpen, setLoading }){
   return (
     <>
-      <img src={ga1} alt="googleads" />
-      <img src={ga2} alt="googleads" />
-      <img src={ga3} alt="googleads" />
-      <img src={ga4} alt="googleads" />
-      <img src={ga5} alt="googleads" />
-      <img src={ga6} alt="googleads" />
-      <img src={ga7} alt="googleads" />
-      <img src={ga8} alt="googleads" />
-      <img src={ga9} alt="googleads" />
-      <img src={ga10} alt="googleads" />
-      <img src={ga11} alt="googleads" />
-      <img src={ga12} alt="googleads" />
+      <img src={ga1} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga1)
+              setOpen(true)
+            }} />
+      <img src={ga2} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga2)
+              setOpen(true)
+            }}/>
+      <img src={ga3} alt="googleads"onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga3)
+              setOpen(true)
+            }} />
+      <img src={ga4} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga4)
+              setOpen(true)
+            }}/>
+      <img src={ga5} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga5)
+              setOpen(true)
+            }}/>
+      <img src={ga6} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga6)
+              setOpen(true)
+            }}/>
+      <img src={ga7} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga7)
+              setOpen(true)
+            }}/>
+      <img src={ga8} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga8)
+              setOpen(true)
+            }}/>
+      <img src={ga9} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga9)
+              setOpen(true)
+            }}/>
+      <img src={ga10} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga10)
+              setOpen(true)
+            }}/>
+      <img src={ga11} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga11)
+              setOpen(true)
+            }}/>
+      <img src={ga12} alt="googleads" onLoad={() => setLoading(false)}
+            onClick={() => {
+              setActiveImg(ga12)
+              setOpen(true)
+            }}/>
     </>
   )
 }
@@ -88,7 +136,7 @@ export default function Googleads(){
       >
         {(loading)
           ? <ImageSkeleton />
-          : <AdditionalImages />
+          : <AdditionalImages setLoading={setLoading} setOpen={setOpen} setActiveImg={setActiveImg} />
         }
         {googleads.map(img => {
           return (
