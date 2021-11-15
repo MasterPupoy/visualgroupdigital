@@ -48,12 +48,34 @@ import reader from '../images/scraped/readers_school.json';
 // import terrilyn from '../images/scraped/terri_lynn.json';
 // import online from '../images/scraped/online_fitness_freedom.json';
 import reign from '../images/scraped/reign_supreme.json';
+import gm from '../images/scraped/geoffrey_matthew.json';
+import gs from '../images/scraped/grant_space.json';
+import hg from '../images/scraped/honest_grapes.json';
+import pv from '../images/scraped/villa.json';
+import rh from '../images/scraped/racehorse.json';
+import rock from '../images/scraped/rockit.json';
+import up from '../images/scraped/upseeks.json';
 
 import l47 from '../images/newone/47.svg';
 import l2 from '../images/newone/2.svg';
-
-
-
+import l40 from '../images/newone/40.svg';
+import l45 from '../images/newone/45.svg';
+import l7 from '../images/newone/7.svg';
+import l37 from '../images/newone/37.svg';
+import l38 from '../images/newone/38.svg';
+import l44 from '../images/newone/44.svg';
+import l55 from '../images/newone/55.svg';
+import l14 from '../images/newone/14.svg';
+import l4 from '../images/newone/4.svg';
+import l50 from '../images/newone/50.svg';
+import l53 from '../images/newone/53.svg';
+import l34 from '../images/newone/34.svg';
+import l52 from '../images/newone/52.svg';
+import l3 from '../images/newone/3.svg';
+import l15 from '../images/newone/15.svg';
+import l17 from '../images/newone/17.svg';
+import l12 from '../images/newone/12.svg';
+import l19 from '../images/newone/19.svg';
 
 import '../styles/casestudies.css';
 import ViewMoreButton from '../components/ViewMoreButton';
@@ -88,9 +110,21 @@ function ClientView({ num, setActiveImg, setOpen }) {
       colorScheme: "green.300"
     },
     {
+      link: "honestgrapes.co.uk",
+      subheader: "Indy Best Online Wine Shop",
+      type: "ONLINE WINE SHOP",
+      logo: l40,
+      img1: hg[1],
+      img2: hg[2],
+      img3: hg[4],
+      img4: hg[3],
+      page: "/case_studies/honest_grapes"
+    },
+    {
       link: "maneuk.com",
       subheader: "Hair Thickening Solutions Company",
       type: "HAIR PRODUCTS",
+      logo: l45,
       img1: man[12],
       img2: man[11],
       img3: man[3],
@@ -102,6 +136,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "hellovans.com",
       subheader: "Online Van removals comparison company",
       type: "vAN COMPANY",
+      logo: l7,
       img1: hello[0],
       img2: hello[7],
       img3: hello[3],
@@ -113,6 +148,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "houseofstrength.co.uk",
       subheader: "A leading uk manufacturer and distributor of weighted plates and olympic bars",
       type: "GYM EQUIPMENTS",
+      logo: l37,
       img1: house[7],
       img2: house[12],
       img3: house[2],
@@ -121,15 +157,37 @@ function ClientView({ num, setActiveImg, setOpen }) {
       colorScheme: "teal.300"
     },
     {
+      link: "grantspace.co.uk",
+      subheader: "Make funding go far",
+      type: "Funding",
+      logo: l38,
+      img1: gs[2],
+      img2: gs[3],
+      img3: gs[4],
+      img4: gs[5],
+      page: "/case_studies/grant_space"
+    },
+    {
       link: "subfranticmusic.com",
       subheader: "The number one online live streaming service for musicians",
       type: "Online music streaming",
+      logo: l44,
       img1: sub[3],
       img2: sub[5],
       img3: sub[1],
       img4: sub[4],
       page: "/case_studies/subfrantic_music",
       colorScheme: "orange.300",
+    },
+    {
+      link: "geoffreymatthew.co.uk",
+      subheader: "Estate Agency at its Best",
+      type: "Estate Agency",
+      img1: gm[1],
+      img2: gm[2],
+      img3: gm[3],
+      img4: gm[5],
+      page: "/case_studies/geoffrey_matthew"
     },
     {
       link: "bossybitchmaid.me.uk",
@@ -141,6 +199,17 @@ function ClientView({ num, setActiveImg, setOpen }) {
       img4: boss[10],
       colorScheme: "red.300",
       page: "/case_studies/bossy_bitch_maid"
+    },
+    {
+      link: "prestigevillageandvillas.co",
+      subheader: "Estate Agency at its Finest",
+      type: "Estate Agency",
+      logo: l55,
+      img1: pv[3],
+      img2: pv[4],
+      img3: pv[5],
+      img4: pv[6],
+      page: "/case_studies/prestige_villas"
     },
     {
       link: "capitalcluehunts.com",
@@ -157,6 +226,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "sussexremovals.co.uk",
       subheader: "Sussex Tailored Removals is a friendly and Professional Removals and Storage In Sussex.",
       type: "Removal Company",
+      logo: l15,
       img1: suss[0],
       img2: suss[1],
       img3: suss[3],
@@ -168,6 +238,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "schtech.co.uk",
       subheader: "We Listen, Create & Deliver YOUR Technology Solutions.",
       type: "Technology Company",
+      logo: l19,
       img1: sch[5],
       img2: sch[8],
       img3: sch[9],
@@ -179,6 +250,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "citydoggo.com",
       subheader: "City Doggo introduces a return to nature for your metropolitan pet.",
       type: "Pet Products Company",
+      logo: l12,
       img1: city[4],
       img2: city[10],
       img3: city[11],
@@ -190,6 +262,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "procleanpartnership.co.uk",
       subheader: "We Listen, Create & Deliver YOUR Technology Solutions.",
       type: "Luxury cleaning service.",
+      logo: l17,
       img1: pro[4],
       img2: pro[5],
       img3: pro[7],
@@ -212,6 +285,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "slynote.com",
       subheader: "Slynote makes sending encrypted data simple.",
       type: "Encrypted notes Company",
+      logo: l15,
       img1: sly[0],
       img2: sly[5],
       img3: sly[4],
@@ -223,12 +297,23 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "arenheatingplumbing.co.uk",
       subheader: "Plumbing and heating company based in London",
       type: "Plumbing and heating company",
+      logo: l3,
       img1: aren[0],
       img2: aren[1],
       img3: aren[2],
       img4: aren[3],
       colorScheme: "red.300",
       page: "/case_studies/aren_heating"
+    },
+    {
+      link: "racehorseclub.co.uk",
+      subheader: "",
+      logo: l52,
+      type: "",
+      img1: rh[1],
+      img2: rh[0],
+      page: "/case_studies/racehorse_club"
+      
     },
     {
       link: "expertapps.online",
@@ -265,11 +350,22 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "blackandwhitelondon.co.uk",
       subheader: "Leading UK Supplier of promotional items.",
       type: "Promotional Company",
+      logo: l34,
       img1: bw[1],
       img2: bw[2],
       img3: bw[0],
       colorScheme: "red.300",
       page: "/case_studies/black_and_white"
+    },
+    {
+      link: "upseeks",
+      subheader: "Get Swiping to match with your ideal worker or business",
+      type: "Job Matching",
+      img1: up[1],
+      img2: up[3],
+      img3: up[5],
+      img4: up[7],
+      page: "/case_studies/upseeks"
     },
     {
       link: "bodiesmadeonline.com",
@@ -283,9 +379,18 @@ function ClientView({ num, setActiveImg, setOpen }) {
       page: "/case_studies/bodiesmade_online"
     },
     {
+      link: "rockithair",
+      logo: l53,
+      subheader: "",
+      type: "",
+      img1: rock[0],
+      page: "/case_studies/rock_it_hair"
+    },
+    {
       link: "tailoredremoval.co.uk",
       subheader: "Removals and storage company based in Sussex",
       type: "Tailored Removal Company",
+      logo: l14,
       img1: tailor[12],
       img2: tailor[13],
       img3: tailor[2],
@@ -297,6 +402,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "readerschool.org/v1/",
       subheader: "A full interactive and fun e-learning platform for children.",
       type: "Online Children Learning platform",
+      logo: l50,
       img1: reader[3],
       img2: reader[2],
       img3: reader[0],
@@ -335,6 +441,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "reignsupremeuk.com",
       subheader: "Accountant In Kent, Who Speaks To You More Than Just Once A Year",
       type: "Business & Accounting Company",
+      logo: l4,
       img1: reign[7],
       img2: reign[3],
       img3: reign[6],
@@ -377,28 +484,42 @@ function ClientView({ num, setActiveImg, setOpen }) {
             className="caseStudyBox"
             my="35px"
             px="10px"
+            key={client.link}
           >
-            <Box
-              textAlign="center"
+            <Flex
+              justifyContent="center"
+              alignItems="center"
+              w="100%"
               mt="30px"
-              className="viewshead"
+              flexWrap="wrap"
             >
-              <Text
-                as="h3"
+              <Box>
+                {(client.logo) 
+                  ? <img src={client.logo} alt="client logo" style={{ width: "200px"}}/>
+                  : null
+                }
+              </Box>
+              <Box
+                className="viewshead"
+                p="40px"
               >
-                <a href={`https://${client?.link}/`} target="_blank">
-                  {client?.link}
-                </a>
-              </Text>
+                <Text
+                  as="h3"
+                >
+                  <a href={`https://${client?.link}/`} target="_blank">
+                    {client?.link}
+                  </a>
+                </Text>
 
-              <Text
-                as="h5"
-                fontStyle="dm-sans"
-                fontSize="md"
-              >
-                {client?.subheader}
-              </Text>
-            </Box>
+                <Text
+                  as="h5"
+                  fontStyle="dm-sans"
+                  fontSize="md"
+                >
+                  {client?.subheader}
+                </Text>
+              </Box>
+            </Flex>
             <Flex
               mt="30px"
               justifyContent="center"
@@ -449,8 +570,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
                   mx="5px"
                   my="5px"
                 >
-               
-                  <img 
+                {(client.img2) 
+                  ? <img 
                     src={client?.img2} 
                     alt="client_showcase" 
                     className="imgholder"
@@ -460,6 +581,9 @@ function ClientView({ num, setActiveImg, setOpen }) {
                     }}
                     SameSite="None"
                   />
+                  : null
+                }
+                  
                 </Flex>
                 <Flex
                   w={[
@@ -474,8 +598,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
                   mx="5px"
                   my="5px"
                 >
-               
-                  <img 
+                {(client.img3) 
+                  ?  <img 
                     src={client?.img3} 
                     alt="client_showcase" 
                     className="imgholder"
@@ -485,6 +609,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
                     }} 
                     SameSite="None"
                   />
+                  : null
+                }
                 </Flex>
                 <Flex
                   w={[
@@ -706,15 +832,15 @@ export default function Case_studies({ location }) {
           justifyContent="center"
           my="100px"
         >
-          {(activeQty < 21)
+          {(activeQty < 28)
             ?<Flex
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
             onClick={() => {
               setActiveQty(num => {
-                if(activeQty === 20){
-                  return 21;
+                if(activeQty === 25){
+                  return 28;
                 }
 
                 return num + 5

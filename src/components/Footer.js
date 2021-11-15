@@ -185,8 +185,8 @@ export default function Footer() {
           <p
             style={{ paddingRight: "10px"}}
           >
-            At Visual Group Digital, we help businesses <br /> flourish by following a 
-            comprehensive <br /> 3-step process of consulting, <br /> development, 
+            At Visual Group Digital, we help businesses flourish by following a 
+            comprehensive 3-step process of consulting, development, 
             and marketing.
           </p>
         </Box>

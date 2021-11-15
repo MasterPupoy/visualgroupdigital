@@ -28,6 +28,12 @@ import oxted from '../images/caseport/oxted.jpg';
 import slynot from '../images/caseport/slynot.jpg';
 import subfrantic from '../images/caseport/subfrantic.jpg';
 import delish from '../images/caseport/delishz.png';
+import l47 from '../images/newone/47.svg';
+import l2 from '../images/newone/2.svg';
+import l45 from '../images/newone/45.svg';
+import l7 from '../images/newone/7.svg';
+import l44 from '../images/newone/44.svg';
+
 
 import portfolio from '../images/Portfolio.png';
 
@@ -298,7 +304,8 @@ function Cases(){
       type: "Health-Focused Baking",
       subtext: "Sodelishus is a health-focused food company",
       link:  "https://www.sodelishus.co.uk/",
-      toCs: "/case_studies/sodelishus"
+      toCs: "/case_studies/sodelishus",
+      logo: l47
     },
     {
       img: oxted,
@@ -306,7 +313,8 @@ function Cases(){
       subtext: "Music Festival based in Oxted",
       type: "Oxted Festival",
       link:  "https://www.oxtedfest.co.uk/",
-      toCs: "/case_studies/oxtedfest"
+      toCs: "/case_studies/oxtedfest",
+      logo: l2
     },
     {
       img: mane,
@@ -314,7 +322,8 @@ function Cases(){
       subtext: "Hair Thickening Solutions Company",
       type: "",
       link:  "https://maneuk.com/",
-      toCs: "/case_studies/maneuk"
+      toCs: "/case_studies/maneuk",
+      logo: l45
     },
     {
       img: hello,
@@ -322,7 +331,8 @@ function Cases(){
       type: "Removal Company",
       subtext: "Online Van removals comparison company",
       link:  "https://hellovans.com/",
-      toCs: "/case_studies/hellovans"
+      toCs: "/case_studies/hellovans",
+      logo: l7
     },
     {
       img: subfrantic,
@@ -330,7 +340,8 @@ function Cases(){
       type: "Online Music Streaming", 
       subtext: "The number one online live streaming service for musicians",
       link:  "https://subfranticmusic.com/",
-      toCs: "/case_studies/subfrantic_music"
+      toCs: "/case_studies/subfrantic_music",
+      logo: l44
     },
 
   ]
@@ -378,6 +389,11 @@ function Cases(){
               alignItems="center"
               flexDirection="column"
             >
+              <Box
+                p="20px"
+              >
+                <img src={c.logo} alt="cslogo" style={{ width: "150px" }} />
+              </Box>
               <Text
                 py="10px"
                 fontSize="25px"
