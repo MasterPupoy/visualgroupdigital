@@ -161,10 +161,10 @@ function ClientView({ num, setActiveImg, setOpen }) {
       subheader: "Make funding go far",
       type: "Funding",
       logo: l38,
-      img1: gs[2],
+      img1: gs[0],
       img2: gs[3],
       img3: gs[4],
-      img4: gs[5],
+      img4: gs[1],
       page: "/case_studies/grant_space"
     },
     {
@@ -528,70 +528,82 @@ function ClientView({ num, setActiveImg, setOpen }) {
                 w="100%"
                 justifyContent="center"
                 alignItems="center"
-                p="10px"
+                px={[
+                  "10px",
+                  "10px",
+                  "10px",
+                  "50px",
+                  "50px"
+                ]}
                 borderRadius="12px"
                 flexWrap="wrap"
               >
                 <Flex
-                  borderRadius="70px"
+                  flexWrap="wrap"
                   justifyContent="center"
-                  mx="5px"
-                    w={[
-                    "100%",
-                    "100%",
-                    "100%",
-                    "35%",
-                    "35%"
-                  ]}
-                  my="5px"
-                >
-                  <img 
-                    src={client?.img1} 
-                    alt="client_showcase" 
-                    className="imgholder" 
-                    onClick={() => {
-                      setActiveImg(client?.img1)
-                      setOpen(true)
-                    }}
-                    SameSite="None"
-                  />
-              
-                </Flex>
-                <Flex
-                  w={[
-                    "100%",
-                    "100%",
-                    "100%",
-                    "35%",
-                    "35%"
-                  ]}
-                  borderRadius="70px"
-                  justifyContent="center"
-                  mx="5px"
-                  my="5px"
-                >
-                {(client.img2) 
-                  ? <img 
-                    src={client?.img2} 
-                    alt="client_showcase" 
-                    className="imgholder"
-                    onClick={() => {
-                      setActiveImg(client?.img2)
-                      setOpen(true)
-                    }}
-                    SameSite="None"
-                  />
-                  : null
-                }
                   
+                >
+                  <Flex
+                    borderRadius="70px"
+                    justifyContent="center"
+                    mx="5px"
+                      w={[
+                      "100%",
+                      "100%",
+                      "100%",
+                      "33%",
+                      "33%"
+                    ]}
+                    my="5px"
+                  >
+                    <img 
+                      src={client?.img1} 
+                      alt="client_showcase" 
+                      className="imgholder" 
+                      onClick={() => {
+                        setActiveImg(client?.img1)
+                        setOpen(true)
+                      }}
+                      SameSite="None"
+                    />
+                
+                  </Flex>
+                  <Flex
+                    w={[
+                      "100%",
+                      "100%",
+                      "100%",
+                      "33%",
+                      "33%"
+                    ]}
+                    borderRadius="70px"
+                    justifyContent="center"
+                    mx="5px"
+                    my="5px"
+                  >
+                  {(client.img2) 
+                    ? <img 
+                      src={client?.img2} 
+                      alt="client_showcase" 
+                      className="imgholder"
+                      onClick={() => {
+                        setActiveImg(client?.img2)
+                        setOpen(true)
+                      }}
+                      SameSite="None"
+                    />
+                    : null
+                  }
+                    
+                  </Flex>
                 </Flex>
                 <Flex
                   w={[
                     "100%",
                     "100%",
                     "100%",
-                    "35%",
-                    "35%"
+                    "33%",
+                    "33%"
                   ]}
                   borderRadius="70px"
                   justifyContent="center"
@@ -617,8 +629,8 @@ function ClientView({ num, setActiveImg, setOpen }) {
                     "100%",
                     "100%",
                     "100%",
-                    "35%",
-                    "35%"
+                    "33%",
+                    "33%"
                   ]}
                   borderRadius="70px"
                   justifyContent="center"
