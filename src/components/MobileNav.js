@@ -44,7 +44,9 @@ export default function MobileNav({ page, main }) {
         zIndex="999"
       >
         <Box>
-          <img src={logo} alt="visual_group_logo" className="logo" />
+          <img src={logo} alt="visual_group_logo" className="logo" onClick={() => {
+            window.location.assign("/")
+          }} />
         </Box>
         {/* <Menu
           id="menu"

@@ -99,7 +99,9 @@ export default function Nav({ loc, page, main }) {
         alignItems="center"
       >
         <Box>
-          <img src={logo} alt="visual_group_logo" className="logo" />
+          <img src={logo} alt="visual_group_logo" className="logo" onClick={() => {
+            window.location.assign("/");
+          }} />
         </Box>
         <ul 
           className="nav-list"

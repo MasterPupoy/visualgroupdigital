@@ -27,6 +27,10 @@ nav {
   height: 33;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 .send {
   padding: 0px 5px 0px 0px;
   display: inline-block;
