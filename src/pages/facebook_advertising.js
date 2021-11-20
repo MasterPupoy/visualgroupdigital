@@ -212,7 +212,7 @@ export default function Facebook_advertising({ location }) {
               fontSize="5xl"
               className="next-gen"
             >
-              <span>Placements</span>
+              <span>Management</span>
             </Text>
             <Text
               as="p"
@@ -251,6 +251,13 @@ export default function Facebook_advertising({ location }) {
             ]}
             pt="10px"
             justifyContent="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
             
           >
             <img src={fblogo} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", width: "550px", height: "400px"}} />
@@ -483,9 +490,9 @@ export default function Facebook_advertising({ location }) {
             <p
               className="whyus"
             >
-              We, at Visual Group Digital, will help you increase your brand’s visibility, <br /> 
-              fan base, and overall engagement from Facebook users. We will help you optimise <br />
-              Facebook as a digital marketing channel to contribute to your growth in order size <br /> 
+              We, at Visual Group Digital, will help you increase your brand’s visibility, 
+              fan base, and overall engagement from Facebook users. We will help you optimise 
+              Facebook as a digital marketing channel to contribute to your growth in order size  
               and number of orders.
             </p>
           </Box>

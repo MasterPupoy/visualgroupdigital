@@ -44,8 +44,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../styles/socmedgrowth.css';
 import ReusableRanking from '../components/ReusableRanking';
 
-export default function Search_engine_optimization({ location }) {
-  const headerText = "SEARCH ENGINE OPTIMIZATION"
+export default function Search_engine_optimisation({ location }) {
+  const headerText = "SEARCH ENGINE OPTIMISATION"
   const subheader = "SEO"
   const paragraph = "SEO is all about increasing your website’s visibility in the search engines by improving your rankings"
   const text = "Do you have a project in mind? Get An Estimate for your Digital Marketing Campaign"
@@ -197,8 +197,8 @@ export default function Search_engine_optimization({ location }) {
       <SEO />
         {
           (width > 1280) 
-          ? <Nav loc={location} page='/search_engine_optimization' main="/marketing" />
-          : <MobileNav main="/search_engine_optimization" />
+          ? <Nav loc={location} page='/search_engine_optimisation' main="/marketing" />
+          : <MobileNav main="/search_engine_optimisation" />
         }
       <Box>
         <ReusableHero 
@@ -228,20 +228,19 @@ export default function Search_engine_optimization({ location }) {
               "100%", // 30em-48em  
               "100%",
               "100%", // 48em-62em
-              "40%", // 62em+
+              "60%", // 62em+
             ]}
           >
             <Text
               as="h3"
-              fontSize="5xl"
-              className="firstecom"
+              fontSize="6xl"
             >
-              <span>SEO :</span> <br/>
+              <span>SEARCH ENGINE OPTIMISATION (SEO)</span> : <br/>
               Reaching Your Target Audience
             </Text>
             <Text
               as="p"
-              fontSize="xl"
+              fontSize="2xl"
               className="ecomtxt"
             >
               SEO is all about increasing your website’s visibility in search engines by improving your rankings. 
@@ -261,22 +260,23 @@ export default function Search_engine_optimization({ location }) {
             </Flex>
           </Box>
           <Flex
-               ml={[
-              "0px",
-              "0px",
-              "70px",
-              "70px"
-            ]}
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em  
               "100%",
               "100%", // 48em-62em
-              "45%", // 62em+
+              "40%", // 62em+
             ]}
             pt="10px" 
             justifyContent="center"
             alignItems="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={seopic} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", }} />
           </Flex>
@@ -324,7 +324,7 @@ export default function Search_engine_optimization({ location }) {
                   <img src={check} alt="check.svg" /> Keyword Research and Keyword Ranking Reports
                 </li>
                 <li>
-                  <img src={check} alt="check.svg" /> Optimization of Page Title, <br />Meta Description and 
+                  <img src={check} alt="check.svg" /> Optimisation of Page Title, <br />Meta Description and 
                   Image Alt Tag
                 </li>
               </ul>
@@ -417,7 +417,7 @@ export default function Search_engine_optimization({ location }) {
                   <img src={check} alt="check.svg" /> Qualified Website Traffic Generation
                 </li>
                  <li>
-                  <img src={check} alt="check.svg" /> Conversion Rate Optimization
+                  <img src={check} alt="check.svg" /> Conversion Rate Optimisation
                 </li>
                 <li>
                   <img src={check} alt="check.svg" /> Visitor Traffic Reports
@@ -451,7 +451,7 @@ export default function Search_engine_optimization({ location }) {
                   <img src={check} alt="check.svg" /> SEO Audit and FAQs
                 </li>
                 <li>
-                  <img src={check} alt="check.svg" /> SEO campaign optimization for all devices – mobile, PC, tablet
+                  <img src={check} alt="check.svg" /> SEO campaign optimisation for all devices – mobile, PC, tablet
                 </li>
               </ul>
             </p>
@@ -479,7 +479,7 @@ export default function Search_engine_optimization({ location }) {
                   <img src={check} alt="check.svg" /> Mobile First Indexing
                 </li>
                  <li>
-                  <img src={check} alt="check.svg" /> Google Analytics and Google Business Optimization
+                  <img src={check} alt="check.svg" /> Google Analytics and Google Business Optimisation
 
                 </li>
                 <li>

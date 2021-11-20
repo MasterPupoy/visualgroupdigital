@@ -228,3 +228,13 @@ opacity: 0.7;
   box-shadow: 8px 5px 10px 0 #d5d5d5;
   transition: 0.5s ease-in;
 }
+
+.logocs {
+  width: 200px;
+}
+
+@media screen and (max-width: 500px) {
+  .logocs {
+    width: 200px;
+  }
+}

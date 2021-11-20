@@ -34,6 +34,13 @@ export default function Bizbut({ id }) {
           "0px",
           "0px"
         ]}
+        px={[
+          "20px",
+          "20px",
+          "20px",
+          '0px',
+          "0px"
+        ]}
       >
         <a
           className="reqCB"

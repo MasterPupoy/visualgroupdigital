@@ -210,6 +210,13 @@ export default function Marketing({ location }) {
             pt="10px" 
             justifyContent="center"
             alignItems="center"
+            display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={rocketpc} alt="rocketpc.svg" className="rocketpic" />
           </Flex>

@@ -196,7 +196,13 @@ export default function Our_portfolio({ location }) {
       <Flex
         mt="100px"
         mb="50px"
-        px="50px"
+        px={[
+          "20px",
+          "20px",
+          "20px",
+          "50px",
+          "50px",
+        ]} 
         flexWrap="wrap"
         justifyContent="center"
       >

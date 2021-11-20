@@ -177,7 +177,7 @@ function SecondSlider({ dir }){
         </h3>
         <Box>
           <a
-            href="/search_engine_optimization"
+            href="/search_engine_optimisation"
           >
             <img src={seo8} alt="seoaccomplishment" style={{ cursor : "pointer"}} />
           </a>
@@ -369,12 +369,19 @@ export default function AccomplishmentSlider() {
         </Flex>
         <Box
           pt="26px"
+          w={[
+            "100%",
+            "100%",
+            "50%",
+            "50%",
+            "50%"
+          ]}
         >
           <p
             className="subwhatwedo"
           >
             At Visual Group Digital, we specialise in helping 
-            businesses introduce their brand, <br />
+            businesses introduce their brand, 
             connect with their target audience, and develop an effective marketing 
             strategy. 
           </p>

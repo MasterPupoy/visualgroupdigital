@@ -63,25 +63,25 @@ export default function About({ location }) {
 
     ceotl.fromTo(".founderfounder", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
     .fromTo(".founderpos", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
     .fromTo(".foundername", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
     .fromTo(".ceo", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
     .fromTo(".foundertxt1", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
     .fromTo(".foundertxt2", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
     .fromTo("#aboutusceolearnmore", {
       opacity: 0
-    }, { duration: 0.25, opacity: 1})
+    }, { duration: 0.15, opacity: 1})
 
     return () => {
       ceotl.kill(true);
@@ -156,8 +156,8 @@ export default function About({ location }) {
               fontSize="xl"
               className="foundertxt1"
             >
-              It all started when the founders, Ricky and Kerryann, 
-              self-branded and marketed their own businesses to success. 
+              It all started when the founder, Ricky, 
+              self-branded and marketed his own businesses to success. 
               That lesson laid the foundation for the creation of Visual 
               Group Digital, a marketing agency dedicated to driving results 
               for businesses around the world.
@@ -196,6 +196,13 @@ export default function About({ location }) {
             pt="50px"
             justifyContent="center"
             alignItems="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={ceo} alt="ceo.png" className="ceo" style={{ width: "100%"}} />
           </Flex>
@@ -244,7 +251,7 @@ export default function About({ location }) {
         <Flex
           justifyContent="space-evenly"
           alignItems="center"
-          py="58px"
+          
           px="10%"
           w={[
             "0%",
@@ -287,7 +294,6 @@ export default function About({ location }) {
           </Flex>
         </Flex>
         <Box
-          mt="50px"
           px={[
             "10px",
             "10px",
@@ -295,6 +301,7 @@ export default function About({ location }) {
             "10%",
             "10%"
           ]}
+          pt="30px"
         >
           <h3 className="ourprocess">
             OUR <span>PROCESS</span>

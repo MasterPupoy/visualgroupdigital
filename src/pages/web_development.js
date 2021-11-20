@@ -209,7 +209,7 @@ export default function Web_development({ location }) {
           justifyContent="space-between"
         >
           <Box
-            className="digibrand"
+            className="digimark"
               width={[
               "100%", // 0-30em
               "100%",
@@ -228,8 +228,7 @@ export default function Web_development({ location }) {
                 "35px"
               ]}
             >
-              Website Development: <br />
-              Your Online Customer Experience
+              Website <span>Development</span>
             </Text>
             <Text
               as="p"
@@ -275,6 +274,13 @@ export default function Web_development({ location }) {
             pt="10px"
             px="20px"
             justifyContent="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={webdevelopment} alt="rocketpc.svg" className="rocketpic" />
           </Flex>

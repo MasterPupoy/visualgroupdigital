@@ -194,9 +194,9 @@ export default function Nav({ loc, page, main }) {
                 Social Media Growth
               </a>
               <a
-                href={'/search_engine_optimization'}
+                href={'/search_engine_optimisation'}
                 className={
-                  (key === '/search_engine_optimization') 
+                  (key === '/search_engine_optimisation') 
                   ? "activeSecondary"
                   : null
                 }

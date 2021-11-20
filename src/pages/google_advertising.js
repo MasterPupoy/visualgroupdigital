@@ -201,6 +201,13 @@ export default function Google_advertising({ location }) {
             pt="10px"
             px="20px"
             justifyContent="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={google} alt="rocketpc.svg" className="rocketpic"  />
           </Flex>
@@ -236,7 +243,18 @@ export default function Google_advertising({ location }) {
               <br />
               Google handles over 5 billion searches per day. By utilising Google Ads, your business will be displayed to people who are actively seeking out the products and services you provide. PPC means you only pay each time your ad is clicked by your prospective customers, meaning you only pay for results! Successful businesses recognise the benefits of Google Ads PPC in sending high-value traffic to their website.
             </Text>
-            <LearnMoreButton id="ecomlearn" link="/contact" />
+            <Flex
+                     justifyContent={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "flex-start",
+                "flex-start"
+              ]}
+            >
+              <LearnMoreButton id="ecomlearn" link="/contact" />
+            </Flex>
           </Box>
         </Flex>
         <Flex

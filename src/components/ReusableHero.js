@@ -120,8 +120,8 @@ export default function ReusableHero({ image, header, subheader, paragraph,
     >
       <Box
         pt={[
-          "40%",
-          "20%",
+          "50%",
+          "50%",
           "20%",
           "232px",
           "130px"
@@ -153,7 +153,13 @@ export default function ReusableHero({ image, header, subheader, paragraph,
           {paragraph}
         </Text>
         <Box
-          pt="90px"
+          pt={[
+            "20px",
+            "20px",
+            "20px",
+            "50px",
+            "90px"
+          ]}
           w={[
             "100%",
             "355px",
@@ -173,9 +179,9 @@ export default function ReusableHero({ image, header, subheader, paragraph,
             "none"
           ]}
         >
-          <img src={shape3} alt="svg" className="reshape3" />
           <img src={shape4} alt="svg" className="reshape4" />
           <img src={shape5} alt="svg" className="shape05" />
+          <img src={shape3} alt="svg" className="reshape3" />
           <img src={shape6} alt="svg" className="reshape6" />
           <img src={shape8} alt="svg" className="reshape8" />
         </Box>

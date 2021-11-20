@@ -211,6 +211,13 @@ export default function Graphic_design({ location }) {
             pt="10px"
             px="20px"
             justifyContent="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={brandingpic2} alt="rocketpc.svg" className="rocketpic" />
           </Flex>

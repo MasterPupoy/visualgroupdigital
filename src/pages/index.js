@@ -375,6 +375,13 @@ export default function Index({ location }) {
                 "50%",
                 "50%"
               ]}
+              display={[
+                "none",
+                "none",
+                "none",
+                "flex",
+                "flex"
+              ]}
               py="20px"
               justifyContent="center"
             >
@@ -520,8 +527,8 @@ export default function Index({ location }) {
           <Text
             fontSize="md"
           >
-            It all started when the founders, Ricky and Kerryann, 
-            self-branded and marketed their own businesses to 
+            It all started when the founder, Ricky, 
+            self-branded and marketed his own businesses to 
             success. That lesson laid the foundation for the 
             creation of Visual Group, a marketing agency dedicated 
             to driving results for businesses around the world.
@@ -566,6 +573,13 @@ export default function Index({ location }) {
             "500px",
             "500px",
             "500px"
+          ]}
+          display={[
+            "none",
+            "none",
+            "none",
+            "flex",
+            "flex"
           ]}
         >
           <img src={aboutus} alt="aboutus.png" className="aboutuspic" />

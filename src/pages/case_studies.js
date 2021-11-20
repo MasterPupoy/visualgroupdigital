@@ -121,6 +121,28 @@ function ClientView({ num, setActiveImg, setOpen }) {
       page: "/case_studies/honest_grapes"
     },
     {
+      link: "racehorseclub.co.uk",
+      subheader: "",
+      logo: l52,
+      type: "",
+      img1: rh[1],
+      img2: rh[0],
+      page: "/case_studies/racehorse_club"
+      
+    }, 
+    {
+      link: "readerschool.org",
+      subheader: "A full interactive and fun e-learning platform for children.",
+      type: "Online Children Learning platform",
+      logo: l50,
+      img1: reader[3],
+      img2: reader[2],
+      img3: reader[0],
+      img4: reader[1],
+      colorScheme: "cyan.300",
+      page: "/case_studies/readers_school"
+    },
+    {
       link: "maneuk.com",
       subheader: "Hair Thickening Solutions Company",
       type: "HAIR PRODUCTS",
@@ -226,7 +248,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "sussexremovals.co.uk",
       subheader: "Sussex Tailored Removals is a friendly and Professional Removals and Storage In Sussex.",
       type: "Removal Company",
-      logo: l15,
+      logo: l14,
       img1: suss[0],
       img2: suss[1],
       img3: suss[3],
@@ -305,16 +327,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       colorScheme: "red.300",
       page: "/case_studies/aren_heating"
     },
-    {
-      link: "racehorseclub.co.uk",
-      subheader: "",
-      logo: l52,
-      type: "",
-      img1: rh[1],
-      img2: rh[0],
-      page: "/case_studies/racehorse_club"
-      
-    },
+
     {
       link: "expertapps.online",
       subheader: "App Development Platform for Business",
@@ -361,7 +374,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "upseeks",
       subheader: "Get Swiping to match with your ideal worker or business",
       type: "Job Matching",
-      img1: up[1],
+      img1: up[2],
       img2: up[3],
       img3: up[5],
       img4: up[7],
@@ -390,7 +403,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       link: "tailoredremoval.co.uk",
       subheader: "Removals and storage company based in Sussex",
       type: "Tailored Removal Company",
-      logo: l14,
+      logo: "",
       img1: tailor[12],
       img2: tailor[13],
       img3: tailor[2],
@@ -398,18 +411,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
       colorScheme: "yellow.300",
       page: "/case_studies/sussex_tailored"
     },
-    {
-      link: "readerschool.org/v1/",
-      subheader: "A full interactive and fun e-learning platform for children.",
-      type: "Online Children Learning platform",
-      logo: l50,
-      img1: reader[3],
-      img2: reader[2],
-      img3: reader[0],
-      img4: reader[1],
-      colorScheme: "cyan.300",
-      page: "/case_studies/readers_school"
-    },
+
     //  {
     //   link: "intune.consulting",
     //   subheader: "Whilst each organisation is unique, here are some specific offerings.",
@@ -495,13 +497,13 @@ function ClientView({ num, setActiveImg, setOpen }) {
             >
               <Box>
                 {(client.logo) 
-                  ? <img src={client.logo} alt="client logo" style={{ width: "200px"}}/>
+                  ? <img src={client.logo} alt="client logo" className="logocs"/>
                   : null
                 }
               </Box>
               <Box
                 className="viewshead"
-                p="40px"
+                p="10px"
               >
                 <Text
                   as="h3"
@@ -515,6 +517,7 @@ function ClientView({ num, setActiveImg, setOpen }) {
                   as="h5"
                   fontStyle="dm-sans"
                   fontSize="md"
+                  textAlign="center"
                 >
                   {client?.subheader}
                 </Text>
@@ -745,7 +748,7 @@ export default function Case_studies({ location }) {
             </h3>
           </Box>
           <Box
-            px="100px"
+            px="10%"
             pt="20px"
           >
             <p

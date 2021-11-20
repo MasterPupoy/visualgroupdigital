@@ -241,6 +241,13 @@ export default function Ecommerce_marketing({ location }) {
             pt="10px"
             px="20px"
             justifyContent="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={ecom} alt="ecom.svg" className="rocketpic" />
           </Flex>
@@ -255,7 +262,9 @@ export default function Ecommerce_marketing({ location }) {
           alignItems="center"
           px="20px"
         >
-          <Box>
+          <Box
+            textAlign="center"
+          >
             <h3>
               Visual Group Digital as your E-Commerce Developer 
             </h3>

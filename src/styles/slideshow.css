@@ -70,6 +70,14 @@
   /* filter: invert(100%); */
 }
 
+@media screen and (max-width: 700px) {
+  .logopng, .addon, .addon2, .addon3, .addon4 {
+    width: 85px;
+    height: 85px;
+    margin: 0px 10px;
+  }
+}
+
 .seeMore {
   padding: 14px 18px;
 

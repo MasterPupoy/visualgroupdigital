@@ -229,9 +229,9 @@ export default function MobileNav({ page, main }) {
           px="30px"
         >
           <a 
-            href={`/search_engine_optimization`}
+            href={`/search_engine_optimisation`}
             className={
-            (main === '/search_engine_optimization') 
+            (main === '/search_engine_optimisation') 
             ? "active"
             : "inactive" 
           }

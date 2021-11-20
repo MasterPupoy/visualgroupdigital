@@ -81,13 +81,7 @@ export default function ReusableFooter({ text }) {
             "35%"
           ]}
           justifyContent="center"
-          flexDirection={[
-            "row",
-            "row",
-            "column",
-            "column",
-            "column"
-          ]}
+          flexDirection="column"
           alignItems="center"
         >
            <Text
@@ -112,13 +106,13 @@ export default function ReusableFooter({ text }) {
               today!
             </Text>
             <Box
-              alignSelf={[
+                      alignSelf={[
                 "center",
                 "center",
                 "center",
                 "flex-start",
                 "flex-start"
-              ]}
+              ]}  
             >
               <button
                 className="bizbut indexBizbut"

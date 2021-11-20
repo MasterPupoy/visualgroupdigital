@@ -215,6 +215,13 @@ export default function Social_media_growth({ location }) {
             pt="10px"
             px="20px"
             justifyContent="center"
+                   display={[
+              "none",
+              "none",
+              "none",
+              "flex",
+              "flex"
+            ]}
           >
             <img src={socmedgrowth} alt="rocketpc.svg" className="rocketpic" style={{ borderRadius: "10px", }} />
           </Flex>
@@ -235,7 +242,14 @@ export default function Social_media_growth({ location }) {
               fontSize="5xl"
               className="firstecom"
             >
-              Organic <span>Social Media</span>
+              Organic Social Media
+            </Text>
+            <Text
+              as="h3"
+              fontSize="5xl"
+              className="next-gen"
+            >
+              <span>Management</span>
             </Text>
             <Text
               as="p"
