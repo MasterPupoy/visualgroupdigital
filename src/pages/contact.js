@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Flex,
   Box,
@@ -31,6 +31,12 @@ export default function Contact({ location }) {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   }
+
+  const emailAdd = useRef();
+  const nameClient = useRef();
+  const cloc = useRef();
+  const coname = useRef();
+  const projDetails = useRef();
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -152,6 +158,7 @@ export default function Contact({ location }) {
                   <FormControl id="name">
                     <FormLabel>YOUR NAME</FormLabel>
                     <Input 
+                      ref={nameClient}
                       type="email" 
                       style={{
                         border: "1px solid rgba(238, 111, 25, 0.54)",
@@ -177,6 +184,7 @@ export default function Contact({ location }) {
                   <FormControl id="email">
                     <FormLabel>EMAIL</FormLabel>
                     <Input 
+                      ref={emailAdd}
                       type="email" 
                       style={{
                         border: "1px solid rgba(238, 111, 25, 0.54)",
@@ -209,6 +217,7 @@ export default function Contact({ location }) {
                   <FormControl id="location">
                     <FormLabel>LOCATION</FormLabel>
                     <Input 
+                      ref={cloc}
                       type="text" 
                       className="inputField" 
                       style={{
@@ -234,7 +243,8 @@ export default function Contact({ location }) {
                 >
                   <FormControl id="company_name">
                     <FormLabel>COMPANY NAME</FormLabel>
-                    <Input 
+                    <Input
+                      ref={coname}
                       type="email" 
                       style={{
                         border: "1px solid rgba(238, 111, 25, 0.54)",
@@ -261,6 +271,7 @@ export default function Contact({ location }) {
             <FormControl id="textarea" pt="20px">
               <FormLabel>PROJECT DETAILS</FormLabel>
               <Textarea
+                ref={projDetails}
                 size="md"
                 placeholder="Anything else you'd like to add?"
                 resize="none"
@@ -322,6 +333,12 @@ export default function Contact({ location }) {
                       setDetails("");
                       setLoc("");
                       setEmail("");
+
+                      emailAdd.current.value = ""
+                      nameClient.current.value = ""
+                      cloc.current.value = ""
+                      coname.current.value = ""
+                      projDetails.current.value = ""
                     }
                   })
                 }}
