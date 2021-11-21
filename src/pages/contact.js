@@ -16,6 +16,8 @@ import MobileNav from '../components/MobileNav';
 import message from '../images/message.svg';
 import map from '../images/map.svg';
 
+import Swal from 'sweetalert2'
+
 import '../styles/contact.css';
 
 export default function Contact({ location }) {
@@ -30,6 +32,12 @@ export default function Contact({ location }) {
     setHeight(window.innerHeight);
   }
 
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [loc, setLoc] = useState();
+  const [companyName, setCompanyName] = useState();
+  const [details, setDetails] = useState("");
+
  useEffect(() => {
 
     if(isBrowser){
@@ -39,6 +47,21 @@ export default function Contact({ location }) {
     
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
+
+  const formatText = (val) => {
+    let formatted = val.replace(/\s/g, "%20");
+
+    if(formatted.includes(",")){
+
+      let removedComma = formatted.replace(/,/g, "%20")
+    
+      return removedComma;
+    }
+
+    return formatted;
+  };
+
+  console.log(loc, companyName, details)
 
   return (
     <Box className="main" overflowX="hidden" >
@@ -135,6 +158,10 @@ export default function Contact({ location }) {
                         borderRadius: "8px"
                       }}
                       isRequired
+                      onChange={(e) => {
+                        const name = formatText(e.target.value);
+                        setName(name);
+                      }}
                     />
                   </FormControl>
                 </Box>
@@ -156,6 +183,10 @@ export default function Contact({ location }) {
                         borderRadius: "8px"
                       }}
                       isRequired
+                      onChange={(e) => {
+                        const mail = formatText(e.target.value);
+                        setEmail(mail);
+                      }}
                     />
                   </FormControl>
                 </Box>
@@ -178,13 +209,17 @@ export default function Contact({ location }) {
                   <FormControl id="location">
                     <FormLabel>LOCATION</FormLabel>
                     <Input 
-                      type="email" 
+                      type="text" 
                       className="inputField" 
                       style={{
                         border: "1px solid rgba(238, 111, 25, 0.54)",
                         borderRadius: "8px"
                       }}
                       isRequired
+                      onChange={(e) => {
+                        const location = formatText(e.target.value);
+                        setLoc(location);
+                      }}
                     />
                   </FormControl>
                 </Box>
@@ -206,6 +241,10 @@ export default function Contact({ location }) {
                         borderRadius: "8px"
                       }}
                       isRequired
+                      onChange={(e) => {
+                        const cname = formatText(e.target.value);
+                        setCompanyName(cname);
+                      }}
                     />
                   </FormControl>
                 </Box>
@@ -229,6 +268,10 @@ export default function Contact({ location }) {
                   border: "1px solid rgba(238, 111, 25, 0.54)",
                   borderRadius: "8px"
                 }}
+                onChange={(e) => {
+                  const deets = formatText(e.target.value);
+                  setDetails(deets);
+                }}
               />
             </FormControl>
           </Box>
@@ -236,9 +279,57 @@ export default function Contact({ location }) {
             pt="50px"
             textAlign="center"
           >
-            <button className="contactsubmit">
-              SUBMIT
-            </button>
+            {(!name || !email || !companyName || !loc )
+              ? <button
+                className="contactsubmit"
+                onClick={() => {
+                    Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: "Please make sure that you filled out all the important details.",
+                      confirmButtonColor: "#0A2F53",
+                      iconColor: "#EE6F19",
+                    });
+                }}
+              >
+                SUBMIT
+              </button>
+              : <a className="contactsubmit" 
+                href={`mailto:hello@visualgroup.online?subject=${companyName}%20Inquiry&body=Name:%20${name}%0D%0A%0D%0AEmail:%20${email}%0D%0A%0D%0ALocation:%20${loc}%0D%0A%0D%0ACompany%20name:%20${companyName}%0D%0A%0D%0AProject%20Details:%0D%0A${details}`}
+                onClick={() => {
+                  if(!name || !email || !companyName || !loc ){
+                    return Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: "Please make sure that you filled out all the important details.",
+                      confirmButtonColor: "#0A2F53",
+                      iconColor: "#EE6F19",
+                    });
+                  }
+
+
+                  return Swal.fire({
+                    icon: 'success',
+                    title: 'Send Us A Mail!',
+                    text: "We've forwarded your details to your default email client. Please double check and hit send!",
+                    confirmButtonColor: "#0A2F53",
+                    iconColor: "#EE6F19",
+                    footer: 'Looking forward to work with you!'
+                  }).then((result) => {
+                    if(result.isConfirmed){
+                      setName("");
+                      setCompanyName("");
+                      setDetails("");
+                      setLoc("");
+                      setEmail("");
+                    }
+                  })
+                }}
+                disabled
+              >
+                SUBMIT
+              </a>
+            }
           </Box>
         </Flex>
         <Footer />

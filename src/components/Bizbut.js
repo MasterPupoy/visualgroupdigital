@@ -20,7 +20,7 @@ export default function Bizbut({ id }) {
         <button
           className="bizbut"
           onClick={() => {
-            window.location.assign('/about')
+            window.location.assign('/contact')
           }}
         >
           BUSINESS ENQUIRY
