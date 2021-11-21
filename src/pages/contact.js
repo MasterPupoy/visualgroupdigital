@@ -6,7 +6,8 @@ import {
   FormLabel,
   Textarea,
   Input,
-  Text
+  Text,
+  Button
 } from '@chakra-ui/react';
 import SEO from '../components/Seo';
 import Nav from '../components/Nav';
@@ -14,11 +15,12 @@ import Footer from '../components/Footer';
 import MobileNav from '../components/MobileNav';
 
 import message from '../images/message.svg';
-import map from '../images/map.svg';
 
 import Swal from 'sweetalert2'
-
+import emailjs, { init } from 'emailjs-com';
 import '../styles/contact.css';
+
+init("user_bcT1POGZr6wb1ww9bBJo6");
 
 export default function Contact({ location }) {
 
@@ -26,7 +28,7 @@ export default function Contact({ location }) {
   
   const [width, setWidth]   = useState();
   const [height, setHeight] = useState();
-  
+
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
@@ -43,6 +45,7 @@ export default function Contact({ location }) {
   const [loc, setLoc] = useState();
   const [companyName, setCompanyName] = useState();
   const [details, setDetails] = useState("");
+  const [valid, setValid] = useState(true);
 
  useEffect(() => {
 
@@ -54,20 +57,53 @@ export default function Contact({ location }) {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  const formatText = (val) => {
-    let formatted = val.replace(/\s/g, "%20");
+  // const formatText = (val) => {
+  //   let formatted = val.replace(/\s/g, "%20");
 
-    if(formatted.includes(",")){
+  //   if(formatted.includes(",")){
 
-      let removedComma = formatted.replace(/,/g, "%20")
+  //     let removedComma = formatted.replace(/,/g, "%20")
     
-      return removedComma;
+  //     return removedComma;
+  //   }
+
+  //   return formatted;
+  // };
+
+
+  const sendMail = () => {
+    const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(emailAdd.current.value.match(valid)){
+
+      const template = {
+        from_name: nameClient.current.value,
+        to_name: "Visual Group",
+        message: message,
+        client_name: nameClient.current.value,
+        client_email: emailAdd.current.value,
+        client_company: coname.current.value,
+        client_location: cloc.current.value,
+        project_details: projDetails.current.value
+      }
+
+      emailjs.send('service_vvr7s0r', 'template_d4hoxpf', template).then((res) => {
+        if(res.status === 200){
+          window.location.assign("/thank_you");
+        }else{
+          Swal.fire({
+            title: "Oops...",
+            text: "Something Went wrong",
+            icon: "error",
+            footer: "We're working to sort this out"
+          });
+        }
+      });
+
+    }else{
+      setValid(false)
     }
-
-    return formatted;
-  };
-
-  console.log(loc, companyName, details)
+  }
 
   return (
     <Box className="main" overflowX="hidden" >
@@ -123,9 +159,6 @@ export default function Contact({ location }) {
           </Flex>
 
 
-
-
-
           <Flex
             className="contactgetstarted2"
             w="100%"
@@ -154,6 +187,7 @@ export default function Contact({ location }) {
                     "49%",
                     "49%"
                   ]}
+                  pt="20px"
                 >
                   <FormControl id="name">
                     <FormLabel>YOUR NAME</FormLabel>
@@ -166,8 +200,7 @@ export default function Contact({ location }) {
                       }}
                       isRequired
                       onChange={(e) => {
-                        const name = formatText(e.target.value);
-                        setName(name);
+                        setName(e.target.value);
                       }}
                     />
                   </FormControl>
@@ -180,6 +213,7 @@ export default function Contact({ location }) {
                     "49%",
                     "49%"
                   ]}
+                  pt="20px"
                 >
                   <FormControl id="email">
                     <FormLabel>EMAIL</FormLabel>
@@ -192,10 +226,20 @@ export default function Contact({ location }) {
                       }}
                       isRequired
                       onChange={(e) => {
-                        const mail = formatText(e.target.value);
-                        setEmail(mail);
+                        const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                        
+                        if(e.target.value.match(valid)){
+                          setEmail(e.target.value);
+                          setValid(true);
+                        }else{
+                          setValid(false);
+                        }
                       }}
                     />
+                    {(valid) ? null : <Text
+                      color="red"
+                      fontSize="15px"
+                    >*Please enter a valid email</Text>}
                   </FormControl>
                 </Box>
               </Flex>
@@ -213,6 +257,7 @@ export default function Contact({ location }) {
                     "49%",
                     "49%"
                   ]}
+                  pt="20px"
                 >
                   <FormControl id="location">
                     <FormLabel>LOCATION</FormLabel>
@@ -226,8 +271,7 @@ export default function Contact({ location }) {
                       }}
                       isRequired
                       onChange={(e) => {
-                        const location = formatText(e.target.value);
-                        setLoc(location);
+                        setLoc(e.target.value);
                       }}
                     />
                   </FormControl>
@@ -240,6 +284,7 @@ export default function Contact({ location }) {
                     "49%",
                     "49%"
                   ]}
+                 pt="20px"
                 >
                   <FormControl id="company_name">
                     <FormLabel>COMPANY NAME</FormLabel>
@@ -252,8 +297,7 @@ export default function Contact({ location }) {
                       }}
                       isRequired
                       onChange={(e) => {
-                        const cname = formatText(e.target.value);
-                        setCompanyName(cname);
+                        setCompanyName(e.target.value);
                       }}
                     />
                   </FormControl>
@@ -280,8 +324,7 @@ export default function Contact({ location }) {
                   borderRadius: "8px"
                 }}
                 onChange={(e) => {
-                  const deets = formatText(e.target.value);
-                  setDetails(deets);
+                  setDetails(e.target.value);
                 }}
               />
             </FormControl>
@@ -290,62 +333,21 @@ export default function Contact({ location }) {
             pt="50px"
             textAlign="center"
           >
-            {(!name || !email || !companyName || !loc )
-              ? <button
-                className="contactsubmit"
-                onClick={() => {
-                    Swal.fire({
-                      icon: 'error',
-                      title: 'Oops...',
-                      text: "Please make sure that you filled out all the important details.",
-                      confirmButtonColor: "#0A2F53",
-                      iconColor: "#EE6F19",
-                    });
-                }}
+            {(!name || !email || !loc || !companyName || !valid) 
+              ?<button 
+                className="contactsubmitdisabled" 
+                // href={`mailto:hello@visualgroup.online?subject=${companyName}%20Inquiry&body=Name:%20${name}%0D%0A%0D%0AEmail:%20${email}%0D%0A%0D%0ALocation:%20${loc}%0D%0A%0D%0ACompany%20name:%20${companyName}%0D%0A%0D%0AProject%20Details:%0D%0A${details}`}
+                
               >
                 SUBMIT
               </button>
-              : <a className="contactsubmit" 
-                href={`mailto:hello@visualgroup.online?subject=${companyName}%20Inquiry&body=Name:%20${name}%0D%0A%0D%0AEmail:%20${email}%0D%0A%0D%0ALocation:%20${loc}%0D%0A%0D%0ACompany%20name:%20${companyName}%0D%0A%0D%0AProject%20Details:%0D%0A${details}`}
-                onClick={() => {
-                  if(!name || !email || !companyName || !loc ){
-                    return Swal.fire({
-                      icon: 'error',
-                      title: 'Oops...',
-                      text: "Please make sure that you filled out all the important details.",
-                      confirmButtonColor: "#0A2F53",
-                      iconColor: "#EE6F19",
-                    });
-                  }
-
-
-                  return Swal.fire({
-                    icon: 'success',
-                    title: 'Send Us A Mail!',
-                    text: "We've forwarded your details to your default email client. Please double check and hit send!",
-                    confirmButtonColor: "#0A2F53",
-                    iconColor: "#EE6F19",
-                    footer: 'Looking forward to work with you!'
-                  }).then((result) => {
-                    if(result.isConfirmed){
-                      setName("");
-                      setCompanyName("");
-                      setDetails("");
-                      setLoc("");
-                      setEmail("");
-
-                      emailAdd.current.value = ""
-                      nameClient.current.value = ""
-                      cloc.current.value = ""
-                      coname.current.value = ""
-                      projDetails.current.value = ""
-                    }
-                  })
-                }}
-                disabled
+              :<button 
+                className="contactsubmit" 
+                // href={`mailto:hello@visualgroup.online?subject=${companyName}%20Inquiry&body=Name:%20${name}%0D%0A%0D%0AEmail:%20${email}%0D%0A%0D%0ALocation:%20${loc}%0D%0A%0D%0ACompany%20name:%20${companyName}%0D%0A%0D%0AProject%20Details:%0D%0A${details}`}
+                onClick={() =>  sendMail()}
               >
                 SUBMIT
-              </a>
+              </button>
             }
           </Box>
         </Flex>
