@@ -197,12 +197,7 @@ export default function Web_development({ location }) {
         />
         <Flex
           pt="50px"
-           px={[
-            "10px",
-            "20px",
-            "60px",
-            "10%"
-          ]}
+           px="5%"
           w="100%"
           flexWrap="wrap"
           alignItems="center"
@@ -252,6 +247,9 @@ export default function Web_development({ location }) {
               <button
                 // className="businessEnquiryButton"
                 className="button button--aylen"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 <span className="biz">BUSINESS ENQUIRY</span>
               </button>
@@ -469,6 +467,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -491,6 +493,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -512,6 +518,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -534,6 +544,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -556,6 +570,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -578,6 +596,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -600,6 +622,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -622,6 +648,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -644,6 +674,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -666,6 +700,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>
@@ -688,6 +726,10 @@ export default function Web_development({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
+                
               >
                 BUSINESS ENQUIRY
               </button>

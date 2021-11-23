@@ -52,6 +52,10 @@ export default function Contact({ location }) {
     if(isBrowser){
       updateDimensions();
       window.addEventListener("resize", updateDimensions);
+      
+      if(window.scrollY !== 0){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
     
     return () => window.removeEventListener("resize", updateDimensions);

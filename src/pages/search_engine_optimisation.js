@@ -210,12 +210,7 @@ export default function Search_engine_optimisation({ location }) {
         />
         <Flex
            pt="50px"
-           px={[
-            "10px",
-            "20px",
-            "60px",
-            "10%"
-          ]}
+           px="5%"
           flexWrap="wrap"
           alignItems="center"
           alignItems="center"
@@ -335,6 +330,9 @@ export default function Search_engine_optimisation({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -366,6 +364,9 @@ export default function Search_engine_optimisation({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -399,6 +400,9 @@ export default function Search_engine_optimisation({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -430,6 +434,9 @@ export default function Search_engine_optimisation({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -461,6 +468,9 @@ export default function Search_engine_optimisation({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -493,6 +503,9 @@ export default function Search_engine_optimisation({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>

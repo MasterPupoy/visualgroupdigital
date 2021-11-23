@@ -170,12 +170,7 @@ export default function Ecommerce_marketing({ location }) {
         />
         <Flex
           pt="50px"
-           px={[
-            "10px",
-            "20px",
-            "60px",
-            "103px"
-          ]}
+           px="5%"
           flexWrap="wrap"
           alignItems="center"
           justifyContent="space-between"
@@ -366,7 +361,7 @@ export default function Ecommerce_marketing({ location }) {
               <button
                 className="bizbut"
                 onClick={() => {
-                  window.location.assign("/digital_marketing")
+                  window.location.assign("/contact")
                 }}
               >
                 BUSINESS ENQUIRY
@@ -401,6 +396,7 @@ export default function Ecommerce_marketing({ location }) {
           justifyContent="center"
           alignItems="center"
           mt="50px"
+          px="5%"
         >
           <Box
             w={[

@@ -149,17 +149,12 @@ export default function Graphic_design({ location }) {
         />
         <Flex
           pt="50px"
-           px={[
-            "10px",
-            "20px",
-            "60px",
-            "60px"
-          ]}
+           px="5%"
           flexWrap="wrap"
           alignItems="center" 
         >
           <Box
-             className="digibrand"
+             className="digimark"
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
@@ -171,7 +166,7 @@ export default function Graphic_design({ location }) {
               as="h3"
               fontSize="5xl"
             >
-              Graphic Design
+              Graphic <span>Design</span>
             </Text>
             <Text
               as="p"
@@ -196,6 +191,9 @@ export default function Graphic_design({ location }) {
               <button
                 // className="businessEnquiryButton"
                 className="button button--aylen"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 <span className="biz">BUSINESS ENQUIRY</span>
               </button>

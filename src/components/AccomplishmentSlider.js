@@ -376,6 +376,7 @@ export default function AccomplishmentSlider() {
             "50%",
             "50%"
           ]}
+          px="10px"
         >
           <p
             className="subwhatwedo"

@@ -55,8 +55,8 @@ export default function ReusableFooter({ text }) {
                 "65px"
               ]}
               transform={[
-                "translate(7%, 50%)",
-                "translate(20%, 50%)",
+                "translate(15%, 50%)",
+                "translate(12%, 50%)",
                 "translate(20%, 100%)",
                 "translate(15%, 130%)",
                 "translate(35%, 130%)",
@@ -116,6 +116,9 @@ export default function ReusableFooter({ text }) {
             >
               <button
                 className="bizbut indexBizbut"
+                onClick={() => {
+                  window.location.assign("/contact")
+                }}
               >
                 BUSINESS ENQUIRY
               </button>

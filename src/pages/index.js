@@ -233,9 +233,11 @@ export default function Index({ location }) {
             <Text
               fontSize="md"
               className="heropara"
+              maxW="700px"
+              px="5"
             >
               We’ve worked with more than 100 companies 
-              since 2015 Check out some of the fantastic <br />
+              since 2015 Check out some of the fantastic 
               clients we have brought to the UK and International 
               Markets.
             </Text>
@@ -417,7 +419,7 @@ export default function Index({ location }) {
       <Flex
         flexDirection="column"
         className="vgd2"
-        px="10%"
+        px="5%"
       >
         <Box
           className="vgd"
@@ -446,7 +448,7 @@ export default function Index({ location }) {
         <Process />
       </Flex>
       <Box 
-        pl="10%"
+        px="5%"
         pt="105px"
         className="supervgd"
       >
@@ -468,7 +470,7 @@ export default function Index({ location }) {
           </Box>
           <Box
             alignSelf="center"
-            pl="20px"
+            px="10px"
           >
             <img src={line1} alt="line.svg" />
           </Box>
@@ -497,12 +499,7 @@ export default function Index({ location }) {
       <ClientTestimonials />
       <Flex
         mt="100px"
-        px={[
-          "10px",
-          "10px",
-          "20px",
-          "10%"
-        ]}
+        px="5%"
         w="100%"
         justifyContent="space-between"
         alignItems="center"

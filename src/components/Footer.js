@@ -153,13 +153,7 @@ export default function Footer() {
           "100px",
           "100px"
         ]}
-        py={[
-          "50px",
-          "50px",
-          "50px",
-          "50px",
-          "50px"
-        ]}
+        py="10px"
         flexWrap="wrap"
       >
         <Box className="footerabout" 
@@ -171,8 +165,8 @@ export default function Footer() {
             "25%"
           ]}
           py={[
-            "50px",
-            "50px",
+            "20px",
+            "20px",
             "50px",
             "20px",
             "20px"

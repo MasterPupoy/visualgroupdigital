@@ -280,7 +280,7 @@ export default function Slideshow() {
       <Flex
         mt="100px"
         mx="20px"
-        px="9%"
+        px="5%"
         flexDirection="column"
         alignItems={[
           "center",
@@ -400,7 +400,7 @@ export default function Slideshow() {
         <button
           className="seeMore button--aylen"
           onClick={() => {
-            window.location.assign("/case_studies")
+            window.location.assign("/our_portfolio")
           }}
         >
           <span>

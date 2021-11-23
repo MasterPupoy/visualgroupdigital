@@ -260,7 +260,7 @@ export default function Our_portfolio({ location }) {
           </h3>
         </Box>
         <Box
-          px="100px"
+          px="5%"
           pt="20px"
         >
           <p
@@ -368,7 +368,7 @@ function Cases(){
             justifyContent="space-evenly"
             alignItems="center"
             my="2%"
-            flexWrap="wrap" 
+            flexWrap="wrap-reverse" 
             w="100%"
             py="5%"
           >

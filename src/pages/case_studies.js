@@ -748,7 +748,7 @@ export default function Case_studies({ location }) {
             </h3>
           </Box>
           <Box
-            px="10%"
+            px="5%"
             pt="20px"
           >
             <p

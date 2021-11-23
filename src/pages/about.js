@@ -252,7 +252,7 @@ export default function About({ location }) {
           justifyContent="space-evenly"
           alignItems="center"
           
-          px="10%"
+          px="5%"
           w={[
             "0%",
             "0%",
@@ -294,13 +294,7 @@ export default function About({ location }) {
           </Flex>
         </Flex>
         <Box
-          px={[
-            "10px",
-            "10px",
-            "10%",
-            "10%",
-            "10%"
-          ]}
+          px="5%"
           pt="30px"
         >
           <h3 className="ourprocess">

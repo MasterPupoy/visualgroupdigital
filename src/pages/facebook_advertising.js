@@ -180,12 +180,7 @@ export default function Facebook_advertising({ location }) {
         />
         <Flex
           pt="50px"
-          px={[
-            "10px",
-            "20px",
-            "60px",
-            "103px"
-          ]}
+          px="5%"
           flexWrap="wrap"
           alignItems="center"
           justifyContent="space-between"
@@ -319,6 +314,9 @@ export default function Facebook_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -347,6 +345,9 @@ export default function Facebook_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -378,6 +379,9 @@ export default function Facebook_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -412,6 +416,9 @@ export default function Facebook_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -443,6 +450,9 @@ export default function Facebook_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -476,6 +486,7 @@ export default function Facebook_advertising({ location }) {
           justifyContent="center"
           alignItems="center"
           flexDirection="column"
+          px="5%"
         >
           <Box>
             <h3

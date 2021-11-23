@@ -39,6 +39,13 @@ export default function ReusableRanking({ textArray }) {
       alignItems="center"
       justifyContent="center"
       w="100%"
+      display={[
+        "none",
+        "flex",
+        "flex",
+        "flex",
+        "flex"
+      ]}
     >
         {textArray.map((steps, i) => {
           return (
@@ -53,9 +60,9 @@ export default function ReusableRanking({ textArray }) {
                 "40%"
               ]}
               h={[
-                "250px",
-                "300px",
-                "300px",
+                "220px",
+                "220px",
+                "220px",
                 "300px",
                 "300px",
                 "300px"

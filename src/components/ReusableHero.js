@@ -120,8 +120,8 @@ export default function ReusableHero({ image, header, subheader, paragraph,
     >
       <Box
         pt={[
-          "50%",
-          "50%",
+          "30%",
+          "30%",
           "20%",
           "232px",
           "130px"

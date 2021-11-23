@@ -157,7 +157,7 @@ export default function OfferCard() {
         </Flex>
       </Box>
        <Box
-        className="offerCards ofc4"
+        className="offerCards1 ofc4"
       >
         <img src={googleAds} alt="digitalmarketing.svg" />
         <h3>
@@ -170,7 +170,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton link="google_advertising" />
+          <LearnMoreButton link="/google_advertising" />
         </Flex>
       </Box>
        <Box
@@ -187,7 +187,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton link="social_media_growth" />
+          <LearnMoreButton link="/social_media_growth" />
         </Flex>
       </Box>
        <Box
@@ -204,7 +204,7 @@ export default function OfferCard() {
           justifyContent="center"
           alignItems="center"
         >
-          <LearnMoreButton link="/search_engine_optimization" />
+          <LearnMoreButton link="/search_engine_optimisation" />
         </Flex>
       </Box>
        <Box

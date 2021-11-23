@@ -194,12 +194,7 @@ export default function Social_media_growth({ location }) {
         />
         <Flex
           pt="50px"
-          px={[
-            "10px",
-            "20px",
-            "60px",
-            "103px"
-          ]}
+          px="5%"
           flexWrap="wrap"
           alignItems="center"
           justifyContent="space-between"
@@ -234,7 +229,6 @@ export default function Social_media_growth({ location }) {
               "100%", // 48em-62em
               "40%", // 62em+
             ]}
-            mx="50px"
             my="50px"
           >
             <Text
@@ -339,13 +333,16 @@ export default function Social_media_growth({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
             </Flex>
           </Box>
           <Box
-            className="widerCards ofc2"
+            className="widerCards2 ofc2"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -361,6 +358,9 @@ export default function Social_media_growth({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -382,6 +382,9 @@ export default function Social_media_growth({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -403,13 +406,16 @@ export default function Social_media_growth({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
             </Flex>
           </Box>
           <Box
-            className="widerCards ofc5"
+            className="widerCards3 ofc5"
           >
             <img src={eCommerce} alt="digitalmarketing.svg" />
             <h3>
@@ -435,13 +441,16 @@ export default function Social_media_growth({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
             </Flex>
           </Box>
           <Box
-            className="widerCards ofc6"
+            className="widerCards2 ofc6"
           >
             <img src={seo} alt="digitalmarketing.svg" />
             <h3>
@@ -461,6 +470,9 @@ export default function Social_media_growth({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>

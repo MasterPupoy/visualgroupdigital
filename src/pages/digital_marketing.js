@@ -270,7 +270,7 @@ export default function Marketing({ location }) {
           alignItems="center"
           my="50px"
           w="100%"
-          px="10%"
+          px="5%"
         >
           <Box
             w={[
@@ -314,7 +314,7 @@ export default function Marketing({ location }) {
           justifyContent="center"
           alignItems="center"
           mt="50px"
-          px="10%"
+          px="5%"
         >
           <Box
                w={[
@@ -324,7 +324,7 @@ export default function Marketing({ location }) {
               "100%",
               "50%"
             ]}
-             px="50px"
+             px="5%"
           >
             <Text
               fontSize="4xl"

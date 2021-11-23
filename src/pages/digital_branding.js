@@ -165,12 +165,7 @@ export default function Digital_branding({ location }) {
         />
         <Flex
           pt="50px"
-          px={[
-            "10px",
-            "20px",
-            "60px",
-            "10%"
-          ]}
+          px="5%"
           flexWrap="wrap"
           alignItems="center" 
           justifyContent="space-between"
@@ -213,6 +208,9 @@ export default function Digital_branding({ location }) {
               <button
                 // className="businessEnquiryButton"
                 className="button button--aylen"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 <span className="biz">BUSINESS ENQUIRY</span>
               </button>
@@ -299,6 +297,9 @@ export default function Digital_branding({ location }) {
               <button
                 // className="businessEnquiryButton"
                 className="button button--aylen"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 <span className="biz">BUSINESS ENQUIRY</span>
               </button>

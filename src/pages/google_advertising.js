@@ -299,6 +299,9 @@ export default function Google_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -322,6 +325,9 @@ export default function Google_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
@@ -345,6 +351,9 @@ export default function Google_advertising({ location }) {
             >
               <button
                 className="bizbut"
+                   onClick={() => {
+            window.location.assign('/contact')
+          }}
               >
                 BUSINESS ENQUIRY
               </button>
