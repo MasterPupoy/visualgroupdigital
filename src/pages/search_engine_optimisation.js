@@ -150,7 +150,7 @@ export default function Search_engine_optimisation({ location }) {
         opacity: 0,
         x: 100
       }, { duration: 0.25, x: 0, opacity: 1})
-    })
+    }, [])
 
     useEffect(() => {
 
@@ -174,7 +174,7 @@ export default function Search_engine_optimisation({ location }) {
       .fromTo("#ecomlearn", {
         opacity: 0
       }, { duration: 0.25, opacity: 1})
-    }) 
+    }, []) 
 
     useEffect(() => {
 
@@ -190,7 +190,7 @@ export default function Search_engine_optimisation({ location }) {
       .fromTo(".seogrowthimg", {
         opacity: 0
       }, { duration: 0.25, opacity: 1})
-    })
+    }, [])
 
   return (
     <Box className="main" overflowX="hidden">
@@ -581,7 +581,7 @@ export default function Search_engine_optimisation({ location }) {
               "100%",
               "50%"
             ]}
-            px="50px"
+            px="5%"
           >
             <Text
               fontSize="4xl"

@@ -136,7 +136,7 @@ export default function Social_media_growth({ location }) {
     .fromTo("#ecomlearn", {
       opacity: 0
     }, { duration: 0.25, opacity: 1})
-  }) 
+  }, []) 
 
   useEffect(() => {
 
@@ -173,7 +173,7 @@ export default function Social_media_growth({ location }) {
         opacity: 0,
         x: 100
       }, { duration: 0.25, x: 0, opacity: 1})
-    })
+    }, [])
 
 
   return (

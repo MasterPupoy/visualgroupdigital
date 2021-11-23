@@ -55,7 +55,7 @@ export default function ReusableFooter({ text }) {
                 "65px"
               ]}
               transform={[
-                "translate(15%, 50%)",
+                "translate(10%, 50%)",
                 "translate(12%, 50%)",
                 "translate(20%, 100%)",
                 "translate(15%, 130%)",
