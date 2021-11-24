@@ -20,7 +20,7 @@ import Swal from 'sweetalert2'
 import emailjs, { init } from 'emailjs-com';
 import '../styles/contact.css';
 
-init("user_bcT1POGZr6wb1ww9bBJo6");
+init("user_GCaEVt5pBdXq2r2kUScDu");
 
 export default function Contact({ location }) {
 
@@ -91,7 +91,7 @@ export default function Contact({ location }) {
         project_details: projDetails.current.value
       }
 
-      emailjs.send('service_vvr7s0r', 'template_d4hoxpf', template).then((res) => {
+      emailjs.send('service_e8f9jv7', 'template_kysv18u', template).then((res) => {
         if(res.status === 200){
           window.location.assign("/thank_you");
         }else{

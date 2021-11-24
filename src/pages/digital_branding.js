@@ -220,7 +220,7 @@ export default function Digital_branding({ location }) {
             width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%", // 48em-62em
+              "45%", // 48em-62em
               "45%", // 62em+
             ]}
             pt="10px"
@@ -246,7 +246,7 @@ export default function Digital_branding({ location }) {
            width={[
               "100%", // 0-30em
               "100%", // 30em-48em
-              "50%",
+              "45%",
               "45%", // 48em-62em
               "45%", // 62em+
             ]}
