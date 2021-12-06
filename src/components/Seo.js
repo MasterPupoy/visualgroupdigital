@@ -23,6 +23,7 @@ export default function SEO() {
       <meta property="og:title" content="Visual Group Digital" />
       <meta property="fb:app_id" content={fbId} />
 
+
       {/* twitter tags */}
 
       <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="font" type="font/woff2" crossorigin /> 
@@ -31,6 +32,19 @@ export default function SEO() {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
       <link href="https://unpkg.com/pattern.css" rel="stylesheet"></link>
+
+
+      {/* Global site tag (gtag.js) - Google Analytics  */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-192877287-2"></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-192877287-2');
+        `}
+      </script>      
     </Helmet>
   )
 }
