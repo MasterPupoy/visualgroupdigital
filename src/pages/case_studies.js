@@ -359,17 +359,17 @@ function ClientView({ num, setActiveImg, setOpen }) {
     //   colorScheme: "blue.300",
     //   page: "/case_studies/virtlx"
     // },
-    {
-      link: "blackandwhitelondon.co.uk",
-      subheader: "Leading UK Supplier of promotional items.",
-      type: "Promotional Company",
-      logo: l34,
-      img1: bw[1],
-      img2: bw[2],
-      img3: bw[0],
-      colorScheme: "red.300",
-      page: "/case_studies/black_and_white"
-    },
+    // {
+    //   link: "blackandwhitelondon.co.uk",
+    //   subheader: "Leading UK Supplier of promotional items.",
+    //   type: "Promotional Company",
+    //   logo: l34,
+    //   img1: bw[1],
+    //   img2: bw[2],
+    //   img3: bw[0],
+    //   colorScheme: "red.300",
+    //   page: "/case_studies/black_and_white"
+    // },
     {
       link: "upseeks",
       subheader: "Get Swiping to match with your ideal worker or business",
@@ -481,7 +481,6 @@ function ClientView({ num, setActiveImg, setOpen }) {
       {views.map((client, i) => {
         return (
           <Box
-            key={i}
             w="100%"
             className="caseStudyBox"
             my="35px"
@@ -847,7 +846,7 @@ export default function Case_studies({ location }) {
           justifyContent="center"
           my="100px"
         >
-          {(activeQty < 28)
+          {(activeQty < 27)
             ?<Flex
             justifyContent="center"
             alignItems="center"
@@ -855,7 +854,7 @@ export default function Case_studies({ location }) {
             onClick={() => {
               setActiveQty(num => {
                 if(activeQty === 25){
-                  return 28;
+                  return 27;
                 }
 
                 return num + 5

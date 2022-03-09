@@ -5,8 +5,6 @@ import {
   Text
 } from '@chakra-ui/react';
 
-import emoji from '../images/emoji.png';
-import circle_el from '../images/circle_el.svg';
 
 import '../styles/reusablefooter.css';
 
@@ -59,7 +57,7 @@ export default function ReusableFooter({ text }) {
                 "translate(12%, 50%)",
                 "translate(20%, 100%)",
                 "translate(15%, 130%)",
-                "translate(35%, 130%)",
+                "translate(50%, 50%)",
               ]}
   
             >
