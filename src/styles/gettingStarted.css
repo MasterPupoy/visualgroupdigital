@@ -1,0 +1,29 @@
+.wave1 {
+  position: relative;
+}
+
+.wave2 {
+
+}
+
+.statement2 > h3 {
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 46px;
+
+  color: #ffff;
+  text-align: center;
+}
+
+
+.statement2 > p {
+  padding-top: 20px;
+  font-family: dm-sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 21px;
+  text-align: center;
+
+  color: #fff;
+}
