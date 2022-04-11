@@ -13,12 +13,14 @@ export default function SimplifiedNav() {
       w="100%"
       justifyContent='space-between'
       p="1rem"
+      flexWrap={"wrap"}
     >
       <Image src={logo} width={'20rem'}  />
       <Flex
         alignItems="center"
         flexDirection="row"
         py="1rem"
+        flexWrap={"wrap"}
       >
         <Text
           className="reusableheader"

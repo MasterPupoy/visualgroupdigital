@@ -1,6 +1,6 @@
 import React from "react";
 import SEO from "../components/Seo";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Button, Input, Text } from "@chakra-ui/react";
 import CheckBadge from "../components/CheckBadge";
 import SimplifiedNav from "../components/SimplifiedNav";
 
@@ -14,10 +14,14 @@ import Footer from "../components/Footer";
 import fivestars from "../images/fivestars.svg";
 import smallLine from "../images/small_line.svg";
 import CheckCircle from "../components/CheckCircle";
+import Gcard from "../components/Gcard";
+import BrokenImg from "../components/BrokenImg";
+import Hourglass from "../components/Hourglass";
+import Trends from "../components/Trends";
 
 export default function GettingStarted() {
   return (
-    <Box className="main">
+    <Box maxW="2000px" m={"auto"} backgroundColor={"#FFF5DF"}>
       <SEO />
       <Flex>
         <SimplifiedNav />
@@ -27,19 +31,24 @@ export default function GettingStarted() {
         backgroundImage={Company}
         backgroundSize={"cover"}
         w="100%"
-        h="80vh"
+        h={["1650px", "1600px", "1500px", "1200px", "80vh"]}
         flexDirection={"row"}
-        alignItems={"center"}
         justifyContent={"space-between"}
         flexWrap={"wrap"}
+        alignItems="center"
       >
-        <Flex flexDirection={"column"} p="2rem" maxW="1200px">
+        <Flex
+          flexDirection={"column"}
+          p="2rem"
+          maxW="1200px"
+          w={["100%", "100%", "100%", "100%", "50%"]}
+        >
           <Text
             borderLeftWidth={"4px"}
             borderLeftColor={"#EE6F19"}
             borderTopWidth={"4px"}
             borderTopColor={"#EE6F19"}
-            fontSize="3.5rem"
+            fontSize={["2.5rem", "2.5rem", "2.5rem", "3rem"]}
             color={"#ffff"}
             fontWeight={"extrabold"}
             p="0.25rem"
@@ -49,7 +58,7 @@ export default function GettingStarted() {
           </Text>
           <Text
             py="0.5rem"
-            fontSize="2.5rem"
+            fontSize={["2rem", "2rem", "2.5rem", "2.5rem"]}
             color="#ffff"
             fontWeight="semibold"
             fontFamily={"dm-sans"}
@@ -83,20 +92,79 @@ export default function GettingStarted() {
             </Flex>
           </Box>
         </Flex>
-        <Flex alignItems="center" m="1.5rem">
-          <Box w={"480px"} h={"500px"} backgroundColor="#ffff" borderRadius={5}>
-            <Flex justifyContent={"space-around"} alignItems="center">
+        <Flex
+          w={["100%", "100%", "100%", "100%", "50%"]}
+          justifyContent="center"
+        >
+          <Box w={"480px"} h={"650px"} backgroundColor="#ffff" borderRadius={5}>
+            <Flex justifyContent={"space-around"} alignItems="center" py="1rem">
               <Text fontSize={"2.5rem"} fontWeight="extrabold" color="#0A2F53">
                 Book a meeting!
               </Text>
               <CheckCircle />
             </Flex>
+            <Box w="100%" p={"1rem"}>
+              <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
+                Your Name
+              </Text>
+              <Input w="100%" size="md" />
+              <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
+                Location
+              </Text>
+              <Input w="100%" size="md" />
+              <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
+                Company Name
+              </Text>
+              <Input w="100%" size="md" />
+              <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
+                Email{" "}
+              </Text>
+              <Input w="100%" size="md" />
+              <Button
+                w="100%"
+                backgroundColor="#0A2F53"
+                my="1rem"
+                p="1.5rem"
+                color="#FFFFFF"
+              >
+                Let's Chat!
+              </Button>
+            </Box>
           </Box>
         </Flex>
       </Flex>
+      <Flex my="1.5rem" justifyContent={"space-around"} flexWrap="wrap">
+        <Gcard
+          icon={<BrokenImg />}
+          title={"No clear strategy?"}
+          content={
+            "With us, we can choose clear, focused marketing objectives. Building a clear, cohesive strategy that centers around your goals."
+          }
+          color={"#0A2F53"}
+          buttonColor={"#EE6F19"}
+        />
+        <Gcard
+          icon={<Hourglass />}
+          title={"Lack of Time and Resources?"}
+          content={
+            "A clear, efficient process allows you to accomplish marketing activities more quickly, or delegate it to us."
+          }
+          color={"#EE6F19"}
+          buttonColor={"#0A2F53"}
+        />
+        <Gcard
+          icon={<Trends />}
+          title={"Adapting to New Trends?"}
+          content={
+            "Understand that Digital Marketing is Constant Change. Thats why we’re here for you! Let's get you up and running!"
+          }
+          color={"#0A2F53"}
+          buttonColor={"#EE6F19"}
+        />
+      </Flex>
       <Flex justifyContent="center" p={"3rem"}>
         <Text
-          fontSize="3.5rem"
+          fontSize={["2.5rem", "2.5rem", "2.5rem", "3.5rem"]}
           color="#0A2F53"
           textAlign="center"
           // fontFamily={"dm-sans"}
@@ -165,7 +233,7 @@ export default function GettingStarted() {
       <Flex w="100%" justifyContent={"center"} my="3rem">
         <Text
           fontFamily={"dm-sans"}
-          fontSize={"3rem"}
+          fontSize={["2rem", "2rem", "2rem", "3rem"]}
           fontWeight="extrabold"
           color="#0A2F53"
           maxW="1000px"
@@ -190,10 +258,11 @@ export default function GettingStarted() {
           fontSize={"3rem"}
           fontWeight="extrabold"
           color={"#ffff"}
+          textAlign="center"
         >
           WHAT OUR CLIENTS HAVE TO SAY
         </Text>
-        <Flex flexDirection={"row"}>
+        <Flex justifyContent={"center"} flexDirection={"row"} flexWrap="wrap">
           <Box w="500px" my="20px" mx="20px" className="testimonial1">
             <Flex justifyContent="center" alignItems="center">
               <img src={fivestars} alt="fivestars.svg" />
@@ -248,7 +317,7 @@ export default function GettingStarted() {
             </Flex>
           </Box>
         </Flex>
-        <Flex flexDirection={"row"}>
+        <Flex justifyContent={"center"} flexWrap="wrap" flexDirection={"row"}>
           <Box w="500px" mx="20px" my="20px" className="testimonial3">
             <Flex justifyContent="center" alignItems="center">
               <img src={fivestars} alt="fivestars.svg" />
@@ -309,7 +378,7 @@ export default function GettingStarted() {
           </Box>
         </Flex>
       </Flex>
-      <Flex px={"3rem"} justifyContent='center'> 
+      <Flex px={"3rem"} justifyContent="center" flexWrap={'wrap'}>
         <Text
           fontSize={"4rem"}
           fontWeight="extrabold"
@@ -318,9 +387,17 @@ export default function GettingStarted() {
         >
           READY FOR THE NEXT BIG LEAP?
         </Text>
-        <Box w="50%">
-
-        </Box>
+        <Flex justifyContent={"center"} alignItems="center" w="50%">
+          <Button
+            backgroundColor="#EE6F19"
+            my="1rem"
+            p="2.5rem"
+            color="#FFFFFF"
+            w="60%"
+          >
+            Book an appointment
+          </Button>
+        </Flex>
       </Flex>
       <Footer />
     </Box>
