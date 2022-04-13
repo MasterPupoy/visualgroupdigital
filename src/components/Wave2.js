@@ -1,14 +1,16 @@
 import React from "react";
-import '../styles/gettingStarted.css'
+import "../styles/gettingStarted.css";
 
 export default function Wave2() {
   return (
-    <svg className="wave2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#0A2F53"
-        fill-opacity="1"
-        d="M0,192L1440,0L1440,0L0,0Z"
-      ></path>
+    <svg
+      width="2000"
+      height="100"
+      viewBox="0 0 2000 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 100L2000 9.97151V0L0 0L0 100Z" fill="#0A2F53" />
     </svg>
   );
 }
