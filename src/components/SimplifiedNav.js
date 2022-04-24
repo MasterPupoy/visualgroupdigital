@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Button, Box, Flex, Image, Text } from "@chakra-ui/react";
 import logo from "../images/logo2.svg";
 import facebook from "../images/simplified/socials/fb_simplified.svg";
 import twitter from "../images/simplified/socials/twttr_simplified.svg";
@@ -12,10 +12,17 @@ export default function SimplifiedNav() {
       w="100%"
       justifyContent="space-between"
       px="1rem"
+      py="1rem"
       flexWrap={"wrap"}
     >
-      <Image src={logo} width={"15rem"} />
-      <Flex
+      <Image src={logo} width={"15rem"} style={{
+        cursor: 'pointer'
+      }} 
+      onClick={() => {
+        window.location.assign('/getting-started')
+      }}
+      />
+      {/* <Flex
         alignItems="center"
         flexDirection="row"
         py="1rem"
@@ -63,7 +70,19 @@ export default function SimplifiedNav() {
             />
           </a>
         </Flex>
-      </Flex>
+      </Flex> */}
+      
+      <Button
+        display={["none","none","block","block","block"]}
+          className="button button--aylen"
+        my="1rem"
+        color="#FFFFFF"
+        onClick={() => {
+          window.location.assign("/book-now");
+        }}
+      >
+        Book an appointment now!
+      </Button>
     </Flex>
   );
 }

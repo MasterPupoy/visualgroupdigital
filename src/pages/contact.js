@@ -7,7 +7,6 @@ import {
   Textarea,
   Input,
   Text,
-  Button
 } from '@chakra-ui/react';
 import SEO from '../components/Seo';
 import Nav from '../components/Nav';

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SEO from "../components/Seo";
 import { Box, Flex, Button, Input, Text, Image } from "@chakra-ui/react";
 import CheckBadge from "../components/CheckBadge";
@@ -13,14 +13,111 @@ import "../styles/simplifiedNav.css";
 import Footer from "../components/Footer";
 import fivestars from "../images/fivestars.svg";
 import smallLine from "../images/small_line.svg";
-import CheckCircle from "../components/CheckCircle";
 import Gcard from "../components/Gcard";
 import BrokenImg from "../components/BrokenImg";
 import Hourglass from "../components/Hourglass";
 import Trends from "../components/Trends";
-import CEO from "../images/ceo.jpg";
+import Head from "../components/Illustrations/headd.png";
+import emailjs, { init } from "emailjs-com";
+import Swal from "sweetalert2";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+init("user_GCaEVt5pBdXq2r2kUScDu");
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function GettingStarted() {
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      ".youneed",
+      { x: 1000, scale: 0 },
+      { duration: 0.5, x: 0, scale: 1 }
+    )
+      .fromTo(".unlock", { opacity: 0 }, { duration: 0.5, opacity: 1 })
+      .fromTo(
+        ".guaranteed",
+        {
+          x: 100,
+          opacity: 0,
+        },
+        { duration: 0.25, x: 0, opacity: 1 }
+      )
+      .fromTo(
+        ".boost",
+        {
+          x: 100,
+          opacity: 0,
+        },
+        { duration: 0.25, x: 0, opacity: 1 }
+      )
+      .fromTo(
+        ".bringing",
+        {
+          x: 100,
+          opacity: 0,
+        },
+        { duration: 0.25, x: 0, opacity: 1 }
+      )
+      .fromTo(
+        ".allin",
+        {
+          x: 100,
+          opacity: 0,
+        },
+        { duration: 0.25, x: 0, opacity: 1 }
+      )
+      .fromTo(
+        ".booknow",
+        { y: -1000, opacity: 0 },
+        { duration: 0.25, opacity: 1, y: 0 }
+      );
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
+  const sendMail = () => {
+    const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (email.current.value.match(valid)) {
+      const template = {
+        from_name: name,
+        to_name: "Visual Group",
+        message: 'Inquiry from funnel',
+        client_name: name,
+        client_email: email, 
+        client_company: company,
+        client_location: location, 
+        project_details: 'Lets chat inquiry' 
+      };
+
+      emailjs
+        .send("service_e8f9jv7", "template_kysv18u", template)
+        .then((res) => {
+          if (res.status === 200) {
+            window.location.assign("/book-now");
+          } else {
+            Swal.fire({
+              title: "Oops...",
+              text: "Something Went wrong",
+              icon: "error",
+              footer: "We're working to sort this out",
+            });
+          }
+        });
+    }
+  };
+
   return (
     <Box backgroundColor={"#FFF5DF"}>
       <Box
@@ -36,49 +133,51 @@ export default function GettingStarted() {
         <Flex
           backgroundRepeat={"no-repeat"}
           backgroundImage={Company}
+          backgroundColor={"#212f3d "}
           backgroundSize={"cover"}
           w="100%"
-          h={["1400px", "1300px", "1200px", "1200px", "750px"]}
+          h={["700px", "700px", "800px", "800px", "850px"]}
           flexDirection={"row"}
-          justifyContent={"space-between"}
+          justifyContent={"space-around"}
           flexWrap={"wrap"}
           alignItems="center"
           px="1rem"
         >
           <Flex
             flexDirection={"column"}
-            p="2rem"
             maxW="1200px"
             w={["100%", "100%", "100%", "100%", "50%"]}
+            px={"1rem"}
           >
             <Text
               borderLeftWidth={"4px"}
               borderLeftColor={"#EE6F19"}
               borderTopWidth={"4px"}
               borderTopColor={"#EE6F19"}
-              fontSize={["1.75rem", "2rem", "2.5rem", "3rem"]}
+              fontSize={["3rem", "3rem", "3.25rem", "4.25rem"]}
               color={"#ffff"}
-              fontWeight={"extrabold"}
-              p="0.25rem"
-              fontFamily={"dm-sans"}
+              p="0.5rem"
+              fontFamily={"DM Sans"}
+              fontWeight={700}
+              className={"youneed"}
             >
-              YOU NEED A GREAT DIGITAL MARKETING ALLY!
+              You need a <u>GREAT DIGITAL MARKETING ALLY!</u>
             </Text>
             <Text
               py="0.5rem"
               fontSize={["1.75rem", "2rem", "2.5rem", "3rem"]}
               color="#ffff"
-              fontWeight="semibold"
-              fontFamily={"dm-sans"}
+              fontWeight={700}
+              className="unlock"
             >
               Unlock your business' full potential with us!
             </Text>
             <Box>
-              <Flex alignItems="center" my="0.5rem">
+              <Flex alignItems="center" my="0.5rem" className="guaranteed">
                 <CheckBadge />
                 <Text
                   fontFamily={"dm-sans"}
-                  fontSize={["1rem", "1.15rem", "1.25rem", "1.5rem"]}
+                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
                   color="#ffff"
                   fontWeight="bold"
                   px="1rem"
@@ -86,11 +185,11 @@ export default function GettingStarted() {
                   Guaranteed boost in clients
                 </Text>
               </Flex>
-              <Flex alignItems="center" py="0.5rem">
+              <Flex alignItems="center" py="0.5rem" className="boost">
                 <CheckBadge />
                 <Text
                   fontFamily={"dm-sans"}
-                  fontSize={["1rem", "1.15rem", "1.25rem", "1.5rem"]}
+                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
                   color="#ffff"
                   fontWeight="bold"
                   px="1rem"
@@ -98,11 +197,11 @@ export default function GettingStarted() {
                   100% Boost in online presence
                 </Text>
               </Flex>
-              <Flex alignItems="center" py="0.5rem">
+              <Flex alignItems="center" py="0.5rem" className="bringing">
                 <CheckBadge />
                 <Text
                   fontFamily={"dm-sans"}
-                  fontSize={["1rem", "1.15rem", "1.25rem", "1.5rem"]}
+                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
                   color="#ffff"
                   fontWeight="bold"
                   px="1rem"
@@ -110,11 +209,11 @@ export default function GettingStarted() {
                   Bringing new customers to you
                 </Text>
               </Flex>
-              <Flex alignItems="center" py="0.5rem">
+              <Flex alignItems="center" py="0.5rem" className="allin">
                 <CheckBadge />
                 <Text
                   fontFamily={"dm-sans"}
-                  fontSize={["1rem", "1.15rem", "1.25rem", "1.5rem"]}
+                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
                   color="#ffff"
                   fontWeight="bold"
                   px="1rem"
@@ -127,6 +226,7 @@ export default function GettingStarted() {
           <Flex
             w={["100%", "100%", "100%", "100%", "50%"]}
             justifyContent={"center"}
+            display={["none", "none", "none", "none", "flex"]}
           >
             <Box
               w={"500px"}
@@ -134,6 +234,7 @@ export default function GettingStarted() {
               backgroundColor="#ffff"
               borderRadius={5}
               px={"0.5rem"}
+              className={"booknow"}
             >
               <Flex
                 justifyContent={"space-around"}
@@ -141,32 +242,48 @@ export default function GettingStarted() {
                 py="1rem"
               >
                 <Text
-                  fontSize={"3rem"}
-                  fontWeight="extrabold"
+                  fontSize={"4rem"}
+                  fontWeight={700}
                   color="#0A2F53"
                   fontFamily={"dm-sans"}
                 >
-                  Book a meeting!
+                  Book Now!
                 </Text>
-                <CheckCircle />
+                <Image src={Head} w="7rem" />
               </Flex>
               <Box w="100%" p={"1rem"}>
                 <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
                   Your Name
                 </Text>
-                <Input w="100%" size="md" />
+                <Input
+                  w="100%"
+                  size="md"
+                  onChange={(e) => setName(e.target.value)}
+                />
                 <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
                   Location
                 </Text>
-                <Input w="100%" size="md" />
+                <Input
+                  w="100%"
+                  size="md"
+                  onChange={(e) => setLocation(e.target.value)}
+                />
                 <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
                   Company Name
                 </Text>
-                <Input w="100%" size="md" />
+                <Input
+                  w="100%"
+                  size="md"
+                  onChange={(e) => setCompany(e.target.value)}
+                />
                 <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
-                  Email{" "}
+                  Email
                 </Text>
-                <Input w="100%" size="md" />
+                <Input
+                  w="100%"
+                  size="md"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
                 <Button
                   w="100%"
                   backgroundColor="#0A2F53"
@@ -190,7 +307,7 @@ export default function GettingStarted() {
             icon={<BrokenImg />}
             title={"No clear strategy?"}
             content={
-              "With us, we can choose clear, focused marketing objectives. Building a clear, cohesive strategy that centers around your goals."
+              "With us, we can choose clear, focused marketing objectives. Building a clear strategy that centers around your goals."
             }
             color={"#0A2F53"}
             buttonColor={"#EE6F19"}
@@ -220,9 +337,9 @@ export default function GettingStarted() {
             color="#0A2F53"
             textAlign="center"
             fontFamily={"dm-sans"}
-            fontWeight={"extrabold"}
+            fontWeight={700}
           >
-            Our company helped <u>corporations and start-ups</u> improve their
+            Our company helped <u>start-ups and corporations</u> improve their
             marketing and brand to <u>maximise their client potential.</u>
           </Text>
         </Flex>
@@ -232,12 +349,12 @@ export default function GettingStarted() {
             flexDirection={"column"}
             w="100%"
             backgroundColor={"#0A2F53"}
-            px="5rem"
+            px={["2rem", "2rem", "2rem", "5rem", "5rem"]}
             py="2rem"
           >
             <Text
               fontFamily={"dm-sans"}
-              fontSize="1.5rem"
+              fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem", "1.5rem"]}
               fontWeight={"extrabold"}
               color="#ffff"
             >
@@ -245,7 +362,7 @@ export default function GettingStarted() {
             </Text>
             <Text
               fontFamily={"dm-sans"}
-              fontSize="3rem"
+              fontSize={["2.5rem", "2.5rem", "2.5rem", "3rem", "3rem"]}
               fontWeight={"extrabold"}
               color="#ffff"
             >
@@ -253,7 +370,7 @@ export default function GettingStarted() {
             </Text>
             <Text
               fontFamily={"dm-sans"}
-              fontSize="1.25rem"
+              fontSize={["1.25rem", "1.25rem", "1.5rem", "1.5rem", "1.5rem"]}
               fontWeight={"extrabold"}
               color="#ffff"
             >
@@ -284,7 +401,7 @@ export default function GettingStarted() {
           justifyContent="center"
           fontFamily={"dm-sans"}
           w="100%"
-          px="5rem"
+          px={["2rem", "2rem", "2rem", "5rem", "5rem"]}
         >
           <Text
             color="#0A2F53"
@@ -328,24 +445,29 @@ export default function GettingStarted() {
         >
           <Text
             fontFamily={"dm-sans"}
-            fontSize={"3rem"}
+            fontSize={["2.25rem", "2.25rem", "2.5rem", "3rem", "3rem"]}
             fontWeight="extrabold"
             color={"#ffff"}
             textAlign="center"
           >
             WHAT OUR CLIENTS HAVE TO SAY
           </Text>
-          <Flex justifyContent={"center"} flexDirection={"row"} flexWrap="wrap">
+          <Flex
+            justifyContent={"center"}
+            flexDirection={"row"}
+            flexWrap="wrap"
+            w="100%"
+          >
             <Box w="500px" my="20px" mx="20px" className="testimonial1">
               <Flex justifyContent="center" alignItems="center">
                 <img src={fivestars} alt="fivestars.svg" />
               </Flex>
               <Box className="statement2">
-                <Text fontSize="3xl" as="h3">
+                <Text fontSize={"3xl"} as={"h3"}>
                   “I’ve been using Visual <br />
                   Group for over 2 months.”
                 </Text>
-                <Text as="p" fontSize="md">
+                <Text as="p" fontSize={"md"}>
                   "My experience has been amazing and they have really helped me
                   grow my business and progress it to the next level. We speak
                   daily and continuously track progress and discuss how we can
@@ -390,14 +512,19 @@ export default function GettingStarted() {
               </Flex>
             </Box>
           </Flex>
-          <Flex justifyContent={"center"} flexWrap="wrap" flexDirection={"row"}>
+          <Flex
+            w="100%"
+            justifyContent={"center"}
+            flexWrap="wrap"
+            flexDirection={"row"}
+          >
             <Box w="500px" mx="20px" my="20px" className="testimonial3">
               <Flex justifyContent="center" alignItems="center">
                 <img src={fivestars} alt="fivestars.svg" />
               </Flex>
               <Box className="statement2">
                 <Text fontSize="3xl" as="h3">
-                  “I can’t express enough how <br />
+                  “I can’t express how <br />
                   impressed I am with their results!”
                 </Text>
                 <Text as="p">
@@ -455,25 +582,29 @@ export default function GettingStarted() {
         </Flex>
         <Flex px={"3rem"} justifyContent="center" flexWrap={"wrap"}>
           <Text
-            fontSize={"4rem"}
+            fontSize={["2.75rem", "2.75rem", "3rem", "3rem", "3rem"]}
             fontWeight="extrabold"
             color="#0A2F53"
             maxW={"500px"}
           >
             READY FOR THE NEXT BIG LEAP?
           </Text>
-          <Flex justifyContent={"center"} alignItems="center" w="50%">
+          <Flex
+            justifyContent={"center"}
+            alignItems="center"
+            w={["100%", "100%", "100%", "50%", "50%"]}
+          >
             <Button
               backgroundColor="#EE6F19"
               my="1rem"
               p="2.5rem"
               color="#FFFFFF"
-              w="60%"
+              w={["90%", "80%", "80%", "60%", "60%"]}
               onClick={() => {
                 window.location.assign("/book-now");
               }}
             >
-              Book an appointment
+              Book an appointment now!
             </Button>
           </Flex>
         </Flex>
