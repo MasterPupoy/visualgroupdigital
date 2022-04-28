@@ -73,7 +73,7 @@ export default function SimplifiedNav() {
       </Flex> */}
       
       <Button
-        display={["none","none","block","block","block"]}
+        display={["none", "none","none","block","block","block"]}
           className="button button--aylen"
         my="1rem"
         color="#FFFFFF"

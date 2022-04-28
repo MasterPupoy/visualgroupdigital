@@ -4,7 +4,6 @@ import { Box, Flex, Button, Input, Text, Image } from "@chakra-ui/react";
 import CheckBadge from "../components/CheckBadge";
 import SimplifiedNav from "../components/SimplifiedNav";
 
-import Company from "../images/simplified/img/company.png";
 import Process from "../components/Process";
 import LogoIndex from "../components/LogoIndex";
 import Wave1 from "../components/Wave1";
@@ -17,9 +16,17 @@ import Gcard from "../components/Gcard";
 import BrokenImg from "../components/BrokenImg";
 import Hourglass from "../components/Hourglass";
 import Trends from "../components/Trends";
-import Head from "../components/Illustrations/headd.png";
 import emailjs, { init } from "emailjs-com";
 import Swal from "sweetalert2";
+import blob from "../components/Illustrations/blob.svg";
+import calendar from "../components/Illustrations/calendar.svg";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+import shape3 from "../images/Vector-circle.svg";
+import shape4 from "../images/Vector-verysmall.svg";
+import shape5 from "../images/small_circle.svg";
+import shape6 from "../images/Polygon.svg";
+import shape8 from "../images/back.svg";
+import boost from "../components/Illustrations/boost.svg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -35,22 +42,124 @@ export default function GettingStarted() {
   const [email, setEmail] = useState("");
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    let tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".banner-sec",
+        scrub: 1,
+        start: "60% center",
+      },
+    });
+
+    tl2
+      .to(".blob", {
+        y: -150,
+        zIndex: 0,
+        duration: 1,
+        ease: "ease",
+      })
+      .to(
+        ".wearevgd",
+        {
+          y: -150,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".unlock",
+        {
+          y: -150,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".seShape5",
+        {
+          y: -100,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".seShape6",
+        {
+          y: -100,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".seShape7",
+        {
+          y: -100,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".seShape8",
+        {
+          y: -150,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".seShape4",
+        {
+          y: -50,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        ".calendar",
+        {
+          y: -50,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      )
+      .to(
+        "booknow",
+        {
+          y: -200,
+          duration: 1,
+          ease: "ease",
+        },
+        "<"
+      );
+
+    return () => {
+      tl2.kill();
+    };
+  }, []);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".bookmore",
+        start: "top center",
+      },
+    });
 
     tl.fromTo(
-      ".youneed",
-      { x: 1000, scale: 0 },
-      { duration: 0.5, x: 0, scale: 1 }
+      ".guaranteed",
+      {
+        x: 100,
+        opacity: 0,
+      },
+      { duration: 0.25, x: 0, opacity: 1 }
     )
-      .fromTo(".unlock", { opacity: 0 }, { duration: 0.5, opacity: 1 })
-      .fromTo(
-        ".guaranteed",
-        {
-          x: 100,
-          opacity: 0,
-        },
-        { duration: 0.25, x: 0, opacity: 1 }
-      )
       .fromTo(
         ".boost",
         {
@@ -74,11 +183,6 @@ export default function GettingStarted() {
           opacity: 0,
         },
         { duration: 0.25, x: 0, opacity: 1 }
-      )
-      .fromTo(
-        ".booknow",
-        { y: -1000, opacity: 0 },
-        { duration: 0.25, opacity: 1, y: 0 }
       );
 
     return () => {
@@ -93,12 +197,12 @@ export default function GettingStarted() {
       const template = {
         from_name: name,
         to_name: "Visual Group",
-        message: 'Inquiry from funnel',
+        message: "Inquiry from funnel",
         client_name: name,
-        client_email: email, 
+        client_email: email,
         client_company: company,
-        client_location: location, 
-        project_details: 'Lets chat inquiry' 
+        client_location: location,
+        project_details: "Lets chat inquiry",
       };
 
       emailjs
@@ -130,171 +234,159 @@ export default function GettingStarted() {
         <Flex>
           <SimplifiedNav />
         </Flex>
+
+        <img src={shape5} alt="svg" className="seShape4" />
+        <img src={shape3} alt="svg" className="seShape5" />
+        <img src={shape6} alt="svg" className="seShape6" />
+        <img src={shape8} alt="svg" className="seShape7" />
+        <img src={shape4} alt="svg" className="seShape8" />
         <Flex
-          backgroundRepeat={"no-repeat"}
-          backgroundImage={Company}
-          backgroundColor={"#212f3d "}
-          backgroundSize={"cover"}
           w="100%"
-          h={["700px", "700px", "800px", "800px", "850px"]}
+          h={["1200px", "1200px", "1500px", "800px", "850px"]}
           flexDirection={"row"}
           justifyContent={"space-around"}
           flexWrap={"wrap"}
           alignItems="center"
-          px="1rem"
+          className="banner-sec "
         >
           <Flex
+            backgroundImage={blob}
+            backgroundPosition={"center"}
+            backgroundSize={["cover", "cover", "contain", "contain", "contain"]}
+            backgroundRepeat={"no-repeat"}
+            h="850px"
+            w={["100%","100%","100%","65%","55%","45%"]}
             flexDirection={"column"}
-            maxW="1200px"
-            w={["100%", "100%", "100%", "100%", "50%"]}
-            px={"1rem"}
-          >
-            <Text
-              borderLeftWidth={"4px"}
-              borderLeftColor={"#EE6F19"}
-              borderTopWidth={"4px"}
-              borderTopColor={"#EE6F19"}
-              fontSize={["3rem", "3rem", "3.25rem", "4.25rem"]}
-              color={"#ffff"}
-              p="0.5rem"
-              fontFamily={"DM Sans"}
-              fontWeight={700}
-              className={"youneed"}
-            >
-              You need a <u>GREAT DIGITAL MARKETING ALLY!</u>
-            </Text>
-            <Text
-              py="0.5rem"
-              fontSize={["1.75rem", "2rem", "2.5rem", "3rem"]}
-              color="#ffff"
-              fontWeight={700}
-              className="unlock"
-            >
-              Unlock your business' full potential with us!
-            </Text>
-            <Box>
-              <Flex alignItems="center" my="0.5rem" className="guaranteed">
-                <CheckBadge />
-                <Text
-                  fontFamily={"dm-sans"}
-                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
-                  color="#ffff"
-                  fontWeight="bold"
-                  px="1rem"
-                >
-                  Guaranteed boost in clients
-                </Text>
-              </Flex>
-              <Flex alignItems="center" py="0.5rem" className="boost">
-                <CheckBadge />
-                <Text
-                  fontFamily={"dm-sans"}
-                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
-                  color="#ffff"
-                  fontWeight="bold"
-                  px="1rem"
-                >
-                  100% Boost in online presence
-                </Text>
-              </Flex>
-              <Flex alignItems="center" py="0.5rem" className="bringing">
-                <CheckBadge />
-                <Text
-                  fontFamily={"dm-sans"}
-                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
-                  color="#ffff"
-                  fontWeight="bold"
-                  px="1rem"
-                >
-                  Bringing new customers to you
-                </Text>
-              </Flex>
-              <Flex alignItems="center" py="0.5rem" className="allin">
-                <CheckBadge />
-                <Text
-                  fontFamily={"dm-sans"}
-                  fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
-                  color="#ffff"
-                  fontWeight="bold"
-                  px="1rem"
-                >
-                  All in one web solutions
-                </Text>
-              </Flex>
-            </Box>
-          </Flex>
-          <Flex
-            w={["100%", "100%", "100%", "100%", "50%"]}
             justifyContent={"center"}
-            display={["none", "none", "none", "none", "flex"]}
+            alignContent={"center"}
+            className="blob"
           >
-            <Box
-              w={"500px"}
-              h={"700px"}
-              backgroundColor="#ffff"
-              borderRadius={5}
-              px={"0.5rem"}
-              className={"booknow"}
+            <Flex
+              flexDirection="column"
+              pl={["1rem", "1rem", "6.5rem", "6.5rem", "6.5rem"]}
             >
-              <Flex
-                justifyContent={"space-around"}
-                alignItems="center"
-                py="1rem"
+              <Text
+                fontFamily={"Montserrat"}
+                fontSize={["3rem", "3rem", "3rem", "3rem", "3.25rem"]}
+                color={"#ffff"}
+                className="wearevgd"
               >
-                <Text
-                  fontSize={"4rem"}
-                  fontWeight={700}
-                  color="#0A2F53"
-                  fontFamily={"dm-sans"}
-                >
-                  Book Now!
-                </Text>
-                <Image src={Head} w="7rem" />
-              </Flex>
-              <Box w="100%" p={"1rem"}>
-                <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
-                  Your Name
-                </Text>
-                <Input
-                  w="100%"
-                  size="md"
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
-                  Location
-                </Text>
-                <Input
-                  w="100%"
-                  size="md"
-                  onChange={(e) => setLocation(e.target.value)}
-                />
-                <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
-                  Company Name
-                </Text>
-                <Input
-                  w="100%"
-                  size="md"
-                  onChange={(e) => setCompany(e.target.value)}
-                />
-                <Text my="1rem" fontSize={"1.25rem"} fontFamily={"dm-sans"}>
-                  Email
-                </Text>
-                <Input
-                  w="100%"
-                  size="md"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <Button
-                  w="100%"
-                  backgroundColor="#0A2F53"
-                  my="1rem"
-                  p="1.5rem"
-                  color="#FFFFFF"
-                >
-                  Let's Chat!
-                </Button>
-              </Box>
+                WE ARE DIGITAL MARKETING
+              </Text>
+              <Text
+                fontFamily={"Montserrat"}
+                fontSize={["2rem", "2rem", "2rem", "2rem", "3rem"]}
+                color={"#ffff"}
+                className="unlock"
+              >
+                Unlock your business’
+                full potential with us!
+              </Text>
+              <Button
+                className="booknow"
+                rightIcon={<ArrowForwardIcon boxSize={"2rem"} />}
+                fontSize="1.25rem"
+                w="300px"
+                p="2rem"
+                borderRadius={20}
+                color="#ffff"
+                backgroundColor={"#ee6f19"}
+                my="2rem"
+                onClick={() => {
+                  window.location.assign('/book-now')
+                }}
+              >
+                Book an appointment
+              </Button>
+            </Flex>
+          </Flex>
+          <Box
+            w={["100%","100%","100%","100%","45%","40%"]}
+
+          >
+            <Image
+              src={calendar}
+              boxSize={["400px", "500px", "600px", "500px", "500px", "800px"]}
+              objectFit={"contain"}
+              className="calendar"
+            />
+          </Box>
+        </Flex>
+        <Flex
+          flexDirection={"row"}
+          flexWrap="wrap-reverse"
+          alignItems={"center"}
+          justifyContent={"space-evenly"}
+        >
+          <Image
+            src={boost}
+            boxSize={["400px", "500px", "600px", "800px", "800px"]}
+          />
+          <Flex
+            justifyContent={'center'}
+            flexDirection='column'
+            px="1rem"
+          >
+            <Box>
+              <Text
+                fontSize={["2.5rem", "2.5rem", "2.5rem", "3rem"]}
+                color="#0A2F53"
+                fontWeight="bold"
+                fontFamily={"Montserrat"}
+                className="bookmore"
+              >
+                Book more clients and <br />
+                Increase your sales
+              </Text>
             </Box>
+            <Flex alignItems="center" my="0.5rem" className="guaranteed">
+              <CheckBadge />
+              <Text
+                fontFamily={"dm-sans"}
+                fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
+                color="#0A2F53"
+                fontWeight="bold"
+                px="1rem"
+              >
+                Guaranteed boost in clients
+              </Text>
+            </Flex>
+            <Flex alignItems="center" py="0.5rem" className="boost">
+              <CheckBadge />
+              <Text
+                fontFamily={"dm-sans"}
+                fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
+                color="#0A2F53"
+                fontWeight="bold"
+                px="1rem"
+              >
+                100% increase in online presence
+              </Text>
+            </Flex>
+            <Flex alignItems="center" py="0.5rem" className="bringing">
+              <CheckBadge />
+              <Text
+                fontFamily={"dm-sans"}
+                fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
+                color="#0A2F53"
+                fontWeight="bold"
+                px="1rem"
+              >
+                Bringing new customers to you
+              </Text>
+            </Flex>
+            <Flex alignItems="center" py="0.5rem" className="allin">
+              <CheckBadge />
+              <Text
+                fontFamily={"dm-sans"}
+                fontSize={["1.25rem", "1.15rem", "1.25rem", "1.5rem"]}
+                color="#0A2F53"
+                fontWeight="bold"
+                px="1rem"
+              >
+                All in one web solutions
+              </Text>
+            </Flex>
           </Flex>
         </Flex>
         <Flex
@@ -333,7 +425,7 @@ export default function GettingStarted() {
         </Flex>
         <Flex justifyContent="center" p={"3rem"}>
           <Text
-            fontSize={["2.5rem", "2.5rem", "2.5rem", "3rem"]}
+            fontSize={["2rem", "2.5rem", "2.5rem", "3rem"]}
             color="#0A2F53"
             textAlign="center"
             fontFamily={"dm-sans"}
@@ -405,8 +497,7 @@ export default function GettingStarted() {
         >
           <Text
             color="#0A2F53"
-            fontFamily={"dm-sans"}
-            fontSize={"3rem"}
+            fontSize={["2rem", "2.5rem", "2.5rem", "3rem"]}
             fontWeight="extrabold"
           >
             <span
@@ -428,6 +519,7 @@ export default function GettingStarted() {
             color="#0A2F53"
             maxW="1000px"
             textAlign={"center"}
+            px="1rem"
           >
             We’ve worked with more than 100 companies since 2015 Check out some
             of the fantastic clients we have brought to the UK and International

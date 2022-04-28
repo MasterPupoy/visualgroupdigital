@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 
 .social-media-icons {
-  filter: invert(58%) sepia(37%) saturate(4993%) hue-rotate(350deg) brightness(95%) contrast(96%);
+  filter: invert(58%) sepia(37%) saturate(4993%) hue-rotate(350deg)
+    brightness(95%) contrast(96%);
 }
 
 .getting-started-banner {
-  background-image: url('../images/simplified/img/company.png');
+  background-image: url("../images/simplified/img/company.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,4 +26,44 @@
   z-index: 0;
   transform: skewY(-12deg);
   transform-origin: top left;
+}
+
+.seShape4 {
+  position: absolute;
+  right: 16rem;
+  top: 47rem;
+  z-index: 999;
+}
+
+.seShape5 {
+  position: absolute;
+  right: 35rem;
+  z-index: 999;
+}
+
+.seShape6 {
+  position: absolute;
+  right: 24rem;
+  top:34rem;
+  z-index: 999;
+}
+
+.seShape3 {
+  position: absolute;
+  right: 3rem;
+  z-index: 999;
+}
+
+.seShape7 {
+  position: absolute;
+  right: 70rem;
+  top: 40rem;
+  z-index: 999;
+}
+
+.seShape8 {
+  position: absolute;
+  right: 42rem;
+  top: 54rem; 
+  z-index: 999;
 }

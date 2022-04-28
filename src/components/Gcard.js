@@ -48,7 +48,7 @@ const style = {
     textAlign: "center",
     marginBottom: "0.5rem",
     padding: "1rem",
-    height: "100px",
+    height: "150px",
   },
   button: {
     width: "90%",
