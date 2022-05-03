@@ -48,7 +48,7 @@ export default function Index({ location }) {
 
   const isBrowser = typeof window !== "undefined"
   
-  const [width, setWidth]   = useState();
+  const [width, setWidth]   = useState(1300);
   const [height, setHeight] = useState();
   
   const updateDimensions = () => {

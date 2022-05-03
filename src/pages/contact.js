@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import {
   Flex,
   Box,
@@ -7,32 +7,31 @@ import {
   Textarea,
   Input,
   Text,
-  Button
-} from '@chakra-ui/react';
-import SEO from '../components/Seo';
-import Nav from '../components/Nav';
-import Footer from '../components/Footer';
-import MobileNav from '../components/MobileNav';
+} from "@chakra-ui/react";
+import { InlineWidget } from "react-calendly";
+import SEO from "../components/Seo";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import MobileNav from "../components/MobileNav";
 
-import message from '../images/message.svg';
+import message from "../images/message.svg";
 
-import Swal from 'sweetalert2'
-import emailjs, { init } from 'emailjs-com';
-import '../styles/contact.css';
+import Swal from "sweetalert2";
+import emailjs, { init } from "emailjs-com";
+import "../styles/contact.css";
 
 init("user_GCaEVt5pBdXq2r2kUScDu");
 
 export default function Contact({ location }) {
+  const isBrowser = typeof window !== "undefined";
 
-  const isBrowser = typeof window !== "undefined"
-  
-  const [width, setWidth]   = useState();
+  const [width, setWidth] = useState();
   const [height, setHeight] = useState();
 
   const updateDimensions = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-  }
+  };
 
   const emailAdd = useRef();
   const nameClient = useRef();
@@ -47,17 +46,16 @@ export default function Contact({ location }) {
   const [details, setDetails] = useState("");
   const [valid, setValid] = useState(true);
 
- useEffect(() => {
-
-    if(isBrowser){
+  useEffect(() => {
+    if (isBrowser) {
       updateDimensions();
       window.addEventListener("resize", updateDimensions);
-      
-      if(window.scrollY !== 0){
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (window.scrollY !== 0) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
     }
-    
+
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
@@ -67,19 +65,17 @@ export default function Contact({ location }) {
   //   if(formatted.includes(",")){
 
   //     let removedComma = formatted.replace(/,/g, "%20")
-    
+
   //     return removedComma;
   //   }
 
   //   return formatted;
   // };
 
-
   const sendMail = () => {
     const valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    if(emailAdd.current.value.match(valid)){
-
+    if (emailAdd.current.value.match(valid)) {
       const template = {
         from_name: nameClient.current.value,
         to_name: "Visual Group",
@@ -88,35 +84,36 @@ export default function Contact({ location }) {
         client_email: emailAdd.current.value,
         client_company: coname.current.value,
         client_location: cloc.current.value,
-        project_details: projDetails.current.value
-      }
+        project_details: projDetails.current.value,
+      };
 
-      emailjs.send('service_e8f9jv7', 'template_kysv18u', template).then((res) => {
-        if(res.status === 200){
-          window.location.assign("/thank_you");
-        }else{
-          Swal.fire({
-            title: "Oops...",
-            text: "Something Went wrong",
-            icon: "error",
-            footer: "We're working to sort this out"
-          });
-        }
-      });
-
-    }else{
-      setValid(false)
+      emailjs
+        .send("service_e8f9jv7", "template_kysv18u", template)
+        .then((res) => {
+          if (res.status === 200) {
+            window.location.assign("/thank_you");
+          } else {
+            Swal.fire({
+              title: "Oops...",
+              text: "Something Went wrong",
+              icon: "error",
+              footer: "We're working to sort this out",
+            });
+          }
+        });
+    } else {
+      setValid(false);
     }
-  }
+  };
 
   return (
-    <Box className="main" overflowX="hidden" >
+    <Box className="main" overflowX="hidden">
       <SEO />
-         {
-          (width > 1280) 
-          ? <Nav loc={location} page='/contact' />
-          : <MobileNav page='/contact' />
-        }
+      {width > 1280 ? (
+        <Nav loc={location} page="/contact" />
+      ) : (
+        <MobileNav page="/contact" />
+      )}
       <Box>
         <Flex
           w="100%"
@@ -125,7 +122,7 @@ export default function Contact({ location }) {
           flexWrap="wrap"
           px="5%"
           mt="60px"
-          >
+        >
           <Flex
             className="contactgetstarted"
             justifyContent="center"
@@ -135,35 +132,24 @@ export default function Contact({ location }) {
             py="10px"
             borderBottom="0.5px solid rgba(0, 0, 0, 0.15);"
           >
-            <Text
-              as="h3"
-              fontSize={[
-                "23px",
-                "23px",
-                "32px",
-                "32px",
-                "32px"
-              ]}
-            >
+            <Text as="h3" fontSize={["23px", "23px", "32px", "32px", "32px"]}>
               Get started
             </Text>
-            <Text
-              as="p"
-              fontSize={[
-                "14px",
-                "14px",
-                "18px",
-                "22px",
-                "22px"
-              ]}
-            >
-              It only takes a few minutes to kick off a project. 
-              Fill in the details below and we’ll be in touch.
+            <Text as="p" fontSize={["14px", "14px", "18px", "22px", "22px"]}>
+              It only takes a few minutes to kick off a project. Fill in the
+              details below and we’ll be in touch.
             </Text>
           </Flex>
 
+          <InlineWidget
+            url="https://calendly.com/visualgroupdigital/"
+            styles={{
+              height: "700px",
+              width: "100%",
+            }}
+          />
 
-          <Flex
+          {/* <Flex
             className="contactgetstarted2"
             w="100%"
             px="5%"
@@ -353,10 +339,10 @@ export default function Contact({ location }) {
                 SUBMIT
               </button>
             }
-          </Box>
+          </Box> */}
         </Flex>
         <Footer />
       </Box>
     </Box>
-  )
+  );
 }
