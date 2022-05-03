@@ -4,7 +4,6 @@ import { Box, Flex, Button, Input, Text, Image } from "@chakra-ui/react";
 import CheckBadge from "../components/CheckBadge";
 import SimplifiedNav from "../components/SimplifiedNav";
 
-import Process from "../components/Process";
 import LogoIndex from "../components/LogoIndex";
 import Wave1 from "../components/Wave1";
 import Wave2 from "../components/Wave2";
@@ -19,7 +18,7 @@ import Trends from "../components/Trends";
 import emailjs, { init } from "emailjs-com";
 import Swal from "sweetalert2";
 import blob from "../components/Illustrations/blob.svg";
-import calendar from "../components/Illustrations/calendar.svg";
+import guy from "../components/Illustrations/guy.svg";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import shape3 from "../images/Vector-circle.svg";
 import shape4 from "../images/Vector-verysmall.svg";
@@ -27,6 +26,10 @@ import shape5 from "../images/small_circle.svg";
 import shape6 from "../images/Polygon.svg";
 import shape8 from "../images/back.svg";
 import boost from "../components/Illustrations/boost.svg";
+
+import consulting from "../components/Illustrations/30.svg";
+import development from "../components/Illustrations/31.svg";
+import marketing from "../components/Illustrations/32.svg";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -52,7 +55,7 @@ export default function GettingStarted() {
 
     tl2
       .to(".blob", {
-        y: -150,
+        y: -10,
         zIndex: 0,
         duration: 1,
         ease: "ease",
@@ -60,7 +63,7 @@ export default function GettingStarted() {
       .to(
         ".wearevgd",
         {
-          y: -150,
+          y: -10,
           duration: 1,
           ease: "ease",
         },
@@ -69,7 +72,7 @@ export default function GettingStarted() {
       .to(
         ".unlock",
         {
-          y: -150,
+          y: -10,
           duration: 1,
           ease: "ease",
         },
@@ -78,7 +81,7 @@ export default function GettingStarted() {
       .to(
         ".seShape5",
         {
-          y: -100,
+          y: -10,
           duration: 1,
           ease: "ease",
         },
@@ -87,7 +90,7 @@ export default function GettingStarted() {
       .to(
         ".seShape6",
         {
-          y: -100,
+          y: -10,
           duration: 1,
           ease: "ease",
         },
@@ -96,7 +99,7 @@ export default function GettingStarted() {
       .to(
         ".seShape7",
         {
-          y: -100,
+          y: -10,
           duration: 1,
           ease: "ease",
         },
@@ -105,7 +108,7 @@ export default function GettingStarted() {
       .to(
         ".seShape8",
         {
-          y: -150,
+          y: -10,
           duration: 1,
           ease: "ease",
         },
@@ -132,7 +135,7 @@ export default function GettingStarted() {
       .to(
         "booknow",
         {
-          y: -200,
+          y: -20,
           duration: 1,
           ease: "ease",
         },
@@ -242,20 +245,16 @@ export default function GettingStarted() {
         <img src={shape4} alt="svg" className="seShape8" />
         <Flex
           w="100%"
-          h={["1200px", "1200px", "1500px", "800px", "850px"]}
+          h={["1100px", "1100px", "1400px", "200vh", "100vh"]}
           flexDirection={"row"}
           justifyContent={"space-around"}
           flexWrap={"wrap"}
           alignItems="center"
-          className="banner-sec "
+          className="banner-sec"
         >
           <Flex
-            backgroundImage={blob}
-            backgroundPosition={"center"}
-            backgroundSize={["cover", "cover", "contain", "contain", "contain"]}
-            backgroundRepeat={"no-repeat"}
-            h="850px"
-            w={["100%","100%","100%","65%","55%","45%"]}
+            h={["70vh", "30vh", "71vh", "80vh"]}
+            w={["100%", "100%", "100%", "65%", "55%", "45%"]}
             flexDirection={"column"}
             justifyContent={"center"}
             alignContent={"center"}
@@ -266,21 +265,19 @@ export default function GettingStarted() {
               pl={["1rem", "1rem", "6.5rem", "6.5rem", "6.5rem"]}
             >
               <Text
-                fontFamily={"Montserrat"}
+                fontFamily={"DM Sans"}
                 fontSize={["3rem", "3rem", "3rem", "3rem", "3.25rem"]}
-                color={"#ffff"}
                 className="wearevgd"
               >
                 WE ARE DIGITAL MARKETING
               </Text>
               <Text
-                fontFamily={"Montserrat"}
+                fontFamily={"DM Sans"}
                 fontSize={["2rem", "2rem", "2rem", "2rem", "3rem"]}
-                color={"#ffff"}
+                color={"#0A2F53"}
                 className="unlock"
               >
-                Unlock your business’
-                full potential with us!
+                Unlock your business’ full potential with us!
               </Text>
               <Button
                 className="booknow"
@@ -292,25 +289,47 @@ export default function GettingStarted() {
                 color="#ffff"
                 backgroundColor={"#ee6f19"}
                 my="2rem"
+                shadow={
+                  "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"
+                }
                 onClick={() => {
-                  window.location.assign('/book-now')
+                  window.location.assign("/book-now");
+                }}
+                _hover={{
+                  backgroundColor: "#0a2f53",
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+                  transition: "0.5 ease",
                 }}
               >
                 Book an appointment
               </Button>
             </Flex>
           </Flex>
-          <Box
-            w={["100%","100%","100%","100%","45%","40%"]}
-
+          <Flex
+            w={["100%", "100%", "100%", "100%", "45%", "40%"]}
+            alignContent="center"
+            justifyContent={"center"}
+            maxH={"1200px"}
+            minH={"450px"}
+            backgroundImage={blob}
+            backgroundPosition={"center"}
+            backgroundSize={[
+              "cover",
+              "contain",
+              "contain",
+              "contain",
+              "contain",
+            ]}
+            backgroundRepeat={"no-repeat"}
           >
             <Image
-              src={calendar}
-              boxSize={["400px", "500px", "600px", "500px", "500px", "800px"]}
+              src={guy}
+              boxSize={["400px", "500px", "600px", "600px", "600px", "800px"]}
               objectFit={"contain"}
               className="calendar"
             />
-          </Box>
+          </Flex>
         </Flex>
         <Flex
           flexDirection={"row"}
@@ -320,19 +339,15 @@ export default function GettingStarted() {
         >
           <Image
             src={boost}
-            boxSize={["400px", "500px", "600px", "800px", "800px"]}
+            boxSize={["400px", "500px", "600px", "600px", "600px"]}
           />
-          <Flex
-            justifyContent={'center'}
-            flexDirection='column'
-            px="1rem"
-          >
+          <Flex justifyContent={"center"} flexDirection="column" px="1rem">
             <Box>
               <Text
                 fontSize={["2.5rem", "2.5rem", "2.5rem", "3rem"]}
                 color="#0A2F53"
                 fontWeight="bold"
-                fontFamily={"Montserrat"}
+                fontFamily={"DM Sans"}
                 className="bookmore"
               >
                 Book more clients and <br />
@@ -509,7 +524,87 @@ export default function GettingStarted() {
             </span>
             &nbsp; to Successful Marketing
           </Text>
-          <Process removedToggle />
+          <Flex
+            flexWrap="wrap"
+            alignItems="center"
+            justifyContent={"space-evenly"}
+          >
+            <Box w={["100%", "100%", "50%", "50%", "50%"]}>
+              <h3 className="steps">STEP 1</h3>
+              <Text className="stepName" fontSize="4xl">
+                Consulting
+              </Text>
+              <Text className="stepP stepp1" fontSize="md">
+                Initial consulting is a crucial part of a successful
+                relationship. This is where we get together and determine the
+                strengths and weaknesses of your business. Everything, including
+                your business’ origin story, vision, and mission will be
+                explored to gain a personalised view of your needs.
+                Understanding your business will enable us to develop an
+                interesting brand story that catches attention and converts!
+              </Text>
+            </Box>
+            <Image
+              src={consulting}
+              boxSize={"300px"}
+              objectFit={"cover"}
+              display={["none", "none", "none", "block"]}
+            />
+          </Flex>
+          <Flex
+            flexWrap="wrap"
+            pt={["50px", "50px", "30px", "0px", "0px"]}
+            alignItems="center"
+            justifyContent={"space-evenly"}
+          >
+            <Box w={["100%", "100%", "50%", "50%", "50%"]}>
+              <h3 className="steps">STEP 2</h3>
+              <Text className="stepName" fontSize="4xl">
+                Development
+              </Text>
+              <Text className="stepP" fontSize="md">
+                Visual Group Digital will take the info from our initial
+                consulting and overlay decades of combined experience to devise
+                an effective brand strategy for your company. We’ll help you to
+                create a brand that stands out, tells your story, and gets you
+                RESULTS!
+              </Text>
+            </Box>
+            <Image
+              src={development}
+              boxSize={"300px"}
+              objectFit={"cover"}
+              display={["none", "none", "none", "block"]}
+            />
+          </Flex>
+          <Flex
+            flexWrap="wrap"
+            pt={["50px", "50px", "30px", "0px", "0px"]}
+            alignItems="center"
+            justifyContent={"space-evenly"}
+          >
+            <Box w={["100%", "100%", "50%", "50%", "50%"]}>
+              <h3 className="steps">STEP 3</h3>
+              <Text className="stepName" fontSize="4xl">
+                Marketing
+              </Text>
+              <Text fontSize="md" className="stepP">
+                Lastly, we’ll reach the marketing step, where our planning comes
+                to life. During this final step in the process, we’ll work with
+                you to execute on your marketing strategy and drive results!
+                Marketing will help you with your overall marketing strategy and
+                ad campaigns. We will help you market your business effectively
+                to build the ultimate lead generation machine that GETS YOU
+                CLIENTS!
+              </Text>
+            </Box>
+            <Image
+              src={marketing}
+              boxSize={"300px"}
+              objectFit={"cover"}
+              display={["none", "none", "none", "block"]}
+            />
+          </Flex>
         </Flex>
         <Flex w="100%" justifyContent={"center"} my="3rem">
           <Text
